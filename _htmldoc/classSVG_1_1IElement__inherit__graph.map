@@ -1,0 +1,9 @@
+<map id="SVG::IElement" name="SVG::IElement">
+<area shape="rect" id="node2" href="$classSVG_1_1Circle.html" title="SVG::Circle" alt="" coords="5,80,96,107"/>
+<area shape="rect" id="node3" href="$classSVG_1_1Line.html" title="SVG::Line" alt="" coords="121,80,203,107"/>
+<area shape="rect" id="node4" href="$classSVG_1_1Path.html" title="SVG::Path" alt="" coords="228,80,313,107"/>
+<area shape="rect" id="node5" href="$classSVG_1_1Polygon.html" title="SVG::Polygon" alt="" coords="338,80,443,107"/>
+<area shape="rect" id="node6" href="$classSVG_1_1Polyline.html" title="SVG::Polyline" alt="" coords="468,80,572,107"/>
+<area shape="rect" id="node7" href="$classSVG_1_1Rectangle.html" title="SVG::Rectangle" alt="" coords="596,80,712,107"/>
+<area shape="rect" id="node8" href="$classSVG_1_1SVG.html" title="SVG::SVG" alt="" coords="738,80,824,107"/>
+</map>

@@ -1,0 +1,29 @@
+/home/joris/Code/cdev_boost/numeric/weightedsampling.hpp:18: warning: Compound numeric::WeightedSampling is not documented.
+/home/joris/Code/cdev_boost/graph_ui/defaultgraphrenderer.hpp:23: warning: Compound graphUI::DefaultGraphRenderer is not documented.
+/home/joris/Code/cdev_boost/game/minimax.hpp:22: warning: Member GamePlayType (typedef) of class game::Minimax is not documented.
+/home/joris/Code/cdev_boost/game/minimax.hpp:23: warning: Member EvaluationFunctionType (typedef) of class game::Minimax is not documented.
+/home/joris/Code/cdev_boost/game/minimax.hpp:24: warning: Member nextMoveFunctionType (typedef) of class game::Minimax is not documented.
+/home/joris/Code/cdev_boost/game/minimax.hpp:26: warning: Member build(const T &startingPosition) (function) of class game::Minimax is not documented.
+/home/joris/Code/cdev_boost/graph_ui/hierarchicalgraphlayout.hpp:43: warning: Member layout(const graph::IGraph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &sizeFunction) override (function) of class graph::HierarchicalGraphLayout is not documented.
+/home/joris/Code/cdev_boost/graph/itree.hpp:17: warning: Member children(const T &source) const =0 (function) of class graph::ITree is not documented.
+/home/joris/Code/cdev_boost/graph/itree.hpp:21: warning: Member parent(const T &source) const =0 (function) of class graph::ITree is not documented.
+/home/joris/Code/cdev_boost/graph_ui/circulargraphlayout.hpp:28: warning: Member layout(const graph::Graph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) override (function) of class graphUI::CircularGraphLayout is not documented.
+/home/joris/Code/cdev_boost/graph_ui/defaultgraphrenderer.hpp:35: warning: Member render(const graph::IGraph< T > &g, const typename graphUI::AbstractGraphLayout< T >::LayoutType &layout, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) const  (function) of class graphUI::DefaultGraphRenderer is not documented.
+/home/joris/Code/cdev_boost/graph_ui/snaptogridgraphlayout.hpp:22: warning: Member SnapToGridGraphLayout(std::unique_ptr< AbstractGraphLayout< T >> innerLayout) (function) of class graphUI::SnapToGridGraphLayout is not documented.
+/home/joris/Code/cdev_boost/graph_ui/snaptogridgraphlayout.hpp:73: warning: Member layout(const graph::IGraph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) override (function) of class graphUI::SnapToGridGraphLayout is not documented.
+/home/joris/Code/cdev_boost/nlp/word2vec.hpp:26: warning: Member UnigramGetterType (typedef) of class NLP::Word2Vec is not documented.
+/home/joris/Code/cdev_boost/nlp/word2vec.hpp:27: warning: Member SampleSizeGetterType (typedef) of class NLP::Word2Vec is not documented.
+/home/joris/Code/cdev_boost/nlp/word2vec.hpp:62: warning: Member LearningRateFunctionType (typedef) of class NLP::Word2Vec is not documented.
+/home/joris/Code/cdev_boost/nlp/word2vec.hpp:29: warning: Member Word2Vec(const UnigramGetterType &unigramGetter, const SampleSizeGetterType &sampleSizeGetter, int nofSamples) (function) of class NLP::Word2Vec is not documented.
+/home/joris/Code/cdev_boost/nlp/word2vec.hpp:63: warning: Member train(int nofIterations, const LearningRateFunctionType &learningRateFunction) (function) of class NLP::Word2Vec is not documented.
+/home/joris/Code/cdev_boost/numeric/distribution.hpp:31: warning: Member makeRelative(const AbsoluteDistributionType &d) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/cdev_boost/numeric/distribution.hpp:49: warning: Member makeAbsolute(const RelativeDistributionType &d, int total) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/cdev_boost/numeric/distribution.hpp:124: warning: Member left(const RelativeDistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/cdev_boost/numeric/distribution.hpp:160: warning: Member right(const RelativeDistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/cdev_boost/numeric/distribution.hpp:196: warning: Member left(const AbsoluteDistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/cdev_boost/numeric/distribution.hpp:204: warning: Member right(const AbsoluteDistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/cdev_boost/numeric/weightedsampling.hpp:20: warning: Member WeightedSampling(const std::map< T, double > &distribution) (function) of class numeric::WeightedSampling is not documented.
+/home/joris/Code/cdev_boost/numeric/weightedsampling.hpp:39: warning: Member WeightedSampling(const boost::bimap< T, long > &dictionary, const std::map< long, double > &distribution) (function) of class numeric::WeightedSampling is not documented.
+/home/joris/Code/cdev_boost/svg/path.hpp:17: warning: Member PathCommand (typedef) of class SVG::Path is not documented.
+/home/joris/Code/cdev_boost/svg/path.hpp:19: warning: Member Path(std::vector< PathCommand > cmds) (function) of class SVG::Path is not documented.
+/home/joris/Code/cdev_boost/tree/bktree.hpp:56: warning: Member find(const T &data, int diff) const  (function) of class tree::BKTree is not documented.

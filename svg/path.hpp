@@ -1,0 +1,75 @@
+#pragma once
+#ifndef PATH_HPP
+#define PATH_HPP
+
+#include "ielement.hpp"
+
+#include <assert.h>
+
+namespace SVG
+{
+    /*! Defines a path.
+     */
+    class Path final : public IElement
+    {
+        public:
+
+            using PathCommand = std::tuple<char, std::vector<double>>;
+
+            explicit Path(std::vector<PathCommand> cmds)
+            {
+                for(int i=0; i<cmds.size(); i++)
+                {
+                    auto type = std::get<0>(cmds[i]);
+                    auto args = std::get<1>(cmds[i]);
+                    // check correct number of arguments
+                    assert(((type=='m' || type=='M') && args.size()==2) ||   // moveto
+                           ((type=='l' || type=='L') && args.size()==2) ||   // lineto
+
+                           ((type=='h' || type=='H') && args.size()==1) ||   // horizontal lineto
+                           ((type=='v' || type=='V') && args.size()==1) ||   // vertical lineto
+
+                           ((type=='c' || type=='C') && args.size()==2) ||   // curveto
+                           ((type=='s' || type=='S') && args.size()==2) ||   // smooth curveto
+
+                           ((type=='q' || type=='Q') && args.size()==2) ||   // quadratic bézier curveto
+                           ((type=='t' || type=='T') && args.size()==2) ||   // smooth quadratic bézier curveto
+
+                           ((type=='a' || type=='A') && args.size()==2) ||   // elliptical arc
+
+                           ((type=='z' || type=='Z') && args.size()==0)      // closepath
+                          );
+                    // check whether arguments make sense
+                    for(int j=0; j<args.size(); j++)
+                    {
+                        assert(args[j] >= 0);
+                    }
+                }
+            }
+
+            /*! Default destructor
+             */
+            virtual ~Path() = default;
+
+            /*! Prohibit const copy constructor
+             */
+            Path(const Path&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            Path(Path&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const Path&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(Path&) = delete;
+
+        private:
+            std::vector<PathCommand> m_pathCommands;
+    };
+}
+
+#endif // PATH_HPP
