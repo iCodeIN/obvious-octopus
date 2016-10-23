@@ -144,9 +144,9 @@ namespace SVG
 
             /*! \return the XML element representing this SVG image
              */
-            virtual std::unique_ptr<XML::Element> toXML() const
+            virtual std::unique_ptr<XML::IElement> toXML() const
             {
-                std::unique_ptr<XML::Element> node = IElement::toXML();
+                std::unique_ptr<XML::IElement> node = SVG::IElement::toXML();
                 node.get()->setName("svg");
 
                 // set width

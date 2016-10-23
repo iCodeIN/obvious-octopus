@@ -127,9 +127,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// --- IElement ---</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classSVG_1_1Circle.html#ab105106940d4d62eddae73ced595654e">   52</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::Element&gt; <a class="code" href="classSVG_1_1Circle.html#ab105106940d4d62eddae73ced595654e">toXML</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="classSVG_1_1Circle.html#acc78bac913089b6133da324acfa84b0a">   52</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::IElement&gt; <a class="code" href="classSVG_1_1Circle.html#acc78bac913089b6133da324acfa84b0a">toXML</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                std::unique_ptr&lt;XML::Element&gt; element = <a class="code" href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">IElement::toXML</a>();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keyword">auto</span> element = <a class="code" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">IElement::toXML</a>();</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                element.get()-&gt;setName(<span class="stringliteral">&quot;circle&quot;</span>);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                element.get()-&gt;setAttribute(<span class="stringliteral">&quot;cx&quot;</span>, m_cx);</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                element.get()-&gt;setAttribute(<span class="stringliteral">&quot;cy&quot;</span>, m_cy);</div>
@@ -148,16 +148,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">#endif // CIRCLe_HPP</span></div>
 <div class="ttc" id="classSVG_1_1IElement_html"><div class="ttname"><a href="classSVG_1_1IElement.html">SVG::IElement</a></div><div class="ttdef"><b>Definition:</b> ielement.hpp:15</div></div>
+<div class="ttc" id="classSVG_1_1Circle_html_acc78bac913089b6133da324acfa84b0a"><div class="ttname"><a href="classSVG_1_1Circle.html#acc78bac913089b6133da324acfa84b0a">SVG::Circle::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> circle.hpp:52</div></div>
 <div class="ttc" id="classSVG_1_1Circle_html_a6612803d084a1dcad5a79d38d2f0f47a"><div class="ttname"><a href="classSVG_1_1Circle.html#a6612803d084a1dcad5a79d38d2f0f47a">SVG::Circle::operator=</a></div><div class="ttdeci">void operator=(const Circle &amp;)=delete</div></div>
-<div class="ttc" id="classSVG_1_1Circle_html_ab105106940d4d62eddae73ced595654e"><div class="ttname"><a href="classSVG_1_1Circle.html#ab105106940d4d62eddae73ced595654e">SVG::Circle::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::Element &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> circle.hpp:52</div></div>
+<div class="ttc" id="classSVG_1_1IElement_html_aa9afc7e9a81109c99b71638bc6fbd3e5"><div class="ttname"><a href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">SVG::IElement::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ielement.hpp:218</div></div>
 <div class="ttc" id="classSVG_1_1Circle_html"><div class="ttname"><a href="classSVG_1_1Circle.html">SVG::Circle</a></div><div class="ttdef"><b>Definition:</b> circle.hpp:13</div></div>
 <div class="ttc" id="classSVG_1_1Circle_html_a664ad02797ef13d38f06251bd4a7add0"><div class="ttname"><a href="classSVG_1_1Circle.html#a664ad02797ef13d38f06251bd4a7add0">SVG::Circle::~Circle</a></div><div class="ttdeci">virtual ~Circle()=default</div></div>
-<div class="ttc" id="classSVG_1_1IElement_html_a6e8199267ad4fc4807c7ed3be272923c"><div class="ttname"><a href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">SVG::IElement::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::Element &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ielement.hpp:212</div></div>
 <div class="ttc" id="classSVG_1_1Circle_html_a7d2535eede6a3fbdfd248e485b10352e"><div class="ttname"><a href="classSVG_1_1Circle.html#a7d2535eede6a3fbdfd248e485b10352e">SVG::Circle::Circle</a></div><div class="ttdeci">Circle(int cx, int cy, int r)</div><div class="ttdef"><b>Definition:</b> circle.hpp:22</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 20 2016 16:40:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 23 2016 14:11:29 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

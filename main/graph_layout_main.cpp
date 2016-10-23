@@ -91,6 +91,8 @@ int main()
     myfile << *(img.get()) << std::endl;
     myfile.close();
 
+    std::cout << *(img.get()) << std::endl;
+
     // return
     return 0;
 }

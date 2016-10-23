@@ -1,8 +1,8 @@
 #pragma once
-#ifndef IELEMENT_HPP
-#define IELEMENT_HPP
+#ifndef SVG_IELEMENT_HPP
+#define SVG_IELEMENT_HPP
 
-#include "xml/element.hpp"
+#include "xml/boostelementimpl.hpp"
 
 #include <math.h>
 #include <memory>
@@ -208,15 +208,16 @@ namespace SVG
             friend std::ostream& operator<<(std::ostream &os, const IElement &e)
             {
                 auto node = e.toXML();
-                os << *(node.get());
+                assert(node.get());
+                os << node.get();
                 return os;
             }
 
             /*! \return the XML element representing this SVG element
              */
-            virtual std::unique_ptr<XML::Element> toXML() const
+            virtual std::unique_ptr<XML::IElement> toXML() const
             {
-                XML::Element* node = new XML::Element("");
+                auto node = std::unique_ptr<XML::IElement>(new XML::BoostElementImpl(""));
 
                 std::ostringstream osStyle;
                 osStyle << "fill:rgb(" << std::get<0>(m_fill) << "," << std::get<1>(m_fill) << "," << std::get<2>(m_fill) << ");";
@@ -237,7 +238,7 @@ namespace SVG
                     node->setAttribute("transform", osTransform.str());
                 }
 
-                return std::unique_ptr<XML::Element>(node);
+                return std::move(node);
             }
 
         private:
@@ -257,4 +258,4 @@ namespace SVG
 
 } // end of namespace SVG
 
-#endif // IELEMENT_HPP
+#endif // SVG_IELEMENT_HPP

@@ -72,9 +72,9 @@ namespace SVG
 
         protected:
             // --- IElement ---
-            virtual std::unique_ptr<XML::Element> toXML() const
+            virtual std::unique_ptr<XML::IElement> toXML() const
             {
-                std::unique_ptr<XML::Element> node = IElement::toXML();
+                auto node = IElement::toXML();
                 node.get()->setName("rect");
                 node.get()->setAttribute("x", m_x);
                 node.get()->setAttribute("y", m_y);

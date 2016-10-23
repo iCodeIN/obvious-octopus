@@ -101,7 +101,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="ielement_8hpp_source.html">ielement.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="svg_2ielement_8hpp_source.html">ielement.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SVG::IElement:</div>
 <div class="dyncontent">
@@ -112,6 +112,10 @@ Inheritance diagram for SVG::IElement:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a1cb6c4d44c3491048fe1477f07618a05"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#a1cb6c4d44c3491048fe1477f07618a05">IElement</a> ()=default</td></tr>
+<tr class="separator:a1cb6c4d44c3491048fe1477f07618a05"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9492424a820131384e2ac4448cb8b31"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#ab9492424a820131384e2ac4448cb8b31">~IElement</a> ()=default</td></tr>
+<tr class="separator:ab9492424a820131384e2ac4448cb8b31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bdf42b1f244c9da973055845b422526"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#a5bdf42b1f244c9da973055845b422526">IElement</a> (const <a class="el" href="classSVG_1_1IElement.html">IElement</a> &amp;)=delete</td></tr>
 <tr class="separator:a5bdf42b1f244c9da973055845b422526"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79d8477cd00557cb24f96148b40f242"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#ae79d8477cd00557cb24f96148b40f242">IElement</a> (<a class="el" href="classSVG_1_1IElement.html">IElement</a> &amp;)=delete</td></tr>
@@ -154,9 +158,9 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ee1970ad1ea86ce47f3a64d7cd92605"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75f391c1344370c32b7c45e10945b9a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#ae75f391c1344370c32b7c45e10945b9a">skewY</a> (double a)</td></tr>
 <tr class="separator:ae75f391c1344370c32b7c45e10945b9a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6e8199267ad4fc4807c7ed3be272923c"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
-&lt; <a class="el" href="classXML_1_1Element.html">XML::Element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">toXML</a> () const </td></tr>
-<tr class="separator:a6e8199267ad4fc4807c7ed3be272923c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa9afc7e9a81109c99b71638bc6fbd3e5"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
+&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">toXML</a> () const </td></tr>
+<tr class="separator:aa9afc7e9a81109c99b71638bc6fbd3e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -166,6 +170,54 @@ Friends</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Common abstract base class for <a class="el" href="classSVG_1_1SVG.html">SVG</a> elements </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a1cb6c4d44c3491048fe1477f07618a05"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">SVG::IElement::IElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="ab9492424a820131384e2ac4448cb8b31"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual SVG::IElement::~IElement </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>destructor </p>
+
+</div>
+</div>
 <a class="anchor" id="a5bdf42b1f244c9da973055845b422526"></a>
 <div class="memitem">
 <div class="memproto">
@@ -754,7 +806,7 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6e8199267ad4fc4807c7ed3be272923c"></a>
+<a class="anchor" id="aa9afc7e9a81109c99b71638bc6fbd3e5"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -762,7 +814,7 @@ Friends</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classXML_1_1Element.html">XML::Element</a>&gt; SVG::IElement::toXML </td>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classXML_1_1IElement.html">XML::IElement</a>&gt; SVG::IElement::toXML </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -776,7 +828,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the XML element representing this <a class="el" href="classSVG_1_1SVG.html">SVG</a> element </dd></dl>
 
-<p>Reimplemented in <a class="el" href="classSVG_1_1SVG.html#ab6524d2fdecb084397a5271b8a1bc0e7">SVG::SVG</a>, <a class="el" href="classSVG_1_1Rectangle.html#add45c0cf32f90df207989dda64826dd6">SVG::Rectangle</a>, <a class="el" href="classSVG_1_1Line.html#a4b80a5cbd3c0638ee7dc4aa04020850c">SVG::Line</a>, <a class="el" href="classSVG_1_1Circle.html#ab105106940d4d62eddae73ced595654e">SVG::Circle</a>, <a class="el" href="classSVG_1_1Polyline.html#a7271c8d1f1b1e35d94a048a3f28b708a">SVG::Polyline</a>, and <a class="el" href="classSVG_1_1Polygon.html#a6c7e7a75cefbc43d4b13effee91e7125">SVG::Polygon</a>.</p>
+<p>Reimplemented in <a class="el" href="classSVG_1_1SVG.html#adccdac0b5479e3be76ee05b0e54c9e1c">SVG::SVG</a>, <a class="el" href="classSVG_1_1Rectangle.html#aedb55ebbd6cf2743bf3ca96529b9aafe">SVG::Rectangle</a>, <a class="el" href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">SVG::Line</a>, <a class="el" href="classSVG_1_1Circle.html#acc78bac913089b6133da324acfa84b0a">SVG::Circle</a>, <a class="el" href="classSVG_1_1Polyline.html#a870e995f705e5f84a9cc6c049f1fd303">SVG::Polyline</a>, and <a class="el" href="classSVG_1_1Polygon.html#aa427191bfa79c0c4f93daa472a07c117">SVG::Polygon</a>.</p>
 
 </div>
 </div>
@@ -858,12 +910,12 @@ Friends</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>svg/<a class="el" href="ielement_8hpp_source.html">ielement.hpp</a></li>
+<li>svg/<a class="el" href="svg_2ielement_8hpp_source.html">ielement.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 20 2016 16:40:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 23 2016 14:11:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

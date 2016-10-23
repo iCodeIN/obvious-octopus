@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['absolutedistributiontype',['AbsoluteDistributionType',['../classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198',1,'numeric::Distribution']]]
+  ['domaintype',['DomainType',['../classmeta_1_1AbstractMetaHeuristic.html#abcd07a0ff223dfc116d7a54047a16701',1,'meta::AbstractMetaHeuristic']]]
 ];

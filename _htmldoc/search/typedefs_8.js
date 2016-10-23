@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['pointtype',['PointType',['../classgraphUI_1_1AbstractGraphLayout.html#a15a59d0e77504082ff9a889a113d0124',1,'graphUI::AbstractGraphLayout::PointType()'],['../classMaze.html#a953f2b1e0d1b25c8a2415452652cde1f',1,'Maze::PointType()']]]
+  ['realfunctiontype',['RealFunctionType',['../classnumeric_1_1Derivative.html#a9ae94b40e81041335af21a764eceaa19',1,'numeric::Derivative']]],
+  ['rgbcolor',['RGBColor',['../classSVG_1_1HSV.html#a93da59189b0174379bf7033229c8096d',1,'SVG::HSV']]]
 ];

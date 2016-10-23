@@ -134,6 +134,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a5fd7968dd388dbd38ff539d3580c64da"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1Rectangle.html#a5fd7968dd388dbd38ff539d3580c64da">operator=</a> (<a class="el" href="classSVG_1_1Rectangle.html">Rectangle</a> &amp;)=delete</td></tr>
 <tr class="separator:a5fd7968dd388dbd38ff539d3580c64da"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classSVG_1_1IElement"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classSVG_1_1IElement')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classSVG_1_1IElement.html">SVG::IElement</a></td></tr>
+<tr class="memitem:a1cb6c4d44c3491048fe1477f07618a05 inherit pub_methods_classSVG_1_1IElement"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#a1cb6c4d44c3491048fe1477f07618a05">IElement</a> ()=default</td></tr>
+<tr class="separator:a1cb6c4d44c3491048fe1477f07618a05 inherit pub_methods_classSVG_1_1IElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab9492424a820131384e2ac4448cb8b31 inherit pub_methods_classSVG_1_1IElement"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#ab9492424a820131384e2ac4448cb8b31">~IElement</a> ()=default</td></tr>
+<tr class="separator:ab9492424a820131384e2ac4448cb8b31 inherit pub_methods_classSVG_1_1IElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5bdf42b1f244c9da973055845b422526 inherit pub_methods_classSVG_1_1IElement"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#a5bdf42b1f244c9da973055845b422526">IElement</a> (const <a class="el" href="classSVG_1_1IElement.html">IElement</a> &amp;)=delete</td></tr>
 <tr class="separator:a5bdf42b1f244c9da973055845b422526 inherit pub_methods_classSVG_1_1IElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae79d8477cd00557cb24f96148b40f242 inherit pub_methods_classSVG_1_1IElement"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#ae79d8477cd00557cb24f96148b40f242">IElement</a> (<a class="el" href="classSVG_1_1IElement.html">IElement</a> &amp;)=delete</td></tr>
@@ -179,9 +183,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:add45c0cf32f90df207989dda64826dd6"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
-&lt; <a class="el" href="classXML_1_1Element.html">XML::Element</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1Rectangle.html#add45c0cf32f90df207989dda64826dd6">toXML</a> () const </td></tr>
-<tr class="separator:add45c0cf32f90df207989dda64826dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedb55ebbd6cf2743bf3ca96529b9aafe"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
+&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1Rectangle.html#aedb55ebbd6cf2743bf3ca96529b9aafe">toXML</a> () const </td></tr>
+<tr class="separator:aedb55ebbd6cf2743bf3ca96529b9aafe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines a rectangle </p>
@@ -435,7 +439,7 @@ Protected Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="add45c0cf32f90df207989dda64826dd6"></a>
+<a class="anchor" id="aedb55ebbd6cf2743bf3ca96529b9aafe"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -443,7 +447,7 @@ Protected Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classXML_1_1Element.html">XML::Element</a>&gt; SVG::Rectangle::toXML </td>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classXML_1_1IElement.html">XML::IElement</a>&gt; SVG::Rectangle::toXML </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -457,7 +461,7 @@ Protected Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the XML element representing this <a class="el" href="classSVG_1_1SVG.html">SVG</a> element </dd></dl>
 
-<p>Reimplemented from <a class="el" href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">SVG::IElement</a>.</p>
+<p>Reimplemented from <a class="el" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">SVG::IElement</a>.</p>
 
 </div>
 </div>
@@ -467,7 +471,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 20 2016 16:40:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 23 2016 14:11:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

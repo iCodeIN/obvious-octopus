@@ -16,8 +16,8 @@ namespace numeric
      */
     template <typename X, typename Y>
     class Distribution
-    {             
-        public:           
+    {
+        public:
 
             /*!
              */
@@ -66,7 +66,7 @@ namespace numeric
                     total += pair.second;
                 }
                 return d.size() == 0 ? ((Y) 0) : (total / d.size());
-            }            
+            }
 
             /*!
              */

@@ -42,6 +42,7 @@ namespace graph
             // --- AbstractGraphLayout ---
             virtual typename graphUI::AbstractGraphLayout<T>::LayoutType layout(const graph::IGraph<T> &graph, const typename graphUI::AbstractGraphLayout<T>::SizeFunctionType &sizeFunction) override
             {
+
                 // determine layers
                 auto layers = determineLayers(graph);
 

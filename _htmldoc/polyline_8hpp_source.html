@@ -126,14 +126,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="comment">// -- IElement ---</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classSVG_1_1Polyline.html#a7271c8d1f1b1e35d94a048a3f28b708a">   49</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::Element&gt; <a class="code" href="classSVG_1_1Polyline.html#a7271c8d1f1b1e35d94a048a3f28b708a">toXML</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno"><a class="line" href="classSVG_1_1Polyline.html#a870e995f705e5f84a9cc6c049f1fd303">   49</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::IElement&gt; <a class="code" href="classSVG_1_1Polyline.html#a870e995f705e5f84a9cc6c049f1fd303">toXML</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="keyword">            </span>{</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                std::ostringstream os;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m_points.size(); i++)</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    os &lt;&lt; ( i == 0 ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot; &quot;</span>) &lt;&lt; m_points[i].first &lt;&lt; <span class="stringliteral">&quot;,&quot;</span> &lt;&lt; m_points[i].second;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                std::unique_ptr&lt;XML::Element&gt; node = <a class="code" href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">IElement::toXML</a>();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="keyword">auto</span> node = <a class="code" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">IElement::toXML</a>();</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                node.get()-&gt;setName(<span class="stringliteral">&quot;polyline&quot;</span>);</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;points&quot;</span>, os.str());</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> node;</div>
@@ -150,14 +150,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classSVG_1_1Polyline_html_a663a7522de1c69bc0ee0933f8d34aebc"><div class="ttname"><a href="classSVG_1_1Polyline.html#a663a7522de1c69bc0ee0933f8d34aebc">SVG::Polyline::operator=</a></div><div class="ttdeci">void operator=(const Polyline &amp;)=delete</div></div>
 <div class="ttc" id="classSVG_1_1IElement_html"><div class="ttname"><a href="classSVG_1_1IElement.html">SVG::IElement</a></div><div class="ttdef"><b>Definition:</b> ielement.hpp:15</div></div>
 <div class="ttc" id="classSVG_1_1Polyline_html_a4b018d4e425d24418b706f7c008b77c1"><div class="ttname"><a href="classSVG_1_1Polyline.html#a4b018d4e425d24418b706f7c008b77c1">SVG::Polyline::~Polyline</a></div><div class="ttdeci">virtual ~Polyline()=default</div></div>
-<div class="ttc" id="classSVG_1_1Polyline_html_a7271c8d1f1b1e35d94a048a3f28b708a"><div class="ttname"><a href="classSVG_1_1Polyline.html#a7271c8d1f1b1e35d94a048a3f28b708a">SVG::Polyline::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::Element &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> polyline.hpp:49</div></div>
+<div class="ttc" id="classSVG_1_1IElement_html_aa9afc7e9a81109c99b71638bc6fbd3e5"><div class="ttname"><a href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">SVG::IElement::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ielement.hpp:218</div></div>
 <div class="ttc" id="classSVG_1_1Polyline_html_a1635becada80e1e6bce44f53a283a8b1"><div class="ttname"><a href="classSVG_1_1Polyline.html#a1635becada80e1e6bce44f53a283a8b1">SVG::Polyline::Polyline</a></div><div class="ttdeci">Polyline(const std::vector&lt; std::pair&lt; double, double &gt;&gt; &amp;points)</div><div class="ttdef"><b>Definition:</b> polyline.hpp:19</div></div>
+<div class="ttc" id="classSVG_1_1Polyline_html_a870e995f705e5f84a9cc6c049f1fd303"><div class="ttname"><a href="classSVG_1_1Polyline.html#a870e995f705e5f84a9cc6c049f1fd303">SVG::Polyline::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> polyline.hpp:49</div></div>
 <div class="ttc" id="classSVG_1_1Polyline_html"><div class="ttname"><a href="classSVG_1_1Polyline.html">SVG::Polyline</a></div><div class="ttdef"><b>Definition:</b> polyline.hpp:12</div></div>
-<div class="ttc" id="classSVG_1_1IElement_html_a6e8199267ad4fc4807c7ed3be272923c"><div class="ttname"><a href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">SVG::IElement::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::Element &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ielement.hpp:212</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 20 2016 16:40:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 23 2016 14:11:29 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

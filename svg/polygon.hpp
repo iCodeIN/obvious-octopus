@@ -45,14 +45,14 @@ namespace SVG
 
         protected:
             // ---  IElement ---
-            virtual std::unique_ptr<XML::Element> toXML() const
+            virtual std::unique_ptr<XML::IElement> toXML() const
             {
                 std::ostringstream os;
                 for(int i=0; i<m_points.size(); i++)
                 {
                     os << ( i == 0 ? "" : " ") << m_points[i].first << "," << m_points[i].second;
                 }
-                std::unique_ptr<XML::Element> node = IElement::toXML();
+                auto node = IElement::toXML();
                 node.get()->setName("polygon");
                 node.get()->setAttribute("points", os.str());
                 return node;

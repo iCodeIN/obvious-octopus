@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['edgelayoutfunctiontype',['EdgeLayoutFunctionType',['../classgraphUI_1_1AbstractGraphLayout.html#a4cedfc8352146d5ab566573c7d651218',1,'graphUI::AbstractGraphLayout']]]
+  ['functiontype',['FunctionType',['../classmeta_1_1AbstractMetaHeuristic.html#aaf6dc9eb432129d080ae115cd2e0adc7',1,'meta::AbstractMetaHeuristic']]]
 ];

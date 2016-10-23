@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['layouttype',['LayoutType',['../classgraphUI_1_1AbstractGraphLayout.html#acd0807b65a1e42c4a2aeb7fb3ed6433a',1,'graphUI::AbstractGraphLayout']]]
+  ['metrictype',['MetricType',['../classtree_1_1BKTree.html#aa33586b67ade92e0423c38386e25f94e',1,'tree::BKTree']]]
 ];

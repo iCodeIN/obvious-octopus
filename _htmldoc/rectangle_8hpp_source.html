@@ -141,9 +141,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        <span class="keyword">protected</span>:</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">// --- IElement ---</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classSVG_1_1Rectangle.html#add45c0cf32f90df207989dda64826dd6">   75</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::Element&gt; <a class="code" href="classSVG_1_1Rectangle.html#add45c0cf32f90df207989dda64826dd6">toXML</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classSVG_1_1Rectangle.html#aedb55ebbd6cf2743bf3ca96529b9aafe">   75</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::IElement&gt; <a class="code" href="classSVG_1_1Rectangle.html#aedb55ebbd6cf2743bf3ca96529b9aafe">toXML</a>()<span class="keyword"> const</span></div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                std::unique_ptr&lt;XML::Element&gt; node = <a class="code" href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">IElement::toXML</a>();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                <span class="keyword">auto</span> node = <a class="code" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">IElement::toXML</a>();</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                node.get()-&gt;setName(<span class="stringliteral">&quot;rect&quot;</span>);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;x&quot;</span>, m_x);</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;y&quot;</span>, m_y);</div>
@@ -169,16 +169,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;<span class="preprocessor">#endif // RECTANGLE_HPP</span></div>
 <div class="ttc" id="classSVG_1_1Rectangle_html_a090fcb11f928d8b23492d7da747e45c6"><div class="ttname"><a href="classSVG_1_1Rectangle.html#a090fcb11f928d8b23492d7da747e45c6">SVG::Rectangle::operator=</a></div><div class="ttdeci">void operator=(const Rectangle &amp;)=delete</div></div>
 <div class="ttc" id="classSVG_1_1IElement_html"><div class="ttname"><a href="classSVG_1_1IElement.html">SVG::IElement</a></div><div class="ttdef"><b>Definition:</b> ielement.hpp:15</div></div>
+<div class="ttc" id="classSVG_1_1IElement_html_aa9afc7e9a81109c99b71638bc6fbd3e5"><div class="ttname"><a href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">SVG::IElement::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ielement.hpp:218</div></div>
 <div class="ttc" id="classSVG_1_1Rectangle_html_a4e8d590057b1dd6770a3eac6818c164e"><div class="ttname"><a href="classSVG_1_1Rectangle.html#a4e8d590057b1dd6770a3eac6818c164e">SVG::Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(int x, int y, int width, int height)</div><div class="ttdef"><b>Definition:</b> rectangle.hpp:24</div></div>
 <div class="ttc" id="classSVG_1_1Rectangle_html_ad720a126b1d2ffed1c343bfea3e8e695"><div class="ttname"><a href="classSVG_1_1Rectangle.html#ad720a126b1d2ffed1c343bfea3e8e695">SVG::Rectangle::~Rectangle</a></div><div class="ttdeci">virtual ~Rectangle()=default</div></div>
-<div class="ttc" id="classSVG_1_1Rectangle_html_add45c0cf32f90df207989dda64826dd6"><div class="ttname"><a href="classSVG_1_1Rectangle.html#add45c0cf32f90df207989dda64826dd6">SVG::Rectangle::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::Element &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> rectangle.hpp:75</div></div>
 <div class="ttc" id="classSVG_1_1Rectangle_html"><div class="ttname"><a href="classSVG_1_1Rectangle.html">SVG::Rectangle</a></div><div class="ttdef"><b>Definition:</b> rectangle.hpp:14</div></div>
-<div class="ttc" id="classSVG_1_1IElement_html_a6e8199267ad4fc4807c7ed3be272923c"><div class="ttname"><a href="classSVG_1_1IElement.html#a6e8199267ad4fc4807c7ed3be272923c">SVG::IElement::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::Element &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ielement.hpp:212</div></div>
+<div class="ttc" id="classSVG_1_1Rectangle_html_aedb55ebbd6cf2743bf3ca96529b9aafe"><div class="ttname"><a href="classSVG_1_1Rectangle.html#aedb55ebbd6cf2743bf3ca96529b9aafe">SVG::Rectangle::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> rectangle.hpp:75</div></div>
 <div class="ttc" id="classSVG_1_1Rectangle_html_a1bab6b6f06a5e33988b5ca1b0b25684e"><div class="ttname"><a href="classSVG_1_1Rectangle.html#a1bab6b6f06a5e33988b5ca1b0b25684e">SVG::Rectangle::Rectangle</a></div><div class="ttdeci">Rectangle(int x, int y, int width, int height, int rx, int ry)</div><div class="ttdef"><b>Definition:</b> rectangle.hpp:42</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 20 2016 16:40:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 23 2016 14:11:29 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

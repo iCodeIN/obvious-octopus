@@ -4,7 +4,7 @@
 <meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.7"/>
-<title>My Project: numeric::Distribution&lt; T &gt; Class Template Reference</title>
+<title>My Project: numeric::Distribution&lt; X, Y &gt; Class Template Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -97,7 +97,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classnumeric_1_1Distribution-members.html">List of all members</a>  </div>
   <div class="headertitle">
-<div class="title">numeric::Distribution&lt; T &gt; Class Template Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
+<div class="title">numeric::Distribution&lt; X, Y &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
@@ -105,198 +105,43 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:abf0af204b09258a6322a5fbabcbc7198"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> = std::map&lt; T, int &gt;</td></tr>
-<tr class="separator:abf0af204b09258a6322a5fbabcbc7198"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a433b9d2922d8ded4afe2cc691bd96e6d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> = std::map&lt; T, double &gt;</td></tr>
-<tr class="separator:a433b9d2922d8ded4afe2cc691bd96e6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2c6fff7e6087c3a130827d19be73f392"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2c6fff7e6087c3a130827d19be73f392"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>DistributionType</b> = std::map&lt; X, Y &gt;</td></tr>
+<tr class="separator:a2c6fff7e6087c3a130827d19be73f392"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:afa60340a852e34e6a8d3afdaf19cf5b7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afa60340a852e34e6a8d3afdaf19cf5b7"></a>
-static const <br class="typebreak" />
-<a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>makeRelative</b> (const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;d)</td></tr>
-<tr class="separator:afa60340a852e34e6a8d3afdaf19cf5b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a06f7223da8fb542acc5255bf48b874d3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a06f7223da8fb542acc5255bf48b874d3"></a>
-static const <br class="typebreak" />
-<a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>makeAbsolute</b> (const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;d, int total)</td></tr>
-<tr class="separator:a06f7223da8fb542acc5255bf48b874d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8e53c399fa14517ab1f726423beb90c4"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a8e53c399fa14517ab1f726423beb90c4">avg</a> (const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;d)</td></tr>
-<tr class="separator:a8e53c399fa14517ab1f726423beb90c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aafff0d007dc9f87e3337f76573883182"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#aafff0d007dc9f87e3337f76573883182">avg</a> (const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;d)</td></tr>
-<tr class="separator:aafff0d007dc9f87e3337f76573883182"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a406246bf6c15119f4316f5782566ceb7"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a406246bf6c15119f4316f5782566ceb7">dev</a> (const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;d)</td></tr>
-<tr class="separator:a406246bf6c15119f4316f5782566ceb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a571e63d9506749b0742e93ce41bb4963"><td class="memItemLeft" align="right" valign="top">static const double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a571e63d9506749b0742e93ce41bb4963">dev</a> (const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;d)</td></tr>
-<tr class="separator:a571e63d9506749b0742e93ce41bb4963"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1db312eb72dad2c14976e942c60152b8"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a1db312eb72dad2c14976e942c60152b8"></a>
-static const <br class="typebreak" />
-<a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> (const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;d, double p)</td></tr>
-<tr class="separator:a1db312eb72dad2c14976e942c60152b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad49abea550b08d51f31a14e0265ef1c3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ad49abea550b08d51f31a14e0265ef1c3"></a>
-static const <br class="typebreak" />
-<a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> (const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;d, double p)</td></tr>
-<tr class="separator:ad49abea550b08d51f31a14e0265ef1c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a02eb2002bd2ded01881b45581ebb0dbe"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a02eb2002bd2ded01881b45581ebb0dbe"></a>
-static const <br class="typebreak" />
-<a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> (const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;d, double p)</td></tr>
-<tr class="separator:a02eb2002bd2ded01881b45581ebb0dbe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a40893a2b96f8f00fc9f9659ea8679fae"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a40893a2b96f8f00fc9f9659ea8679fae"></a>
-static const <br class="typebreak" />
-<a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> (const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;d, double p)</td></tr>
-<tr class="separator:a40893a2b96f8f00fc9f9659ea8679fae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46c7eaca9157f2cbc08f143006b7b27f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a46c7eaca9157f2cbc08f143006b7b27f"></a>
+static const DistributionType&#160;</td><td class="memItemRight" valign="bottom"><b>relative</b> (const DistributionType &amp;d)</td></tr>
+<tr class="separator:a46c7eaca9157f2cbc08f143006b7b27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f84be113dc9e280133a949ba18f1300"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5f84be113dc9e280133a949ba18f1300"></a>
+static const DistributionType&#160;</td><td class="memItemRight" valign="bottom"><b>absolute</b> (const DistributionType &amp;d, const Y &amp;total)</td></tr>
+<tr class="separator:a5f84be113dc9e280133a949ba18f1300"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c4c0d58d34eb26450b6fb31b300237b"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0c4c0d58d34eb26450b6fb31b300237b"></a>
+static const Y&#160;</td><td class="memItemRight" valign="bottom"><b>avg</b> (const DistributionType &amp;d)</td></tr>
+<tr class="separator:a0c4c0d58d34eb26450b6fb31b300237b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3a81305af24cefab1a55b4e5c1f7fc4e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a3a81305af24cefab1a55b4e5c1f7fc4e"></a>
+static const Y&#160;</td><td class="memItemRight" valign="bottom"><b>dev</b> (const DistributionType &amp;d)</td></tr>
+<tr class="separator:a3a81305af24cefab1a55b4e5c1f7fc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b840084aac5bca95cd790c933c58600"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b840084aac5bca95cd790c933c58600"></a>
+static const DistributionType&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> (const DistributionType &amp;d, double p)</td></tr>
+<tr class="separator:a2b840084aac5bca95cd790c933c58600"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a76777f506361af711663dc1092ccd4cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76777f506361af711663dc1092ccd4cc"></a>
+static const DistributionType&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> (const DistributionType &amp;d, double p)</td></tr>
+<tr class="separator:a76777f506361af711663dc1092ccd4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><h3>template&lt;typename T&gt;<br />
-class numeric::Distribution&lt; T &gt;</h3>
+<div class="textblock"><h3>template&lt;typename X, typename Y&gt;<br />
+class numeric::Distribution&lt; X, Y &gt;</h3>
 
 <p>In probability and statistics, a probability distribution is a mathematical description of a random phenomenon in terms of the probabilities of events. Examples of random phenomena include the results of an experiment or survey. A probability distribution is defined in terms of an underlying sample space, which is the set of all possible outcomes of the random phenomenon being observed. The sample space may be the set of real numbers or a higher-dimensional vector space, or it may be a list of non-numerical values. </p>
-</div><h2 class="groupheader">Member Typedef Documentation</h2>
-<a class="anchor" id="abf0af204b09258a6322a5fbabcbc7198"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; T &gt;::<a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> =  std::map&lt;T, int&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>The count of how many data values fall into a certain class constitutes the frequency for this class </p>
-
-</div>
-</div>
-<a class="anchor" id="a433b9d2922d8ded4afe2cc691bd96e6d"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-      <table class="memname">
-        <tr>
-          <td class="memname">using <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; T &gt;::<a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> =  std::map&lt;T, double&gt;</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Relative frequency is a measure of what proportion or percent of the data values fall into a particular class </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a8e53c399fa14517ab1f726423beb90c4"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static const double <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; T &gt;::avg </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>In colloquial language, an average is the sum of a list of numbers divided by the number of numbers in the list. In mathematics and statistics, this would be called the arithmetic mean. </p>
-
-</div>
-</div>
-<a class="anchor" id="aafff0d007dc9f87e3337f76573883182"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static const double <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; T &gt;::avg </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>In colloquial language, an average is the sum of a list of numbers divided by the number of numbers in the list. In mathematics and statistics, this would be called the arithmetic mean. </p>
-
-</div>
-</div>
-<a class="anchor" id="a406246bf6c15119f4316f5782566ceb7"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static const double <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; T &gt;::dev </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnumeric_1_1Distribution.html#a433b9d2922d8ded4afe2cc691bd96e6d">RelativeDistributionType</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>In mathematics and statistics, deviation is a measure of difference between the observed value of a variable and some other value, often that variable's mean. The sign of the deviation (positive or negative), reports the direction of that difference (the deviation is positive when the observed value exceeds the reference value). The magnitude of the value indicates the size of the difference. </p>
-
-</div>
-</div>
-<a class="anchor" id="a571e63d9506749b0742e93ce41bb4963"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T &gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">static const double <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; T &gt;::dev </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classnumeric_1_1Distribution.html#abf0af204b09258a6322a5fbabcbc7198">AbsoluteDistributionType</a> &amp;&#160;</td>
-          <td class="paramname"><em>d</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>In mathematics and statistics, deviation is a measure of difference between the observed value of a variable and some other value, often that variable's mean. The sign of the deviation (positive or negative), reports the direction of that difference (the deviation is positive when the observed value exceeds the reference value). The magnitude of the value indicates the size of the difference. </p>
-
-</div>
-</div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+</div><hr/>The documentation for this class was generated from the following file:<ul>
 <li>numeric/<a class="el" href="distribution_8hpp_source.html">distribution.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 20 2016 16:40:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 23 2016 14:11:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
