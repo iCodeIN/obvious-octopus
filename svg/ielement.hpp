@@ -15,7 +15,12 @@ namespace SVG
     class IElement
     {
         public:
+            /*! constructor
+             */
             explicit IElement() = default;
+
+            /*! destructor
+             */
             virtual ~IElement() = default;
 
             /*! Prohibit const copy constructor
