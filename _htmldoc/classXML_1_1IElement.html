@@ -137,6 +137,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a38b4ce4a24c4f49e78e67686a84cabbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27df8b22df4ea2cf2bc9a6ea78afca59"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classXML_1_1IElement.html">IElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#a27df8b22df4ea2cf2bc9a6ea78afca59">getChild</a> (int i) const =0</td></tr>
 <tr class="separator:a27df8b22df4ea2cf2bc9a6ea78afca59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aacbc0fa0409fe582d68ab9d0e95bfe08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#aacbc0fa0409fe582d68ab9d0e95bfe08">hasChildByName</a> (const std::string &amp;name) const </td></tr>
+<tr class="separator:aacbc0fa0409fe582d68ab9d0e95bfe08"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0ed563a930572a1368cda2210226e06"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="classXML_1_1IElement.html">IElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#ae0ed563a930572a1368cda2210226e06">getChildByName</a> (const std::string &amp;name) const </td></tr>
+<tr class="separator:ae0ed563a930572a1368cda2210226e06"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7ea322ad4bafd28d56cf6c3116d28982"><td class="memItemLeft" align="right" valign="top">const std::vector<br class="typebreak" />
+&lt; std::reference_wrapper<br class="typebreak" />
+&lt; const <a class="el" href="classXML_1_1IElement.html">IElement</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#a7ea322ad4bafd28d56cf6c3116d28982">getChildrenByName</a> (const std::string &amp;name) const </td></tr>
+<tr class="separator:a7ea322ad4bafd28d56cf6c3116d28982"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abb840142ff4089bada758c67011a5a75"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#abb840142ff4089bada758c67011a5a75">hasChild</a> (int i) const =0</td></tr>
 <tr class="separator:abb840142ff4089bada758c67011a5a75"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46ac1b197e10fb363e045f2ee34ebf41"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#a46ac1b197e10fb363e045f2ee34ebf41">setAttribute</a> (const std::string &amp;attribute, const std::string &amp;value)=0</td></tr>
@@ -387,6 +395,68 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ae0ed563a930572a1368cda2210226e06"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="classXML_1_1IElement.html">IElement</a>&amp; XML::IElement::getChildByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the Element with given name in this Element's content list. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the (child) Element </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a7ea322ad4bafd28d56cf6c3116d28982"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const std::vector&lt;std::reference_wrapper&lt;const <a class="el" href="classXML_1_1IElement.html">IElement</a>&gt; &gt; XML::IElement::getChildrenByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the Element(s) with given name in this Element's content list. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the (child) Element(s) </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="a4e1fd787133c7c3bcf306b25d6b83cb3"></a>
 <div class="memitem">
 <div class="memproto">
@@ -502,6 +572,37 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a68c460d885845be8b2bae0c012085915">XML::BoostElementImpl</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aacbc0fa0409fe582d68ab9d0e95bfe08"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool XML::IElement::hasChildByName </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true if there is an (child) Element with given name in this Element's content list. </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">name</td><td>the name of the (child) Element </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
@@ -867,7 +968,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 23 2016 14:11:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Oct 27 2016 12:18:28 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

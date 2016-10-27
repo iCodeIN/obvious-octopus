@@ -1,6 +1,5 @@
 /home/joris/Code/cdev_boost/numeric/weightedsampling.hpp:18: warning: Compound numeric::WeightedSampling is not documented.
 /home/joris/Code/cdev_boost/numeric/ismoothdistribution.hpp:9: warning: Compound numeric::ISmoothDistribution is not documented.
-/home/joris/Code/cdev_boost/xml/graphml.hpp:10: warning: Compound XML::GraphML is not documented.
 /home/joris/Code/cdev_boost/graph_ui/defaultgraphrenderer.hpp:23: warning: Compound graphUI::DefaultGraphRenderer is not documented.
 /home/joris/Code/cdev_boost/game/minimax.hpp:22: warning: Member GamePlayType (typedef) of class game::Minimax is not documented.
 /home/joris/Code/cdev_boost/game/minimax.hpp:23: warning: Member EvaluationFunctionType (typedef) of class game::Minimax is not documented.
@@ -33,6 +32,4 @@
 /home/joris/Code/cdev_boost/svg/path.hpp:19: warning: Member Path(std::vector< PathCommand > cmds) (function) of class SVG::Path is not documented.
 /home/joris/Code/cdev_boost/tree/bktree.hpp:56: warning: Member find(const T &data, int diff) const  (function) of class tree::BKTree is not documented.
 /home/joris/Code/cdev_boost/xml/boostelementimpl.hpp:78: warning: Member add(std::unique_ptr< XML::IElement > n) override (function) of class XML::BoostElementImpl is not documented.
-/home/joris/Code/cdev_boost/xml/graphml.hpp:14: warning: Member operator<<(std::ostream &os, const graph::AdjecenyListGraph &g) (friend) of class XML::GraphML is not documented.
-/home/joris/Code/cdev_boost/xml/graphml.hpp:19: warning: Member operator>>(std::istream &is, graph::AdjecenyListGraph &e) (friend) of class XML::GraphML is not documented.
-/home/joris/Code/cdev_boost/xml/ielement.hpp:27: warning: argument 'name' of command @param is not found in the argument list of XML::IElement::IElement()
+/home/joris/Code/cdev_boost/xml/ielement.hpp:29: warning: argument 'name' of command @param is not found in the argument list of XML::IElement::IElement()

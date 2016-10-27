@@ -1,6 +1,8 @@
 #ifndef XML_IELEMENT_HPP
 #define XML_IELEMENT_HPP
 
+#include <assert.h>
+#include <functional>
 #include <istream>
 #include <map>
 #include <memory>
@@ -80,6 +82,61 @@ namespace XML
             	 \param[in] i	the index of the (child) Element
              */
             virtual const IElement& getChild(int i) const = 0;
+
+            /*! \returns true if there is an (child) Element with given name in this Element's content list.
+            	 \param[in] name	the name of the (child) Element
+             */
+            bool hasChildByName(const std::string &name) const
+            {
+                auto i = 0;
+                while(hasChild(i))
+                {
+                    auto &child = getChild(i);
+                    if(child.getName() == name)
+                    {
+                        return true;
+                    }
+                    i++;
+                }
+                return false;
+            }
+
+            /*! \returns the Element with given name in this Element's content list.
+            	 \param[in] name	the name of the (child) Element
+             */
+            const IElement& getChildByName(const std::string &name) const
+            {
+                assert(hasChildByName(name));
+                auto i = 0;
+                while(hasChild(i))
+                {
+                    auto &child = getChild(i);
+                    if(child.getName() == name)
+                    {
+                        return child;
+                    }
+                    i++;
+                }
+            }
+
+            /*! \returns the Element(s) with given name in this Element's content list.
+            	 \param[in] name	the name of the (child) Element(s)
+             */
+            const std::vector<std::reference_wrapper<const IElement>> getChildrenByName(const std::string &name) const
+            {
+                std::vector<std::reference_wrapper<const IElement>> retval;
+                auto i = 0;
+                while(hasChild(i))
+                {
+                    auto &child = getChild(i);
+                    if(child.getName() == name)
+                    {
+                        retval.push_back(std::cref(child));
+                    }
+                    i++;
+                }
+                return retval;
+            }
 
             /*! \returns true if there is an (child) Element at given index in this Element's content list.
             	 \param[in] i	the index of the (child) Element

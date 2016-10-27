@@ -161,23 +161,11 @@ namespace XML
                 return m_attributes;
             }
 
-            /*! Writes an Element to an std::ostream
-             	 \param[in] os	std::ostream to write the XML::Element to
-            	 \param[in] e	XML::Element to stream
-             */
-            friend std::ostream& operator<<(std::ostream& os, const XML::IElement* e)
-            {
-                boost::property_tree::ptree tree;
-                toTree(e, "", tree);
-                boost::property_tree::write_xml(os, tree, boost::property_tree::xml_writer_make_settings<std::string>('	', 1));
-                return os;
-            }
-
             /*! Reads an Element from an std::istream
              	 \param[in] is	std::istream to read the XML::Element from
             	 \param[in] e	XML::Element to stream
              */
-            friend std::istream& operator>>(std::istream& is, XML::IElement* e)
+            friend std::istream& operator>>(std::istream& is, XML::IElement &e)
             {
                 boost::property_tree::ptree tree;
                 boost::property_tree::read_xml(is, tree);
@@ -185,45 +173,58 @@ namespace XML
                 return is;
             }
 
+            /*! Writes an Element to an std::ostream
+                 	 \param[in] os	std::ostream to write the XML::Element to
+                	 \param[in] e	XML::Element to stream
+                 */
+            friend std::ostream& operator<<(std::ostream& os, const XML::IElement &e)
+            {
+                boost::property_tree::ptree tree;
+                toTree(e, "", tree);
+                boost::property_tree::write_xml(os, tree, boost::property_tree::xml_writer_make_settings<std::string>('	', 1));
+                return os;
+            }
+
         private:
             // --- Methods ---
-
             /*!
-             */
-            static void toTree(const XML::IElement* e, const std::string &path, boost::property_tree::ptree &tree)
+                 */
+            static void toTree(const XML::IElement &e, const std::string &path, boost::property_tree::ptree &tree)
             {
-                std::string newPath = path.empty() ? e->getName() : path + "." + e->getName();
+                std::string newPath = path.empty() ? e.getName() : path + "." + e.getName();
 
                 // put text
-                auto &it = tree.add(newPath, e->getText());
+                auto &it = tree.add(newPath, e.getText());
 
                 // process attributes
-                for(auto pair : e->getAttributes())
+                for(auto pair : e.getAttributes())
                 {
                     it.add("<xmlattr>." + pair.first, pair.second);
                 }
 
                 // process children
                 int i = 0;
-                while(e->hasChild(i))
+                while(e.hasChild(i))
                 {
-                    toTree(&(e->getChild(i)), newPath, tree);
+                    toTree(e.getChild(i), newPath, tree);
                     i++;
                 }
             }
 
+
+
             /*!
              */
-            static void fromTree(XML::IElement* e, const boost::property_tree::ptree &tree)
+            static void fromTree(XML::IElement &e, const boost::property_tree::ptree &tree)
             {
                 /* The first level of a boost::property_tree::ptree is always empty.
                 	When the recursion 'fromTree' start, the element does not have a name.
                 	This condition enables the algorithm to skip the empty root and move on to the 'real' root of the XML tree.
                  */
-                if(e->getName().empty())
+                if(e.getName().empty())
                 {
                     auto realRoot = *(tree.begin());
-                    e->setName(realRoot.first);
+                    e.setName(realRoot.first);
                     fromTree(e, realRoot.second);
                     return;
                 }
@@ -239,18 +240,17 @@ namespace XML
                         // process attributes
                         for(auto attrChild : child.second)
                         {
-                            e->setAttribute(attrChild.first, attrChild.second.get_value<std::string>());
+                            e.setAttribute(attrChild.first, attrChild.second.get_value<std::string>());
                         }
                     }
                     // else we are dealing with regular XML child-nodes
                     else
                     {
                         auto childPtr = std::unique_ptr<XML::IElement>(new XML::BoostElementImpl(name));
-                        fromTree(childPtr.get(), child.second);
-                        e->add(std::move(childPtr));
+                        fromTree(*(childPtr.get()), child.second);
+                        e.add(std::move(childPtr));
                     }
                 }
-
             }
             // --- Members ---
             std::string 									m_name;			//!< name

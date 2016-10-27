@@ -71,7 +71,7 @@ namespace graph
                     std::cout << pair.first << " : ";
                     for(auto &vertex : pair.second)
                     {
-                        //std::cout << vertex << "[" << (reverseVertexMapping.find(vertex) != reverseVertexMapping.end() ? reverseVertexMapping[vertex] : "dummy") << "]\t";
+                        std::cout << vertex << "\t";
                     }
                     std::cout << std::endl;
                 }
@@ -219,14 +219,13 @@ namespace graph
                     vertexMap[vertex] = id;
                     layerMap[id] = layerInformation.find(vertex)->second;
                 });
+                auto nextId = vertexMap.size();
 
                 // DEBUG
                 for(auto &pair : vertexMap)
                 {
                     std::cout << pair.first << "\t:\t" << pair.second << "\t(" << layerMap[pair.second] << ")" << std::endl;
                 }
-
-                // #TODO
 
                 // if an edge connects two vertices on layers that are more than 1 level apart, dummy vertices and edges need to be made
                 for(auto &originalSource : graph.vertices())
@@ -245,15 +244,10 @@ namespace graph
                             /* If sourceLayer and targetLayer differ, sourceLayer must be larger
                                 since we only allow links from 'higher' layer to 'lower' layers
                              */
-                            if(sourceLayer <= targetLayer)
-                            {
-                                std::cout << "from " << originalSource << " to " << originalTarget << std::endl;
-                            }
                             assert(sourceLayer > targetLayer);
 
                             std::vector<long> dummyPath;
 
-                            auto nextId = vertexMap.size();
                             for(int i=1; i<sourceLayer-targetLayer; i++)
                             {
                                 layerMap[nextId] = sourceLayer - i;
@@ -390,7 +384,7 @@ namespace graph
 
                 /* utility function to find the index of a given vertex when the permutation is applied
                  */
-                auto findIndex = [&permutation,&layer](const long vertex)
+                auto findIndex = [&permutation, &layer](const long vertex)
                 {
                     for(int i=0; i<layer.size(); i++)
                         if(layer[permutation[i]] == vertex)
@@ -405,7 +399,6 @@ namespace graph
                     auto source = prevLayer[i];
                     for(auto &target : graphWithDummies.outgoing(source))
                     {
-
                         auto targetPos = findIndex(target);
                         assert(targetPos >= 0 && targetPos < layer.size());
 
@@ -414,8 +407,8 @@ namespace graph
                             for(auto &intersectTarget : graphWithDummies.outgoing(prevLayer[j]))
                             {
                                 auto intersectTargetPos = findIndex(intersectTarget);
+                                //std::cout << "source : " << source << ", target : " << target << ", targetPos : " << targetPos << ", intersectSource : " << prevLayer[j] << ", intersectTarget : " << intersectTarget << ", intersectTargetPos : " << intersectTargetPos << std::endl;
                                 assert(intersectTargetPos >= 0 && intersectTargetPos < layer.size());
-
                                 cross += (intersectTargetPos > targetPos) ? 1 : 0;
                             }
                         }

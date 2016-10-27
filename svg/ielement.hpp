@@ -7,6 +7,7 @@
 #include <math.h>
 #include <memory>
 #include <sstream>
+#include <iostream> // debug
 
 namespace SVG
 {
@@ -209,7 +210,7 @@ namespace SVG
             {
                 auto node = e.toXML();
                 assert(node.get());
-                os << node.get();
+                os << *(static_cast<XML::BoostElementImpl*>(node.get()));
                 return os;
             }
 
