@@ -4,7 +4,7 @@
 #include <string>
 #include <memory>
 
-#include "xml/boostelementimpl.hpp"
+#include "xml/defaultelementimpl.hpp"
 #include "graph/adjecencylistgraph.hpp"
 
 #include "graph_ui/hierarchicalgraphlayout.hpp"

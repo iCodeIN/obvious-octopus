@@ -1,7 +1,7 @@
-#ifndef BOOSTELEMENTIMPL_HPP
-#define BOOSTELEMENTIMPL_HPP
+#ifndef DEFAULTELEMENTIMPL_HPP
+#define DEFAULTELEMENTIMPL_HPP
 
-#include "xml/ielement.hpp"
+#include "ielement.hpp"
 
 #include <assert.h>
 #include <istream>
@@ -12,43 +12,40 @@
 #include <string>
 #include <vector>
 
-#include <boost/property_tree/ptree.hpp>
-#include <boost/property_tree/xml_parser.hpp>
-
 namespace XML
 {
-    /*! Implementation of IElement using boost for serialization
+    /*! default implementation of IElement
      */
-    class BoostElementImpl : public XML::IElement
+    class DefaultElementImpl : public XML::IElement
     {
         public:
             /*! Constructor
             	 \param[in] name	the (local) name of the IElement (without any namespace prefix)
              */
-            explicit BoostElementImpl(const std::string &name)
+            explicit DefaultElementImpl(const std::string &name)
                 : m_name(name)
             {
             }
 
             /*! Default destructor
              */
-            virtual ~BoostElementImpl() = default;
+            virtual ~DefaultElementImpl() = default;
 
             /*! Prohibit const copy constructor
              */
-            BoostElementImpl(const BoostElementImpl&) = delete;
+            DefaultElementImpl(const DefaultElementImpl&) = delete;
 
             /*! Prohibit copy constructor
              */
-            BoostElementImpl(BoostElementImpl&) = delete;
+            DefaultElementImpl(DefaultElementImpl&) = delete;
 
             /*! Prohibit const assignment operator
              */
-            void operator=(const BoostElementImpl&) = delete;
+            void operator=(const DefaultElementImpl&) = delete;
 
             /*! Prohibit assignment operator
              */
-            void operator=(BoostElementImpl&) = delete;
+            void operator=(DefaultElementImpl&) = delete;
 
             // --- IElement ---
             void setName(const std::string &name) override
@@ -88,6 +85,11 @@ namespace XML
                 assert(hasChild(i));
                 auto it = m_children.begin() + i;
                 m_children.erase(it);
+            }
+
+            int countChildren() const override
+            {
+                return (int) m_children.size();
             }
 
             // --- IElement ---
@@ -161,97 +163,8 @@ namespace XML
                 return m_attributes;
             }
 
-            /*! Reads an Element from an std::istream
-             	 \param[in] is	std::istream to read the XML::Element from
-            	 \param[in] e	XML::Element to stream
-             */
-            friend std::istream& operator>>(std::istream& is, XML::IElement &e)
-            {
-                boost::property_tree::ptree tree;
-                boost::property_tree::read_xml(is, tree);
-                fromTree(e, tree);
-                return is;
-            }
-
-            /*! Writes an Element to an std::ostream
-                 	 \param[in] os	std::ostream to write the XML::Element to
-                	 \param[in] e	XML::Element to stream
-                 */
-            friend std::ostream& operator<<(std::ostream& os, const XML::IElement &e)
-            {
-                boost::property_tree::ptree tree;
-                toTree(e, "", tree);
-                boost::property_tree::write_xml(os, tree, boost::property_tree::xml_writer_make_settings<std::string>('	', 1));
-                return os;
-            }
-
         private:
             // --- Methods ---
-            /*!
-                 */
-            static void toTree(const XML::IElement &e, const std::string &path, boost::property_tree::ptree &tree)
-            {
-                std::string newPath = path.empty() ? e.getName() : path + "." + e.getName();
-
-                // put text
-                auto &it = tree.add(newPath, e.getText());
-
-                // process attributes
-                for(auto pair : e.getAttributes())
-                {
-                    it.add("<xmlattr>." + pair.first, pair.second);
-                }
-
-                // process children
-                int i = 0;
-                while(e.hasChild(i))
-                {
-                    toTree(e.getChild(i), newPath, tree);
-                    i++;
-                }
-            }
-
-
-
-            /*!
-             */
-            static void fromTree(XML::IElement &e, const boost::property_tree::ptree &tree)
-            {
-                /* The first level of a boost::property_tree::ptree is always empty.
-                	When the recursion 'fromTree' start, the element does not have a name.
-                	This condition enables the algorithm to skip the empty root and move on to the 'real' root of the XML tree.
-                 */
-                if(e.getName().empty())
-                {
-                    auto realRoot = *(tree.begin());
-                    e.setName(realRoot.first);
-                    fromTree(e, realRoot.second);
-                    return;
-                }
-
-                // process children
-                for(auto child : tree)
-                {
-                    auto name = child.first;
-
-                    // if the name is '<xmlattr>' then we are dealing with XML attributes
-                    if(name == "<xmlattr>")
-                    {
-                        // process attributes
-                        for(auto attrChild : child.second)
-                        {
-                            e.setAttribute(attrChild.first, attrChild.second.get_value<std::string>());
-                        }
-                    }
-                    // else we are dealing with regular XML child-nodes
-                    else
-                    {
-                        auto childPtr = std::unique_ptr<XML::IElement>(new XML::BoostElementImpl(name));
-                        fromTree(*(childPtr.get()), child.second);
-                        e.add(std::move(childPtr));
-                    }
-                }
-            }
             // --- Members ---
             std::string 									m_name;			//!< name
             std::string 									m_text;			//!< text
@@ -260,4 +173,4 @@ namespace XML
     };
 }
 
-#endif // Element_HPP
+#endif // DEFAULTELEMENTIMPL_HPP

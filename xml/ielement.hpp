@@ -78,6 +78,10 @@ namespace XML
              */
             virtual void remove(int i) = 0;
 
+            /*! \returns the number of Elements in this Element's content list
+             */
+            virtual int countChildren() const = 0;
+
             /*! \returns the Element at given index in this Element's content list.
             	 \param[in] i	the index of the (child) Element
              */

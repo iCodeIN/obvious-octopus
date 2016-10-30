@@ -31,5 +31,5 @@
 /home/joris/Code/cdev_boost/svg/path.hpp:17: warning: Member PathCommand (typedef) of class SVG::Path is not documented.
 /home/joris/Code/cdev_boost/svg/path.hpp:19: warning: Member Path(std::vector< PathCommand > cmds) (function) of class SVG::Path is not documented.
 /home/joris/Code/cdev_boost/tree/bktree.hpp:56: warning: Member find(const T &data, int diff) const  (function) of class tree::BKTree is not documented.
-/home/joris/Code/cdev_boost/xml/boostelementimpl.hpp:78: warning: Member add(std::unique_ptr< XML::IElement > n) override (function) of class XML::BoostElementImpl is not documented.
+/home/joris/Code/cdev_boost/xml/defaultelementimpl.hpp:75: warning: Member add(std::unique_ptr< XML::IElement > n) override (function) of class XML::DefaultElementImpl is not documented.
 /home/joris/Code/cdev_boost/xml/ielement.hpp:29: warning: argument 'name' of command @param is not found in the argument list of XML::IElement::IElement()

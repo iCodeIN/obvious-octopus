@@ -5,7 +5,7 @@
 #include "graph/igraph.hpp"
 #include "graph/adjecencylistgraph.hpp"
 
-#include "xml/boostelementimpl.hpp"
+#include "xml/xml.hpp"
 
 #include <assert.h>
 #include <istream>
@@ -28,7 +28,7 @@ namespace XML
     {
 
         // read element
-        auto elementPtr = new BoostElementImpl("");
+        auto elementPtr = new DefaultElementImpl("");
         is >> *elementPtr;
 
         // build graph

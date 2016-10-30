@@ -2,12 +2,11 @@
 #ifndef SVG_IELEMENT_HPP
 #define SVG_IELEMENT_HPP
 
-#include "xml/boostelementimpl.hpp"
+#include "xml/xml.hpp"
 
 #include <math.h>
 #include <memory>
 #include <sstream>
-#include <iostream> // debug
 
 namespace SVG
 {
@@ -210,7 +209,7 @@ namespace SVG
             {
                 auto node = e.toXML();
                 assert(node.get());
-                os << *(static_cast<XML::BoostElementImpl*>(node.get()));
+                os << *(static_cast<XML::DefaultElementImpl*>(node.get()));
                 return os;
             }
 
@@ -218,7 +217,7 @@ namespace SVG
              */
             virtual std::unique_ptr<XML::IElement> toXML() const
             {
-                auto node = std::unique_ptr<XML::IElement>(new XML::BoostElementImpl(""));
+                auto node = std::unique_ptr<XML::IElement>(new XML::DefaultElementImpl(""));
 
                 std::ostringstream osStyle;
                 osStyle << "fill:rgb(" << std::get<0>(m_fill) << "," << std::get<1>(m_fill) << "," << std::get<2>(m_fill) << ");";

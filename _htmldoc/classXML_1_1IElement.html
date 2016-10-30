@@ -106,7 +106,7 @@ Inheritance diagram for XML::IElement:</div>
 <div class="dyncontent">
 <div class="center"><img src="classXML_1_1IElement__inherit__graph.png" border="0" usemap="#XML_1_1IElement_inherit__map" alt="Inheritance graph"/></div>
 <map name="XML_1_1IElement_inherit__map" id="XML_1_1IElement_inherit__map">
-<area shape="rect" id="node2" href="classXML_1_1BoostElementImpl.html" title="XML::BoostElementImpl" alt="" coords="5,80,168,107"/></map>
+<area shape="rect" id="node2" href="classXML_1_1DefaultElementImpl.html" title="XML::DefaultElementImpl" alt="" coords="5,80,176,107"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
@@ -135,6 +135,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a14a40d51e6cecde2bbd059e0f4beb4c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a38b4ce4a24c4f49e78e67686a84cabbf"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#a38b4ce4a24c4f49e78e67686a84cabbf">remove</a> (int i)=0</td></tr>
 <tr class="separator:a38b4ce4a24c4f49e78e67686a84cabbf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a1e2b4dc6f81c118cf92b5254fb46b32c"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#a1e2b4dc6f81c118cf92b5254fb46b32c">countChildren</a> () const =0</td></tr>
+<tr class="separator:a1e2b4dc6f81c118cf92b5254fb46b32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a27df8b22df4ea2cf2bc9a6ea78afca59"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="classXML_1_1IElement.html">IElement</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#a27df8b22df4ea2cf2bc9a6ea78afca59">getChild</a> (int i) const =0</td></tr>
 <tr class="separator:a27df8b22df4ea2cf2bc9a6ea78afca59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aacbc0fa0409fe582d68ab9d0e95bfe08"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classXML_1_1IElement.html#aacbc0fa0409fe582d68ab9d0e95bfe08">hasChildByName</a> (const std::string &amp;name) const </td></tr>
@@ -303,6 +305,32 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a1e2b4dc6f81c118cf92b5254fb46b32c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int XML::IElement::countChildren </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the number of Elements in this Element's content list </dd></dl>
+
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a57740f84580917649449374dbf212a50">XML::DefaultElementImpl</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a5f3d0289bb05a1fc856f7cddddbb3097"></a>
 <div class="memitem">
 <div class="memproto">
@@ -332,7 +360,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a8e5d7d194667e6615118bacd172628a6">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a17aa0fcd4fdbe46ffc2115569a13bf31">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -358,7 +386,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>all attribute/value pairs </dd></dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a2181e24a9f705bcc94355c742b36f4d0">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#afcacb58c3b7394b97cb7ae956bf08a63">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -391,7 +419,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a531c5c826a906c04323fc72c1b6a19e9">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a2a34a865576782fbb7ec6adf25ef47d3">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -479,7 +507,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the (local) name of this Element (without any namespace prefix). </dd></dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a5efde42198169dcde92f8a338e850d44">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a9c5b487b98958723b937028a9285975e">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -505,7 +533,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>the content of this Element </dd></dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a32c027dfe886e814f9d8d79052335c49">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#aa5aaa4354c7932e4c21e8e8241487c64">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -538,7 +566,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#ab5663cdfaced77c1fe5d028f9c72c121">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a32f04db8d39a6a633210b2959edfce71">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -571,7 +599,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a68c460d885845be8b2bae0c012085915">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a3ac0dd9f5c82e47b0e7afceb7778ce0f">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -684,7 +712,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a6f8622d0a388e36a78a99d710d98c945">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a8424f74181228ec2c74ec4c62746aa9f">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -727,7 +755,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a4815b40697eb5c642c9fc8a8ac0c4cb1">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a3022530e8bf3e26bec5eabf044d21651">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -770,7 +798,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#aca93e9ad4865b7a54a9ebbd1c1223d2d">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#aed9b0a0ff3b3a198d54e476961524895">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -813,7 +841,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#afbe54ddc2c285d36fae8c740aaebd948">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a38547a6702e6aaeeb7a8b24acb7a76dc">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -856,7 +884,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#acb85ae529d3a319326395e39c9b9ae99">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a69173b24ddd7639899b83b4ec97f188d">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -899,7 +927,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#a28533ab3e1d0a84a844ad7fcb7f64b3f">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#aac1be097b60b498ebf0a880dc4897792">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -926,7 +954,7 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 <p>Set the (local) name of this Element (without any namespace prefix). </p>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#ae096e911de1d5fc716f13b523d11ba03">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a3e5e12d8f89190ca760fd217962fd133">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -958,7 +986,7 @@ Public Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p>Implemented in <a class="el" href="classXML_1_1BoostElementImpl.html#aade00ef4cdb4daf994f5627f8e637538">XML::BoostElementImpl</a>.</p>
+<p>Implemented in <a class="el" href="classXML_1_1DefaultElementImpl.html#a00519c4ea5bc2046124ec243e8f913ae">XML::DefaultElementImpl</a>.</p>
 
 </div>
 </div>
@@ -968,7 +996,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Oct 27 2016 12:18:28 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Oct 30 2016 19:15:46 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
