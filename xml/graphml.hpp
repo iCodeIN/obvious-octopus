@@ -16,15 +16,51 @@ namespace XML
 {
     /*!
      */
-    static std::ostream& operator<<(std::ostream& os, const graph::IGraph<std::string>* g)
+    static std::ostream& operator<<(std::ostream& os, const graph::IGraph<std::string> &g)
     {
         // build xml
+        auto rootElementPtr = new DefaultElementImpl("graphml");
+
+        auto graphElementPtr = std::unique_ptr<IElement>(new DefaultElementImpl("graph"));
+        graphElementPtr->setAttribute("id", "G");
+        graphElementPtr->setAttribute("edgedefault", "directed");
+
+        for(auto &vertex : g.vertices())
+        {
+            auto nodeElementPtr = std::unique_ptr<IElement>(new DefaultElementImpl("node"));
+            nodeElementPtr->setAttribute("id", vertex);
+            graphElementPtr->add(std::move(nodeElementPtr));
+        }
+        auto edgeId = 0;
+        for(auto &vertex0 : g.vertices())
+        {
+            for(auto &vertex1 : g.vertices())
+            {
+                if(g.hasEdge(vertex0, vertex1))
+                {
+                    auto edgeElementPtr = std::unique_ptr<IElement>(new DefaultElementImpl("edge"));
+                    edgeElementPtr->setAttribute("id", edgeId);
+                    edgeElementPtr->setAttribute("source", vertex0);
+                    edgeElementPtr->setAttribute("target", vertex1);
+                    graphElementPtr->add(std::move(edgeElementPtr));
+                    edgeId++;
+                }
+            }
+        }
+
+        // add graph element to root element
+        rootElementPtr->add(std::move(graphElementPtr));
+
         // persist xml
+        os << *rootElementPtr;
+
         // return
         return os;
     }
 
-    static std::istream& operator>>(std::istream& is, graph::IGraph<std::string>* graphPtr)
+    /*!
+     */
+    static std::istream& operator>>(std::istream& is, graph::IGraph<std::string> &g)
     {
 
         // read element
@@ -41,7 +77,6 @@ namespace XML
         auto isGraphDirected = graphElement.getAttribute("edgedefault") == "directed";
 
         // vertices
-        assert(graphPtr != nullptr);
         for(auto vertexElement : graphElement.getChildrenByName("node"))
         {
         }
@@ -55,14 +90,14 @@ namespace XML
             if(isGraphDirected)
             {
                 // add edge
-                graphPtr->insertEdge(source, target);
+                g.insertEdge(source, target);
             }
             else
             {
                 // add edge
-                graphPtr->insertEdge(source, target);
+                g.insertEdge(source, target);
                 // add reverse edge
-                graphPtr->insertEdge(target, source);
+                g.insertEdge(target, source);
             }
         }
 

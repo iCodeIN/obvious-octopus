@@ -35,7 +35,7 @@ int main()
 
     // read graph
     auto graphPtr = (graph::IGraph<string>*) new AdjecencyListGraph<string>();
-    ifs >> graphPtr;
+    ifs >> *graphPtr;
 
     // set preferences for pixel size of vertices
     auto vertexSize = 30;
@@ -68,6 +68,11 @@ int main()
     myfile.open ("demo_graph_output.svg");
     auto imgPtr = img.get();
     myfile << *imgPtr << std::endl;
+    myfile.close();
+
+    // persist graph
+    myfile.open("graphml_out.xml");
+    myfile << *graphPtr;
     myfile.close();
 
     return 0;
