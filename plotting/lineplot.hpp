@@ -97,6 +97,9 @@ namespace plotting
                 background.get()->setFill(255,255,255);
                 img.get()->add(std::move(background));
 
+                // calculate appropropriate stroke width
+                auto sw = std::min( (double) maxX / (double) m_width, (double) maxY / (double) m_height);
+
                 // Add each series to the svg
                 auto colors = SVG::HSV::equidistant(m_series.size());
                 for(int i=0; i<m_series.size(); i++)
@@ -107,7 +110,7 @@ namespace plotting
                     auto polyline = std::unique_ptr<SVG::Polyline>(new SVG::Polyline(s));
                     auto rgb = SVG::HSV::toRGB(colors[i]);
                     polyline.get()->setStroke(std::get<0>(rgb), std::get<1>(rgb), std::get<2>(rgb));
-                    polyline.get()->setStrokeWidth(0.2);
+                    polyline.get()->setStrokeWidth(sw);
                     polyline.get()->setStrokeOpacity(1.0);
                     img.get()->add(std::move(polyline));
                 }

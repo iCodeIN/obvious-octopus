@@ -95,14 +95,17 @@ namespace plotting
                 img.get()->setHeight(m_height);
 
                 // Add white background
-                auto background = std::unique_ptr<Rectangle>(new Rectangle(0, 0, maxX, maxY));
+                auto background = std::unique_ptr<SVG::Rectangle>(new SVG::Rectangle(0, 0, maxX, maxY));
                 background.get()->setStrokeWidth(0);
                 background.get()->setFillOpacity(1.0);
                 background.get()->setFill(255,255,255);
                 img.get()->add(std::move(background));
 
+                // calculate appropropriate stroke width
+                auto sw = std::min( (double) maxX / (double) m_width, (double) maxY / (double) m_height);
+
                 // Add each series to the svg
-                auto colors = HSV::equidistant(m_series.size());
+                auto colors = SVG::HSV::equidistant(m_series.size());
                 for(int i=0; i<m_series.size(); i++)
                 {
                     auto s = m_series[i];
@@ -119,10 +122,10 @@ namespace plotting
                     }
 
                     // Set the color of each line
-                    auto polyline = std::unique_ptr<Polygon>(new Polygon(sRef));
-                    auto rgb = HSV::toRGB(colors[i]);
+                    auto polyline = std::unique_ptr<SVG::Polygon>(new SVG::Polygon(sRef));
+                    auto rgb = SVG::HSV::toRGB(colors[i]);
                     polyline.get()->setStroke(std::get<0>(rgb), std::get<1>(rgb), std::get<2>(rgb));
-                    polyline.get()->setStrokeWidth(0.2);
+                    polyline.get()->setStrokeWidth(sw);
                     polyline.get()->setStrokeOpacity(1.0);
                     polyline.get()->setFillOpacity(1.0);
                     polyline.get()->setFill(std::get<0>(rgb), std::get<1>(rgb), std::get<2>(rgb));

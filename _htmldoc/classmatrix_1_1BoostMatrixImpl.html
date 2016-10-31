@@ -94,6 +94,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classmatrix_1_1BoostMatrixImpl-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">matrix::BoostMatrixImpl Class Reference</div>  </div>
@@ -149,6 +150,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af9ccc72c8f2e073a94136325a5a005de inherit pub_methods_classmatrix_1_1IMatrix"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a09fc99aa085940e8e4702513b85d51f5 inherit pub_methods_classmatrix_1_1IMatrix"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmatrix_1_1IMatrix.html#a09fc99aa085940e8e4702513b85d51f5">max</a> ()</td></tr>
 <tr class="separator:a09fc99aa085940e8e4702513b85d51f5 inherit pub_methods_classmatrix_1_1IMatrix"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
+Static Public Member Functions</h2></td></tr>
+<tr class="memitem:ab2c79dee38dcb56a4b32d7284844de59"><td class="memItemLeft" align="right" valign="top">static std::unique_ptr&lt; <a class="el" href="classmatrix_1_1IMatrix.html">IMatrix</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classmatrix_1_1BoostMatrixImpl.html#ab2c79dee38dcb56a4b32d7284844de59">rand</a> (int <a class="el" href="classmatrix_1_1BoostMatrixImpl.html#abbe9a2c8e9aa57a80e0f35a71f0c8e06">rows</a>, int <a class="el" href="classmatrix_1_1BoostMatrixImpl.html#a07746e5540b51ea610548afcc25344bf">cols</a>)</td></tr>
+<tr class="separator:ab2c79dee38dcb56a4b32d7284844de59"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Implementation of <a class="el" href="classmatrix_1_1IMatrix.html">IMatrix</a> using boost matrix type </p>
@@ -309,6 +315,48 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ab2c79dee38dcb56a4b32d7284844de59"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static std::unique_ptr&lt;<a class="el" href="classmatrix_1_1IMatrix.html">IMatrix</a>&gt; matrix::BoostMatrixImpl::rand </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>rows</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>cols</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a matrix of given dimensions, with random elements </dd></dl>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">rows</td><td>number of rows to allocate </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">cols</td><td>number of columns to allocate </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a class="anchor" id="abbe9a2c8e9aa57a80e0f35a71f0c8e06"></a>
 <div class="memitem">
 <div class="memproto">
@@ -410,7 +458,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Oct 30 2016 20:45:43 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Oct 31 2016 21:24:13 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

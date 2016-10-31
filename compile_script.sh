@@ -1,6 +1,6 @@
 # variable declarations
 BOOST='/home/joris/Downloads/boost_1_60_0'
-MYDIR='/home/joris/Code/cdev_boost/'
+MYDIR='/home/joris/Code/alexandria/'
 
 EXEC_OUT_NAME='GraphLayout'
 DOXY_OUT_NAME='_htmldoc'

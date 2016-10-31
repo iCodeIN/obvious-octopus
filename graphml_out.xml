@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<graphml>
+	<graph edgedefault="directed" id="G">
+		<node id="n0"/>
+		<node id="n1"/>
+		<node id="n10"/>
+		<node id="n11"/>
+		<node id="n12"/>
+		<node id="n13"/>
+		<node id="n2"/>
+		<node id="n3"/>
+		<node id="n4"/>
+		<node id="n5"/>
+		<node id="n6"/>
+		<node id="n7"/>
+		<node id="n8"/>
+		<node id="n9"/>
+		<edge id="0" source="n0" target="n11"/>
+		<edge id="1" source="n0" target="n5"/>
+		<edge id="2" source="n1" target="n4"/>
+		<edge id="3" source="n2" target="n4"/>
+		<edge id="4" source="n2" target="n5"/>
+		<edge id="5" source="n2" target="n6"/>
+		<edge id="6" source="n3" target="n6"/>
+		<edge id="7" source="n3" target="n7"/>
+		<edge id="8" source="n4" target="n10"/>
+		<edge id="9" source="n5" target="n10"/>
+		<edge id="10" source="n5" target="n9"/>
+		<edge id="11" source="n6" target="n8"/>
+		<edge id="12" source="n6" target="n9"/>
+		<edge id="13" source="n7" target="n8"/>
+		<edge id="14" source="n7" target="n9"/>
+		<edge id="15" source="n8" target="n12"/>
+		<edge id="16" source="n8" target="n13"/>
+		<edge id="17" source="n9" target="n11"/>
+		<edge id="18" source="n9" target="n12"/>
+	</graph>
+</graphml>

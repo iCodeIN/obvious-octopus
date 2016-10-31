@@ -5,6 +5,7 @@
 
 #include <assert.h>
 #include <boost/numeric/ublas/matrix.hpp>
+#include <random>
 
 namespace matrix
 {
@@ -24,9 +25,33 @@ namespace matrix
             {
                 assert(rows >= 0 && cols >= 0);
             }
+
             /*! destructor
              */
             virtual ~BoostMatrixImpl() = default;
+
+            /*! \returns a matrix of given dimensions, with random elements
+                \param[in] rows number of rows to allocate
+                \param[in] cols number of columns to allocate
+             */
+            static std::unique_ptr<IMatrix> rand(int rows, int cols)
+            {
+                // random
+                std::default_random_engine generator;
+                std::uniform_real_distribution<double> distribution(0,1);
+
+                // matrix
+                auto m = std::unique_ptr<IMatrix>(new BoostMatrixImpl(rows,cols));
+                for(int i=0; i<rows; i++)
+                {
+                    for(int j=0; j<cols; j++)
+                    {
+                        auto d = distribution(generator);
+                        m->set(i,j,d);
+                    }
+                }
+                return std::move(m);
+            }
 
             // --- IMatrix ---
             virtual int rows() const override

@@ -10,6 +10,7 @@ var searchData=
   ['apply',['apply',['../classmatrix_1_1IMatrix.html#a101517507395c9f105feba61f0d1f8da',1,'matrix::IMatrix']]],
   ['areaplot',['AreaPlot',['../classplotting_1_1AreaPlot.html',1,'plotting']]],
   ['areaplot',['AreaPlot',['../classplotting_1_1AreaPlot.html#af4f39ce3925e29f183265c160676985d',1,'plotting::AreaPlot::AreaPlot(int w, int h)'],['../classplotting_1_1AreaPlot.html#a2cb6176fc63e89b4983571e95fc9aef5',1,'plotting::AreaPlot::AreaPlot(AreaPlot &amp;n)=delete'],['../classplotting_1_1AreaPlot.html#a08aff0d910bafd34c919893043cceb0b',1,'plotting::AreaPlot::AreaPlot(const AreaPlot &amp;n)=delete']]],
+  ['assignmentsearch',['AssignmentSearch',['../classmeta_1_1AssignmentSearch.html#aa726c2b33ff8a20dc22033d6626096e6',1,'meta::AssignmentSearch']]],
   ['assignmentsearch',['AssignmentSearch',['../classmeta_1_1AssignmentSearch.html',1,'meta']]],
-  ['assignmentsearch',['AssignmentSearch',['../classmeta_1_1AssignmentSearch.html#aa726c2b33ff8a20dc22033d6626096e6',1,'meta::AssignmentSearch']]]
+  ['alexandria',['Alexandria',['../md_README.html',1,'']]]
 ];
