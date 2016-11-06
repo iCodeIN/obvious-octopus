@@ -15,3 +15,7 @@ _The Royal Library of Alexandria or Ancient Library of Alexandria in Alexandria,
 * plotting
 * support GraphML
 * word2vec
+
+## (known) bugs
+* impossible to add only a vertex to an IGraph
+* dfs and bfs for nodes without any outgoing edges procudes empty graph

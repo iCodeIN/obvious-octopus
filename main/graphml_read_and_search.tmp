@@ -1,0 +1,30 @@
+#include "graph/adjecencylistgraph.hpp"
+#include "graph/bfs.hpp"
+#include "graph/dfs.hpp"
+
+#include "xml/graphml.hpp"
+
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+using namespace graph;
+using namespace XML;
+
+int main()
+{
+    ifstream ifs;
+    ifs.open ("/home/joris/g0.xml", ifstream::in);
+
+    // read graph
+    auto graphPtr = (graph::IGraph<string>*) new AdjecencyListGraph<string>();
+    ifs >> *graphPtr;
+
+    auto treePtr = dfs<string>(*graphPtr, "n2");
+
+    ofstream ofs;
+    ofs.open("/home/joris/g0_tree_at_n0.xml");
+    ofs << *(treePtr.get());
+    ofs.close();
+}

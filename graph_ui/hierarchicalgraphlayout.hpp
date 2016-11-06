@@ -3,6 +3,7 @@
 #define HIERARCHICALGRAPHLAYOUT_HPP
 
 #include "graph_ui/abstractgraphlayout.hpp"
+#include "graph/bfs.hpp"
 #include "graph/igraph.hpp"
 #include "graph/adjecencylistgraph.hpp"
 
@@ -131,55 +132,6 @@ namespace graph
         private:
             // --- methods ---
 
-            /*! \return the length of the longest path starting at a given vertex
-                \param[in] graph       the graph to search in
-                \param[in] source      the vertex to start from
-             */
-            int longestPath(const IGraph<T> &graph, const T &source) const
-            {
-                // graph should contain the source node
-                assert(graph.hasVertex(source));
-
-                // nodes that have already been explored
-                std::set<T> visited;
-
-                // candidate nodes for exploration
-                using PathInfoType = std::tuple<const T, int>;
-                std::stack<PathInfoType> toVisit;
-
-                // put query node up for exploration
-                toVisit.push(std::make_tuple(source, 0));
-
-                // main loop
-                auto maxLen = 0;
-                while(!toVisit.empty())
-                {
-                    auto curr = toVisit.top();
-                    toVisit.pop();
-
-                    auto id  = std::get<0>(curr);
-                    auto len = std::get<1>(curr);
-                    maxLen = std::max(maxLen, len);
-
-                    if(std::find(visited.begin(), visited.end(), id) != visited.end())
-                    {
-                        continue;
-                    }
-
-                    // graph is not supposed to contain cycles
-                    assert(!(maxLen > 0 && id == source));
-
-                    visited.insert(id);
-
-                    for(auto &target : graph.outgoing(id))
-                    {
-                        toVisit.push(std::make_tuple(target, len + 1));
-                    }
-                }
-
-                return maxLen;
-            }
-
             /*! Organize all nodes of the graph into layers.
                 This method will generate a second graph, possibly containing dummy-vertices
                 in order to fulfill the criteria set by the remainder of the algorithm.
@@ -191,7 +143,7 @@ namespace graph
                 auto &vertices = graph.vertices();
                 std::for_each(vertices.begin(), vertices.end(), [this, &graph, &layers](const T &vertex)
                 {
-                    layers[vertex] = longestPath(graph, vertex);
+                    layers[vertex] = graph.outgoing(vertex).empty() ? 0 : bfs<T>(graph, vertex)->depth();
                 });
                 return layers;
             }

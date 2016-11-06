@@ -67,7 +67,36 @@ namespace SVG
              */
             void operator=(Path&) = delete;
 
+        protected:
+            // -- IElement ---
+            virtual std::unique_ptr<XML::IElement> toXML() const
+            {
+                auto node = IElement::toXML();
+                node.get()->setName("path");
+
+                auto s = "";
+                for(auto cmd : m_pathCommands)
+                {
+                    s += std::get<0>(cmd);
+                    for(auto coord : std::get<1>(cmd))
+                    {
+                        s += toString(coord) + " ";
+                    }
+                }
+
+                node.get()->setAttribute("d", s);
+                return node;
+            }
         private:
+            // --- methods ---
+            std::string toString(int a)
+            {
+                std::ostringstream os;
+                os << a;
+                return os.str();
+            }
+
+            // --- members ---
             std::vector<PathCommand> m_pathCommands;
     };
 }

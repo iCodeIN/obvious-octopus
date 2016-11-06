@@ -97,6 +97,8 @@ namespace plotting
                 background.get()->setFill(255,255,255);
                 img.get()->add(std::move(background));
 
+                // Add axis
+
                 // calculate appropropriate stroke width
                 auto sw = std::min( (double) maxX / (double) m_width, (double) maxY / (double) m_height);
 

@@ -2,6 +2,10 @@
 #ifndef ITREE_HPP
 #define ITREE_HPP
 
+#include "graph/igraph.hpp"
+
+#include <set>
+
 namespace graph
 {
     /*! In computer science, a tree is a widely used abstract data type (ADT)—or data structure implementing this ADT—that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes.
@@ -12,14 +16,18 @@ namespace graph
     class ITree : public IGraph<T>
     {
         public:
-            /*!
+            /*! \return the leaves of the ITree
              */
-            virtual const std::vector<T> children(const T& source) const = 0;
+            virtual const std::set<T> leaves() const = 0;
 
-            /*!
+            /*! \return the root of the ITree
              */
-            virtual const T parent(const T& source) const = 0;
-    }
+            virtual const T root() const = 0;
+
+            /*! \return the depth of the ITree
+             */
+            virtual int depth() const = 0;
+    };
 }
 
 #endif // ITREE_HPP

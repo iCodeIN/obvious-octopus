@@ -95,6 +95,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="classSVG_1_1Path-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">SVG::Path Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
@@ -185,9 +186,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1ee1970ad1ea86ce47f3a64d7cd92605 inherit pub_methods_classSVG_1_1IElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae75f391c1344370c32b7c45e10945b9a inherit pub_methods_classSVG_1_1IElement"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#ae75f391c1344370c32b7c45e10945b9a">skewY</a> (double a)</td></tr>
 <tr class="separator:ae75f391c1344370c32b7c45e10945b9a inherit pub_methods_classSVG_1_1IElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa9afc7e9a81109c99b71638bc6fbd3e5 inherit pub_methods_classSVG_1_1IElement"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
-&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">toXML</a> () const </td></tr>
-<tr class="separator:aa9afc7e9a81109c99b71638bc6fbd3e5 inherit pub_methods_classSVG_1_1IElement"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad3663a167e39ced74a93d93bfa6a09b7"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
+&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSVG_1_1Path.html#ad3663a167e39ced74a93d93bfa6a09b7">toXML</a> () const </td></tr>
+<tr class="separator:ad3663a167e39ced74a93d93bfa6a09b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Defines a path. </p>
@@ -317,13 +321,39 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ad3663a167e39ced74a93d93bfa6a09b7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classXML_1_1IElement.html">XML::IElement</a>&gt; SVG::Path::toXML </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the XML element representing this <a class="el" href="classSVG_1_1SVG.html">SVG</a> element </dd></dl>
+
+<p>Reimplemented from <a class="el" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">SVG::IElement</a>.</p>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>svg/<a class="el" href="path_8hpp_source.html">path.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2016 21:24:13 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 6 2016 23:28:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

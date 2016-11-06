@@ -106,7 +106,7 @@ Inheritance diagram for graph::ITree&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgraph_1_1ITree__inherit__graph.png" border="0" usemap="#graph_1_1ITree_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="graph_1_1ITree_3_01T_01_4_inherit__map" id="graph_1_1ITree_3_01T_01_4_inherit__map">
-<area shape="rect" id="node2" href="classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="5,5,139,32"/></map>
+<area shape="rect" id="node3" href="classgraph_1_1AdjecencyListTree.html" title="graph::AdjecencyListTree\&lt; T \&gt;" alt="" coords="5,155,208,181"/><area shape="rect" id="node2" href="classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="40,5,173,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for graph::ITree&lt; T &gt;:</div>
@@ -118,12 +118,12 @@ Collaboration diagram for graph::ITree&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a813cf401fff09fd27a6ec10279ced292"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a813cf401fff09fd27a6ec10279ced292"></a>
-virtual const std::vector&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>children</b> (const T &amp;source) const =0</td></tr>
-<tr class="separator:a813cf401fff09fd27a6ec10279ced292"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afc6ef1c2e4075ffa540bbee990bd54ed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afc6ef1c2e4075ffa540bbee990bd54ed"></a>
-virtual const T&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b> (const T &amp;source) const =0</td></tr>
-<tr class="separator:afc6ef1c2e4075ffa540bbee990bd54ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a397b04fa22a1b26ac5828c9a31ebbd44"><td class="memItemLeft" align="right" valign="top">virtual const std::set&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44">leaves</a> () const =0</td></tr>
+<tr class="separator:a397b04fa22a1b26ac5828c9a31ebbd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cfa82c3ec2c19be2ab391c1c4e5a915"><td class="memItemLeft" align="right" valign="top">virtual const T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#a3cfa82c3ec2c19be2ab391c1c4e5a915">root</a> () const =0</td></tr>
+<tr class="separator:a3cfa82c3ec2c19be2ab391c1c4e5a915"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0c371eaba88df60210583d393ba0d70"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#ad0c371eaba88df60210583d393ba0d70">depth</a> () const =0</td></tr>
+<tr class="separator:ad0c371eaba88df60210583d393ba0d70"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classgraph_1_1IGraph"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgraph_1_1IGraph')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph&lt; T &gt;</a></td></tr>
 <tr class="memitem:af76777565d4a744f275553186487dade inherit pub_methods_classgraph_1_1IGraph"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#af76777565d4a744f275553186487dade">insertEdge</a> (const T &amp;source, const T &amp;target)=0</td></tr>
 <tr class="separator:af76777565d4a744f275553186487dade inherit pub_methods_classgraph_1_1IGraph"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -145,13 +145,98 @@ virtual const T&#160;</td><td class="memItemRight" valign="bottom"><b>parent</b>
 class graph::ITree&lt; T &gt;</h3>
 
 <p>In computer science, a tree is a widely used abstract data type (ADT)—or data structure implementing this ADT—that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes. A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and node points to the root. Alternatively, a tree can be defined abstractly as a whole (globally) as an ordered tree, with a value assigned to each node. Both these perspectives are useful: while a tree can be analyzed mathematically as a whole, when actually represented as a data structure it is usually represented and worked with separately by node (rather than as a list of nodes and an adjacency list of edges between nodes, as one may represent a digraph, for instance). For example, looking at a tree as a whole, one can talk about "the parent node" of a given node, but in general as a data structure a given node only contains the list of its children, but does not contain a reference to its parent (if any). </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ad0c371eaba88df60210583d393ba0d70"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int <a class="el" href="classgraph_1_1ITree.html">graph::ITree</a>&lt; T &gt;::depth </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the depth of the <a class="el" href="classgraph_1_1ITree.html">ITree</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classgraph_1_1AdjecencyListTree.html#a01b290e33edea432fc3b44329a66b536">graph::AdjecencyListTree&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a397b04fa22a1b26ac5828c9a31ebbd44"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const std::set&lt;T&gt; <a class="el" href="classgraph_1_1ITree.html">graph::ITree</a>&lt; T &gt;::leaves </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the leaves of the <a class="el" href="classgraph_1_1ITree.html">ITree</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classgraph_1_1AdjecencyListTree.html#ae756ae699a30f27fe636b0c732cfdc33">graph::AdjecencyListTree&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a3cfa82c3ec2c19be2ab391c1c4e5a915"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const T <a class="el" href="classgraph_1_1ITree.html">graph::ITree</a>&lt; T &gt;::root </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the root of the <a class="el" href="classgraph_1_1ITree.html">ITree</a> </dd></dl>
+
+<p>Implemented in <a class="el" href="classgraph_1_1AdjecencyListTree.html#a819148b2fbef77065604f38e6792714f">graph::AdjecencyListTree&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>graph/<a class="el" href="itree_8hpp_source.html">itree.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2016 21:24:13 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 6 2016 23:28:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

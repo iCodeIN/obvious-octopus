@@ -5,7 +5,7 @@ var searchData=
   ['permutationsearch',['PermutationSearch',['../classmeta_1_1PermutationSearch.html',1,'meta']]],
   ['permutationsearch',['PermutationSearch',['../classmeta_1_1PermutationSearch.html#a0a69951fbdaa15c23afa81ba27ccece3',1,'meta::PermutationSearch']]],
   ['pick',['pick',['../classnumeric_1_1WeightedSampling.html#af994a5be59ba91ef2fd2a8edef478ed8',1,'numeric::WeightedSampling']]],
-  ['pointtype',['PointType',['../classgraphUI_1_1AbstractGraphLayout.html#a15a59d0e77504082ff9a889a113d0124',1,'graphUI::AbstractGraphLayout::PointType()'],['../classMaze.html#a953f2b1e0d1b25c8a2415452652cde1f',1,'Maze::PointType()']]],
+  ['pointtype',['PointType',['../classgraph_1_1I2DGraph.html#a3b0d4735eced33529b6e74cc5e94a15b',1,'graph::I2DGraph::PointType()'],['../classgraphUI_1_1AbstractGraphLayout.html#a15a59d0e77504082ff9a889a113d0124',1,'graphUI::AbstractGraphLayout::PointType()'],['../classMaze.html#a953f2b1e0d1b25c8a2415452652cde1f',1,'Maze::PointType()']]],
   ['polygon',['Polygon',['../classSVG_1_1Polygon.html#a01621d7e0fbd044a071a87bbe8c76d11',1,'SVG::Polygon::Polygon(const std::vector&lt; std::pair&lt; double, double &gt;&gt; &amp;points)'],['../classSVG_1_1Polygon.html#ad45e4aad74f4370004042b2e45378c7b',1,'SVG::Polygon::Polygon(const Polygon &amp;)=delete'],['../classSVG_1_1Polygon.html#abcdd391aa09617036bd449c4cb9a63b0',1,'SVG::Polygon::Polygon(Polygon &amp;)=delete']]],
   ['polygon',['Polygon',['../classSVG_1_1Polygon.html',1,'SVG']]],
   ['polyline',['Polyline',['../classSVG_1_1Polyline.html',1,'SVG']]],

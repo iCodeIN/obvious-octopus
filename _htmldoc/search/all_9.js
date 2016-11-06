@@ -2,6 +2,7 @@ var searchData=
 [
   ['layout',['layout',['../classgraphUI_1_1AbstractGraphLayout.html#aa4512547673bb81e74f800fdd9b451b8',1,'graphUI::AbstractGraphLayout']]],
   ['layouttype',['LayoutType',['../classgraphUI_1_1AbstractGraphLayout.html#acd0807b65a1e42c4a2aeb7fb3ed6433a',1,'graphUI::AbstractGraphLayout']]],
+  ['leaves',['leaves',['../classgraph_1_1AdjecencyListTree.html#ae756ae699a30f27fe636b0c732cfdc33',1,'graph::AdjecencyListTree::leaves()'],['../classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44',1,'graph::ITree::leaves()']]],
   ['line',['Line',['../classSVG_1_1Line.html',1,'SVG']]],
   ['line',['Line',['../classSVG_1_1Line.html#acb0e1260c85b3037a2c35cbece03cf2e',1,'SVG::Line::Line(int x1, int y1, int x2, int y2)'],['../classSVG_1_1Line.html#a3d423fefc377e9220e124e960cf62bba',1,'SVG::Line::Line(const Line &amp;)=delete'],['../classSVG_1_1Line.html#af9a1c3683d0c5d8005207efa16d500ba',1,'SVG::Line::Line(Line &amp;)=delete']]],
   ['lineplot',['LinePlot',['../classplotting_1_1LinePlot.html',1,'plotting']]],

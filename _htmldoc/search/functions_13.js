@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['_7eadjecencylisttree',['~AdjecencyListTree',['../classgraph_1_1AdjecencyListTree.html#ae3333a02985edb235e76ae897c3d3722',1,'graph::AdjecencyListTree']]],
   ['_7eareaplot',['~AreaPlot',['../classplotting_1_1AreaPlot.html#a2e2f321dc3a821e3b1e7c7778afce010',1,'plotting::AreaPlot']]],
   ['_7ebktree',['~BKTree',['../classtree_1_1BKTree.html#a11948a49ebb816e226b91ee4433e2da6',1,'tree::BKTree']]],
   ['_7eboostmatriximpl',['~BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html#ac8cad4427c7d29e74f3eb73457b217ad',1,'matrix::BoostMatrixImpl']]],
@@ -8,6 +9,7 @@ var searchData=
   ['_7edefaultgraphrenderer',['~DefaultGraphRenderer',['../classgraphUI_1_1DefaultGraphRenderer.html#a3390e6e3bba27911a389bfb282a6cfab',1,'graphUI::DefaultGraphRenderer']]],
   ['_7eheatplot',['~HeatPlot',['../classplotting_1_1HeatPlot.html#ae8f90f3fc3328da4631b867b0524dede',1,'plotting::HeatPlot']]],
   ['_7ehierarchicalgraphlayout',['~HierarchicalGraphLayout',['../classgraph_1_1HierarchicalGraphLayout.html#a67b3ed9794be9731ece0966cb2d99219',1,'graph::HierarchicalGraphLayout']]],
+  ['_7ei2dgraph',['~I2DGraph',['../classgraph_1_1I2DGraph.html#ac845fbcb82e52df701e0a9e487a52bde',1,'graph::I2DGraph']]],
   ['_7eielement',['~IElement',['../classSVG_1_1IElement.html#ab9492424a820131384e2ac4448cb8b31',1,'SVG::IElement::~IElement()'],['../classXML_1_1IElement.html#af130a92f3022e56bbe36a6013a949449',1,'XML::IElement::~IElement()']]],
   ['_7eimatrix',['~IMatrix',['../classmatrix_1_1IMatrix.html#a6c12c83081d1bba960b628a7dfec7f21',1,'matrix::IMatrix']]],
   ['_7eline',['~Line',['../classSVG_1_1Line.html#a7083a62f9e5cbc44bba5baf63116f758',1,'SVG::Line']]],

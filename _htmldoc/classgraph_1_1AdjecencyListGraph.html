@@ -107,14 +107,14 @@ Inheritance diagram for graph::AdjecencyListGraph&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgraph_1_1AdjecencyListGraph__inherit__graph.png" border="0" usemap="#graph_1_1AdjecencyListGraph_3_01T_01_4_inherit__map" alt="Inheritance graph"/></div>
 <map name="graph_1_1AdjecencyListGraph_3_01T_01_4_inherit__map" id="graph_1_1AdjecencyListGraph_3_01T_01_4_inherit__map">
-<area shape="rect" id="node2" href="classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="43,5,176,32"/></map>
+<area shape="rect" id="node2" href="classgraph_1_1I2DGraph.html" title="graph::I2DGraph\&lt; T \&gt;" alt="" coords="34,80,184,107"/><area shape="rect" id="node3" href="classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="43,5,176,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for graph::AdjecencyListGraph&lt; T &gt;:</div>
 <div class="dyncontent">
 <div class="center"><img src="classgraph_1_1AdjecencyListGraph__coll__graph.png" border="0" usemap="#graph_1_1AdjecencyListGraph_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="graph_1_1AdjecencyListGraph_3_01T_01_4_coll__map" id="graph_1_1AdjecencyListGraph_3_01T_01_4_coll__map">
-<area shape="rect" id="node2" href="classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="43,5,176,32"/></map>
+<area shape="rect" id="node2" href="classgraph_1_1I2DGraph.html" title="graph::I2DGraph\&lt; T \&gt;" alt="" coords="34,80,184,107"/><area shape="rect" id="node3" href="classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="43,5,176,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
@@ -123,6 +123,12 @@ Public Types</h2></td></tr>
 <tr class="separator:a0c6025df6317a95a31aef4fe4a1332cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acd49f74a40d350bf6e43cad27c986eea"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#acd49f74a40d350bf6e43cad27c986eea">TransferFunctionType1</a> = std::function&lt; std::set&lt; T &gt;(const T &amp;source)&gt;</td></tr>
 <tr class="separator:acd49f74a40d350bf6e43cad27c986eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7328ea917a54decfed081d6e98393bed"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7328ea917a54decfed081d6e98393bed"></a>
+using&#160;</td><td class="memItemRight" valign="bottom"><b>PointType</b> = std::pair&lt; int, int &gt;</td></tr>
+<tr class="separator:a7328ea917a54decfed081d6e98393bed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classgraph_1_1I2DGraph"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classgraph_1_1I2DGraph')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classgraph_1_1I2DGraph.html">graph::I2DGraph&lt; T &gt;</a></td></tr>
+<tr class="memitem:a3b0d4735eced33529b6e74cc5e94a15b inherit pub_types_classgraph_1_1I2DGraph"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1I2DGraph.html#a3b0d4735eced33529b6e74cc5e94a15b">PointType</a> = std::pair&lt; int, int &gt;</td></tr>
+<tr class="separator:a3b0d4735eced33529b6e74cc5e94a15b inherit pub_types_classgraph_1_1I2DGraph"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -136,8 +142,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae598a843f83ed15062616214ce396a2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9298052b108505770b5f6e7ab555b8a"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#ad9298052b108505770b5f6e7ab555b8a">eraseEdge</a> (const T &amp;source, const T &amp;target) override</td></tr>
 <tr class="separator:ad9298052b108505770b5f6e7ab555b8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aad83bcb9d89742ac76eca29d7717a70d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#aad83bcb9d89742ac76eca29d7717a70d">hasEdge</a> (const T &amp;source, const T &amp;target) const override</td></tr>
-<tr class="separator:aad83bcb9d89742ac76eca29d7717a70d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa6a1b60ff5e2c348d4688e162d04346"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#aaa6a1b60ff5e2c348d4688e162d04346">hasEdge</a> (const T &amp;source, const T &amp;target) const override</td></tr>
+<tr class="separator:aaa6a1b60ff5e2c348d4688e162d04346"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acfc027ed9af56c390fb069433ca05197"><td class="memItemLeft" align="right" valign="top">virtual const std::set&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#acfc027ed9af56c390fb069433ca05197">outgoing</a> (const T &amp;source) const override</td></tr>
 <tr class="separator:acfc027ed9af56c390fb069433ca05197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa1430ac443843096b90d124e71fb8a1f"><td class="memItemLeft" align="right" valign="top">virtual const std::set&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#aa1430ac443843096b90d124e71fb8a1f">incoming</a> (const T &amp;target) const override</td></tr>
@@ -146,6 +152,22 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5b794cb47453247e44404a93462bdfb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ef13ebd42b9cee9699a1a6ca617ff54"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#a8ef13ebd42b9cee9699a1a6ca617ff54">hasVertex</a> (const T &amp;vertex) const override</td></tr>
 <tr class="separator:a8ef13ebd42b9cee9699a1a6ca617ff54"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d186996d0f41f2729b30bdc106263ce"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2d186996d0f41f2729b30bdc106263ce"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setVertexPoint</b> (const T &amp;vertex, PointType &amp;point)</td></tr>
+<tr class="separator:a2d186996d0f41f2729b30bdc106263ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8c646f8d9b558cddbee1d623c69865d"><td class="memItemLeft" align="right" valign="top">virtual const PointType&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">getVertexPoint</a> (const T &amp;vertex) const </td></tr>
+<tr class="separator:ab8c646f8d9b558cddbee1d623c69865d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af478093ec711a489815419ed222958b1"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="af478093ec711a489815419ed222958b1"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>setEdgePoints</b> (const T &amp;source, const T &amp;target, std::vector&lt; PointType &gt; &amp;edge)</td></tr>
+<tr class="separator:af478093ec711a489815419ed222958b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaf0a983c888e3559ea69980443cec34e"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; PointType &gt;<br class="typebreak" />
+ const&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">getEdgePoints</a> (const T &amp;source, const T &amp;target) const </td></tr>
+<tr class="separator:aaf0a983c888e3559ea69980443cec34e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classgraph_1_1I2DGraph"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classgraph_1_1I2DGraph')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classgraph_1_1I2DGraph.html">graph::I2DGraph&lt; T &gt;</a></td></tr>
+<tr class="memitem:a1d621da30f092c82deacbce7f7be650e inherit pub_methods_classgraph_1_1I2DGraph"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1I2DGraph.html#a1d621da30f092c82deacbce7f7be650e">I2DGraph</a> ()=default</td></tr>
+<tr class="separator:a1d621da30f092c82deacbce7f7be650e inherit pub_methods_classgraph_1_1I2DGraph"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac845fbcb82e52df701e0a9e487a52bde inherit pub_methods_classgraph_1_1I2DGraph"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1I2DGraph.html#ac845fbcb82e52df701e0a9e487a52bde">~I2DGraph</a> ()=default</td></tr>
+<tr class="separator:ac845fbcb82e52df701e0a9e487a52bde inherit pub_methods_classgraph_1_1I2DGraph"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
@@ -355,7 +377,7 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
-<a class="anchor" id="aad83bcb9d89742ac76eca29d7717a70d"></a>
+<a class="anchor" id="aaf0a983c888e3559ea69980443cec34e"></a>
 <div class="memitem">
 <div class="memproto">
 <div class="memtemplate">
@@ -365,7 +387,75 @@ template&lt;typename T&gt; </div>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool <a class="el" href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph</a>&lt; T &gt;::hasEdge </td>
+          <td class="memname">virtual std::vector&lt;PointType&gt; const <a class="el" href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph</a>&lt; T &gt;::getEdgePoints </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>source</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>target</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the path of PointTypes at which the edge is located </dd></dl>
+
+<p>Implements <a class="el" href="classgraph_1_1I2DGraph.html#a3fc43d775dc592a7038db80f66d97474">graph::I2DGraph&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ab8c646f8d9b558cddbee1d623c69865d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual const PointType <a class="el" href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph</a>&lt; T &gt;::getVertexPoint </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the PointType at which the given vertex is located </dd></dl>
+
+<p>Implements <a class="el" href="classgraph_1_1I2DGraph.html#a2109f0a407a2eb63a00388ad8c44b746">graph::I2DGraph&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="aaa6a1b60ff5e2c348d4688e162d04346"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool <a class="el" href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph</a>&lt; T &gt;::hasEdge </td>
           <td>(</td>
           <td class="paramtype">const T &amp;&#160;</td>
           <td class="paramname"><em>source</em>, </td>
@@ -567,7 +657,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Oct 31 2016 21:24:13 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Nov 6 2016 23:28:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

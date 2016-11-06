@@ -8,6 +8,7 @@ var searchData=
   ['remove',['remove',['../classXML_1_1DefaultElementImpl.html#a8424f74181228ec2c74ec4c62746aa9f',1,'XML::DefaultElementImpl::remove()'],['../classXML_1_1IElement.html#a38b4ce4a24c4f49e78e67686a84cabbf',1,'XML::IElement::remove()']]],
   ['render',['render',['../classMazeDrawer.html#aff1b029c8b12875f3243003f1d415d67',1,'MazeDrawer::render()'],['../classplotting_1_1AreaPlot.html#abdb7e70c3663fe12cf8b32595433bb7c',1,'plotting::AreaPlot::render()'],['../classplotting_1_1HeatPlot.html#a8f1179899a6d0d12e12d27c0273d0560',1,'plotting::HeatPlot::render()'],['../classplotting_1_1LinePlot.html#a238cd5b3f7c1b600848b72f8016ef851',1,'plotting::LinePlot::render()']]],
   ['rgbcolor',['RGBColor',['../classSVG_1_1HSV.html#a93da59189b0174379bf7033229c8096d',1,'SVG::HSV']]],
+  ['root',['root',['../classgraph_1_1AdjecencyListTree.html#a819148b2fbef77065604f38e6792714f',1,'graph::AdjecencyListTree::root()'],['../classgraph_1_1ITree.html#a3cfa82c3ec2c19be2ab391c1c4e5a915',1,'graph::ITree::root()']]],
   ['rotate',['rotate',['../classSVG_1_1IElement.html#a12c55824cf66163c4c13894e1fc79a03',1,'SVG::IElement::rotate(double a)'],['../classSVG_1_1IElement.html#a4350371dbfb0552e2b2e7f0fa21355de',1,'SVG::IElement::rotate(double a, double x, double y)']]],
   ['rows',['rows',['../classmatrix_1_1BoostMatrixImpl.html#abbe9a2c8e9aa57a80e0f35a71f0c8e06',1,'matrix::BoostMatrixImpl::rows()'],['../classmatrix_1_1IMatrix.html#a4194cbc5b5bfc23d7ffdb839ae6c93c8',1,'matrix::IMatrix::rows()']]]
 ];

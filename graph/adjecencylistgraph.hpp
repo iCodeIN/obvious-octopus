@@ -2,7 +2,7 @@
 #ifndef ADJECENCYLISTGRAPH_HPP
 #define ADJECENCYLISTGRAPH_HPP
 
-#include "igraph.hpp"
+#include "i2dgraph.hpp"
 
 #include <assert.h>
 #include <functional>
@@ -14,7 +14,7 @@ namespace graph
     /*! Implementation of IGraph using an adjecency list as the underlying datastructure
      */
     template <typename T>
-    class AdjecencyListGraph : public IGraph<T>
+    class AdjecencyListGraph : public I2DGraph<T>
     {
         public:
 
@@ -83,7 +83,7 @@ namespace graph
             }
 
             // --- IGraph ---
-            bool hasEdge(const T& source, const T& target) const override
+            virtual bool hasEdge(const T& source, const T& target) const override
             {
                 if(!hasVertex(source) || !hasVertex(target))
                 {
@@ -161,10 +161,44 @@ namespace graph
                 return false;
             }
 
+            using PointType = std::pair<int,int>;
+
+            /*!
+             */
+            void setVertexPoint(const T& vertex, PointType& point)
+            {
+                // #todo
+            }
+
+            // --- I2DGraph ---
+            virtual const PointType getVertexPoint(const T &vertex) const
+            {
+                auto it = m_vertexPoints.find(vertex);
+                assert(it != m_vertexPoints.end());
+                return it->second;
+            }
+
+            /*!
+             */
+            void setEdgePoints(const T& source, const T& target, std::vector<PointType>& edge)
+            {
+                // #todo
+            }
+
+            // --- I2DGraph ---
+            virtual std::vector<PointType> const getEdgePoints(const T& source, const T& target) const
+            {
+                auto it = m_edgePoints.find(std::make_pair(source, target));
+                assert(it != m_edgePoints.end());
+                return it->second;
+            }
+
         private:
             // --- methods ---
             // --- members ---
-            std::map<T, std::set<T>>   m_vertices;
+            std::map<T, std::set<T>>                                            m_vertices;
+            std::map<const T, PointType>                                        m_vertexPoints;
+            std::map<std::pair<const T, const T>, std::vector<PointType>>       m_edgePoints;
     };
 }
 
