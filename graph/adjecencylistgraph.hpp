@@ -163,7 +163,9 @@ namespace graph
 
             using PointType = std::pair<int,int>;
 
-            /*!
+            /*! set the PointType of a vertex
+                \param[in] vertex the vertex
+                \param[in] point the point (location) of the vertex
              */
             void setVertexPoint(const T& vertex, PointType& point)
             {
@@ -178,9 +180,12 @@ namespace graph
                 return it->second;
             }
 
-            /*!
+            /*! set the path (std::vector<PointType>) for an edge
+                \param[in] source the source vertex of the edge
+                \param[in] target the target vertex of the edge
+                \param[in] path the path (std::vector<PointType>) corresponding to the points the edge passes through
              */
-            void setEdgePoints(const T& source, const T& target, std::vector<PointType>& edge)
+            void setEdgePoints(const T& source, const T& target, std::vector<PointType>& path)
             {
                 // #todo
             }

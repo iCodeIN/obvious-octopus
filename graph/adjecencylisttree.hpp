@@ -11,7 +11,7 @@
 
 namespace graph
 {
-    /*!
+    /*! Implementation of ITree using AdjecencyListGraph as underlying datastructure
      */
     template <typename T>
     class AdjecencyListTree : public ITree<T>

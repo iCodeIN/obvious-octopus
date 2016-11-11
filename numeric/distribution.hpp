@@ -55,7 +55,8 @@ namespace numeric
                 return retval;
             }
 
-            /*!
+            /*! \return the average of a distribution.
+                In colloquial language, an average is the sum of a set of numbers divided by the number of numbers in the set. In mathematics and statistics, this would be called the arithmetic mean.
              */
             static const Y avg(const DistributionType &d)
             {
@@ -68,7 +69,10 @@ namespace numeric
                 return d.size() == 0 ? ((Y) 0) : (total / d.size());
             }
 
-            /*!
+            /*! \return the deviance of a distribution
+                In mathematics and statistics, deviation is a measure of difference between the observed value of a variable and some other value, often that variable's mean.
+                The sign of the deviation (positive or negative), reports the direction of that difference (the deviation is positive when the observed value exceeds the reference value).
+                The magnitude of the value indicates the size of the difference.
              */
             static const Y dev(const DistributionType &d)
             {

@@ -237,42 +237,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keyword">using</span> PointType = std::pair&lt;int,int&gt;;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            <span class="keywordtype">void</span> setVertexPoint(<span class="keyword">const</span> T&amp; vertex, PointType&amp; point)</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            {</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                <span class="comment">// #todo</span></div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            <span class="comment">// --- I2DGraph ---</span></div>
-<div class="line"><a name="l00174"></a><span class="lineno"><a class="line" href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">  174</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> PointType <a class="code" href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">getVertexPoint</a>(<span class="keyword">const</span> T &amp;vertex)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                <span class="keyword">auto</span> it = m_vertexPoints.find(vertex);</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                assert(it != m_vertexPoints.end());</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keywordflow">return</span> it-&gt;second;</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;            <span class="keywordtype">void</span> setEdgePoints(<span class="keyword">const</span> T&amp; source, <span class="keyword">const</span> T&amp; target, std::vector&lt;PointType&gt;&amp; edge)</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;            {</div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                <span class="comment">// #todo</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;            }</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;            <span class="comment">// --- I2DGraph ---</span></div>
-<div class="line"><a name="l00189"></a><span class="lineno"><a class="line" href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">  189</a></span>&#160;            <span class="keyword">virtual</span> std::vector&lt;PointType&gt; <span class="keyword">const</span> <a class="code" href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">getEdgePoints</a>(<span class="keyword">const</span> T&amp; source, <span class="keyword">const</span> T&amp; target)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="keyword">auto</span> it = m_edgePoints.find(std::make_pair(source, target));</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                assert(it != m_edgePoints.end());</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span> it-&gt;second;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            std::map&lt;T, std::set&lt;T&gt;&gt;                                            m_vertices;</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            std::map&lt;const T, PointType&gt;                                        m_vertexPoints;</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            std::map&lt;std::pair&lt;const T, const T&gt;, std::vector&lt;PointType&gt;&gt;       m_edgePoints;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    };</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#endif // ADJECENCYLISTGRAPH_HPP</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno"><a class="line" href="classgraph_1_1AdjecencyListGraph.html#a2d186996d0f41f2729b30bdc106263ce">  170</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgraph_1_1AdjecencyListGraph.html#a2d186996d0f41f2729b30bdc106263ce">setVertexPoint</a>(<span class="keyword">const</span> T&amp; vertex, PointType&amp; point)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="comment">// #todo</span></div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="comment">// --- I2DGraph ---</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno"><a class="line" href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">  176</a></span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> PointType <a class="code" href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">getVertexPoint</a>(<span class="keyword">const</span> T &amp;vertex)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                <span class="keyword">auto</span> it = m_vertexPoints.find(vertex);</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                assert(it != m_vertexPoints.end());</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            }</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
+<div class="line"><a name="l00188"></a><span class="lineno"><a class="line" href="classgraph_1_1AdjecencyListGraph.html#ae8ec112cc7e890e8e46e32100a67f58c">  188</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgraph_1_1AdjecencyListGraph.html#ae8ec112cc7e890e8e46e32100a67f58c">setEdgePoints</a>(<span class="keyword">const</span> T&amp; source, <span class="keyword">const</span> T&amp; target, std::vector&lt;PointType&gt;&amp; path)</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            {</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="comment">// #todo</span></div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            }</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="comment">// --- I2DGraph ---</span></div>
+<div class="line"><a name="l00194"></a><span class="lineno"><a class="line" href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">  194</a></span>&#160;            <span class="keyword">virtual</span> std::vector&lt;PointType&gt; <span class="keyword">const</span> <a class="code" href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">getEdgePoints</a>(<span class="keyword">const</span> T&amp; source, <span class="keyword">const</span> T&amp; target)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                <span class="keyword">auto</span> it = m_edgePoints.find(std::make_pair(source, target));</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                assert(it != m_edgePoints.end());</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">return</span> it-&gt;second;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            }</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;            std::map&lt;T, std::set&lt;T&gt;&gt;                                            m_vertices;</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;            std::map&lt;const T, PointType&gt;                                        m_vertexPoints;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;            std::map&lt;std::pair&lt;const T, const T&gt;, std::vector&lt;PointType&gt;&gt;       m_edgePoints;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;    };</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;}</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;<span class="preprocessor">#endif // ADJECENCYLISTGRAPH_HPP</span></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph</a></div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:17</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_ab545acb9a04b97d2deb1bb8eeece39f4"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#ab545acb9a04b97d2deb1bb8eeece39f4">graph::AdjecencyListGraph::AdjecencyListGraph</a></div><div class="ttdeci">AdjecencyListGraph(std::set&lt; T &gt; vertices, const TransferFunctionType0 &amp;transferFunction)</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:44</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_ad9298052b108505770b5f6e7ab555b8a"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#ad9298052b108505770b5f6e7ab555b8a">graph::AdjecencyListGraph::eraseEdge</a></div><div class="ttdeci">virtual void eraseEdge(const T &amp;source, const T &amp;target) override</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:80</div></div>
@@ -280,19 +280,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_aa1430ac443843096b90d124e71fb8a1f"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#aa1430ac443843096b90d124e71fb8a1f">graph::AdjecencyListGraph::incoming</a></div><div class="ttdeci">virtual const std::set&lt; T &gt; incoming(const T &amp;target) const override</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:116</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_a295df2c5b3053e374e2e917f64691821"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#a295df2c5b3053e374e2e917f64691821">graph::AdjecencyListGraph::AdjecencyListGraph</a></div><div class="ttdeci">AdjecencyListGraph(std::set&lt; T &gt; vertices, const TransferFunctionType1 &amp;transferFunction)</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:62</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_ae598a843f83ed15062616214ce396a2a"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#ae598a843f83ed15062616214ce396a2a">graph::AdjecencyListGraph::insertEdge</a></div><div class="ttdeci">virtual void insertEdge(const T &amp;source, const T &amp;target) override</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:74</div></div>
-<div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_ab8c646f8d9b558cddbee1d623c69865d"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">graph::AdjecencyListGraph::getVertexPoint</a></div><div class="ttdeci">virtual const PointType getVertexPoint(const T &amp;vertex) const </div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:174</div></div>
+<div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_ab8c646f8d9b558cddbee1d623c69865d"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#ab8c646f8d9b558cddbee1d623c69865d">graph::AdjecencyListGraph::getVertexPoint</a></div><div class="ttdeci">virtual const PointType getVertexPoint(const T &amp;vertex) const </div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:176</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_aaa6a1b60ff5e2c348d4688e162d04346"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#aaa6a1b60ff5e2c348d4688e162d04346">graph::AdjecencyListGraph::hasEdge</a></div><div class="ttdeci">virtual bool hasEdge(const T &amp;source, const T &amp;target) const override</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:86</div></div>
 <div class="ttc" id="classgraph_1_1I2DGraph_html"><div class="ttname"><a href="classgraph_1_1I2DGraph.html">graph::I2DGraph</a></div><div class="ttdef"><b>Definition:</b> i2dgraph.hpp:15</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_a8ef13ebd42b9cee9699a1a6ca617ff54"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#a8ef13ebd42b9cee9699a1a6ca617ff54">graph::AdjecencyListGraph::hasVertex</a></div><div class="ttdeci">virtual bool hasVertex(const T &amp;vertex) const override</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:146</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_acd49f74a40d350bf6e43cad27c986eea"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#acd49f74a40d350bf6e43cad27c986eea">graph::AdjecencyListGraph::TransferFunctionType1</a></div><div class="ttdeci">std::function&lt; std::set&lt; T &gt;(const T &amp;source)&gt; TransferFunctionType1</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:38</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_a5b794cb47453247e44404a93462bdfb1"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#a5b794cb47453247e44404a93462bdfb1">graph::AdjecencyListGraph::vertices</a></div><div class="ttdeci">virtual const std::set&lt; T &gt; vertices() const override</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:131</div></div>
-<div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_aaf0a983c888e3559ea69980443cec34e"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">graph::AdjecencyListGraph::getEdgePoints</a></div><div class="ttdeci">virtual std::vector&lt; PointType &gt; const getEdgePoints(const T &amp;source, const T &amp;target) const </div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:189</div></div>
+<div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_aaf0a983c888e3559ea69980443cec34e"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#aaf0a983c888e3559ea69980443cec34e">graph::AdjecencyListGraph::getEdgePoints</a></div><div class="ttdeci">virtual std::vector&lt; PointType &gt; const getEdgePoints(const T &amp;source, const T &amp;target) const </div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:194</div></div>
+<div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_a2d186996d0f41f2729b30bdc106263ce"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#a2d186996d0f41f2729b30bdc106263ce">graph::AdjecencyListGraph::setVertexPoint</a></div><div class="ttdeci">void setVertexPoint(const T &amp;vertex, PointType &amp;point)</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:170</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_a0c6025df6317a95a31aef4fe4a1332cf"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#a0c6025df6317a95a31aef4fe4a1332cf">graph::AdjecencyListGraph::TransferFunctionType0</a></div><div class="ttdeci">std::function&lt; bool(const T &amp;source, const T &amp;target)&gt; TransferFunctionType0</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:32</div></div>
+<div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_ae8ec112cc7e890e8e46e32100a67f58c"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#ae8ec112cc7e890e8e46e32100a67f58c">graph::AdjecencyListGraph::setEdgePoints</a></div><div class="ttdeci">void setEdgePoints(const T &amp;source, const T &amp;target, std::vector&lt; PointType &gt; &amp;path)</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:188</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html_a90079ffb83ad497499450b9744cfa760"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html#a90079ffb83ad497499450b9744cfa760">graph::AdjecencyListGraph::AdjecencyListGraph</a></div><div class="ttdeci">AdjecencyListGraph()</div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Nov 6 2016 23:28:30 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Fri Nov 11 2016 00:17:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

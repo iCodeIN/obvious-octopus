@@ -1,14 +1,11 @@
 /home/joris/Code/alexandria/numeric/weightedsampling.hpp:18: warning: Compound numeric::WeightedSampling is not documented.
 /home/joris/Code/alexandria/numeric/ismoothdistribution.hpp:9: warning: Compound numeric::ISmoothDistribution is not documented.
 /home/joris/Code/alexandria/graph_ui/defaultgraphrenderer.hpp:23: warning: Compound graphUI::DefaultGraphRenderer is not documented.
-/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:18: warning: Compound graph::AdjecencyListTree is not documented.
 /home/joris/Code/alexandria/game/minimax.hpp:22: warning: Member GamePlayType (typedef) of class game::Minimax is not documented.
 /home/joris/Code/alexandria/game/minimax.hpp:23: warning: Member EvaluationFunctionType (typedef) of class game::Minimax is not documented.
 /home/joris/Code/alexandria/game/minimax.hpp:24: warning: Member nextMoveFunctionType (typedef) of class game::Minimax is not documented.
 /home/joris/Code/alexandria/game/minimax.hpp:26: warning: Member build(const T &startingPosition) (function) of class game::Minimax is not documented.
 /home/joris/Code/alexandria/graph/adjecencylistgraph.hpp:164: warning: Member PointType (typedef) of class graph::AdjecencyListGraph is not documented.
-/home/joris/Code/alexandria/graph/adjecencylistgraph.hpp:168: warning: Member setVertexPoint(const T &vertex, PointType &point) (function) of class graph::AdjecencyListGraph is not documented.
-/home/joris/Code/alexandria/graph/adjecencylistgraph.hpp:183: warning: Member setEdgePoints(const T &source, const T &target, std::vector< PointType > &edge) (function) of class graph::AdjecencyListGraph is not documented.
 /home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:44: warning: Member layout(const graph::IGraph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &sizeFunction) override (function) of class graph::HierarchicalGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/circulargraphlayout.hpp:28: warning: Member layout(const graph::Graph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) override (function) of class graphUI::CircularGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/defaultgraphrenderer.hpp:35: warning: Member render(const graph::IGraph< T > &g, const typename graphUI::AbstractGraphLayout< T >::LayoutType &layout, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) const  (function) of class graphUI::DefaultGraphRenderer is not documented.
@@ -22,10 +19,8 @@
 /home/joris/Code/alexandria/numeric/distribution.hpp:24: warning: Member DistributionType (typedef) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:28: warning: Member relative(const DistributionType &d) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:46: warning: Member absolute(const DistributionType &d, const Y &total) (function) of class numeric::Distribution is not documented.
-/home/joris/Code/alexandria/numeric/distribution.hpp:60: warning: Member avg(const DistributionType &d) (function) of class numeric::Distribution is not documented.
-/home/joris/Code/alexandria/numeric/distribution.hpp:73: warning: Member dev(const DistributionType &d) (function) of class numeric::Distribution is not documented.
-/home/joris/Code/alexandria/numeric/distribution.hpp:87: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
-/home/joris/Code/alexandria/numeric/distribution.hpp:123: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/alexandria/numeric/distribution.hpp:91: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/alexandria/numeric/distribution.hpp:127: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/ismoothdistribution.hpp:20: warning: Member get(const X &x) const  (function) of class numeric::ISmoothDistribution is not documented.
 /home/joris/Code/alexandria/numeric/ismoothdistribution.hpp:29: warning: Member operator[](X idx) const  (function) of class numeric::ISmoothDistribution is not documented.
 /home/joris/Code/alexandria/numeric/weightedsampling.hpp:20: warning: Member WeightedSampling(const std::map< T, double > &distribution) (function) of class numeric::WeightedSampling is not documented.
