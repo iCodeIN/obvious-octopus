@@ -23,19 +23,17 @@ namespace graph
              */
             virtual ~I2DGraph() = default;
 
-            /*! define PointType as std::pair<int,int>
-             */
-            using PointType = std::pair<int,int>;
-
             /*! \return the PointType at which the given vertex is located
              */
-            virtual const PointType getVertexPoint(const T &vertex) const = 0;
+            virtual const std::pair<int,int> getVertexPoint(const T &vertex) const = 0;
 
             /*! \return the path of PointTypes at which the edge is located
              */
-            virtual std::vector<PointType> const getEdgePoints(const T& source, const T& target) const = 0;
+            virtual std::vector<std::pair<int,int>> const getEdgePoints(const T& source, const T& target) const = 0;
 
         private:
+            // --- methods ---
+            // --- members ---
     };
 }
 

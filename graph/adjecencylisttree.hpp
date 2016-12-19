@@ -68,6 +68,18 @@ namespace graph
             }
 
             // --- IGraph ---
+            virtual void insertVertex(const T& vertex)
+            {
+                m_graph->insertVertex(vertex);
+            }
+
+            // --- IGraph ---
+            virtual void eraseVertex(const T& vertex)
+            {
+                m_graph->eraseVertex(vertex);
+            }
+
+            // --- IGraph ---
             virtual bool hasVertex(const T& vertex) const
             {
                 return m_graph->hasVertex(vertex);
@@ -88,7 +100,14 @@ namespace graph
             }
 
             // --- ITree ---
-            virtual const T root() const override
+            virtual T parent(const T& vertex) const override
+            {
+                auto &in = incoming(vertex);
+                return *in.begin();
+            }
+
+            // --- ITree ---
+            virtual T root() const override
             {
                 std::set<T> r;
                 for(auto &vertex : vertices())

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['pointtype',['PointType',['../classgraph_1_1I2DGraph.html#a3b0d4735eced33529b6e74cc5e94a15b',1,'graph::I2DGraph::PointType()'],['../classgraphUI_1_1AbstractGraphLayout.html#a15a59d0e77504082ff9a889a113d0124',1,'graphUI::AbstractGraphLayout::PointType()'],['../classMaze.html#a953f2b1e0d1b25c8a2415452652cde1f',1,'Maze::PointType()']]]
+  ['nextmovefunctiontype',['NextMoveFunctionType',['../classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d',1,'game::Minimax']]]
 ];

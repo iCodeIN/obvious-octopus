@@ -123,6 +123,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af0a34553d09ef9f85d804bfb7f9525cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6d174ae789ce6025880675708ca6e0cf"><td class="memItemLeft" align="right" valign="top">virtual const std::set&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a> () const =0</td></tr>
 <tr class="separator:a6d174ae789ce6025880675708ca6e0cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9f899502cdfdd2d6c1c31686a38e1029"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#a9f899502cdfdd2d6c1c31686a38e1029">insertVertex</a> (const T &amp;vertex)=0</td></tr>
+<tr class="separator:a9f899502cdfdd2d6c1c31686a38e1029"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae0d90350643f978e448df47024b8413e"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#ae0d90350643f978e448df47024b8413e">eraseVertex</a> (const T &amp;vertex)=0</td></tr>
+<tr class="separator:ae0d90350643f978e448df47024b8413e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab659a04f986ae7a1451ad68ed69c55d1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#ab659a04f986ae7a1451ad68ed69c55d1">hasVertex</a> (const T &amp;vertex) const =0</td></tr>
 <tr class="separator:ab659a04f986ae7a1451ad68ed69c55d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -174,6 +178,40 @@ template&lt;typename T&gt; </div>
 </dl>
 
 <p>Implemented in <a class="el" href="classgraph_1_1AdjecencyListGraph.html#ad9298052b108505770b5f6e7ab555b8a">graph::AdjecencyListGraph&lt; T &gt;</a>, and <a class="el" href="classgraph_1_1AdjecencyListTree.html#a12c46ed138f388a8ae565fd5190c4337">graph::AdjecencyListTree&lt; T &gt;</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="ae0d90350643f978e448df47024b8413e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt;::eraseVertex </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Erase a vertex from the graph </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertex</td><td>the vertex to be erased </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classgraph_1_1AdjecencyListGraph.html#ae75263e4a1308b472d9d2eb2b37594ba">graph::AdjecencyListGraph&lt; T &gt;</a>, and <a class="el" href="classgraph_1_1AdjecencyListTree.html#ac72ab60a3879ba8bfa9a4faaf9fa054d">graph::AdjecencyListTree&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -326,6 +364,40 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a9f899502cdfdd2d6c1c31686a38e1029"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt;::insertVertex </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>vertex</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Insert a vertex into the graph </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">vertex</td><td>the vertex to be inserted </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p>Implemented in <a class="el" href="classgraph_1_1AdjecencyListGraph.html#abced78b89342fe405a04b53219a6cf81">graph::AdjecencyListGraph&lt; T &gt;</a>, and <a class="el" href="classgraph_1_1AdjecencyListTree.html#a3f2f08fd6d19383bfe3f33479259eade">graph::AdjecencyListTree&lt; T &gt;</a>.</p>
+
+</div>
+</div>
 <a class="anchor" id="a34b90bb8597f289e2482ca53737ad7c0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +461,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 11 2016 00:17:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 19 2016 21:56:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

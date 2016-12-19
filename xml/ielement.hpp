@@ -26,8 +26,7 @@ namespace XML
     class IElement
     {
         public:
-            /*! Constructor
-            	 \param[in] name	the (local) name of the Element (without any namespace prefix)
+            /*! Default constructor
              */
             explicit IElement() = default;
 

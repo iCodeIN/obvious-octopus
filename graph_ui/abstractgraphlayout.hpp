@@ -2,6 +2,8 @@
 #ifndef ABSTRACTGRAPHLAYOUT_HPP
 #define ABSTRACTGRAPHLAYOUT_HPP
 
+#include "graph_ui/igraphlayout.h"
+
 #include <assert.h>
 #include <functional>
 #include <tuple>
@@ -12,12 +14,12 @@ namespace graph
     template <typename T> class IGraph;
 }
 
-namespace graphUI
+namespace graph_ui
 {
     /*! Abstract base class for laying out graphs
      */
     template <typename T>
-    class AbstractGraphLayout
+    class AbstractGraphLayout : public IGraphLayout<T>
     {
         public:
             explicit AbstractGraphLayout() = default;
@@ -26,18 +28,6 @@ namespace graphUI
             /*! define a phyiscal point
              */
             using PointType = typename std::tuple<int,int>;
-
-            /*! define a function mapping vertices to points
-             */
-            using VertexLayoutFunctionType = typename std::function<PointType(const T &vertex)>;
-
-            /*! define a function mapping edges to the points they cross
-             */
-            using EdgeLayoutFunctionType   = typename std::function<std::vector<PointType>(const T &source, const T &target)>;
-
-            /*! define a layout as a combination of VertexLayoutFunctionType and EdgeLayoutFunctionType
-             */
-            using LayoutType = typename std::tuple<VertexLayoutFunctionType, EdgeLayoutFunctionType>;
 
             /*! define a size (bounding box) type
              */
@@ -48,9 +38,8 @@ namespace graphUI
              */
             using SizeFunctionType = typename std::function<SizeType(const T &vertex)>;
 
-            /*! Layout a graph
-             */
-            virtual LayoutType layout(const graph::IGraph<T> &graph, const SizeFunctionType &size) = 0;
+            // --- IGraphLayout ---
+            virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const SizeFunctionType &size) const = 0;
 
             /*! set the minimal margin on the x-axis between vertices
              */
@@ -60,8 +49,7 @@ namespace graphUI
                 m_minXMargin = margin;
             }
 
-            /*! \return the minimal margin on the x-axis between vertices
-             */
+            // --- IGraphLayout ---
             virtual int getMinXMargin() const
             {
                 return m_minXMargin;
@@ -75,8 +63,7 @@ namespace graphUI
                 m_maxXMargin = margin;
             }
 
-            /*! \return the maximal margin on the x-axis between vertices
-             */
+            // --- IGraphLayout ---
             virtual int getMaxXMargin() const
             {
                 return m_maxXMargin;
@@ -90,8 +77,7 @@ namespace graphUI
                 m_minYMargin = margin;
             }
 
-            /*! \return the minimal margin on the y-axis between vertices
-             */
+            // --- IGraphLayout ---
             virtual int getMinYMargin() const
             {
                 return m_minYMargin;
@@ -105,15 +91,14 @@ namespace graphUI
                 m_maxYMargin = margin;
             }
 
-            /*! \return the maximal margin on the y-axis between vertices
-             */
+            // --- IGraphLayout ---
             virtual int getMaxYMargin() const
             {
                 return m_maxYMargin;
             }
 
         private:
-// --- members ---
+            // --- members ---
             int     m_minXMargin = 10;
             int     m_maxXMargin = 10;
             int     m_minYMargin = 10;

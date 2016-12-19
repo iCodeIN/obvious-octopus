@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['domaintype',['DomainType',['../classmeta_1_1AbstractMetaHeuristic.html#abcd07a0ff223dfc116d7a54047a16701',1,'meta::AbstractMetaHeuristic']]]
+  ['cycle',['Cycle',['../classgraph_1_1CycleFinder.html#a540ea3d51572b6f1137f967e3b3c37c8',1,'graph::CycleFinder']]]
 ];

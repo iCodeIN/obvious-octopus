@@ -1,117 +1,74 @@
 #pragma once
-#ifndef SNAPTOGRIDGRAPHLAYOUT_HPP
-#define SNAPTOGRIDGRAPHLAYOUT_HPP
+#ifndef SNAP_TO_GRID_GRAPH_LAYOUT_HPP
+#define SNAP_TO_GRID_GRAPH_LAYOUT_HPP
 
 #include "graph_ui/abstractgraphlayout.hpp"
 
-#include <math.h>
-#include <memory>
-#include <tuple>
+#include "graph/i2dgraph.hpp"
+#include "graph/igraph.hpp"
 
-namespace graphUI
+#include <memory>
+
+namespace graph_ui
 {
-    /*! Wrapper class that snaps all layed out components of its wrapped layout to a grid with given size.
-     */
     template <typename T>
-    class SnapToGridGraphLayout final : public AbstractGraphLayout<T>
+    class SnapToGridGraphLayout : public AbstractGraphLayout<T>
     {
         public:
-            /* constructor
-                \param[in] innerLayout  the layout to be wrapped
+            /*! default constructor
              */
-            explicit SnapToGridGraphLayout(std::unique_ptr<AbstractGraphLayout<T>> innerLayout)
-                : m_innerLayout(std::move(innerLayout))
+            public SnapToGridGraphLayout(std::unique_ptr<IGraphLayout<T>> &wrappedLayout)
+                : m_wrappedLayout(wrappedLayout)
+                , m_xGridResolution(20)
+                , m_yGridResolution(20)
             {
-            }
-
-            /*! destructor (default)
-             */
-            virtual ~SnapToGridGraphLayout() = default;
-
-            // --- AbstractGraphLayout ---
-            virtual void setMinXMargin(int margin) override
-            {
-                m_innerLayout.get()->setMinXMargin(margin);
-            }
-            // --- AbstractGraphLayout ---
-            virtual int getMinXMargin() const override
-            {
-                return m_innerLayout.get()->getMinXMargin();
-            }
-            // --- AbstractGraphLayout ---
-            virtual void setMaxXMargin(int margin) override
-            {
-                m_innerLayout.get()->setMaxXMargin(margin);
-            }
-            // --- AbstractGraphLayout ---
-            virtual int getMaxXMargin() const override
-            {
-                return m_innerLayout.get()->getMaxXMargin();
-            }
-            // --- AbstractGraphLayout ---
-            virtual void setMinYMargin(int margin) override
-            {
-                m_innerLayout.get()->setMinYMargin(margin);
-            }
-            // --- AbstractGraphLayout ---
-            virtual int getMinYMargin() const override
-            {
-                return m_innerLayout.get()->getMinYMargin();
-            }
-            // --- AbstractGraphLayout ---
-            virtual void setMaxYMargin(int margin) override
-            {
-                m_innerLayout.get()->setMaxYMargin(margin);
-            }
-            // --- AbstractGraphLayout ---
-            virtual int getMaxYMargin() const override
-            {
-                return m_innerLayout.get()->getMaxYMargin();
+                assert(m_wrappedLayout);
             }
 
             // --- AbstractGraphLayout ---
-            virtual typename graphUI::AbstractGraphLayout<T>::LayoutType layout(const graph::IGraph<T> &graph, const typename graphUI::AbstractGraphLayout<T>::SizeFunctionType &size) override
+            virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const typename AbstractGraphLayout<T>::SizeFunctionType &size) const override
             {
-                auto initialLayout = m_innerLayout.get()->layout(graph, size);
-                auto &vertexLayout = std::get<0>(initialLayout);
-                auto &edgeLayout = std::get<1>(initialLayout);
+                // perform initial layout
+                auto initLayout = m_wrappedLayout->layout(graph, size);
+                assert(initLayout);
 
-                // snap vertices to grid
-                auto gridVertexLayout = [vertexLayout, this](const T &vertex)
+                // adjust coordinates of vertices
+                for(auto &vertex : graph.vertices())
                 {
-                    auto pos = vertexLayout(vertex);
-                    auto x = std::get<0>(pos);
-                    auto y = std::get<1>(pos);
-                    auto gridX = round(x / (double) m_xGridSize) * m_xGridSize;
-                    auto gridY = round(y / (double) m_yGridSize) * m_yGridSize;
-                    return std::make_tuple(gridX, gridY);
-                };
+                    auto &point = initLayout->getVertexPoint(vertex);
+                    point.first -= point.first % m_xGridResolution;
+                    point.second -= point.second % m_yGridResolution;
+                    initLayout->setVertexPoint(vertex, x, y);
+                }
 
-                // snap edges to grid
-                auto gridEdgeLayout = [edgeLayout, this](const T &source, const T &target)
+                // adjust coordinates of edges
+                for(auto &source : graph.vertices())
                 {
-                    using PointType = typename graphUI::AbstractGraphLayout<T>::PointType;
-                    std::vector<PointType> pos = edgeLayout(source, target);
-                    for(int i=0; i<pos.size(); i++)
+                    for(auto &target : graph.vertices())
                     {
-                        auto x = std::get<0>(pos[i]);
-                        auto y = std::get<1>(pos[i]);
-                        auto gridX = round(x / (double) m_xGridSize) * m_xGridSize;
-                        auto gridY = round(y / (double) m_yGridSize) * m_yGridSize;
-                        pos[i] = std::make_tuple(gridX, gridY);
+                        if(graph.hasVertex(source, target))
+                        {
+                            auto &path = initLayout->getEdgePoints(source, target);
+                            for(auto &point : path)
+                            {
+                                point.first -= point.first % m_xGridResolution;
+                                point.second -= point.second % m_yGridResolution;
+                            }
+                        }
                     }
-                    return pos;
-                };
+                }
 
                 // return
-                return std::make_tuple(gridVertexLayout, gridEdgeLayout);
+                return std::move(initLayout);
             }
 
         private:
-            std::unique_ptr<AbstractGraphLayout<T>> m_innerLayout;
-            int                                     m_xGridSize = 10;
-            int                                     m_yGridSize = 10;
+            // --- methods ---
+            // --- members ---
+            int                                 m_xGridResolution;
+            int                                 m_yGridResolution;
+            std::unique_ptr<IGraphLayout<T>>    m_wrappedLayout;
     };
 }
 
-#endif // SNAPTOGRIDGRAPHLAYOUT_HPP
+#endif // SNAP_TO_GRID_GRAPH_LAYOUT_HPP

@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['abstractgraphlayout',['AbstractGraphLayout',['../classgraphUI_1_1AbstractGraphLayout.html',1,'graphUI']]],
+  ['abstractgraphlayout',['AbstractGraphLayout',['../classgraph__ui_1_1AbstractGraphLayout.html',1,'graph_ui']]],
   ['abstractmetaheuristic',['AbstractMetaHeuristic',['../classmeta_1_1AbstractMetaHeuristic.html',1,'meta']]],
   ['adjecencylistgraph',['AdjecencyListGraph',['../classgraph_1_1AdjecencyListGraph.html',1,'graph']]],
   ['adjecencylisttree',['AdjecencyListTree',['../classgraph_1_1AdjecencyListTree.html',1,'graph']]],

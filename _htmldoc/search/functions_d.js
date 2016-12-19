@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['parent',['parent',['../classgraph_1_1AdjecencyListTree.html#ab86007801ca9a62ad9ba01a1d504e8ea',1,'graph::AdjecencyListTree::parent()'],['../classgraph_1_1ITree.html#ad6c2d22aab71ccb1bed8e225813eac6b',1,'graph::ITree::parent()']]],
   ['path',['Path',['../classSVG_1_1Path.html#a314100e3d7325103e56fd9cd71c20ba6',1,'SVG::Path::Path(const Path &amp;)=delete'],['../classSVG_1_1Path.html#a90f04a2e131b4d9711aa650a620dd478',1,'SVG::Path::Path(Path &amp;)=delete']]],
   ['permutationsearch',['PermutationSearch',['../classmeta_1_1PermutationSearch.html#a0a69951fbdaa15c23afa81ba27ccece3',1,'meta::PermutationSearch']]],
   ['pick',['pick',['../classnumeric_1_1WeightedSampling.html#af994a5be59ba91ef2fd2a8edef478ed8',1,'numeric::WeightedSampling']]],

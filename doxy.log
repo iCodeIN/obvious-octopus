@@ -1,16 +1,13 @@
 /home/joris/Code/alexandria/numeric/weightedsampling.hpp:18: warning: Compound numeric::WeightedSampling is not documented.
 /home/joris/Code/alexandria/numeric/ismoothdistribution.hpp:9: warning: Compound numeric::ISmoothDistribution is not documented.
-/home/joris/Code/alexandria/graph_ui/defaultgraphrenderer.hpp:23: warning: Compound graphUI::DefaultGraphRenderer is not documented.
-/home/joris/Code/alexandria/game/minimax.hpp:22: warning: Member GamePlayType (typedef) of class game::Minimax is not documented.
-/home/joris/Code/alexandria/game/minimax.hpp:23: warning: Member EvaluationFunctionType (typedef) of class game::Minimax is not documented.
-/home/joris/Code/alexandria/game/minimax.hpp:24: warning: Member nextMoveFunctionType (typedef) of class game::Minimax is not documented.
-/home/joris/Code/alexandria/game/minimax.hpp:26: warning: Member build(const T &startingPosition) (function) of class game::Minimax is not documented.
-/home/joris/Code/alexandria/graph/adjecencylistgraph.hpp:164: warning: Member PointType (typedef) of class graph::AdjecencyListGraph is not documented.
-/home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:44: warning: Member layout(const graph::IGraph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &sizeFunction) override (function) of class graph::HierarchicalGraphLayout is not documented.
-/home/joris/Code/alexandria/graph_ui/circulargraphlayout.hpp:28: warning: Member layout(const graph::Graph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) override (function) of class graphUI::CircularGraphLayout is not documented.
-/home/joris/Code/alexandria/graph_ui/defaultgraphrenderer.hpp:35: warning: Member render(const graph::IGraph< T > &g, const typename graphUI::AbstractGraphLayout< T >::LayoutType &layout, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) const  (function) of class graphUI::DefaultGraphRenderer is not documented.
-/home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:22: warning: Member SnapToGridGraphLayout(std::unique_ptr< AbstractGraphLayout< T >> innerLayout) (function) of class graphUI::SnapToGridGraphLayout is not documented.
-/home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:73: warning: Member layout(const graph::IGraph< T > &graph, const typename graphUI::AbstractGraphLayout< T >::SizeFunctionType &size) override (function) of class graphUI::SnapToGridGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:17: warning: Compound graph_ui::HierarchicalGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:16: warning: Compound graph_ui::SnapToGridGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:20: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::HierarchicalGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/randomgraphlayout.hpp:23: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::RandomGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::ResizeGraphLayout is not documented.
+/home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::SnapToGridGraphLayout is not documented.
 /home/joris/Code/alexandria/nlp/word2vec.hpp:26: warning: Member UnigramGetterType (typedef) of class NLP::Word2Vec is not documented.
 /home/joris/Code/alexandria/nlp/word2vec.hpp:27: warning: Member SampleSizeGetterType (typedef) of class NLP::Word2Vec is not documented.
 /home/joris/Code/alexandria/nlp/word2vec.hpp:62: warning: Member LearningRateFunctionType (typedef) of class NLP::Word2Vec is not documented.
@@ -29,4 +26,3 @@
 /home/joris/Code/alexandria/svg/path.hpp:19: warning: Member Path(std::vector< PathCommand > cmds) (function) of class SVG::Path is not documented.
 /home/joris/Code/alexandria/tree/bktree.hpp:56: warning: Member find(const T &data, int diff) const  (function) of class tree::BKTree is not documented.
 /home/joris/Code/alexandria/xml/defaultelementimpl.hpp:75: warning: Member add(std::unique_ptr< XML::IElement > n) override (function) of class XML::DefaultElementImpl is not documented.
-/home/joris/Code/alexandria/xml/ielement.hpp:29: warning: argument 'name' of command @param is not found in the argument list of XML::IElement::IElement()

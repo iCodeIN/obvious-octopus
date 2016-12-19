@@ -21,23 +21,32 @@ namespace graph
         // bfs build loop
         std::queue<T> q;
         q.push(root);
+        tree->insertVertex(root);
         while(!q.empty())
         {
             auto &vertex = q.front();
             q.pop();
 
-            if(!tree->outgoing(vertex).empty())
+            if(tree->hasVertex(vertex) && !tree->outgoing(vertex).empty())
             {
                 continue;
             }
 
             for(auto &nextVertex : graph.outgoing(vertex))
             {
-                if(tree->incoming(nextVertex).empty())
+                if(tree->hasVertex(nextVertex) && !tree->incoming(nextVertex).empty())
                 {
-                    tree->insertEdge(vertex, nextVertex);
-                    q.push(nextVertex);
+                    continue;
                 }
+                if(tree->hasVertex(nextVertex) && !tree->outgoing(nextVertex).empty())
+                {
+                    continue;
+                }
+
+                tree->insertVertex(nextVertex);
+                tree->insertEdge(vertex, nextVertex);
+                q.push(nextVertex);
+
             }
         }
 

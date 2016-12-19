@@ -25,9 +25,9 @@ static std::ostream& operator<<(std::ostream& os, const graph::IGraph<std::strin
 
     for(auto &vertex : g.vertices())
     {
-        auto nodeElementPtr = std::unique_ptr<XML::IElement>(new XML::DefaultElementImpl("node"));
-        nodeElementPtr->setAttribute("id", vertex);
-        graphElementPtr->add(std::move(nodeElementPtr));
+        auto vertexElementPtr = std::unique_ptr<XML::IElement>(new XML::DefaultElementImpl("node"));
+        vertexElementPtr->setAttribute("id", vertex);
+        graphElementPtr->add(std::move(vertexElementPtr));
     }
     auto edgeId = 0;
     for(auto &vertex0 : g.vertices())
@@ -77,6 +77,8 @@ static std::istream& operator>>(std::istream& is, graph::IGraph<std::string> &g)
     // vertices
     for(auto vertexElement : graphElement.getChildrenByName("node"))
     {
+        auto &id = vertexElement.get().getAttribute("id");
+        g.insertVertex(id);
     }
 
     // edges

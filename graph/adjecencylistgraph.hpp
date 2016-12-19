@@ -5,9 +5,15 @@
 #include "i2dgraph.hpp"
 
 #include <assert.h>
+#include <boost/bimap.hpp>
 #include <functional>
+#include <limits>
 #include <map>
+#include <random>
 #include <set>
+#include <vector>
+
+#include <iostream> // debug
 
 namespace graph
 {
@@ -21,6 +27,8 @@ namespace graph
             /*! default constructor
              */
             explicit AdjecencyListGraph()
+                : m_generator(m_randomDevice())
+                , m_distribution(0, std::numeric_limits<ulong>::max())
             {
             }
 
@@ -43,6 +51,12 @@ namespace graph
              */
             explicit AdjecencyListGraph(std::set<T> vertices, const TransferFunctionType0 &transferFunction)
             {
+                // insert vertices
+                for(auto &vertex : vertices)
+                {
+                    insertVertex(vertex);
+                }
+                // insert edges
                 for(auto &vertex0 : vertices)
                 {
                     for(auto &vertex1 : vertices)
@@ -61,6 +75,12 @@ namespace graph
              */
             explicit AdjecencyListGraph(std::set<T> vertices, const TransferFunctionType1 &transferFunction)
             {
+                // insert vertices
+                for(auto &vertex : vertices)
+                {
+                    insertVertex(vertex);
+                }
+                // insert edges
                 for(auto &vertex0 : vertices)
                 {
                     for(auto &vertex1 : transferFunction(vertex0))
@@ -70,16 +90,24 @@ namespace graph
                 }
             }
 
+
             // --- IGraph ---
             virtual void insertEdge(const T& source, const T& target) override
             {
-                m_vertices[source].insert(target);
+                //std::cout << "insertEdge(" << source << ", " << target << ")" << std::endl;
+                assert(hasVertex(source) && hasVertex(target));
+                auto sourceId = m_vertexIds.left.find(source)->second;
+                auto targetId = m_vertexIds.left.find(target)->second;
+                m_edges[sourceId].insert(targetId);
             }
 
             // --- IGraph ---
             virtual void eraseEdge(const T& source, const T& target) override
             {
-                m_vertices[source].erase(target);
+                assert(hasVertex(source) && hasVertex(target));
+                auto sourceId = m_vertexIds.left.find(source)->second;
+                auto targetId = m_vertexIds.left.find(target)->second;
+                m_edges[sourceId].erase(targetId);
             }
 
             // --- IGraph ---
@@ -89,95 +117,137 @@ namespace graph
                 {
                     return false;
                 }
-                auto adjSetIt = m_vertices.find(source);
-                if(adjSetIt == m_vertices.cend())
-                {
-                    return false;
-                }
-                auto &adjSet = adjSetIt->second;
-                return adjSet.find(target) != adjSet.cend();
+                auto sourceId = m_vertexIds.left.find(source)->second;
+                auto targetId = m_vertexIds.left.find(target)->second;
+                auto &edgeSet = m_edges.find(sourceId)->second;
+                return edgeSet.find(targetId) != edgeSet.end();
             }
 
             // --- IGraph ---
             virtual const std::set<T> outgoing(const T& source) const override
             {
-                auto adjSetIt = m_vertices.find(source);
-                if(adjSetIt != m_vertices.cend())
+                //std::cout << "outgoing(" << source << ")" << std::endl;
+                assert(hasVertex(source));
+                auto sourceId = m_vertexIds.left.find(source)->second;
+                std::set<T> retval;
+                for(auto targetId : m_edges.find(sourceId)->second)
                 {
-                    return adjSetIt->second;
+                    auto &targetVertex = m_vertexIds.right.find(targetId)->second;
+                    retval.insert(targetVertex);
                 }
-                else
-                {
-                    return std::set<T>();
-                }
+                return retval;
             }
 
             // --- IGraph ---
             virtual const std::set<T> incoming(const T& target) const override
             {
-                auto retSet = std::set<T>();
-                for(auto &pair : m_vertices)
+                std::set<T> retval;
+                for(auto &source : vertices())
                 {
-                    auto &nbs = pair.second;
-                    if(nbs.find(target) != nbs.cend())
+                    if(hasEdge(source, target))
                     {
-                        retSet.insert(pair.first);
+                        retval.insert(source);
                     }
                 }
-                return retSet;
+                return retval;
             }
 
             // --- IGraph ---
             virtual const std::set<T> vertices() const override
             {
-                auto retSet = std::set<T>();
-                for(auto &pair : m_vertices)
+                std::set<T> retval;
+                for(auto &tuple : m_vertexIds.left)
                 {
-                    retSet.insert(pair.first);
-                    for(auto &nb : pair.second)
+                    retval.insert(tuple.first);
+                }
+                return retval;
+            }
+
+            // --- IGraph ---
+            virtual void insertVertex(const T& vertex) override
+            {
+                //std::cout << "insertVertex(" << vertex << ")" << std::endl;
+                if(hasVertex(vertex))
+                {
+                    return;
+                }
+                auto id = generateNextId();
+                using BimapType = typename boost::bimap<T,long>;
+                using BimapValueType = typename BimapType::value_type;
+                m_vertexIds.insert(BimapValueType(vertex, id));
+                m_edges[id] = std::set<long>();
+            }
+
+            // --- IGraph ---
+            virtual void eraseVertex(const T& vertex) override
+            {
+                if(!hasVertex(vertex))
+                {
+                    return;
+                }
+
+                // find id
+                auto vertexId = m_vertexIds.left.find(vertex)->second;
+
+                // erase from edges (incoming)
+                for(auto &tuple : m_edges)
+                {
+                    tuple.second.erase(vertexId);
+                }
+
+                // erase from edges (outgoing)
+                m_edges.erase(vertexId);
+
+                // erase points associated to edges using this vertex
+                std::vector<std::pair<long,long>> edgesToDelete;
+                for(auto &tuple : m_edgePoints)
+                {
+                    auto &edge = tuple.first;
+                    if(edge.first == vertexId || edge.second == vertexId)
                     {
-                        retSet.insert(nb);
+                        edgesToDelete.push_back(edge);
                     }
                 }
-                return retSet;
+                for(auto &edge : edgesToDelete)
+                {
+                    m_edgePoints.erase(edge);
+                }
+
+                // erase point associated to this vertex
+                m_vertexPoints.erase(vertexId);
+
+                // erase from vertices
+                // m_vertexIds.erase(vertexId);
+
+                // #TODO
             }
 
             // --- IGraph ---
             virtual bool hasVertex(const T &vertex) const override
             {
-                if(m_vertices.find(vertex) != m_vertices.cend())
-                {
-                    return true;
-                }
-                for(auto &pair : m_vertices)
-                {
-                    auto &nbs = pair.second;
-                    if(nbs.find(vertex) != nbs.cend())
-                    {
-                        return true;
-                    }
-                }
-                // default
-                return false;
+                //std::cout << "hasVertex(" << vertex << ") = " << (m_vertexIds.left.find(vertex) != m_vertexIds.left.end()) << std::endl;
+                return m_vertexIds.left.find(vertex) != m_vertexIds.left.end();
             }
-
-            using PointType = std::pair<int,int>;
 
             /*! set the PointType of a vertex
                 \param[in] vertex the vertex
                 \param[in] point the point (location) of the vertex
              */
-            void setVertexPoint(const T& vertex, PointType& point)
+            void setVertexPoint(const T& vertex, std::pair<int,int> point)
             {
-                // #todo
+                assert(hasVertex(vertex));
+                auto vertexId = m_vertexIds.left.find(vertex)->second;
+                m_vertexPoints[vertexId] = point;
             }
 
             // --- I2DGraph ---
-            virtual const PointType getVertexPoint(const T &vertex) const
+            virtual const std::pair<int,int> getVertexPoint(const T &vertex) const
             {
-                auto it = m_vertexPoints.find(vertex);
-                assert(it != m_vertexPoints.end());
-                return it->second;
+                assert(hasVertex(vertex));
+                auto vertexId = m_vertexIds.left.find(vertex)->second;
+                auto vertexPointIt = m_vertexPoints.find(vertexId);
+                assert(vertexPointIt != m_vertexPoints.end());
+                return vertexPointIt->second;
             }
 
             /*! set the path (std::vector<PointType>) for an edge
@@ -185,25 +255,47 @@ namespace graph
                 \param[in] target the target vertex of the edge
                 \param[in] path the path (std::vector<PointType>) corresponding to the points the edge passes through
              */
-            void setEdgePoints(const T& source, const T& target, std::vector<PointType>& path)
+            void setEdgePoints(const T& source, const T& target, std::vector<std::pair<int,int>>& path)
             {
-                // #todo
+                assert(hasEdge(source, target));
+                auto sourceId = m_vertexIds.left.find(source)->second;
+                auto targetId = m_vertexIds.left.find(target)->second;
+                m_edgePoints[std::make_pair(sourceId, targetId)] = path;
             }
 
             // --- I2DGraph ---
-            virtual std::vector<PointType> const getEdgePoints(const T& source, const T& target) const
+            virtual std::vector<std::pair<int,int>> const getEdgePoints(const T& source, const T& target) const
             {
-                auto it = m_edgePoints.find(std::make_pair(source, target));
-                assert(it != m_edgePoints.end());
-                return it->second;
+                assert(hasEdge(source, target));
+                auto sourceId = m_vertexIds.left.find(source)->second;
+                auto targetId = m_vertexIds.left.find(target)->second;
+                auto edgePointIt = m_edgePoints.find(std::make_pair(sourceId, targetId));
+                assert(edgePointIt != m_edgePoints.end());
+                return edgePointIt->second;
             }
 
         private:
             // --- methods ---
+            long generateNextId()
+            {
+                auto nextId = 0L;
+                while(m_vertexIds.right.find(nextId) != m_vertexIds.right.end())
+                {
+                    nextId = m_distribution(m_generator);
+                }
+                return nextId;
+            }
+
             // --- members ---
-            std::map<T, std::set<T>>                                            m_vertices;
-            std::map<const T, PointType>                                        m_vertexPoints;
-            std::map<std::pair<const T, const T>, std::vector<PointType>>       m_edgePoints;
+            std::random_device                                                      m_randomDevice;
+            std::mt19937                                                            m_generator;
+            std::uniform_int_distribution<ulong>                                    m_distribution;
+
+            boost::bimap<T, long>                                                   m_vertexIds;
+            std::map<long, std::set<long>>                                          m_edges;
+
+            std::map<long, std::pair<int,int>>                                      m_vertexPoints;
+            std::map<std::pair<long, long>, std::vector<std::pair<int,int>>>        m_edgePoints;
     };
 }
 

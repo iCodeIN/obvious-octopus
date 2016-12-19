@@ -20,9 +20,13 @@ namespace graph
              */
             virtual const std::set<T> leaves() const = 0;
 
+            /*! \return the parent of a given vertex
+             */
+            virtual T parent(const T& vertex) const = 0;
+
             /*! \return the root of the ITree
              */
-            virtual const T root() const = 0;
+            virtual T root() const = 0;
 
             /*! \return the depth of the ITree
              */

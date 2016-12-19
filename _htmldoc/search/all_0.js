@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['abstractgraphlayout',['AbstractGraphLayout',['../classgraphUI_1_1AbstractGraphLayout.html',1,'graphUI']]],
+  ['abstractgraphlayout',['AbstractGraphLayout',['../classgraph__ui_1_1AbstractGraphLayout.html',1,'graph_ui']]],
   ['abstractmetaheuristic',['AbstractMetaHeuristic',['../classmeta_1_1AbstractMetaHeuristic.html',1,'meta']]],
   ['add',['add',['../classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd',1,'SVG::SVG::add()'],['../classXML_1_1IElement.html#a14a40d51e6cecde2bbd059e0f4beb4c6',1,'XML::IElement::add()']]],
   ['addmatrix',['addMatrix',['../classplotting_1_1HeatPlot.html#a394c756f2da4e3d6ce3f41321f3671c3',1,'plotting::HeatPlot']]],

@@ -93,6 +93,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="classgame_1_1Minimax-members.html">List of all members</a>  </div>
@@ -105,34 +106,127 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ab55fc958e48ab1a613e603eb070fcd95"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ab55fc958e48ab1a613e603eb070fcd95"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>GamePlayType</b> = graph::Graph&lt; T &gt;</td></tr>
-<tr class="separator:ab55fc958e48ab1a613e603eb070fcd95"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2480f2d40f8cee4a081430a6890e53c0"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2480f2d40f8cee4a081430a6890e53c0"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>EvaluationFunctionType</b> = std::function&lt; int(const GamePlayType &amp;g)&gt;</td></tr>
-<tr class="separator:a2480f2d40f8cee4a081430a6890e53c0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abb88e340559bd246b40ff16ef6d4ded9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abb88e340559bd246b40ff16ef6d4ded9"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>nextMoveFunctionType</b> = std::function&lt; std::vector&lt; T &gt;(const T &amp;position)&gt;</td></tr>
-<tr class="separator:abb88e340559bd246b40ff16ef6d4ded9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0ff22fe8f6f71f318b952afa3872e74"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a> = std::function&lt; int(const T &amp;position)&gt;</td></tr>
+<tr class="separator:ab0ff22fe8f6f71f318b952afa3872e74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa372d231ddf506e0ddc7de4187b2fc8d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a> = std::function&lt; std::vector&lt; T &gt;(const T &amp;position)&gt;</td></tr>
+<tr class="separator:aa372d231ddf506e0ddc7de4187b2fc8d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ae7f96a80707d777bb16b89e2cdd70f46"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ae7f96a80707d777bb16b89e2cdd70f46"></a>
-std::unique_ptr&lt; GamePlayType &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>build</b> (const T &amp;startingPosition)</td></tr>
-<tr class="separator:ae7f96a80707d777bb16b89e2cdd70f46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af94301ccbd35de51308eacc4c2e192c6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">Minimax</a> (<a class="el" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a> &amp;evalFunction, <a class="el" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a> &amp;nextMoveFunction)</td></tr>
+<tr class="separator:af94301ccbd35de51308eacc4c2e192c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a55364b949135aa4aee8879696ef3fc08"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">next</a> (const T &amp;startingPosition)</td></tr>
+<tr class="separator:a55364b949135aa4aee8879696ef3fc08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><h3>template&lt;typename T&gt;<br />
 class game::Minimax&lt; T &gt;</h3>
 
-<p><a class="el" href="classgame_1_1Minimax.html">Minimax</a> (sometimes MinMax or MM[1]) is a decision rule used in decision theory, game theory, statistics and philosophy for minimizing the possible loss for a worst case (maximum loss) scenario. Originally formulated for two-player zero-sum game theory, covering both the cases where players take alternate moves and those where they make simultaneous moves, it has also been extended to more complex games and to general decision-making in the presence of uncertainty. </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+<p><a class="el" href="classgame_1_1Minimax.html">Minimax</a> (sometimes MinMax or MM) is a decision rule used in decision theory, game theory, statistics and philosophy for minimizing the possible loss for a worst case (maximum loss) scenario. Originally formulated for two-player zero-sum game theory, covering both the cases where players take alternate moves and those where they make simultaneous moves, it has also been extended to more complex games and to general decision-making in the presence of uncertainty. </p>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="ab0ff22fe8f6f71f318b952afa3872e74"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classgame_1_1Minimax.html">game::Minimax</a>&lt; T &gt;::<a class="el" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a> =  std::function&lt;int(const T&amp; position)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>define the function to evaluate game positions </p>
+
+</div>
+</div>
+<a class="anchor" id="aa372d231ddf506e0ddc7de4187b2fc8d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classgame_1_1Minimax.html">game::Minimax</a>&lt; T &gt;::<a class="el" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a> =  std::function&lt;std::vector&lt;T&gt;(const T&amp; position)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>define the function to generate the next possible game-positions given a starting position </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="af94301ccbd35de51308eacc4c2e192c6"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgame_1_1Minimax.html">game::Minimax</a>&lt; T &gt;::<a class="el" href="classgame_1_1Minimax.html">Minimax</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a> &amp;&#160;</td>
+          <td class="paramname"><em>evalFunction</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a> &amp;&#160;</td>
+          <td class="paramname"><em>nextMoveFunction</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a55364b949135aa4aee8879696ef3fc08"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classgame_1_1Minimax.html">game::Minimax</a>&lt; T &gt;::next </td>
+          <td>(</td>
+          <td class="paramtype">const T &amp;&#160;</td>
+          <td class="paramname"><em>startingPosition</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the next (optimal) position given the starting positions This method uses minimax, and alpha-beta pruning. </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>game/<a class="el" href="minimax_8hpp_source.html">minimax.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Nov 11 2016 00:17:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon Dec 19 2016 21:56:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

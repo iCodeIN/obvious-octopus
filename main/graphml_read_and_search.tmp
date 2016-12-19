@@ -1,5 +1,6 @@
 #include "graph/adjecencylistgraph.hpp"
 #include "graph/bfs.hpp"
+#include "graph/cyclefinder.hpp"
 #include "graph/dfs.hpp"
 
 #include "xml/graphml.hpp"
@@ -15,16 +16,30 @@ using namespace XML;
 int main()
 {
     ifstream ifs;
-    ifs.open ("/home/joris/g0.xml", ifstream::in);
+    ifs.open ("/home/joris/Downloads/one_cycle.graphml", ifstream::in);
 
     // read graph
     auto graphPtr = (graph::IGraph<string>*) new AdjecencyListGraph<string>();
     ifs >> *graphPtr;
 
+    // apply dfs
     auto treePtr = dfs<string>(*graphPtr, "n2");
 
+    // persist
     ofstream ofs;
     ofs.open("/home/joris/g0_tree_at_n0.xml");
     ofs << *(treePtr.get());
     ofs.close();
+
+    // look for cycles
+    auto &cycles = CycleFinder<string>::cycles(*graphPtr);
+    for(auto &cycle : cycles)
+    {
+        std::cout << "cycle : ";
+        for(auto &vertex : cycle)
+        {
+            std::cout << vertex << "\t";
+        }
+        std::cout << std::endl;
+    }
 }

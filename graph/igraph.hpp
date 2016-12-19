@@ -46,6 +46,16 @@ namespace graph
              */
             virtual const std::set<T> vertices() const = 0;
 
+            /*! Insert a vertex into the graph
+                \param[in] vertex the vertex to be inserted
+             */
+            virtual void insertVertex(const T& vertex) = 0;
+
+            /*! Erase a vertex from the graph
+                \param[in] vertex the vertex to be erased
+             */
+            virtual void eraseVertex(const T& vertex) = 0;
+
             /*! \return true if this graph has a given vertex, false otherwise
              */
             virtual bool hasVertex(const T& vertex) const = 0;

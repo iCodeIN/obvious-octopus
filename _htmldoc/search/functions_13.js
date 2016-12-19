@@ -6,9 +6,7 @@ var searchData=
   ['_7eboostmatriximpl',['~BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html#ac8cad4427c7d29e74f3eb73457b217ad',1,'matrix::BoostMatrixImpl']]],
   ['_7ecircle',['~Circle',['../classSVG_1_1Circle.html#a664ad02797ef13d38f06251bd4a7add0',1,'SVG::Circle']]],
   ['_7edefaultelementimpl',['~DefaultElementImpl',['../classXML_1_1DefaultElementImpl.html#a393c772c356267329fa787dde51f73f6',1,'XML::DefaultElementImpl']]],
-  ['_7edefaultgraphrenderer',['~DefaultGraphRenderer',['../classgraphUI_1_1DefaultGraphRenderer.html#a3390e6e3bba27911a389bfb282a6cfab',1,'graphUI::DefaultGraphRenderer']]],
   ['_7eheatplot',['~HeatPlot',['../classplotting_1_1HeatPlot.html#ae8f90f3fc3328da4631b867b0524dede',1,'plotting::HeatPlot']]],
-  ['_7ehierarchicalgraphlayout',['~HierarchicalGraphLayout',['../classgraph_1_1HierarchicalGraphLayout.html#a67b3ed9794be9731ece0966cb2d99219',1,'graph::HierarchicalGraphLayout']]],
   ['_7ei2dgraph',['~I2DGraph',['../classgraph_1_1I2DGraph.html#ac845fbcb82e52df701e0a9e487a52bde',1,'graph::I2DGraph']]],
   ['_7eielement',['~IElement',['../classSVG_1_1IElement.html#ab9492424a820131384e2ac4448cb8b31',1,'SVG::IElement::~IElement()'],['../classXML_1_1IElement.html#af130a92f3022e56bbe36a6013a949449',1,'XML::IElement::~IElement()']]],
   ['_7eimatrix',['~IMatrix',['../classmatrix_1_1IMatrix.html#a6c12c83081d1bba960b628a7dfec7f21',1,'matrix::IMatrix']]],
@@ -19,6 +17,5 @@ var searchData=
   ['_7epolygon',['~Polygon',['../classSVG_1_1Polygon.html#aa15e0c1f9b3b556629919557aa8c8f5e',1,'SVG::Polygon']]],
   ['_7epolyline',['~Polyline',['../classSVG_1_1Polyline.html#a4b018d4e425d24418b706f7c008b77c1',1,'SVG::Polyline']]],
   ['_7erectangle',['~Rectangle',['../classSVG_1_1Rectangle.html#ad720a126b1d2ffed1c343bfea3e8e695',1,'SVG::Rectangle']]],
-  ['_7esnaptogridgraphlayout',['~SnapToGridGraphLayout',['../classgraphUI_1_1SnapToGridGraphLayout.html#a5544fd5acf3d0e3626143d7dba436569',1,'graphUI::SnapToGridGraphLayout']]],
   ['_7esvg',['~SVG',['../classSVG_1_1SVG.html#adc050d33a0abf55a438ef5f23ef7c7a2',1,'SVG::SVG']]]
 ];
