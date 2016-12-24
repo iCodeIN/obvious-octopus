@@ -7,5 +7,6 @@ var searchData=
   ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html#a6e658fa846d834d03e898034b5fb2c2e',1,'MazeDrawer']]],
   ['min',['min',['../classmatrix_1_1IMatrix.html#af9ccc72c8f2e073a94136325a5a005de',1,'matrix::IMatrix']]],
   ['minimax',['Minimax',['../classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6',1,'game::Minimax']]],
-  ['mul',['mul',['../classmatrix_1_1BoostMatrixImpl.html#a7f2f2a31cbb283cb12b88fc3473f928c',1,'matrix::BoostMatrixImpl::mul()'],['../classmatrix_1_1IMatrix.html#afbbb3948e7908be43bdc2e9fb5fe55c0',1,'matrix::IMatrix::mul()']]]
+  ['mod',['mod',['../classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e',1,'numeric::BigInteger']]],
+  ['mul',['mul',['../classmatrix_1_1BoostMatrixImpl.html#a7f2f2a31cbb283cb12b88fc3473f928c',1,'matrix::BoostMatrixImpl::mul()'],['../classmatrix_1_1IMatrix.html#afbbb3948e7908be43bdc2e9fb5fe55c0',1,'matrix::IMatrix::mul()'],['../classnumeric_1_1BigInteger.html#aaea0ae622600519ccdce369b8a4b70c4',1,'numeric::BigInteger::mul()']]]
 ];

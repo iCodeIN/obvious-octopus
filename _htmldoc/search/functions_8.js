@@ -9,6 +9,5 @@ var searchData=
   ['insertvertex',['insertVertex',['../classgraph_1_1AdjecencyListGraph.html#abced78b89342fe405a04b53219a6cf81',1,'graph::AdjecencyListGraph::insertVertex()'],['../classgraph_1_1AdjecencyListTree.html#a3f2f08fd6d19383bfe3f33479259eade',1,'graph::AdjecencyListTree::insertVertex()'],['../classgraph_1_1IGraph.html#a9f899502cdfdd2d6c1c31686a38e1029',1,'graph::IGraph::insertVertex()']]],
   ['inversedft',['inverseDFT',['../classnumeric_1_1DFT.html#aefafd1c70aef4b273508fbd7f5308303',1,'numeric::DFT']]],
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
-  ['ismoothdistribution',['ISmoothDistribution',['../classnumeric_1_1ISmoothDistribution.html#a28914451d4bf2d983ad7c46df7ba3bc0',1,'numeric::ISmoothDistribution']]],
   ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]]
 ];

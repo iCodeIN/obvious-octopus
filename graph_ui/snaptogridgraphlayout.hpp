@@ -38,7 +38,7 @@ namespace graph_ui
                     auto &point = initLayout->getVertexPoint(vertex);
                     point.first -= point.first % m_xGridResolution;
                     point.second -= point.second % m_yGridResolution;
-                    initLayout->setVertexPoint(vertex, x, y);
+                    //initLayout->setVertexPoint(vertex, x, y);
                 }
 
                 // adjust coordinates of edges

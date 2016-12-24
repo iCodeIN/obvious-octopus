@@ -1,14 +1,10 @@
 var searchData=
 [
-  ['m_5fgenerator',['m_generator',['../classmeta_1_1AbstractMetaHeuristic.html#a9b6b5313e4c148023d54a77ab9d377da',1,'meta::AbstractMetaHeuristic']]],
-  ['main',['main',['../classgame_1_1TicTacToe.html#aeade7969f06afe41a0d69be6ea00cf3d',1,'game::TicTacToe']]],
-  ['matrix',['matrix',['../classSVG_1_1IElement.html#acb302b3a025522197e4e7cdfe064c46f',1,'SVG::IElement']]],
-  ['max',['max',['../classmatrix_1_1IMatrix.html#a09fc99aa085940e8e4702513b85d51f5',1,'matrix::IMatrix']]],
-  ['maze',['Maze',['../classMaze.html',1,'Maze'],['../classMaze.html#a0334b6143afd7bbfb4cfe1774cd1c502',1,'Maze::Maze(int w, int h)'],['../classMaze.html#a81c6be816361ea11b61f9049e542b346',1,'Maze::Maze(const Maze &amp;)=delete'],['../classMaze.html#ad1ba7291c6f823f0e536a03ec1ca33c5',1,'Maze::Maze(Maze &amp;)=delete']]],
-  ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html',1,'MazeDrawer'],['../classMazeDrawer.html#a6e658fa846d834d03e898034b5fb2c2e',1,'MazeDrawer::MazeDrawer()']]],
-  ['metrictype',['MetricType',['../classtree_1_1BKTree.html#aa33586b67ade92e0423c38386e25f94e',1,'tree::BKTree']]],
-  ['min',['min',['../classmatrix_1_1IMatrix.html#af9ccc72c8f2e073a94136325a5a005de',1,'matrix::IMatrix']]],
-  ['minimax',['Minimax',['../classgame_1_1Minimax.html',1,'game']]],
-  ['minimax',['Minimax',['../classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6',1,'game::Minimax']]],
-  ['mul',['mul',['../classmatrix_1_1BoostMatrixImpl.html#a7f2f2a31cbb283cb12b88fc3473f928c',1,'matrix::BoostMatrixImpl::mul()'],['../classmatrix_1_1IMatrix.html#afbbb3948e7908be43bdc2e9fb5fe55c0',1,'matrix::IMatrix::mul()']]]
+  ['layout',['layout',['../classgraph__ui_1_1AbstractGraphLayout.html#a7a27721996ad62bd93e751db838199c2',1,'graph_ui::AbstractGraphLayout::layout()'],['../classgraph__ui_1_1IGraphLayout.html#af069b7e3d3abff539fb10696cd500699',1,'graph_ui::IGraphLayout::layout()']]],
+  ['leaves',['leaves',['../classgraph_1_1AdjecencyListTree.html#ae756ae699a30f27fe636b0c732cfdc33',1,'graph::AdjecencyListTree::leaves()'],['../classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44',1,'graph::ITree::leaves()']]],
+  ['line',['Line',['../classSVG_1_1Line.html',1,'SVG']]],
+  ['line',['Line',['../classSVG_1_1Line.html#acb0e1260c85b3037a2c35cbece03cf2e',1,'SVG::Line::Line(int x1, int y1, int x2, int y2)'],['../classSVG_1_1Line.html#a3d423fefc377e9220e124e960cf62bba',1,'SVG::Line::Line(const Line &amp;)=delete'],['../classSVG_1_1Line.html#af9a1c3683d0c5d8005207efa16d500ba',1,'SVG::Line::Line(Line &amp;)=delete']]],
+  ['lineplot',['LinePlot',['../classplotting_1_1LinePlot.html',1,'plotting']]],
+  ['lineplot',['LinePlot',['../classplotting_1_1LinePlot.html#aef22889a9d4ba4b7e011610b1d0cecb9',1,'plotting::LinePlot::LinePlot(int w, int h)'],['../classplotting_1_1LinePlot.html#aab654ebe50838fb4b181096b7412fa44',1,'plotting::LinePlot::LinePlot(LinePlot &amp;n)=delete'],['../classplotting_1_1LinePlot.html#ac9c8d0e456cc1ab5b74ae9d366a6d6d7',1,'plotting::LinePlot::LinePlot(const LinePlot &amp;n)=delete']]],
+  ['localsearch',['LocalSearch',['../classmeta_1_1LocalSearch.html',1,'meta']]]
 ];

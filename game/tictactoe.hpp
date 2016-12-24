@@ -4,6 +4,7 @@
 #include "minimax.hpp"
 
 #include <algorithm>
+#include <assert.h>
 #include <functional>
 #include <iostream>
 #include <vector>
@@ -102,6 +103,7 @@ namespace game
              */
             static BoardType copy(const BoardType &b)
             {
+                assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
                 BoardType retval;
                 for(int i=0; i<3; i++)
                 {
@@ -118,12 +120,15 @@ namespace game
              */
             static std::vector<BoardType> nextMoves(const BoardType &b)
             {
+                assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
+
+                // if the game has been won, there are no next moves
                 if(score(b,0) != 0)
                 {
                     return std::vector<BoardType>();
                 }
 
-                // count emptySpots;
+                // count nof empty spots;
                 auto emptySpots = 0;
                 for(int i=0; i<3; i++)
                 {
@@ -136,6 +141,7 @@ namespace game
                     }
                 }
 
+                // if the board is filled, there are no next moves
                 if(emptySpots == 0)
                 {
                     return std::vector<BoardType>();
@@ -190,6 +196,7 @@ namespace game
              */
             static int score(const BoardType &b, const int player)
             {
+                assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
                 for(int r=0; r<3; r++)
                 {
                     // rows
@@ -218,6 +225,7 @@ namespace game
 
             static void print(const BoardType &b)
             {
+                assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
                 for(int i=0; i<3; i++)
                 {
                     for(int j=0; j<3; j++)

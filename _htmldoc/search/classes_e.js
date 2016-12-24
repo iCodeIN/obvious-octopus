@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['weightedsampling',['WeightedSampling',['../classnumeric_1_1WeightedSampling.html',1,'numeric']]],
-  ['word2vec',['Word2Vec',['../classNLP_1_1Word2Vec.html',1,'NLP']]]
+  ['tabusearch',['TabuSearch',['../classmeta_1_1TabuSearch.html',1,'meta']]],
+  ['tictactoe',['TicTacToe',['../classgame_1_1TicTacToe.html',1,'game']]],
+  ['turingmachine',['TuringMachine',['../classturing_1_1TuringMachine.html',1,'turing']]]
 ];

@@ -17,10 +17,10 @@ namespace graph_ui
         public:
             /*! default constructor
              */
-            public ResizeGraphLayout(std::unique_ptr<IGraphLayout<T>> &wrappedLayout)
+            public ResizeGraphLayout(std::unique_ptr<IGraphLayout<T>> &wrappedLayout, int width, int height)
                 : m_wrappedLayout(wrappedLayout)
-                , m_maxWidth(20)
-                , m_maxHeight(20)
+                , m_maxWidth(width)
+                , m_maxHeight(height)
             {
                 assert(m_wrappedLayout);
             }

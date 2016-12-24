@@ -6,6 +6,5 @@ var searchData=
   ['igraph',['IGraph',['../classgraph_1_1IGraph.html',1,'graph']]],
   ['igraphlayout',['IGraphLayout',['../classgraph__ui_1_1IGraphLayout.html',1,'graph_ui']]],
   ['imatrix',['IMatrix',['../classmatrix_1_1IMatrix.html',1,'matrix']]],
-  ['ismoothdistribution',['ISmoothDistribution',['../classnumeric_1_1ISmoothDistribution.html',1,'numeric']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html',1,'graph']]]
 ];

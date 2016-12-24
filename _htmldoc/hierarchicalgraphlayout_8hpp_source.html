@@ -107,42 +107,42 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">namespace </span>graph_ui</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classgraph__ui_1_1HierarchicalGraphLayout.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgraph__ui_1_1HierarchicalGraphLayout.html">HierarchicalGraphLayout</a> : <span class="keyword">public</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html">AbstractGraphLayout</a>&lt;T&gt;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            <span class="comment">// --- AbstractGraphLayout ---</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;graph::I2DGraph&lt;T&gt;&gt; layout(<span class="keyword">const</span> <a class="code" href="classgraph_1_1IGraph.html">graph::IGraph&lt;T&gt;</a> &amp;graph, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">AbstractGraphLayout&lt;T&gt;::SizeFunctionType</a> &amp;size)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                assert(!<a class="code" href="classgraph_1_1CycleFinder.html">graph::CycleFinder&lt;T&gt;::hasCycle</a>(graph));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                <span class="comment">// duplicate graph into I2DGraph</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="comment">// set y coordinate based on BFS depth</span></div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="comment">// insert dummy vertices to ensure layout properties are methods</span></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classgraph__ui_1_1HierarchicalGraphLayout.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgraph__ui_1_1HierarchicalGraphLayout.html">HierarchicalGraphLayout</a> : <span class="keyword">public</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html">AbstractGraphLayout</a>&lt;T&gt;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="comment">// --- AbstractGraphLayout ---</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;graph::I2DGraph&lt;T&gt;&gt; layout(<span class="keyword">const</span> <a class="code" href="classgraph_1_1IGraph.html">graph::IGraph&lt;T&gt;</a> &amp;graph, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">AbstractGraphLayout&lt;T&gt;::SizeFunctionType</a> &amp;size)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                assert(!<a class="code" href="classgraph_1_1CycleFinder.html">graph::CycleFinder&lt;T&gt;::hasCycle</a>(graph));</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="comment">// layout graph, layer by layer</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="comment">// duplicate graph into I2DGraph</span></div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="comment">// return</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;}</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="comment">// set y coordinate based on BFS depth</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="comment">// insert dummy vertices to ensure layout properties are methods</span></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="comment">// layout graph, layer by layer</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="comment">// return</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="preprocessor">#endif // HIERARCHICAL_GRAPH_LAYOUT_HPP</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">#endif // HIERARCHICAL_GRAPH_LAYOUT_HPP</span></div>
 <div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html_aa73fd17c800396b0636aa768eb2c0aa8"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">graph_ui::AbstractGraphLayout::SizeFunctionType</a></div><div class="ttdeci">typename std::function&lt; SizeType(const T &amp;vertex)&gt; SizeFunctionType</div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:39</div></div>
 <div class="ttc" id="classgraph_1_1CycleFinder_html"><div class="ttname"><a href="classgraph_1_1CycleFinder.html">graph::CycleFinder</a></div><div class="ttdef"><b>Definition:</b> cyclefinder.hpp:23</div></div>
 <div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html">graph_ui::AbstractGraphLayout</a></div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:22</div></div>
-<div class="ttc" id="classgraph__ui_1_1HierarchicalGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1HierarchicalGraphLayout.html">graph_ui::HierarchicalGraphLayout</a></div><div class="ttdef"><b>Definition:</b> hierarchicalgraphlayout.hpp:16</div></div>
+<div class="ttc" id="classgraph__ui_1_1HierarchicalGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1HierarchicalGraphLayout.html">graph_ui::HierarchicalGraphLayout</a></div><div class="ttdef"><b>Definition:</b> hierarchicalgraphlayout.hpp:22</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html"><div class="ttname"><a href="classgraph_1_1IGraph.html">graph::IGraph</a></div><div class="ttdef"><b>Definition:</b> igraph.hpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 19 2016 21:56:07 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Dec 24 2016 12:39:34 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

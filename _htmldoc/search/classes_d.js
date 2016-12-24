@@ -1,6 +1,7 @@
 var searchData=
 [
-  ['tabusearch',['TabuSearch',['../classmeta_1_1TabuSearch.html',1,'meta']]],
-  ['tictactoe',['TicTacToe',['../classgame_1_1TicTacToe.html',1,'game']]],
-  ['turingmachine',['TuringMachine',['../classturing_1_1TuringMachine.html',1,'turing']]]
+  ['simulatedannealing',['SimulatedAnnealing',['../classmeta_1_1SimulatedAnnealing.html',1,'meta']]],
+  ['snaptogridgraphlayout',['SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html',1,'graph_ui']]],
+  ['split',['Split',['../classutil_1_1Split.html',1,'util']]],
+  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]]
 ];

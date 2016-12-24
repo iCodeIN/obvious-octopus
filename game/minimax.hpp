@@ -2,8 +2,6 @@
 #ifndef MINIMAX_HPP
 #define MINIMAX_HPP
 
-//#include "graph/graph.hpp"
-
 #include <algorithm>
 #include <assert.h>
 #include <functional>
@@ -49,7 +47,7 @@ namespace game
                 m_root = std::unique_ptr<Node>(new Node(startingPosition,this));
 
                 // perform search, with alpha/beta pruning
-                auto v = m_root->alphabeta();
+                m_root->alphabeta();
 
                 // get next (optimal) move
                 return m_root->next();
@@ -68,6 +66,7 @@ namespace game
                         , m_minimax(minimax)
                         , m_parent(this)
                     {
+                        assert(minimax);
                     }
 
                     Node* insert(const T& position)
@@ -119,15 +118,19 @@ namespace game
 
                     bool isConstantLeaf(Node* n) const
                     {
+                        assert(n);
                         while(n->m_parent != n->m_parent->m_parent && n->m_value == n->m_parent->m_value)
                         {
+                            assert(n->m_parent);
                             n = n->m_parent;
                         }
+                        assert(n && n->m_parent && n->m_parent->m_parent);
                         return n->m_parent == n->m_parent->m_parent && n->m_value == n->m_parent->m_value;
                     }
 
                     void recursiveLeaves(Node* n, std::vector<Node*>& v)
                     {
+                        assert(n);
                         if(n->m_children.empty())
                         {
                             v.push_back(n);
@@ -143,7 +146,7 @@ namespace game
 
                     int recursiveaAlphaBeta(int alpha, int beta, int turn)
                     {
-
+                        assert(m_minimax);
                         auto nextMoves = m_minimax->m_nextMove(m_game);
                         if(nextMoves.empty())
                         {
@@ -179,6 +182,7 @@ namespace game
                             {
                                 // update tree
                                 auto childNodePtr = insert(nextMove);
+                                assert(childNodePtr);
 
                                 // default alpha-beta pruning
                                 v = std::min(v, childNodePtr->recursiveaAlphaBeta(alpha, beta,(turn + 1) % m_minimax->m_nofPlayers));
@@ -194,10 +198,10 @@ namespace game
                     }
 
                     // --- members ---
-                    T                                       m_game;
-                    std::vector<std::unique_ptr<Node>>      m_children;
-                    Minimax*                                m_minimax;
-                    Node*                                   m_parent;
+                    T                                       m_game;         // current position in the game
+                    std::vector<std::unique_ptr<Node>>      m_children;     // child nodes
+                    Minimax*                                m_minimax;      // overlying minimax class (used for getting next moves, and evaluating game positions)
+                    Node*                                   m_parent;       // parent node (pointer to self in case of root)
                     int                                     m_value;
             };
 

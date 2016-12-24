@@ -28,6 +28,7 @@ var searchData=
   ['sorteddft',['sortedDFT',['../classnumeric_1_1DFT.html#a95ef27ca473b1381784407bd7acec82f',1,'numeric::DFT']]],
   ['split',['split',['../classutil_1_1Split.html#a89b174397884de389a830e65885e8a38',1,'util::Split']]],
   ['splitpunctandspace',['splitPunctAndSpace',['../classutil_1_1Split.html#a1ae0a27c2362440c1cd0321be9c698b0',1,'util::Split']]],
+  ['sub',['sub',['../classnumeric_1_1BigInteger.html#a2e3cddb33588b58bfd4f61dbad82182f',1,'numeric::BigInteger']]],
   ['svg',['SVG',['../classSVG_1_1SVG.html#ac85aa23716d229d89b26e237365d9d98',1,'SVG::SVG::SVG()=default'],['../classSVG_1_1SVG.html#a91f8c40460dd462d733996a1ef0db511',1,'SVG::SVG::SVG(const SVG &amp;)=delete'],['../classSVG_1_1SVG.html#a2031b2ba044abb2252c54ac37f0297dc',1,'SVG::SVG::SVG(SVG &amp;)=delete']]],
   ['swapcols',['swapCols',['../classmatrix_1_1IMatrix.html#a156d2f262c656ea62f0da784ced4fb26',1,'matrix::IMatrix']]],
   ['swaprows',['swapRows',['../classmatrix_1_1IMatrix.html#a747304978363f970807830364f539e63',1,'matrix::IMatrix']]]
