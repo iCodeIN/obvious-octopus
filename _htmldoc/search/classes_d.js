@@ -1,7 +1,9 @@
 var searchData=
 [
-  ['simulatedannealing',['SimulatedAnnealing',['../classmeta_1_1SimulatedAnnealing.html',1,'meta']]],
-  ['snaptogridgraphlayout',['SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html',1,'graph_ui']]],
-  ['split',['Split',['../classutil_1_1Split.html',1,'util']]],
-  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]]
+  ['path',['Path',['../classSVG_1_1Path.html',1,'SVG']]],
+  ['permutationsearch',['PermutationSearch',['../classmeta_1_1PermutationSearch.html',1,'meta']]],
+  ['polygon',['Polygon',['../classSVG_1_1Polygon.html',1,'SVG']]],
+  ['polyline',['Polyline',['../classSVG_1_1Polyline.html',1,'SVG']]],
+  ['polynomialsmoothing',['PolynomialSmoothing',['../classsmooth_1_1PolynomialSmoothing.html',1,'smooth']]],
+  ['prime',['Prime',['../classnumeric_1_1Prime.html',1,'numeric']]]
 ];

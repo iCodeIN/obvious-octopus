@@ -19,15 +19,15 @@ namespace numeric
     {
         public:
 
-            /*!
+            /*! define a distribution type
              */
             using DistributionType = std::map<X, Y>;
 
-            /*!
+            /*! \return the relative frequencies that correspond to the absolute frequencies in the given distribution
              */
-            static const DistributionType relative(const DistributionType &d)
+            static const std::map<X,double> relative(const DistributionType &d)
             {
-                DistributionType retval;
+                std::map<X, double> retval;
                 Y totalMass = 0;
                 for(auto pair : d)
                 {
@@ -41,12 +41,12 @@ namespace numeric
                 return retval;
             }
 
-            /*!
+            /*! \return the absolute frequences that correspond to the relative frequencies in the given relative distribution
              */
-            static const DistributionType absolute(const DistributionType &d, const Y &total)
+            static const std::map<X,int> absolute(const DistributionType &d, const Y &total)
             {
                 assert(total >= 0);
-                DistributionType retval;
+                std::map<X, int> retval;
                 for(auto pair : d)
                 {
                     assert(pair.second >= 0);

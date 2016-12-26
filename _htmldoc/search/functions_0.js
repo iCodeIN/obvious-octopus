@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['absolute',['absolute',['../classnumeric_1_1Distribution.html#acc648a9432a2f9e75998be5ce1719b72',1,'numeric::Distribution']]],
   ['add',['add',['../classnumeric_1_1BigInteger.html#a9c9bcb9257d66318518e452e9e0eeeaf',1,'numeric::BigInteger::add()'],['../classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd',1,'SVG::SVG::add()'],['../classXML_1_1IElement.html#a14a40d51e6cecde2bbd059e0f4beb4c6',1,'XML::IElement::add()']]],
   ['addmatrix',['addMatrix',['../classplotting_1_1HeatPlot.html#a394c756f2da4e3d6ce3f41321f3671c3',1,'plotting::HeatPlot']]],
   ['addseries',['addSeries',['../classplotting_1_1AreaPlot.html#a81bc8165dcdb9d5f44c17adeda9abd45',1,'plotting::AreaPlot::addSeries()'],['../classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5',1,'plotting::LinePlot::addSeries()']]],

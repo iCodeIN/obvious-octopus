@@ -223,6 +223,8 @@ namespace game
                 return 0;
             }
 
+            /*! print the game board
+             */
             static void print(const BoardType &b)
             {
                 assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);

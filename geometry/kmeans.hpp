@@ -22,15 +22,18 @@ namespace geometry
     {
         public:
 
-            /*!
+            /*! define an n-dimensional point
              */
             using PointType = std::vector<double>;
 
-            /*!
+            /*! define a matric function for n-dimensional points
              */
             using MetricFunctionType = std::function<double(const PointType& p0, const PointType& p1)>;
 
-            /*!
+            /*! Apply k-means clustering to the given collection of points, with the given metric
+                \param[in] points   the points to cluster
+                \param[in] metric   the metric to use when measuring distance
+                \param[in] k        the desired number of clusters
              */
             static std::map<PointType, int> kmeans(const std::vector<PointType>& points, const MetricFunctionType& metric, int k)
             {
@@ -122,6 +125,10 @@ namespace geometry
                 return clusters;
             }
 
+            /*! Apply k-means clustering to the given collection of points, with a Euclidean metric
+                \param[in] points   the points to cluster
+                \param[in] k        the desired number of clusters
+             */
             static std::map<PointType, int> kmeansWithEuclideanMetric(const std::vector<PointType>& points, int k)
             {
                 // use euclidean metric

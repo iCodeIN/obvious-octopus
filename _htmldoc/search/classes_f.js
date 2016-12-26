@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['weightedsampling',['WeightedSampling',['../classnumeric_1_1WeightedSampling.html',1,'numeric']]],
-  ['word2vec',['Word2Vec',['../classNLP_1_1Word2Vec.html',1,'NLP']]]
+  ['simulatedannealing',['SimulatedAnnealing',['../classmeta_1_1SimulatedAnnealing.html',1,'meta']]],
+  ['snaptogridgraphlayout',['SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html',1,'graph_ui']]],
+  ['split',['Split',['../classutil_1_1Split.html',1,'util']]],
+  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]]
 ];

@@ -236,9 +236,27 @@ namespace numeric
                     retval = add(retval, temp);
                 }
 
+                // truncate
+                while(retval.m_digits[retval.m_digits.size()-1] == 0)
+                {
+                    retval.m_digits.erase(retval.m_digits.begin() + retval.m_digits.size() -1);
+                }
+
                 // sign
                 retval.m_negative = (i0.m_negative || i1.m_negative) && !(i0.m_negative && i1.m_negative);
 
+                return retval;
+            }
+
+            /*! \return |i|
+             */
+            static BigInteger abs(const BigInteger& i)
+            {
+                auto retval = BigInteger(i);
+                if(retval.m_negative)
+                {
+                    retval.m_negative = false;
+                }
                 return retval;
             }
 

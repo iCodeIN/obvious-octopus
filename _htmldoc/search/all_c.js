@@ -4,5 +4,8 @@ var searchData=
   ['next',['next',['../classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08',1,'game::Minimax']]],
   ['nextmovefunctiontype',['NextMoveFunctionType',['../classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d',1,'game::Minimax']]],
   ['nextprime',['nextPrime',['../classnumeric_1_1Prime.html#af9afe0d09423b69fb13b7d841d48d2fd',1,'numeric::Prime']]],
+  ['ngramlanguagedetector',['NGramLanguageDetector',['../classnlp_1_1NGramLanguageDetector.html',1,'nlp']]],
+  ['ngrams',['NGrams',['../classutil_1_1NGrams.html',1,'util']]],
+  ['ngrams',['ngrams',['../classutil_1_1NGrams.html#a7a87abe28f90419b3785c7e7945ee4b3',1,'util::NGrams']]],
   ['none',['NONE',['../classSVG_1_1SVG.html#adad70e278302823bd721b3f23bacfdffaf828cdb9af710c522098aa8251a1ce21',1,'SVG::SVG']]]
 ];

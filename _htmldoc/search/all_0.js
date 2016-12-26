@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['absolute',['absolute',['../classnumeric_1_1Distribution.html#acc648a9432a2f9e75998be5ce1719b72',1,'numeric::Distribution']]],
   ['abstractgraphlayout',['AbstractGraphLayout',['../classgraph__ui_1_1AbstractGraphLayout.html',1,'graph_ui']]],
   ['abstractmetaheuristic',['AbstractMetaHeuristic',['../classmeta_1_1AbstractMetaHeuristic.html',1,'meta']]],
   ['add',['add',['../classnumeric_1_1BigInteger.html#a9c9bcb9257d66318518e452e9e0eeeaf',1,'numeric::BigInteger::add()'],['../classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd',1,'SVG::SVG::add()'],['../classXML_1_1IElement.html#a14a40d51e6cecde2bbd059e0f4beb4c6',1,'XML::IElement::add()']]],
