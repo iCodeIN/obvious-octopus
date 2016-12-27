@@ -110,7 +110,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;</div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classgame_1_1TicTacToe.html#aeade7969f06afe41a0d69be6ea00cf3d">   23</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classgame_1_1TicTacToe.html#aeade7969f06afe41a0d69be6ea00cf3d">main</a>()</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classgame_1_1TicTacToe.html#aed0c5788e4b1cfa46ec9cae508639f97">   23</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code" href="classgame_1_1TicTacToe.html#aed0c5788e4b1cfa46ec9cae508639f97">play</a>()</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="comment">/* game evaluation function</span></div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="comment">                 */</span></div>
@@ -150,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="comment">// process user input</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    <span class="keyword">auto</span> x = -1;</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    <span class="keyword">auto</span> y = -1;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">while</span>(x == -1 || y == -1 || x &gt; ( BOARD_SIZE - 1) || y &gt; (BOARD_SIZE - 1) || board[x][y]!=-1)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    <span class="keywordflow">while</span>(x == -1 || y == -1 || x &gt; 2 || y &gt; 2 || board[x][y]!=-1)</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    {</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        std::cout &lt;&lt; <span class="stringliteral">&quot;[x,y] : &quot;</span>;</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        std::string temp;</div>
@@ -178,10 +178,10 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keyword">static</span> BoardType empty()</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            {</div>
 <div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                BoardType retval;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;BOARD_SIZE; i++)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;3; i++)</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                {</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    retval.push_back(std::vector&lt;int&gt;());</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;BOARD_SIZE; j++)</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;3; j++)</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                    {</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        retval[i].push_back(-1);</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                    }</div>
@@ -193,12 +193,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">             */</span></div>
 <div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keyword">static</span> BoardType copy(<span class="keyword">const</span> BoardType &amp;b)</div>
 <div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                <span class="comment">// assert(b.size() == BOARD_SIZE &amp;&amp; b[0].size() == BOARD_SIZE &amp;&amp; b[1].size() == 3 &amp;&amp; b[2].size() == 3);</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                assert(b.size() == 3 &amp;&amp; b[0].size() == 3 &amp;&amp; b[1].size() == 3 &amp;&amp; b[2].size() == 3);</div>
 <div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                BoardType retval;</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;BOARD_SIZE; i++)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;3; i++)</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                {</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                    retval.push_back(std::vector&lt;int&gt;());</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;BOARD_SIZE; j++)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;3; j++)</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        retval[i].push_back(b[i][j]);</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                    }</div>
@@ -208,7 +208,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;</div>
 <div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            <span class="keyword">static</span> std::vector&lt;BoardType&gt; nextMoves(<span class="keyword">const</span> BoardType &amp;b)</div>
 <div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            {</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                <span class="comment">// assert(b.size() == 3 &amp;&amp; b[0].size() == 3 &amp;&amp; b[1].size() == 3 &amp;&amp; b[2].size() == 3);</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                assert(b.size() == 3 &amp;&amp; b[0].size() == 3 &amp;&amp; b[1].size() == 3 &amp;&amp; b[2].size() == 3);</div>
 <div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;</div>
 <div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                <span class="comment">// if the game has been won, there are no next moves</span></div>
 <div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                <span class="keywordflow">if</span>(score(b,0) != 0)</div>
@@ -218,9 +218,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;</div>
 <div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                <span class="comment">// count nof empty spots;</span></div>
 <div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                <span class="keyword">auto</span> emptySpots = 0;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;BOARD_SIZE; i++)</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;3; i++)</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;BOARD_SIZE; j++)</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;3; j++)</div>
 <div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;                    {</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;                        <span class="keywordflow">if</span>(b[i][j] == -1)</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                        {</div>
@@ -238,9 +238,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                <span class="comment">// generate next moves</span></div>
 <div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                std::vector&lt;BoardType&gt; retval;</div>
 <div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keyword">auto</span> turn = (emptySpots + 1) % 2;</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;BOARD_SIZE; i++)</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;3; i++)</div>
 <div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                {</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;BOARD_SIZE; j++)</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> j=0; j&lt;3; j++)</div>
 <div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    {</div>
 <div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                        <span class="keywordflow">if</span>(b[i][j] == -1)</div>
 <div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                        {</div>
@@ -260,9 +260,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> score2(<span class="keyword">const</span> BoardType&amp; b, <span class="keyword">const</span> <span class="keywordtype">int</span> player)</div>
 <div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;            {</div>
 <div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                <span class="keyword">auto</span> empty = 0;</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;BOARD_SIZE; r++)</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> r=0; r&lt;3; r++)</div>
 <div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;BOARD_SIZE; c++)</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> c=0; c&lt;3; c++)</div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    {</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                        <span class="keywordflow">if</span>(b[r][c] == -1)</div>
 <div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                        {</div>
@@ -330,15 +330,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
 <div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;<span class="preprocessor">#endif // TICTACTOE_HPP</span></div>
 <div class="ttc" id="classgame_1_1TicTacToe_html"><div class="ttname"><a href="classgame_1_1TicTacToe.html">game::TicTacToe</a></div><div class="ttdef"><b>Definition:</b> tictactoe.hpp:17</div></div>
-<div class="ttc" id="classgame_1_1TicTacToe_html_aeade7969f06afe41a0d69be6ea00cf3d"><div class="ttname"><a href="classgame_1_1TicTacToe.html#aeade7969f06afe41a0d69be6ea00cf3d">game::TicTacToe::main</a></div><div class="ttdeci">static void main()</div><div class="ttdef"><b>Definition:</b> tictactoe.hpp:23</div></div>
 <div class="ttc" id="classgame_1_1Minimax_html_aa372d231ddf506e0ddc7de4187b2fc8d"><div class="ttname"><a href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">game::Minimax::NextMoveFunctionType</a></div><div class="ttdeci">std::function&lt; std::vector&lt; T &gt;(const T &amp;position)&gt; NextMoveFunctionType</div><div class="ttdef"><b>Definition:</b> minimax.hpp:30</div></div>
 <div class="ttc" id="classgame_1_1Minimax_html_a55364b949135aa4aee8879696ef3fc08"><div class="ttname"><a href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">game::Minimax::next</a></div><div class="ttdeci">T next(const T &amp;startingPosition)</div><div class="ttdef"><b>Definition:</b> minimax.hpp:44</div></div>
 <div class="ttc" id="classgame_1_1Minimax_html_ab0ff22fe8f6f71f318b952afa3872e74"><div class="ttname"><a href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">game::Minimax::EvaluationFunctionType</a></div><div class="ttdeci">std::function&lt; int(const T &amp;position)&gt; EvaluationFunctionType</div><div class="ttdef"><b>Definition:</b> minimax.hpp:27</div></div>
 <div class="ttc" id="classgame_1_1Minimax_html"><div class="ttname"><a href="classgame_1_1Minimax.html">game::Minimax</a></div><div class="ttdef"><b>Definition:</b> minimax.hpp:22</div></div>
+<div class="ttc" id="classgame_1_1TicTacToe_html_aed0c5788e4b1cfa46ec9cae508639f97"><div class="ttname"><a href="classgame_1_1TicTacToe.html#aed0c5788e4b1cfa46ec9cae508639f97">game::TicTacToe::play</a></div><div class="ttdeci">static void play()</div><div class="ttdef"><b>Definition:</b> tictactoe.hpp:23</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 27 2016 14:35:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 27 2016 20:29:09 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -20,7 +20,7 @@ namespace game
 
             /*! main method for demo tic-tac-toe game with minimax
              */
-            static void main()
+            static void play()
             {
                 /* game evaluation function
                  */
@@ -60,7 +60,7 @@ namespace game
                     // process user input
                     auto x = -1;
                     auto y = -1;
-                    while(x == -1 || y == -1 || x > ( BOARD_SIZE - 1) || y > (BOARD_SIZE - 1) || board[x][y]!=-1)
+                    while(x == -1 || y == -1 || x > 2 || y > 2 || board[x][y]!=-1)
                     {
                         std::cout << "[x,y] : ";
                         std::string temp;
@@ -88,10 +88,10 @@ namespace game
             static BoardType empty()
             {
                 BoardType retval;
-                for(int i=0; i<BOARD_SIZE; i++)
+                for(int i=0; i<3; i++)
                 {
                     retval.push_back(std::vector<int>());
-                    for(int j=0; j<BOARD_SIZE; j++)
+                    for(int j=0; j<3; j++)
                     {
                         retval[i].push_back(-1);
                     }
@@ -103,12 +103,12 @@ namespace game
              */
             static BoardType copy(const BoardType &b)
             {
-                // assert(b.size() == BOARD_SIZE && b[0].size() == BOARD_SIZE && b[1].size() == 3 && b[2].size() == 3);
+                assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
                 BoardType retval;
-                for(int i=0; i<BOARD_SIZE; i++)
+                for(int i=0; i<3; i++)
                 {
                     retval.push_back(std::vector<int>());
-                    for(int j=0; j<BOARD_SIZE; j++)
+                    for(int j=0; j<3; j++)
                     {
                         retval[i].push_back(b[i][j]);
                     }
@@ -120,7 +120,7 @@ namespace game
              */
             static std::vector<BoardType> nextMoves(const BoardType &b)
             {
-                // assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
+                assert(b.size() == 3 && b[0].size() == 3 && b[1].size() == 3 && b[2].size() == 3);
 
                 // if the game has been won, there are no next moves
                 if(score(b,0) != 0)
@@ -130,9 +130,9 @@ namespace game
 
                 // count nof empty spots;
                 auto emptySpots = 0;
-                for(int i=0; i<BOARD_SIZE; i++)
+                for(int i=0; i<3; i++)
                 {
-                    for(int j=0; j<BOARD_SIZE; j++)
+                    for(int j=0; j<3; j++)
                     {
                         if(b[i][j] == -1)
                         {
@@ -150,9 +150,9 @@ namespace game
                 // generate next moves
                 std::vector<BoardType> retval;
                 auto turn = (emptySpots + 1) % 2;
-                for(int i=0; i<BOARD_SIZE; i++)
+                for(int i=0; i<3; i++)
                 {
-                    for(int j=0; j<BOARD_SIZE; j++)
+                    for(int j=0; j<3; j++)
                     {
                         if(b[i][j] == -1)
                         {
@@ -172,9 +172,9 @@ namespace game
             static int score2(const BoardType& b, const int player)
             {
                 auto empty = 0;
-                for(int r=0; r<BOARD_SIZE; r++)
+                for(int r=0; r<3; r++)
                 {
-                    for(int c=0; c<BOARD_SIZE; c++)
+                    for(int c=0; c<3; c++)
                     {
                         if(b[r][c] == -1)
                         {

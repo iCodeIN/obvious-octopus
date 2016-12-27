@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['main',['main',['../classgame_1_1TicTacToe.html#aeade7969f06afe41a0d69be6ea00cf3d',1,'game::TicTacToe']]],
   ['matrix',['matrix',['../classSVG_1_1IElement.html#acb302b3a025522197e4e7cdfe064c46f',1,'SVG::IElement']]],
   ['max',['max',['../classmatrix_1_1IMatrix.html#a09fc99aa085940e8e4702513b85d51f5',1,'matrix::IMatrix']]],
   ['maze',['Maze',['../classMaze.html#a0334b6143afd7bbfb4cfe1774cd1c502',1,'Maze::Maze(int w, int h)'],['../classMaze.html#a81c6be816361ea11b61f9049e542b346',1,'Maze::Maze(const Maze &amp;)=delete'],['../classMaze.html#ad1ba7291c6f823f0e536a03ec1ca33c5',1,'Maze::Maze(Maze &amp;)=delete']]],

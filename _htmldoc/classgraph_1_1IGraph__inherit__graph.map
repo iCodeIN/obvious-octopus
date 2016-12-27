@@ -1,6 +1,7 @@
 <map id="graph::IGraph&lt; T &gt;" name="graph::IGraph&lt; T &gt;">
-<area shape="rect" id="node2" href="$classgraph_1_1I2DGraph.html" title="graph::I2DGraph\&lt; T \&gt;" alt="" coords="51,80,201,107"/>
+<area shape="rect" id="node2" href="$classgraph_1_1I2DGraph.html" title="graph::I2DGraph\&lt; T \&gt;" alt="" coords="69,80,219,107"/>
 <area shape="rect" id="node4" href="$classgraph_1_1ITree.html" title="graph::ITree\&lt; T \&gt;" alt="" coords="261,80,384,107"/>
 <area shape="rect" id="node3" href="$classgraph_1_1AdjecencyListGraph.html" title="graph::AdjecencyListGraph\&lt; T \&gt;" alt="" coords="4,155,213,181"/>
 <area shape="rect" id="node5" href="$classgraph_1_1AdjecencyListTree.html" title="graph::AdjecencyListTree\&lt; T \&gt;" alt="" coords="239,155,441,181"/>
+<area shape="rect" id="node6" href="$classgraph_1_1BKTree.html" title="graph::BKTree\&lt; T \&gt;" alt="" coords="271,229,409,256"/>
 </map>

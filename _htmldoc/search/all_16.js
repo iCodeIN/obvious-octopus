@@ -3,7 +3,6 @@ var searchData=
   ['_7eadjecencylisttree',['~AdjecencyListTree',['../classgraph_1_1AdjecencyListTree.html#ae3333a02985edb235e76ae897c3d3722',1,'graph::AdjecencyListTree']]],
   ['_7eareaplot',['~AreaPlot',['../classplotting_1_1AreaPlot.html#a2e2f321dc3a821e3b1e7c7778afce010',1,'plotting::AreaPlot']]],
   ['_7ebiginteger',['~BigInteger',['../classnumeric_1_1BigInteger.html#aeca37996734b8cc324edb8f28032627f',1,'numeric::BigInteger']]],
-  ['_7ebktree',['~BKTree',['../classtree_1_1BKTree.html#a11948a49ebb816e226b91ee4433e2da6',1,'tree::BKTree']]],
   ['_7eboostmatriximpl',['~BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html#ac8cad4427c7d29e74f3eb73457b217ad',1,'matrix::BoostMatrixImpl']]],
   ['_7ecircle',['~Circle',['../classSVG_1_1Circle.html#a664ad02797ef13d38f06251bd4a7add0',1,'SVG::Circle']]],
   ['_7edefaultelementimpl',['~DefaultElementImpl',['../classXML_1_1DefaultElementImpl.html#a393c772c356267329fa787dde51f73f6',1,'XML::DefaultElementImpl']]],

@@ -4,4 +4,5 @@
 <area shape="rect" id="node4" href="$classgraph_1_1ITree.html" title="graph::ITree\&lt; T \&gt;" alt="" coords="201,56,325,83"/>
 <area shape="rect" id="node3" href="$classgraph_1_1AdjecencyListGraph.html" title="graph::AdjecencyListGraph\&lt; T \&gt;" alt="" coords="387,5,597,32"/>
 <area shape="rect" id="node5" href="$classgraph_1_1AdjecencyListTree.html" title="graph::AdjecencyListTree\&lt; T \&gt;" alt="" coords="391,56,593,83"/>
+<area shape="rect" id="node6" href="$classgraph_1_1BKTree.html" title="graph::BKTree\&lt; T \&gt;" alt="" coords="645,56,784,83"/>
 </map>
