@@ -32,7 +32,7 @@ var searchData=
   ['sometimes',['sometimes',['../classmeta_1_1AbstractMetaHeuristic.html#ae4fb328cee7109eedc3aa0eb8be5c888',1,'meta::AbstractMetaHeuristic']]],
   ['sorteddft',['sortedDFT',['../classnumeric_1_1DFT.html#a95ef27ca473b1381784407bd7acec82f',1,'numeric::DFT']]],
   ['split',['Split',['../classutil_1_1Split.html',1,'util']]],
-  ['split',['split',['../classutil_1_1Split.html#a89b174397884de389a830e65885e8a38',1,'util::Split']]],
+  ['split',['split',['../classutil_1_1Split.html#a89b174397884de389a830e65885e8a38',1,'util::Split::split(const std::string &amp;s, std::function&lt; bool(char)&gt; splitFunction)'],['../classutil_1_1Split.html#a58f5584404cecf2ea5c7fc1f8f630988',1,'util::Split::Split()=delete']]],
   ['splitpunctandspace',['splitPunctAndSpace',['../classutil_1_1Split.html#a1ae0a27c2362440c1cd0321be9c698b0',1,'util::Split']]],
   ['sub',['sub',['../classnumeric_1_1BigInteger.html#a2e3cddb33588b58bfd4f61dbad82182f',1,'numeric::BigInteger']]],
   ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]],

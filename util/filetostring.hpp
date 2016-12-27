@@ -11,6 +11,9 @@ namespace util
     class FileToString
     {
         public:
+            /*! Prohibit construction of FileToString. This class offers only static methods.
+             */
+            explicit FileToString() = delete;
 
             /*! \return the result of consuming the entire std::istream as an std::string
              */

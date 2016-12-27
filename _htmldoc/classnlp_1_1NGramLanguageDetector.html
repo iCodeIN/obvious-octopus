@@ -99,14 +99,28 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">nlp::NGramLanguageDetector Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="ngramlanguagedetector_8hpp_source.html">ngramlanguagedetector.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for nlp::NGramLanguageDetector:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnlp_1_1NGramLanguageDetector__inherit__graph.png" border="0" usemap="#nlp_1_1NGramLanguageDetector_inherit__map" alt="Inheritance graph"/></div>
+<map name="nlp_1_1NGramLanguageDetector_inherit__map" id="nlp_1_1NGramLanguageDetector_inherit__map">
+<area shape="rect" id="node2" href="classnlp_1_1ILanguageDetector.html" title="nlp::ILanguageDetector" alt="" coords="24,5,181,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for nlp::NGramLanguageDetector:</div>
+<div class="dyncontent">
+<div class="center"><img src="classnlp_1_1NGramLanguageDetector__coll__graph.png" border="0" usemap="#nlp_1_1NGramLanguageDetector_coll__map" alt="Collaboration graph"/></div>
+<map name="nlp_1_1NGramLanguageDetector_coll__map" id="nlp_1_1NGramLanguageDetector_coll__map">
+<area shape="rect" id="node2" href="classnlp_1_1ILanguageDetector.html" title="nlp::ILanguageDetector" alt="" coords="24,5,181,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a95a766d2da6546fed3eb073d2117f7e3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a95a766d2da6546fed3eb073d2117f7e3"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><b>train</b> (const std::string &amp;text, const std::string &amp;language)</td></tr>
+<tr class="memitem:a95a766d2da6546fed3eb073d2117f7e3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1NGramLanguageDetector.html#a95a766d2da6546fed3eb073d2117f7e3">train</a> (const std::string &amp;text, const std::string &amp;language)</td></tr>
 <tr class="separator:a95a766d2da6546fed3eb073d2117f7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2174a7aafadd6411ebee123d24670cf2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2174a7aafadd6411ebee123d24670cf2"></a>
-std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>detect</b> (const std::string &amp;text) const </td></tr>
+<tr class="memitem:a2174a7aafadd6411ebee123d24670cf2"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1NGramLanguageDetector.html#a2174a7aafadd6411ebee123d24670cf2">detect</a> (const std::string &amp;text) const </td></tr>
 <tr class="separator:a2174a7aafadd6411ebee123d24670cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afd29d6166c5da4db3a515d258bdc2c20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd29d6166c5da4db3a515d258bdc2c20"></a>
 virtual std::unique_ptr<br class="typebreak" />
@@ -116,13 +130,84 @@ virtual std::unique_ptr<br class="typebreak" />
 virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>fromXML</b> (std::unique_ptr&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt; xml)</td></tr>
 <tr class="separator:a5afb1f99b79b3a1954d3fccfc20d1bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>The <a class="el" href="classnlp_1_1NGramLanguageDetector.html">NGramLanguageDetector</a> is based on calculating and comparing language profiles of N-gram frequencies. The system generates a language profile for the N-grams in particular language by using training data for the language in question and later uses these profiles to make its detection. Given a novel piece of text to be classified, the system computes the N-gram profile of this text (text profile) and compares the distance between this text profile and the language profiles for all the supported languages. The language profile with the minimal distance is considered to represent the detected language. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a2174a7aafadd6411ebee123d24670cf2"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::map&lt;std::string, double&gt; nlp::NGramLanguageDetector::detect </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>a ranking of all languages known to the model </dd></dl>
+
+<p>Implements <a class="el" href="classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b">nlp::ILanguageDetector</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a95a766d2da6546fed3eb073d2117f7e3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void nlp::NGramLanguageDetector::train </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>language</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Train this model to accept the given piece of text to correspond to the given language </p><dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">text</td><td>the text the model is to be trained on </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">language</td><td>the language (abbreviation) that the given text is written in </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>nlp/<a class="el" href="ngramlanguagedetector_8hpp_source.html">ngramlanguagedetector.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 26 2016 19:34:23 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 27 2016 14:35:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

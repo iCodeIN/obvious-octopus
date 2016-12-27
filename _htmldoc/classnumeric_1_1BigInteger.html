@@ -115,8 +115,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae0e89ad380dac0de69ea5c82ee944016"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aeca37996734b8cc324edb8f28032627f"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1BigInteger.html#aeca37996734b8cc324edb8f28032627f">~BigInteger</a> ()=default</td></tr>
 <tr class="separator:aeca37996734b8cc324edb8f28032627f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a556eb805f62f99e926d93f8239d9701d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a556eb805f62f99e926d93f8239d9701d"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>toString</b> ()</td></tr>
+<tr class="memitem:a556eb805f62f99e926d93f8239d9701d"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1BigInteger.html#a556eb805f62f99e926d93f8239d9701d">toString</a> ()</td></tr>
 <tr class="separator:a556eb805f62f99e926d93f8239d9701d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
@@ -127,6 +126,8 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a2e3cddb33588b58bfd4f61dbad82182f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaea0ae622600519ccdce369b8a4b70c4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1BigInteger.html#aaea0ae622600519ccdce369b8a4b70c4">mul</a> (const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i0, const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i1)</td></tr>
 <tr class="separator:aaea0ae622600519ccdce369b8a4b70c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7eac5464310f00932922873500cda77"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1BigInteger.html#ac7eac5464310f00932922873500cda77">abs</a> (const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i)</td></tr>
+<tr class="separator:ac7eac5464310f00932922873500cda77"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5cf5ffbf111a689d637211cc5c17f81e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">mod</a> (const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i0, const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i1)</td></tr>
 <tr class="separator:a5cf5ffbf111a689d637211cc5c17f81e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae49efb821d2c3b124b7179f40646fbff"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">pow</a> (const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i0, const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;i1)</td></tr>
@@ -262,6 +263,31 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="ac7eac5464310f00932922873500cda77"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> numeric::BigInteger::abs </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> &amp;&#160;</td>
+          <td class="paramname"><em>i</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>|i| </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a9c9bcb9257d66318518e452e9e0eeeaf"></a>
 <div class="memitem">
 <div class="memproto">
@@ -472,13 +498,37 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a556eb805f62f99e926d93f8239d9701d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string numeric::BigInteger::toString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>an std::string representation of this <a class="el" href="classnumeric_1_1BigInteger.html">BigInteger</a> </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>numeric/<a class="el" href="biginteger_8hpp_source.html">biginteger.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 26 2016 19:34:23 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 27 2016 14:35:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

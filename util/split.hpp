@@ -13,6 +13,11 @@ namespace util
     class Split
     {
         public:
+
+            /*! Prohibit construction of Split. This class offers only static methods.
+             */
+            explicit Split() = delete;
+
             /*! Split an std::string using an std::function to decide whether to split on a given character
              */
             static std::vector<std::string> split(const std::string& s, std::function<bool(char)> splitFunction)

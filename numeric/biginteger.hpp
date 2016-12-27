@@ -321,6 +321,8 @@ namespace numeric
                 return 0;
             }
 
+            /*! \return an std::string representation of this BigInteger
+             */
             std::string toString()
             {
                 // special case for 0
@@ -372,6 +374,8 @@ namespace numeric
                 }
             }
 
+            /*! initialize this BigInteger from its std::string representation
+             */
             void fromString(const std::string& s)
             {
             }

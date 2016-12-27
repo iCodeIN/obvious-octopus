@@ -16,6 +16,10 @@ namespace util
     {
         public:
 
+            /*! Prohibit construction of NGrams. This class offers only static methods.
+             */
+            explicit NGrams() = delete;
+
             /*! \return a frequency-map of all ngrams in the given std:string
                 \param[in] s            the string to extract ngrams from
                 \param[in] ngramsSizes  the sizes of the ngrams to be extracted

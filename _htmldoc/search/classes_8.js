@@ -5,6 +5,7 @@ var searchData=
   ['ielement',['IElement',['../classXML_1_1IElement.html',1,'XML']]],
   ['igraph',['IGraph',['../classgraph_1_1IGraph.html',1,'graph']]],
   ['igraphlayout',['IGraphLayout',['../classgraph__ui_1_1IGraphLayout.html',1,'graph_ui']]],
+  ['ilanguagedetector',['ILanguageDetector',['../classnlp_1_1ILanguageDetector.html',1,'nlp']]],
   ['imatrix',['IMatrix',['../classmatrix_1_1IMatrix.html',1,'matrix']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html',1,'graph']]]
 ];

@@ -55,7 +55,9 @@ void useModel()
     ngld.fromXML(std::move(elementPtr));
 
     // use model
-    auto cls = ngld.detect("The hills are alive with the sound of music.");
+    string text = "If i could be a superhero, I would be drug-free boy; Freeing the world of the evils of drugs and all of the lives they destroy.";
+    text = FileToString::readFile("/home/joris/Documents/corpus/en/en001.txt");
+    auto cls = ngld.detect(text);
     for(auto &pair : cls)
     {
         std::cout << pair.first << "\t" << pair.second << std::endl;

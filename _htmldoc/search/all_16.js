@@ -18,5 +18,6 @@ var searchData=
   ['_7epolygon',['~Polygon',['../classSVG_1_1Polygon.html#aa15e0c1f9b3b556629919557aa8c8f5e',1,'SVG::Polygon']]],
   ['_7epolyline',['~Polyline',['../classSVG_1_1Polyline.html#a4b018d4e425d24418b706f7c008b77c1',1,'SVG::Polyline']]],
   ['_7erectangle',['~Rectangle',['../classSVG_1_1Rectangle.html#ad720a126b1d2ffed1c343bfea3e8e695',1,'SVG::Rectangle']]],
-  ['_7esvg',['~SVG',['../classSVG_1_1SVG.html#adc050d33a0abf55a438ef5f23ef7c7a2',1,'SVG::SVG']]]
+  ['_7esvg',['~SVG',['../classSVG_1_1SVG.html#adc050d33a0abf55a438ef5f23ef7c7a2',1,'SVG::SVG']]],
+  ['_7etext',['~Text',['../classSVG_1_1Text.html#a42aac6a3e87d571c7e10a4cb6c14ce8b',1,'SVG::Text']]]
 ];

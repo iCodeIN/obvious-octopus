@@ -237,7 +237,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                <span class="comment">// init retval</span></div>
 <div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a> retval = <a class="code" href="classnumeric_1_1BigInteger.html#a2973d858c9519c57259acc5f7e840d87">BigInteger</a>(0);</div>
 <div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;                retval.m_digits.clear();</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                std::cout &lt;&lt; retval.toString() &lt;&lt; std::endl;</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;                std::cout &lt;&lt; retval.<a class="code" href="classnumeric_1_1BigInteger.html#a556eb805f62f99e926d93f8239d9701d">toString</a>() &lt;&lt; std::endl;</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <span class="comment">// main loop</span></div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keyword">auto</span> maxNofDigits = std::max(i0.m_digits.size(), i1.m_digits.size());</div>
@@ -311,134 +311,152 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    retval = <a class="code" href="classnumeric_1_1BigInteger.html#a9c9bcb9257d66318518e452e9e0eeeaf">add</a>(retval, temp);</div>
 <div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                }</div>
 <div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="comment">// sign</span></div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                retval.m_negative = (i0.m_negative || i1.m_negative) &amp;&amp; !(i0.m_negative &amp;&amp; i1.m_negative);</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                <span class="keywordflow">return</span> retval;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            }</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                <span class="comment">// truncate</span></div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                <span class="keywordflow">while</span>(retval.m_digits[retval.m_digits.size()-1] == 0)</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                {</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                    retval.m_digits.erase(retval.m_digits.begin() + retval.m_digits.size() -1);</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;                }</div>
 <div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00247"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">  247</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a> <a class="code" href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">mod</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i0, <span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i1)</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            {</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00254"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">  254</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a> <a class="code" href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">pow</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i0, <span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i1)</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            {</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            }</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;</div>
-<div class="line"><a name="l00261"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c">  261</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c">compare</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i0, <span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i1)</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            {</div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;                <span class="comment">// 1. if the numbers have a different sign, this is easy</span></div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">if</span>(i0.m_negative &amp;&amp; !i1.m_negative)</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;                {</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;                    <span class="keywordflow">return</span> -1;</div>
-<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;                }</div>
-<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;                <span class="keywordflow">if</span>(!i0.m_negative &amp;&amp; i1.m_negative)</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;                {</div>
-<div class="line"><a name="l00270"></a><span class="lineno">  270</span>&#160;                    <span class="keywordflow">return</span> 1;</div>
-<div class="line"><a name="l00271"></a><span class="lineno">  271</span>&#160;                }</div>
-<div class="line"><a name="l00272"></a><span class="lineno">  272</span>&#160;</div>
-<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;                <span class="comment">// 2. both numbers have the same sign, but different radix (number of digits)</span></div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;                <span class="keywordflow">if</span>(i0.m_digits.size() &gt; i1.m_digits.size())</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;                {</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;                    <span class="comment">// &#39;999&#39; &gt; &#39;9&#39; and &#39;-999&#39; &lt; &#39;-9&#39;</span></div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;                    <span class="keywordflow">return</span> i0.m_negative ? -1 : 1;</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                }</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                <span class="keywordflow">if</span>(i0.m_digits.size() &lt; i1.m_digits.size())</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                {</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                    <span class="comment">// &#39;9&#39; &lt; &#39;999&#39; and &#39;-9&#39; &lt; &#39;-999&#39;</span></div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    <span class="keywordflow">return</span> i0.m_negative ? 1 : -1;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                }</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                <span class="comment">// 3. both numbers have the same sign and same radix</span></div>
-<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=i0.m_digits.size()-1; i&gt;=0; i--)</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="comment">// sign</span></div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                retval.m_negative = (i0.m_negative || i1.m_negative) &amp;&amp; !(i0.m_negative &amp;&amp; i1.m_negative);</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            }</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#ac7eac5464310f00932922873500cda77">  253</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a> <a class="code" href="classnumeric_1_1BigInteger.html#ac7eac5464310f00932922873500cda77">abs</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i)</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            {</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;                <span class="keyword">auto</span> retval = <a class="code" href="classnumeric_1_1BigInteger.html#a2973d858c9519c57259acc5f7e840d87">BigInteger</a>(i);</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;                <span class="keywordflow">if</span>(retval.m_negative)</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;                {</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;                    retval.m_negative = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;                }</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00265"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">  265</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a> <a class="code" href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">mod</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i0, <span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i1)</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;            {</div>
+<div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;</div>
+<div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;            }</div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;</div>
+<div class="line"><a name="l00272"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">  272</a></span>&#160;            <span class="keyword">static</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a> <a class="code" href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">pow</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i0, <span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i1)</div>
+<div class="line"><a name="l00273"></a><span class="lineno">  273</span>&#160;            {</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            }</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;</div>
+<div class="line"><a name="l00279"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c">  279</a></span>&#160;            <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c">compare</a>(<span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i0, <span class="keyword">const</span> <a class="code" href="classnumeric_1_1BigInteger.html">BigInteger</a>&amp; i1)</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;            {</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                <span class="comment">// 1. if the numbers have a different sign, this is easy</span></div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                <span class="keywordflow">if</span>(i0.m_negative &amp;&amp; !i1.m_negative)</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                    <span class="keywordflow">return</span> -1;</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;                }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;                <span class="keywordflow">if</span>(!i0.m_negative &amp;&amp; i1.m_negative)</div>
 <div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;                {</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    <span class="keyword">auto</span> d0 = i0.m_digits[i];</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                    <span class="keyword">auto</span> d1 = i1.m_digits[i];</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                    <span class="comment">// &#39;99_8_66&#39; &gt; &#39;99_5_35&#39;</span></div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                    <span class="keywordflow">if</span>(d0 &gt; d1)</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                    {</div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                        <span class="keywordflow">return</span> i0.m_negative ? -1 : 1;</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    }</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <span class="comment">// &#39;99_5_35&#39; &lt; &#39;99_8_66&#39;</span></div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                    <span class="keywordflow">if</span>(d0 &lt; d1)</div>
-<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                    {</div>
-<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                        <span class="keywordflow">return</span> i0.m_negative ? 1 : -1;</div>
-<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    }</div>
-<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                }</div>
-<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;</div>
-<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;                <span class="comment">// 4. default</span></div>
-<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                <span class="keywordflow">return</span> 0;</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;            }</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            std::string toString()</div>
-<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;            {</div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                <span class="comment">// special case for 0</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                <span class="keywordflow">if</span>(m_digits.size() == 0 || m_digits.size() == 1 &amp;&amp; m_digits[0] == 0)</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                {</div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;0&quot;</span>;</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                }</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;</div>
-<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                <span class="comment">// general case</span></div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                std::string s = <span class="stringliteral">&quot;&quot;</span>;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m_digits.size(); i++)</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                    s = std::to_string(m_digits[i]) + s;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                }</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="keywordflow">if</span>(m_negative)</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                {</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;                    s  = <span class="stringliteral">&quot;-&quot;</span> + s;</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;                }</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;                <span class="keywordflow">return</span> s;</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            }</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordtype">void</span> fromLong(<span class="keywordtype">long</span> l)</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="comment">// handle 0</span></div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                <span class="keywordflow">if</span>(l == 0 || l == -0)</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                {</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                    m_digits.push_back(0);</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                    m_negative = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                    <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                }</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                <span class="comment">// handle sign</span></div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                <span class="keywordflow">if</span>(l &lt; 0)</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                    m_negative = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    l = -l;</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;                    <span class="keywordflow">return</span> 1;</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                }</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;                <span class="comment">// 2. both numbers have the same sign, but different radix (number of digits)</span></div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;                <span class="keywordflow">if</span>(i0.m_digits.size() &gt; i1.m_digits.size())</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;                {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                    <span class="comment">// &#39;999&#39; &gt; &#39;9&#39; and &#39;-999&#39; &lt; &#39;-9&#39;</span></div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;                    <span class="keywordflow">return</span> i0.m_negative ? -1 : 1;</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;                }</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;                <span class="keywordflow">if</span>(i0.m_digits.size() &lt; i1.m_digits.size())</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;                {</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                    <span class="comment">// &#39;9&#39; &lt; &#39;999&#39; and &#39;-9&#39; &lt; &#39;-999&#39;</span></div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;                    <span class="keywordflow">return</span> i0.m_negative ? 1 : -1;</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;                }</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;                <span class="comment">// 3. both numbers have the same sign and same radix</span></div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=i0.m_digits.size()-1; i&gt;=0; i--)</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;                {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;                    <span class="keyword">auto</span> d0 = i0.m_digits[i];</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;                    <span class="keyword">auto</span> d1 = i1.m_digits[i];</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                    <span class="comment">// &#39;99_8_66&#39; &gt; &#39;99_5_35&#39;</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;                    <span class="keywordflow">if</span>(d0 &gt; d1)</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;                    {</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;                        <span class="keywordflow">return</span> i0.m_negative ? -1 : 1;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;                    }</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                    <span class="comment">// &#39;99_5_35&#39; &lt; &#39;99_8_66&#39;</span></div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;                    <span class="keywordflow">if</span>(d0 &lt; d1)</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                    {</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                        <span class="keywordflow">return</span> i0.m_negative ? 1 : -1;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                    }</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                }</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                <span class="comment">// 4. default</span></div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                <span class="keywordflow">return</span> 0;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            }</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;</div>
+<div class="line"><a name="l00326"></a><span class="lineno"><a class="line" href="classnumeric_1_1BigInteger.html#a556eb805f62f99e926d93f8239d9701d">  326</a></span>&#160;            std::string <a class="code" href="classnumeric_1_1BigInteger.html#a556eb805f62f99e926d93f8239d9701d">toString</a>()</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;            {</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;                <span class="comment">// special case for 0</span></div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;                <span class="keywordflow">if</span>(m_digits.size() == 0 || m_digits.size() == 1 &amp;&amp; m_digits[0] == 0)</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;                {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                    <span class="keywordflow">return</span> <span class="stringliteral">&quot;0&quot;</span>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;                }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;                <span class="comment">// general case</span></div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;                std::string s = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m_digits.size(); i++)</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;                {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;                    s = std::to_string(m_digits[i]) + s;</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;                }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;                <span class="keywordflow">if</span>(m_negative)</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                {</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;                    s  = <span class="stringliteral">&quot;-&quot;</span> + s;</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;                }</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                    m_negative = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;                }</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;                <span class="comment">// process digits</span></div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;                <span class="keywordflow">while</span>(l != 0)</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;                {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                    <span class="keyword">auto</span> d = l % 10;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                    l /= 10;</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                    m_digits.push_back(d);</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                }</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            }</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;            <span class="keywordtype">void</span> fromString(<span class="keyword">const</span> std::string&amp; s)</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;            {</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;            }</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;            std::vector&lt;short&gt;  m_digits;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;            <span class="keywordtype">bool</span>                m_negative;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;    };</div>
-<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;}</div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;<span class="preprocessor">#endif // BIGINTEGER_HPP</span></div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;                <span class="keywordflow">return</span> s;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            }</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordtype">void</span> fromLong(<span class="keywordtype">long</span> l)</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                <span class="comment">// handle 0</span></div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;                <span class="keywordflow">if</span>(l == 0 || l == -0)</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;                {</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;                    m_digits.push_back(0);</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;                    m_negative = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                    <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                }</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                <span class="comment">// handle sign</span></div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                <span class="keywordflow">if</span>(l &lt; 0)</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;                {</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                    m_negative = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                    l = -l;</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                }</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                {</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                    m_negative = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                }</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                <span class="comment">// process digits</span></div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <span class="keywordflow">while</span>(l != 0)</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;                {</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                    <span class="keyword">auto</span> d = l % 10;</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                    l /= 10;</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    m_digits.push_back(d);</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            }</div>
+<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;            <span class="keywordtype">void</span> fromString(<span class="keyword">const</span> std::string&amp; s)</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;            {</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            }</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;            std::vector&lt;short&gt;  m_digits;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;            <span class="keywordtype">bool</span>                m_negative;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    };</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;</div>
+<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;<span class="preprocessor">#endif // BIGINTEGER_HPP</span></div>
+<div class="ttc" id="classnumeric_1_1BigInteger_html_a556eb805f62f99e926d93f8239d9701d"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a556eb805f62f99e926d93f8239d9701d">numeric::BigInteger::toString</a></div><div class="ttdeci">std::string toString()</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:326</div></div>
 <div class="ttc" id="classnumeric_1_1BigInteger_html_a2e3cddb33588b58bfd4f61dbad82182f"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a2e3cddb33588b58bfd4f61dbad82182f">numeric::BigInteger::sub</a></div><div class="ttdeci">static BigInteger sub(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:104</div></div>
 <div class="ttc" id="classnumeric_1_1BigInteger_html_a0f6eb2baeb4cbb97b36e15fff582cc47"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a0f6eb2baeb4cbb97b36e15fff582cc47">numeric::BigInteger::BigInteger</a></div><div class="ttdeci">BigInteger(long l)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:34</div></div>
-<div class="ttc" id="classnumeric_1_1BigInteger_html_a5cf5ffbf111a689d637211cc5c17f81e"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">numeric::BigInteger::mod</a></div><div class="ttdeci">static BigInteger mod(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:247</div></div>
-<div class="ttc" id="classnumeric_1_1BigInteger_html_ae49efb821d2c3b124b7179f40646fbff"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">numeric::BigInteger::pow</a></div><div class="ttdeci">static BigInteger pow(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:254</div></div>
-<div class="ttc" id="classnumeric_1_1BigInteger_html_a7445c0a794735c54e5de02e5ba49d95c"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c">numeric::BigInteger::compare</a></div><div class="ttdeci">static int compare(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:261</div></div>
+<div class="ttc" id="classnumeric_1_1BigInteger_html_a5cf5ffbf111a689d637211cc5c17f81e"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e">numeric::BigInteger::mod</a></div><div class="ttdeci">static BigInteger mod(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:265</div></div>
+<div class="ttc" id="classnumeric_1_1BigInteger_html_ac7eac5464310f00932922873500cda77"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#ac7eac5464310f00932922873500cda77">numeric::BigInteger::abs</a></div><div class="ttdeci">static BigInteger abs(const BigInteger &amp;i)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:253</div></div>
+<div class="ttc" id="classnumeric_1_1BigInteger_html_ae49efb821d2c3b124b7179f40646fbff"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#ae49efb821d2c3b124b7179f40646fbff">numeric::BigInteger::pow</a></div><div class="ttdeci">static BigInteger pow(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:272</div></div>
+<div class="ttc" id="classnumeric_1_1BigInteger_html_a7445c0a794735c54e5de02e5ba49d95c"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c">numeric::BigInteger::compare</a></div><div class="ttdeci">static int compare(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:279</div></div>
 <div class="ttc" id="classnumeric_1_1BigInteger_html_ae0e89ad380dac0de69ea5c82ee944016"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#ae0e89ad380dac0de69ea5c82ee944016">numeric::BigInteger::BigInteger</a></div><div class="ttdeci">BigInteger(const BigInteger &amp;i0)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:41</div></div>
 <div class="ttc" id="classnumeric_1_1BigInteger_html_aaea0ae622600519ccdce369b8a4b70c4"><div class="ttname"><a href="classnumeric_1_1BigInteger.html#aaea0ae622600519ccdce369b8a4b70c4">numeric::BigInteger::mul</a></div><div class="ttdeci">static BigInteger mul(const BigInteger &amp;i0, const BigInteger &amp;i1)</div><div class="ttdef"><b>Definition:</b> biginteger.hpp:198</div></div>
 <div class="ttc" id="classnumeric_1_1BigInteger_html"><div class="ttname"><a href="classnumeric_1_1BigInteger.html">numeric::BigInteger</a></div><div class="ttdef"><b>Definition:</b> biginteger.hpp:15</div></div>
@@ -449,7 +467,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon Dec 26 2016 19:34:22 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Dec 27 2016 14:35:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

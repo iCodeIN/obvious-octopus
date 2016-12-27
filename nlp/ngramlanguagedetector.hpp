@@ -1,6 +1,7 @@
 #ifndef NGRAMLANGUAGEDETECTOR_HPP
 #define NGRAMLANGUAGEDETECTOR_HPP
 
+#include "nlp/ilanguagedetector.h"
 #include "numeric/distribution.hpp"
 #include "util/ngrams.hpp"
 #include "xml/xml.hpp"
@@ -13,13 +14,18 @@
 
 namespace nlp
 {
-    /*!
+    /*! The NGramLanguageDetector is based on calculating and comparing language profiles of N-gram frequencies.
+        The system generates a language profile for the N-grams in particular language by using training data for the language in question and later uses these profiles to make its detection.
+        Given a novel piece of text to be classified, the system computes the N-gram profile of this text (text profile) and compares the distance between this text profile and the language profiles
+        for all the supported languages. The language profile with the minimal distance is considered to represent the detected language.
      */
-    class NGramLanguageDetector
+    class NGramLanguageDetector : public ILanguageDetector
     {
         public:
 
-            /*!
+            /*! Train this model to accept the given piece of text to correspond to the given language
+                \param[in] text         the text the model is to be trained on
+                \param[in] language     the language (abbreviation) that the given text is written in
              */
             void train(const std::string& text, const std::string& language)
             {
@@ -39,8 +45,7 @@ namespace nlp
                 }
             }
 
-            /*!
-             */
+            // --- ILanguageDetector ---
             std::map<std::string, double> detect(const std::string& text) const
             {
                 // setup
@@ -148,7 +153,7 @@ namespace nlp
             }
 
             // --- members ---
-            std::map<std::string, LanguageModelType> m_models;
+            std::map<std::string, LanguageModelType>    m_models;
     };
 }
 

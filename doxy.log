@@ -1,16 +1,13 @@
 /home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:19: warning: Compound nlp::NGramLanguageDetector is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:16: warning: Compound graph_ui::SnapToGridGraphLayout is not documented.
+/home/joris/Code/alexandria/geometry/convexhull.hpp:26: warning: Member wrap(const std::vector< PointType > &points) (function) of class geometry::ConvexHull is not documented.
 /home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:26: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::HierarchicalGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/randomgraphlayout.hpp:23: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::RandomGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::ResizeGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::SnapToGridGraphLayout is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:24: warning: Member train(const std::string &text, const std::string &language) (function) of class nlp::NGramLanguageDetector is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:44: warning: Member detect(const std::string &text) const  (function) of class nlp::NGramLanguageDetector is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:68: warning: Member toXML() const  (function) of class nlp::NGramLanguageDetector is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:96: warning: Member fromXML(std::unique_ptr< XML::IElement > xml) (function) of class nlp::NGramLanguageDetector is not documented.
-/home/joris/Code/alexandria/numeric/biginteger.hpp:306: warning: Member toString() (function) of class numeric::BigInteger is not documented.
+/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:73: warning: Member toXML() const  (function) of class nlp::NGramLanguageDetector is not documented.
+/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:101: warning: Member fromXML(std::unique_ptr< XML::IElement > xml) (function) of class nlp::NGramLanguageDetector is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:91: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:127: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/svg/path.hpp:17: warning: Member PathCommand (typedef) of class SVG::Path is not documented.

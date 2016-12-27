@@ -22,6 +22,10 @@ namespace geometry
     {
         public:
 
+            /*! Prohibit construction of KMeans. This class offers only static methods.
+             */
+            explicit KMeans() = delete;
+
             /*! define an n-dimensional point
              */
             using PointType = std::vector<double>;
