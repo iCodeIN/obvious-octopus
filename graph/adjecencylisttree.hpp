@@ -29,7 +29,7 @@ namespace graph
             virtual ~AdjecencyListTree() = default;
 
             // --- IGraph ---
-            virtual void insertEdge(const T& source, const T& target)
+            virtual void insertEdge(const T& source, const T& target) override
             {
                 assert(m_graph->incoming(target).size() == 0);
                 assert(source != target);
@@ -38,49 +38,49 @@ namespace graph
             }
 
             // --- IGraph ---
-            virtual void eraseEdge(const T& source, const T& target)
+            virtual void eraseEdge(const T& source, const T& target) override
             {
                 m_graph->eraseEdge(source, target);
             }
 
             // --- IGraph ---
-            virtual bool hasEdge(const T& source, const T& target) const
+            virtual bool hasEdge(const T& source, const T& target) const override
             {
                 return m_graph->hasEdge(source, target);
             }
 
             // --- IGraph ---
-            virtual const std::set<T> outgoing(const T& source) const
+            virtual const std::set<T> outgoing(const T& source) const override
             {
                 return m_graph->outgoing(source);
             }
 
             // --- IGraph ---
-            virtual const std::set<T> incoming(const T& target) const
+            virtual const std::set<T> incoming(const T& target) const override
             {
                 return m_graph->incoming(target);
             }
 
             // --- IGraph ---
-            virtual const std::set<T> vertices() const
+            virtual const std::set<T> vertices() const override
             {
                 return m_graph->vertices();
             }
 
             // --- IGraph ---
-            virtual void insertVertex(const T& vertex)
+            virtual void insertVertex(const T& vertex) override
             {
                 m_graph->insertVertex(vertex);
             }
 
             // --- IGraph ---
-            virtual void eraseVertex(const T& vertex)
+            virtual void eraseVertex(const T& vertex) override
             {
                 m_graph->eraseVertex(vertex);
             }
 
             // --- IGraph ---
-            virtual bool hasVertex(const T& vertex) const
+            virtual bool hasVertex(const T& vertex) const override
             {
                 return m_graph->hasVertex(vertex);
             }

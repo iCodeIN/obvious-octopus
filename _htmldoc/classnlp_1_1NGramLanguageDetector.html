@@ -122,12 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a95a766d2da6546fed3eb073d2117f7e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2174a7aafadd6411ebee123d24670cf2"><td class="memItemLeft" align="right" valign="top">std::map&lt; std::string, double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1NGramLanguageDetector.html#a2174a7aafadd6411ebee123d24670cf2">detect</a> (const std::string &amp;text) const </td></tr>
 <tr class="separator:a2174a7aafadd6411ebee123d24670cf2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afd29d6166c5da4db3a515d258bdc2c20"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="afd29d6166c5da4db3a515d258bdc2c20"></a>
-virtual std::unique_ptr<br class="typebreak" />
-&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><b>toXML</b> () const </td></tr>
+<tr class="memitem:afd29d6166c5da4db3a515d258bdc2c20"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
+&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1NGramLanguageDetector.html#afd29d6166c5da4db3a515d258bdc2c20">toXML</a> () const </td></tr>
 <tr class="separator:afd29d6166c5da4db3a515d258bdc2c20"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5afb1f99b79b3a1954d3fccfc20d1bfa"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a5afb1f99b79b3a1954d3fccfc20d1bfa"></a>
-virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>fromXML</b> (std::unique_ptr&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt; xml)</td></tr>
+<tr class="memitem:a5afb1f99b79b3a1954d3fccfc20d1bfa"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1NGramLanguageDetector.html#a5afb1f99b79b3a1954d3fccfc20d1bfa">fromXML</a> (std::unique_ptr&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt; xml)</td></tr>
 <tr class="separator:a5afb1f99b79b3a1954d3fccfc20d1bfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -157,6 +155,55 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>fromXML</b> (
 <dl class="section return"><dt>Returns</dt><dd>a ranking of all languages known to the model </dd></dl>
 
 <p>Implements <a class="el" href="classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b">nlp::ILanguageDetector</a>.</p>
+
+</div>
+</div>
+<a class="anchor" id="a5afb1f99b79b3a1954d3fccfc20d1bfa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void nlp::NGramLanguageDetector::fromXML </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td>
+          <td class="paramname"><em>xml</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>load an <a class="el" href="classnlp_1_1NGramLanguageDetector.html">NGramLanguageDetector</a> from a given XML element </p>
+
+</div>
+</div>
+<a class="anchor" id="afd29d6166c5da4db3a515d258bdc2c20"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classXML_1_1IElement.html">XML::IElement</a>&gt; nlp::NGramLanguageDetector::toXML </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>an XML representation of this <a class="el" href="classnlp_1_1NGramLanguageDetector.html">NGramLanguageDetector</a> </dd></dl>
 
 </div>
 </div>
@@ -207,7 +254,7 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><b>fromXML</b> (
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Tue Dec 27 2016 20:29:09 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 28 2016 13:25:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

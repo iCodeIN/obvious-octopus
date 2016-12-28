@@ -1,18 +1,12 @@
-/home/joris/Code/alexandria/graph/bktree.hpp:10: warning: Compound graph::BKTree is not documented.
 /home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:16: warning: Compound graph_ui::SnapToGridGraphLayout is not documented.
 /home/joris/Code/alexandria/geometry/convexhull.hpp:26: warning: Member wrap(const std::vector< PointType > &points) (function) of class geometry::ConvexHull is not documented.
-/home/joris/Code/alexandria/graph/bktree.hpp:12: warning: Member MetricFunctionType (typedef) of class graph::BKTree is not documented.
-/home/joris/Code/alexandria/graph/bktree.hpp:14: warning: Member BKTree(const MetricFunctionType &metric) (function) of class graph::BKTree is not documented.
-/home/joris/Code/alexandria/graph/bktree.hpp:21: warning: Member insert(const T &t) (function) of class graph::BKTree is not documented.
-/home/joris/Code/alexandria/graph/bktree.hpp:27: warning: Member find(const T &t, int distance) (function) of class graph::BKTree is not documented.
+/home/joris/Code/alexandria/graph/bktree.hpp:51: warning: Member MetricFunctionType (typedef) of class graph::BKTree is not documented.
 /home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:26: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::HierarchicalGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/randomgraphlayout.hpp:23: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::RandomGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::ResizeGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::SnapToGridGraphLayout is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:73: warning: Member toXML() const  (function) of class nlp::NGramLanguageDetector is not documented.
-/home/joris/Code/alexandria/nlp/ngramlanguagedetector.hpp:101: warning: Member fromXML(std::unique_ptr< XML::IElement > xml) (function) of class nlp::NGramLanguageDetector is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:91: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:127: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/svg/path.hpp:17: warning: Member PathCommand (typedef) of class SVG::Path is not documented.

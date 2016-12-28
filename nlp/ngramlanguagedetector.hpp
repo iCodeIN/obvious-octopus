@@ -68,7 +68,7 @@ namespace nlp
                 return retval;
             }
 
-            /*!
+            /*! \return an XML representation of this NGramLanguageDetector
              */
             virtual std::unique_ptr<XML::IElement> toXML() const
             {
@@ -96,7 +96,7 @@ namespace nlp
                 return std::move(root);
             }
 
-            /*!
+            /*! load an NGramLanguageDetector from a given XML element
              */
             virtual void fromXML(std::unique_ptr<XML::IElement> xml)
             {
@@ -107,6 +107,7 @@ namespace nlp
                 {
                     auto &languageNode = xml->getChild(i);
                     std::map<std::string, double> languageModel;
+                    // elements for each observed ngram
                     for(int j=0; j<languageNode.countChildren(); j++)
                     {
                         auto &ngramNode = languageNode.getChild(j);
@@ -114,7 +115,7 @@ namespace nlp
                     }
                     m_models[languageNode.getName()] = languageModel;
                 }
-                // elements for each observed ngram
+
             }
 
         private:
