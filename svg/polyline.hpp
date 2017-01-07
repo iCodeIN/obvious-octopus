@@ -60,7 +60,8 @@ namespace SVG
             }
 
         private:
-            // --- Members ---
+            // --- methods ---
+            // --- members ---
             std::vector<std::pair<double,double>> m_points;
     };
 

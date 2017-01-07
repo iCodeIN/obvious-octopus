@@ -13,8 +13,6 @@
 #include <set>
 #include <vector>
 
-#include <iostream> // debug
-
 namespace graph
 {
     /*! Implementation of IGraph using an adjecency list as the underlying datastructure
@@ -30,6 +28,11 @@ namespace graph
                 : m_generator(m_randomDevice())
                 , m_distribution(0, std::numeric_limits<ulong>::max())
             {
+            }
+
+            virtual ~AdjecencyListGraph()
+            {
+                m_vertexIds.clear();
             }
 
             /*! transfer function definition
@@ -94,7 +97,6 @@ namespace graph
             // --- IGraph ---
             virtual void insertEdge(const T& source, const T& target) override
             {
-                //std::cout << "insertEdge(" << source << ", " << target << ")" << std::endl;
                 assert(hasVertex(source) && hasVertex(target));
                 auto sourceId = m_vertexIds.left.find(source)->second;
                 auto targetId = m_vertexIds.left.find(target)->second;
@@ -126,7 +128,6 @@ namespace graph
             // --- IGraph ---
             virtual const std::set<T> outgoing(const T& source) const override
             {
-                //std::cout << "outgoing(" << source << ")" << std::endl;
                 assert(hasVertex(source));
                 auto sourceId = m_vertexIds.left.find(source)->second;
                 std::set<T> retval;
@@ -166,7 +167,6 @@ namespace graph
             // --- IGraph ---
             virtual void insertVertex(const T& vertex) override
             {
-                //std::cout << "insertVertex(" << vertex << ")" << std::endl;
                 if(hasVertex(vertex))
                 {
                     return;
@@ -225,7 +225,6 @@ namespace graph
             // --- IGraph ---
             virtual bool hasVertex(const T &vertex) const override
             {
-                //std::cout << "hasVertex(" << vertex << ") = " << (m_vertexIds.left.find(vertex) != m_vertexIds.left.end()) << std::endl;
                 return m_vertexIds.left.find(vertex) != m_vertexIds.left.end();
             }
 

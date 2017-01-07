@@ -4,10 +4,12 @@
 
 #include "graph_ui/abstractgraphlayout.hpp"
 
+#include "graph/bfs.hpp"
 #include "graph/cyclefinder.hpp"
 #include "graph/i2dgraph.hpp"
 #include "graph/igraph.hpp"
 
+#include <assert.h>
 #include <memory>
 
 namespace graph_ui
@@ -28,12 +30,47 @@ namespace graph_ui
                 assert(!graph::CycleFinder<T>::hasCycle(graph));
 
                 // duplicate graph into I2DGraph
+                std::map<T, long> ids;
+                graph::AdjecencyListGraph<long> relativeLayout();
+                for(auto &vertex : graph.vertices())
+                {
+                    auto id = ids.size();
+                    ids[vertex] = id;
+                    relativeLayout.insertVertex(id);
+                }
+                for(auto &source : graph.vertices())
+                {
+                    assert(ids.find(source) != ids.end());
+                    for(auto &target : graph.vertices())
+                    {
+                        if(graph.hasEdge(source, target))
+                        {
+                            assert(ids.find(target) != ids.end());
+                            relativeLayout.insertEdge(ids[source], ids[target]);
+                        }
+                    }
+                }
 
                 // set y coordinate based on BFS depth
+                for(auto &vertex : graph.vertices())
+                {
+                    auto layer = graph::bfs(graph, vertex)->depth();
+                    relativeLayout.setVertexPoint(ids[vertex], std::make_pair(0, layer));
+                }
 
                 // insert dummy vertices to ensure layout properties are methods
+                for(auto &source : graph.vertices())
+                {
+                    auto sourceLayer = graph.getVertexPoint(source).second;
+                    for(auto &target : graph.outgoing(source))
+                    {
+                        auto targetLayer = graph.getVertexPoint(target).second;
+                        // if these vertices are more than 1 layer apart, dummy vertices are needed
+                    }
+                }
 
                 // layout graph, layer by layer
+
 
                 // return
             }

@@ -1,14 +1,31 @@
+/home/joris/Code/alexandria/plotting/lineplot.hpp:17: warning: Compound plotting::LinePlot is not documented.
 /home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:16: warning: Compound graph_ui::SnapToGridGraphLayout is not documented.
 /home/joris/Code/alexandria/geometry/convexhull.hpp:26: warning: Member wrap(const std::vector< PointType > &points) (function) of class geometry::ConvexHull is not documented.
-/home/joris/Code/alexandria/graph/bktree.hpp:51: warning: Member MetricFunctionType (typedef) of class graph::BKTree is not documented.
-/home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:26: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::HierarchicalGraphLayout is not documented.
+/home/joris/Code/alexandria/graph/bktree.hpp:54: warning: Member MetricFunctionType (typedef) of class graph::BKTree is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:32: warning: Member insertEdge(const BKTreeNode< T > *&source, const BKTreeNode< T > *&target) override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:41: warning: Member eraseEdge(const BKTreeNode< T > *&source, const BKTreeNode< T > *&target) override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:47: warning: Member hasEdge(const BKTreeNode< T > *&source, const BKTreeNode< T > *&target) const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:53: warning: Member outgoing(const BKTreeNode< T > *&source) const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:59: warning: Member incoming(const BKTreeNode< T > *&target) const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:65: warning: Member vertices() const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:71: warning: Member insertVertex(const BKTreeNode< T > *&vertex) override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:77: warning: Member eraseVertex(const BKTreeNode< T > *&vertex) override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:83: warning: Member hasVertex(const BKTreeNode< T > *&vertex) const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:89: warning: Member leaves() const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:103: warning: Member parent(const BKTreeNode< T > *&vertex) const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:110: warning: Member root() const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph/adjecencylisttree.hpp:125: warning: Member depth() const override (function) of class AdjecencyListTree< BKTreeNode< T > * > is not documented.
+/home/joris/Code/alexandria/graph_ui/hierarchicalgraphlayout.hpp:28: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::HierarchicalGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/randomgraphlayout.hpp:23: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::RandomGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::ResizeGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:29: warning: Member layout(const graph::IGraph< T > &graph, const typename AbstractGraphLayout< T >::SizeFunctionType &size) const override (function) of class graph_ui::SnapToGridGraphLayout is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:91: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:127: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
+/home/joris/Code/alexandria/plotting/lineplot.hpp:78: warning: Member plot() const  (function) of class plotting::LinePlot is not documented.
+/home/joris/Code/alexandria/svg/line.hpp:50: warning: Member setStrokeArray(const std::vector< int > &dots) (function) of class SVG::Line is not documented.
+/home/joris/Code/alexandria/svg/line.hpp:54: warning: Member clearStrokeArray() (function) of class SVG::Line is not documented.
 /home/joris/Code/alexandria/svg/path.hpp:17: warning: Member PathCommand (typedef) of class SVG::Path is not documented.
 /home/joris/Code/alexandria/svg/path.hpp:19: warning: Member Path(std::vector< PathCommand > cmds) (function) of class SVG::Path is not documented.
 /home/joris/Code/alexandria/xml/defaultelementimpl.hpp:75: warning: Member add(std::unique_ptr< XML::IElement > n) override (function) of class XML::DefaultElementImpl is not documented.

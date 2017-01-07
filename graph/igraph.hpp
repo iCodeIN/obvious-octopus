@@ -15,6 +15,8 @@ namespace graph
     class IGraph
     {
         public:
+            explicit IGraph() = default;
+            virtual ~IGraph() = default;
 
             /*! Insert an edge into the graph
                 \param[in] source the source vertex

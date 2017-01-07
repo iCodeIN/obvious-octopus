@@ -28,7 +28,7 @@ namespace numeric
             static const std::map<X,double> relative(const DistributionType &d)
             {
                 std::map<X, double> retval;
-                Y totalMass = 0;
+                double totalMass = 0;
                 for(auto pair : d)
                 {
                     assert(pair.second >= 0);

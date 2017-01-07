@@ -124,32 +124,51 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classSVG_1_1Line.html#a82ed7d4c2b98bdaa827e4f8beab83d1a">operator=</a>(<a class="code" href="classSVG_1_1Line.html">Line</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// --- IElement ---</span></div>
-<div class="line"><a name="l00053"></a><span class="lineno"><a class="line" href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">   53</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::IElement&gt; <a class="code" href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">toXML</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                <span class="keyword">auto</span> node = <a class="code" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">IElement::toXML</a>();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                node.get()-&gt;setName(<span class="stringliteral">&quot;line&quot;</span>);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;x1&quot;</span>, m_x1);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;y1&quot;</span>, m_y1);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;x2&quot;</span>, m_x2);</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                node.get()-&gt;setAttribute(<span class="stringliteral">&quot;y2&quot;</span>, m_y2);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> node;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// --- Members ---</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="keywordtype">int</span> m_x1;       </div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">int</span> m_y1;       </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            <span class="keywordtype">int</span> m_x2;       </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keywordtype">int</span> m_y2;       </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    };</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;}</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">#endif // LINE_HPP</span></div>
-<div class="ttc" id="classSVG_1_1Line_html_ac760fa30f698cbc16211a39565778d39"><div class="ttname"><a href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">SVG::Line::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> line.hpp:53</div></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordtype">void</span> setStrokeArray(<span class="keyword">const</span> std::vector&lt;int&gt;&amp; dots)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                m_strokeArray = dots;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keywordtype">void</span> clearStrokeArray()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                m_strokeArray.clear();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="comment">// --- IElement ---</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">   62</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;XML::IElement&gt; <a class="code" href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">toXML</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                <span class="keyword">auto</span> node = <a class="code" href="classSVG_1_1IElement.html#aa9afc7e9a81109c99b71638bc6fbd3e5">IElement::toXML</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                node-&gt;setName(<span class="stringliteral">&quot;line&quot;</span>);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                node-&gt;setAttribute(<span class="stringliteral">&quot;x1&quot;</span>, m_x1);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                node-&gt;setAttribute(<span class="stringliteral">&quot;y1&quot;</span>, m_y1);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                node-&gt;setAttribute(<span class="stringliteral">&quot;x2&quot;</span>, m_x2);</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                node-&gt;setAttribute(<span class="stringliteral">&quot;y2&quot;</span>, m_y2);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keywordflow">if</span>(!m_strokeArray.empty())</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    std::string strokeArrayString = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m_strokeArray.size(); i++)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                        strokeArrayString += (i == 0 ? <span class="stringliteral">&quot;&quot;</span> : <span class="stringliteral">&quot;, &quot;</span>) + std::to_string(m_strokeArray[i]);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    node-&gt;setAttribute(<span class="stringliteral">&quot;stroke-dasharray&quot;</span>, strokeArrayString);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                <span class="keywordflow">return</span> node;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <span class="comment">// --- Members ---</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            std::vector&lt;int&gt;    m_strokeArray;  </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keywordtype">int</span>                 m_x1;           </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keywordtype">int</span>                 m_y1;           </div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <span class="keywordtype">int</span>                 m_x2;           </div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="keywordtype">int</span>                 m_y2;           </div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    };</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;<span class="preprocessor">#endif // LINE_HPP</span></div>
+<div class="ttc" id="classSVG_1_1Line_html_ac760fa30f698cbc16211a39565778d39"><div class="ttname"><a href="classSVG_1_1Line.html#ac760fa30f698cbc16211a39565778d39">SVG::Line::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> line.hpp:62</div></div>
 <div class="ttc" id="classSVG_1_1IElement_html"><div class="ttname"><a href="classSVG_1_1IElement.html">SVG::IElement</a></div><div class="ttdef"><b>Definition:</b> ielement.hpp:15</div></div>
 <div class="ttc" id="classSVG_1_1Line_html_a7083a62f9e5cbc44bba5baf63116f758"><div class="ttname"><a href="classSVG_1_1Line.html#a7083a62f9e5cbc44bba5baf63116f758">SVG::Line::~Line</a></div><div class="ttdeci">virtual ~Line()=default</div></div>
 <div class="ttc" id="classSVG_1_1Line_html_a82ed7d4c2b98bdaa827e4f8beab83d1a"><div class="ttname"><a href="classSVG_1_1Line.html#a82ed7d4c2b98bdaa827e4f8beab83d1a">SVG::Line::operator=</a></div><div class="ttdeci">void operator=(const Line &amp;)=delete</div></div>
@@ -159,7 +178,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Wed Dec 28 2016 13:25:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 7 2017 11:39:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

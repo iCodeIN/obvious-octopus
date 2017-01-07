@@ -7,7 +7,6 @@ var searchData=
   ['hasedge',['hasEdge',['../classgraph_1_1AdjecencyListGraph.html#aaa6a1b60ff5e2c348d4688e162d04346',1,'graph::AdjecencyListGraph::hasEdge()'],['../classgraph_1_1AdjecencyListTree.html#a2f431e93bc6f3018cf723fe4a34aa0a4',1,'graph::AdjecencyListTree::hasEdge()'],['../classgraph_1_1IGraph.html#abec9a1b359aadcda924f69a2f61af835',1,'graph::IGraph::hasEdge()']]],
   ['hasvertex',['hasVertex',['../classgraph_1_1AdjecencyListGraph.html#a8ef13ebd42b9cee9699a1a6ca617ff54',1,'graph::AdjecencyListGraph::hasVertex()'],['../classgraph_1_1AdjecencyListTree.html#a08ab12baeb9e95f442831691c2fcd750',1,'graph::AdjecencyListTree::hasVertex()'],['../classgraph_1_1IGraph.html#ab659a04f986ae7a1451ad68ed69c55d1',1,'graph::IGraph::hasVertex()']]],
   ['haswall',['hasWall',['../classMaze.html#a696c3e358c7e123451ea392219d618d0',1,'Maze']]],
-  ['heatplot',['HeatPlot',['../classplotting_1_1HeatPlot.html#ab4539669e4031581c5a455b55a8ffece',1,'plotting::HeatPlot::HeatPlot(int w, int h)'],['../classplotting_1_1HeatPlot.html#a3f1b7fbe3216c9f188a83662a4bd0acc',1,'plotting::HeatPlot::HeatPlot(HeatPlot &amp;n)=delete'],['../classplotting_1_1HeatPlot.html#a8ad618c4a906228c2f423c91b4d9163d',1,'plotting::HeatPlot::HeatPlot(const HeatPlot &amp;n)=delete']]],
   ['height',['height',['../classMaze.html#a53de30abea69713225ab77703e753d81',1,'Maze']]],
   ['hsv',['HSV',['../classSVG_1_1HSV.html#a1b9319b7d41ef770d8d490e030969cb5',1,'SVG::HSV']]]
 ];

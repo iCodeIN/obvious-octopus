@@ -25,7 +25,7 @@ int main()
     ifs.open ("/home/joris/g0.xml", ifstream::in);
 
     // read graph
-    auto graphPtr = (graph::IGraph<string>*) new AdjecencyListGraph<string>();
+    auto graphPtr = std::unique_ptr<IGraph<string>>(new AdjecencyListGraph<string>());
     ifs >> *graphPtr;
 
     // set preferences for pixel size of vertices
@@ -44,7 +44,6 @@ int main()
     layoutMgr0.get()->setMinYMargin(margin);
 
     auto layout = layoutMgr0->layout(*graphPtr, boundingBox);
-
 
     return 0;
 }

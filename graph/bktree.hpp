@@ -18,6 +18,9 @@ namespace graph
                 , m_dist(dist)
             {
             }
+
+            virtual ~BKTreeNode() = default;
+
             /*! \return the distance between this node and its parent
              */
             int getDist() const
@@ -26,7 +29,7 @@ namespace graph
             }
             /*! \return the data in this BKTreeNode
              */
-            T getData() const
+            const T& getData() const
             {
                 return m_data;
             }
@@ -57,6 +60,13 @@ namespace graph
             {
             }
 
+            virtual ~BKTree()
+            {
+                for(auto &vertex : this->vertices())
+                {
+                    delete vertex;
+                }
+            }
 
             /*! Insert a new T in this BKTree
                 \return true iff the tree was modified as a result of this operation, false otherwise

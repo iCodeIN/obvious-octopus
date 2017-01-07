@@ -55,7 +55,7 @@ void useModel()
     ngld.fromXML(std::move(elementPtr));
 
     // use model
-    string text = "If i could be a superhero, I would be drug-free boy; Freeing the world of the evils of drugs and all of the lives they destroy.";
+    string text = "I see your true colours.";
     auto cls = ngld.detect(text);
     for(auto &pair : cls)
     {

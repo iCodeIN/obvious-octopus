@@ -149,7 +149,6 @@ namespace nlp
                     squaresA += (f0 * f0);
                     squaresB += (f1 * f1);
                 }
-
                 return terms / (sqrt(squaresA) * sqrt(squaresB));
             }
 
