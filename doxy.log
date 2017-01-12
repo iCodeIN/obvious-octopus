@@ -1,3 +1,4 @@
+/home/joris/Code/alexandria/nlp/isplitter.h:9: warning: Compound nlp::ISplitter is not documented.
 /home/joris/Code/alexandria/plotting/lineplot.hpp:17: warning: Compound plotting::LinePlot is not documented.
 /home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.

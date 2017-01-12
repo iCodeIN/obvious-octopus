@@ -93,10 +93,45 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">naivesplitter.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"></div><!-- fragment --></div><!-- contents -->
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NAIVESPLITTER_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NAIVESPLITTER_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;nlp/isplitter.h&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span>nlp</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classnlp_1_1NaiveSplitter.html">   10</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classnlp_1_1NaiveSplitter.html">NaiveSplitter</a> : <span class="keyword">public</span> <a class="code" href="classnlp_1_1ISplitter.html">ISplitter</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classnlp_1_1NaiveSplitter.html#a9411b041a44d5e605d41305abb19c667">   16</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classnlp_1_1NaiveSplitter.html#a9411b041a44d5e605d41305abb19c667">NaiveSplitter</a>(std::set&lt;std::string&gt; dictionary)</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            {</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classnlp_1_1NaiveSplitter.html#a31b6ffbca37fa2f48c9914fbca04ee88">~NaiveSplitter</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">// --- ISplitter ---</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classnlp_1_1NaiveSplitter.html#a4422fb074dbfdae395d2a4f627097e11">   25</a></span>&#160;            std::vector&lt;std::string&gt; <a class="code" href="classnlp_1_1NaiveSplitter.html#a4422fb074dbfdae395d2a4f627097e11">split</a>(std::string s)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;}</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;<span class="preprocessor">#endif // NAIVESPLITTER_HPP</span></div>
+<div class="ttc" id="classnlp_1_1NaiveSplitter_html_a31b6ffbca37fa2f48c9914fbca04ee88"><div class="ttname"><a href="classnlp_1_1NaiveSplitter.html#a31b6ffbca37fa2f48c9914fbca04ee88">nlp::NaiveSplitter::~NaiveSplitter</a></div><div class="ttdeci">virtual ~NaiveSplitter()=default</div></div>
+<div class="ttc" id="classnlp_1_1NaiveSplitter_html_a9411b041a44d5e605d41305abb19c667"><div class="ttname"><a href="classnlp_1_1NaiveSplitter.html#a9411b041a44d5e605d41305abb19c667">nlp::NaiveSplitter::NaiveSplitter</a></div><div class="ttdeci">NaiveSplitter(std::set&lt; std::string &gt; dictionary)</div><div class="ttdef"><b>Definition:</b> naivesplitter.hpp:16</div></div>
+<div class="ttc" id="classnlp_1_1ISplitter_html"><div class="ttname"><a href="classnlp_1_1ISplitter.html">nlp::ISplitter</a></div><div class="ttdef"><b>Definition:</b> isplitter.h:8</div></div>
+<div class="ttc" id="classnlp_1_1NaiveSplitter_html_a4422fb074dbfdae395d2a4f627097e11"><div class="ttname"><a href="classnlp_1_1NaiveSplitter.html#a4422fb074dbfdae395d2a4f627097e11">nlp::NaiveSplitter::split</a></div><div class="ttdeci">std::vector&lt; std::string &gt; split(std::string s) const override</div><div class="ttdef"><b>Definition:</b> naivesplitter.hpp:25</div></div>
+<div class="ttc" id="classnlp_1_1NaiveSplitter_html"><div class="ttname"><a href="classnlp_1_1NaiveSplitter.html">nlp::NaiveSplitter</a></div><div class="ttdef"><b>Definition:</b> naivesplitter.hpp:10</div></div>
+</div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 7 2017 11:39:32 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 12 2017 07:18:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

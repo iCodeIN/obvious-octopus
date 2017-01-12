@@ -19,6 +19,7 @@ var searchData=
   ['inttupletype',['IntTupleType',['../classmeta_1_1AssignmentSearch.html#ad0fe0211c0184ef2439cd68a6b9c8534',1,'meta::AssignmentSearch::IntTupleType()'],['../classmeta_1_1PermutationSearch.html#af6eb63075a6e44c6e0f8e30ff304a96c',1,'meta::PermutationSearch::IntTupleType()']]],
   ['inversedft',['inverseDFT',['../classnumeric_1_1DFT.html#aefafd1c70aef4b273508fbd7f5308303',1,'numeric::DFT']]],
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
+  ['isplitter',['ISplitter',['../classnlp_1_1ISplitter.html',1,'nlp']]],
   ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html',1,'graph']]],
   ['itree_3c_20bktreenode_3c_20t_20_3e_20_2a_20_3e',['ITree&lt; BKTreeNode&lt; T &gt; * &gt;',['../classgraph_1_1ITree.html',1,'graph']]]

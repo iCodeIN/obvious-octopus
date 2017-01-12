@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['naivesplitter',['NaiveSplitter',['../classnlp_1_1NaiveSplitter.html',1,'nlp']]],
+  ['naivesplitter',['NaiveSplitter',['../classnlp_1_1NaiveSplitter.html#a9411b041a44d5e605d41305abb19c667',1,'nlp::NaiveSplitter']]],
   ['neighbour',['neighbour',['../classmeta_1_1AbstractMetaHeuristic.html#ac790357e744c70f7e248b34c6ea7be95',1,'meta::AbstractMetaHeuristic']]],
   ['next',['next',['../classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08',1,'game::Minimax']]],
   ['nextmovefunctiontype',['NextMoveFunctionType',['../classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d',1,'game::Minimax']]],

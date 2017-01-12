@@ -13,7 +13,6 @@ void trainModel()
     NGramLanguageDetector ngld;
 
     // train
-
     ngld.train(FileToString::readFile("/home/joris/Documents/corpus/en/en001.txt"), "EN");
     std::cout << "trained for EN" << std::endl;
 
