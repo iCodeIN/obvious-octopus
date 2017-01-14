@@ -11,6 +11,7 @@ void trainModel()
 {
     // init model
     NGramLanguageDetector ngld;
+    ngld.setOption(IGNORE_CASE);
 
     // train
     ngld.train(FileToString::readFile("/home/joris/Documents/corpus/en/en001.txt"), "EN");

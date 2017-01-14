@@ -6,6 +6,7 @@ var searchData=
   ['detect',['detect',['../classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b',1,'nlp::ILanguageDetector::detect()'],['../classnlp_1_1NGramLanguageDetector.html#a2174a7aafadd6411ebee123d24670cf2',1,'nlp::NGramLanguageDetector::detect()']]],
   ['dev',['dev',['../classnumeric_1_1Distribution.html#a3a81305af24cefab1a55b4e5c1f7fc4e',1,'numeric::Distribution']]],
   ['dft',['DFT',['../classnumeric_1_1DFT.html#acccd34ffdc8ecc474e79954b6c935b23',1,'numeric::DFT']]],
+  ['dictionarybasedtokenizer',['DictionaryBasedTokenizer',['../classnlp_1_1DictionaryBasedTokenizer.html#abdaf44318a842549db087dbd0a307159',1,'nlp::DictionaryBasedTokenizer']]],
   ['digitalroot',['digitalRoot',['../classnumeric_1_1Digits.html#a225d22829fb051225b7d5d27fcf0e971',1,'numeric::Digits']]],
   ['digits',['digits',['../classnumeric_1_1Digits.html#aa2afcfe9f2c6b4f29cf2a950d78fb721',1,'numeric::Digits']]],
   ['distance',['distance',['../classutil_1_1Levenshtein.html#a3f628d94e6b15d3378061e285cb4b298',1,'util::Levenshtein']]]

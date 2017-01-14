@@ -1,0 +1,8 @@
+<map id="nlp::IModel" name="nlp::IModel">
+<area shape="rect" id="node2" href="$classnlp_1_1ILanguageDetector.html" title="nlp::ILanguageDetector" alt="" coords="43,80,200,107"/>
+<area shape="rect" id="node4" href="$classnlp_1_1IPOSTagger.html" title="nlp::IPOSTagger" alt="" coords="245,80,363,107"/>
+<area shape="rect" id="node6" href="$classnlp_1_1ITokenizer.html" title="nlp::ITokenizer" alt="" coords="421,80,528,107"/>
+<area shape="rect" id="node3" href="$classnlp_1_1NGramLanguageDetector.html" title="nlp::NGramLanguageDetector" alt="" coords="5,155,200,181"/>
+<area shape="rect" id="node5" href="$classnlp_1_1MaxEntPOSTagger.html" title="nlp::MaxEntPOSTagger" alt="" coords="224,155,383,181"/>
+<area shape="rect" id="node7" href="$classnlp_1_1DictionaryBasedTokenizer.html" title="nlp::DictionaryBasedTokenizer" alt="" coords="408,155,607,181"/>
+</map>

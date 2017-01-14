@@ -36,7 +36,7 @@ namespace nlp
                 lengths.push_back(3);
 
                 // extract ngrams
-                auto localModel = util::NGrams::ngrams(text, lengths);
+                auto localModel = util::NGrams::ngrams(text, lengths, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC));
 
                 // add to global model
                 for(auto &pair : localModel)
@@ -55,7 +55,7 @@ namespace nlp
                 lengths.push_back(3);
 
                 // extract ngrams from text
-                auto textDist = numeric::Distribution<std::string,int>::relative(util::NGrams::ngrams(text, lengths));
+                auto textDist = numeric::Distribution<std::string,int>::relative(util::NGrams::ngrams(text, lengths, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC)));
 
                 // compare to each model
                 std::map<std::string, double> retval;

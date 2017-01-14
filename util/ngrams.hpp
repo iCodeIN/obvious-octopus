@@ -24,7 +24,7 @@ namespace util
                 \param[in] s            the string to extract ngrams from
                 \param[in] ngramsSizes  the sizes of the ngrams to be extracted
              */
-            static std::map<std::string, int> ngrams(const std::string& s, std::vector<int> ngramsSizes)
+            static std::map<std::string, int> ngrams(const std::string& s, std::vector<int> ngramsSizes, bool ignoreCase, bool ignoreNonAlphaNumeric)
             {
                 std::map<std::string,int> count;
                 for(int i=0; i<s.size(); i++)
@@ -33,7 +33,18 @@ namespace util
                     {
                         if(i+l <= s.size())
                         {
-                            count[s.substr(i, l)]++;
+                            if(ignoreNonAlphaNumeric && containsNonAlphaNumeric(s, i, i + l))
+                            {
+                                continue;
+                            }
+                            if(ignoreCase)
+                            {
+                                count[toUpper(s, i, i + l)]++;
+                            }
+                            else
+                            {
+                                count[s.substr(i, l)]++;
+                            }
                         }
                     }
                 }
@@ -42,6 +53,29 @@ namespace util
 
         private:
             // --- methods ---
+
+            static std::string toUpper(const std::string& s, int from, int to)
+            {
+                std::string ret;
+                for(int i=from; i<to; i++)
+                {
+                    ret += toupper(s[i]);
+                }
+                return ret;
+            }
+
+            static bool containsNonAlphaNumeric(const std::string& s, int from, int to)
+            {
+                for(int i=from; i<to; i++)
+                {
+                    if(!std::isalnum(s[i]))
+                    {
+                        return true;
+                    }
+                }
+                return false;
+            }
+
             // --- members ---
     };
 }

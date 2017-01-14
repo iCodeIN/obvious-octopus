@@ -122,7 +122,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                lengths.push_back(3);</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="comment">// extract ngrams</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keyword">auto</span> localModel = <a class="code" href="classutil_1_1NGrams.html#a7a87abe28f90419b3785c7e7945ee4b3">util::NGrams::ngrams</a>(text, lengths);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keyword">auto</span> localModel = <a class="code" href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">util::NGrams::ngrams</a>(text, lengths, this-&gt;isSet(IGNORE_CASE), this-&gt;isSet(IGNORE_NON_ALPHANUMERIC));</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="comment">// add to global model</span></div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;pair : localModel)</div>
@@ -141,7 +141,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                lengths.push_back(3);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// extract ngrams from text</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keyword">auto</span> textDist = <a class="code" href="classnumeric_1_1Distribution.html#ab10a6ba37d1663f87216acd1f9653a06">numeric::Distribution&lt;std::string,int&gt;::relative</a>(<a class="code" href="classutil_1_1NGrams.html#a7a87abe28f90419b3785c7e7945ee4b3">util::NGrams::ngrams</a>(text, lengths));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keyword">auto</span> textDist = <a class="code" href="classnumeric_1_1Distribution.html#ab10a6ba37d1663f87216acd1f9653a06">numeric::Distribution&lt;std::string,int&gt;::relative</a>(<a class="code" href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">util::NGrams::ngrams</a>(text, lengths, this-&gt;isSet(IGNORE_CASE), this-&gt;isSet(IGNORE_NON_ALPHANUMERIC)));</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">// compare to each model</span></div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                std::map&lt;std::string, double&gt; retval;</div>
@@ -240,17 +240,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;<span class="preprocessor">#endif // NGRAMLANGUAGEDETECTOR_HPP</span></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html">nlp::NGramLanguageDetector</a></div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:22</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_afd29d6166c5da4db3a515d258bdc2c20"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#afd29d6166c5da4db3a515d258bdc2c20">nlp::NGramLanguageDetector::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:73</div></div>
-<div class="ttc" id="classutil_1_1NGrams_html_a7a87abe28f90419b3785c7e7945ee4b3"><div class="ttname"><a href="classutil_1_1NGrams.html#a7a87abe28f90419b3785c7e7945ee4b3">util::NGrams::ngrams</a></div><div class="ttdeci">static std::map&lt; std::string, int &gt; ngrams(const std::string &amp;s, std::vector&lt; int &gt; ngramsSizes)</div><div class="ttdef"><b>Definition:</b> ngrams.hpp:27</div></div>
 <div class="ttc" id="classnumeric_1_1Distribution_html_ab10a6ba37d1663f87216acd1f9653a06"><div class="ttname"><a href="classnumeric_1_1Distribution.html#ab10a6ba37d1663f87216acd1f9653a06">numeric::Distribution::relative</a></div><div class="ttdeci">static const std::map&lt; X, double &gt; relative(const DistributionType &amp;d)</div><div class="ttdef"><b>Definition:</b> distribution.hpp:28</div></div>
-<div class="ttc" id="classnlp_1_1ILanguageDetector_html"><div class="ttname"><a href="classnlp_1_1ILanguageDetector.html">nlp::ILanguageDetector</a></div><div class="ttdef"><b>Definition:</b> ilanguagedetector.h:12</div></div>
+<div class="ttc" id="classnlp_1_1ILanguageDetector_html"><div class="ttname"><a href="classnlp_1_1ILanguageDetector.html">nlp::ILanguageDetector</a></div><div class="ttdef"><b>Definition:</b> ilanguagedetector.h:14</div></div>
 <div class="ttc" id="classXML_1_1DefaultElementImpl_html"><div class="ttname"><a href="classXML_1_1DefaultElementImpl.html">XML::DefaultElementImpl</a></div><div class="ttdef"><b>Definition:</b> defaultelementimpl.hpp:19</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_a5afb1f99b79b3a1954d3fccfc20d1bfa"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#a5afb1f99b79b3a1954d3fccfc20d1bfa">nlp::NGramLanguageDetector::fromXML</a></div><div class="ttdeci">virtual void fromXML(std::unique_ptr&lt; XML::IElement &gt; xml)</div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:101</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_a2174a7aafadd6411ebee123d24670cf2"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#a2174a7aafadd6411ebee123d24670cf2">nlp::NGramLanguageDetector::detect</a></div><div class="ttdeci">std::map&lt; std::string, double &gt; detect(const std::string &amp;text) const </div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:49</div></div>
+<div class="ttc" id="classutil_1_1NGrams_html_ae7d9c7ed881170947f485ff056cafda5"><div class="ttname"><a href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">util::NGrams::ngrams</a></div><div class="ttdeci">static std::map&lt; std::string, int &gt; ngrams(const std::string &amp;s, std::vector&lt; int &gt; ngramsSizes, bool ignoreCase, bool ignoreNonAlphaNumeric)</div><div class="ttdef"><b>Definition:</b> ngrams.hpp:27</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_a95a766d2da6546fed3eb073d2117f7e3"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#a95a766d2da6546fed3eb073d2117f7e3">nlp::NGramLanguageDetector::train</a></div><div class="ttdeci">void train(const std::string &amp;text, const std::string &amp;language)</div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:30</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 07:18:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Thu Jan 12 2017 22:25:06 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

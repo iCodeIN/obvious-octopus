@@ -1,6 +1,8 @@
 #ifndef ILANGUAGEDETECTOR_HPP
 #define ILANGUAGEDETECTOR_HPP
 
+#include "imodel.hpp"
+
 #include <map>
 #include <string>
 
@@ -9,7 +11,7 @@ namespace nlp
     /*! In natural language processing, language identification or language guessing is the problem of determining which natural language given content is in.
         Computational approaches to this problem view it as a special case of text categorization, solved with various statistical methods.
      */
-    class ILanguageDetector
+    class ILanguageDetector : public IModel
     {
         public:
 

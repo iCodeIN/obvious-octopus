@@ -3,6 +3,7 @@ var searchData=
   ['m_5fgenerator',['m_generator',['../classmeta_1_1AbstractMetaHeuristic.html#a9b6b5313e4c148023d54a77ab9d377da',1,'meta::AbstractMetaHeuristic']]],
   ['matrix',['matrix',['../classSVG_1_1IElement.html#acb302b3a025522197e4e7cdfe064c46f',1,'SVG::IElement']]],
   ['max',['max',['../classmatrix_1_1IMatrix.html#a09fc99aa085940e8e4702513b85d51f5',1,'matrix::IMatrix']]],
+  ['maxentpostagger',['MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html',1,'nlp']]],
   ['maze',['Maze',['../classMaze.html',1,'Maze'],['../classMaze.html#a0334b6143afd7bbfb4cfe1774cd1c502',1,'Maze::Maze(int w, int h)'],['../classMaze.html#a81c6be816361ea11b61f9049e542b346',1,'Maze::Maze(const Maze &amp;)=delete'],['../classMaze.html#ad1ba7291c6f823f0e536a03ec1ca33c5',1,'Maze::Maze(Maze &amp;)=delete']]],
   ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html',1,'MazeDrawer'],['../classMazeDrawer.html#a6e658fa846d834d03e898034b5fb2c2e',1,'MazeDrawer::MazeDrawer()']]],
   ['metricfunctiontype',['MetricFunctionType',['../classgeometry_1_1KMeans.html#a78e25a0c58c43e228446bcd58f474ec3',1,'geometry::KMeans']]],
