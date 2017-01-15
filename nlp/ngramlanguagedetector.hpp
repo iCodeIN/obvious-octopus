@@ -29,14 +29,9 @@ namespace nlp
              */
             void train(const std::string& text, const std::string& language)
             {
-                // setup
-                std::vector<int> lengths;
-                lengths.push_back(1);
-                lengths.push_back(2);
-                lengths.push_back(3);
-
                 // extract ngrams
-                auto localModel = util::NGrams::ngrams(text, lengths, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC));
+                auto localModel = util::NGrams::ngrams(text, 2, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC));
+                std::cout << localModel.size() << std::endl;
 
                 // add to global model
                 for(auto &pair : localModel)
@@ -48,14 +43,8 @@ namespace nlp
             // --- ILanguageDetector ---
             std::map<std::string, double> detect(const std::string& text) const
             {
-                // setup
-                std::vector<int> lengths;
-                lengths.push_back(1);
-                lengths.push_back(2);
-                lengths.push_back(3);
-
                 // extract ngrams from text
-                auto textDist = numeric::Distribution<std::string,int>::relative(util::NGrams::ngrams(text, lengths, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC)));
+                auto textDist = numeric::Distribution<std::string,int>::relative(util::NGrams::ngrams(text, 2, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC)));
 
                 // compare to each model
                 std::map<std::string, double> retval;
@@ -137,7 +126,7 @@ namespace nlp
                 }
 
                 // cosine similarity metric with naive discounted smoothing
-                auto alpha = 0.05;
+                auto alpha = 0.001;
                 auto terms = 0.0;
                 auto squaresA = 0.0;
                 auto squaresB = 0.0;

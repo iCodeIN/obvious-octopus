@@ -110,8 +110,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:ae7d9c7ed881170947f485ff056cafda5"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">ngrams</a> (const std::string &amp;s, std::vector&lt; int &gt; ngramsSizes, bool ignoreCase, bool ignoreNonAlphaNumeric)</td></tr>
-<tr class="separator:ae7d9c7ed881170947f485ff056cafda5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa84c9a111a31026d35d7dc5399949a48"><td class="memItemLeft" align="right" valign="top">static std::map&lt; std::string, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classutil_1_1NGrams.html#aa84c9a111a31026d35d7dc5399949a48">ngrams</a> (const std::string &amp;s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlphaNumeric)</td></tr>
+<tr class="separator:aa84c9a111a31026d35d7dc5399949a48"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>In the fields of computational linguistics and probability, an n-gram is a contiguous sequence of n items from a given sequence of text or speech. The items can be phonemes, syllables, letters, words or base pairs according to the application. The n-grams typically are collected from a text or speech corpus. When the items are words, n-grams may also be called shingles. </p>
@@ -141,7 +141,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ae7d9c7ed881170947f485ff056cafda5"></a>
+<a class="anchor" id="aa84c9a111a31026d35d7dc5399949a48"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -157,8 +157,8 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::vector&lt; int &gt;&#160;</td>
-          <td class="paramname"><em>ngramsSizes</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>maxNGramSize</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -201,7 +201,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 22:25:06 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 15 2017 10:17:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

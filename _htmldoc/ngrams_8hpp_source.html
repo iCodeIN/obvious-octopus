@@ -109,14 +109,14 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classutil_1_1NGrams.html#a3ec444dd85d851b00de4de81f05c1e53">NGrams</a>() = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">   27</a></span>&#160;            <span class="keyword">static</span> std::map&lt;std::string, int&gt; <a class="code" href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">ngrams</a>(<span class="keyword">const</span> std::string&amp; s, std::vector&lt;int&gt; ngramsSizes, <span class="keywordtype">bool</span> ignoreCase, <span class="keywordtype">bool</span> ignoreNonAlphaNumeric)</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classutil_1_1NGrams.html#aa84c9a111a31026d35d7dc5399949a48">   27</a></span>&#160;            <span class="keyword">static</span> std::map&lt;std::string, int&gt; <a class="code" href="classutil_1_1NGrams.html#aa84c9a111a31026d35d7dc5399949a48">ngrams</a>(<span class="keyword">const</span> std::string&amp; s, <span class="keywordtype">int</span> maxNGramSize, <span class="keywordtype">bool</span> ignoreCase, <span class="keywordtype">bool</span> ignoreNonAlphaNumeric)</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                std::map&lt;std::string,int&gt; count;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;s.size(); i++)</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l : ngramsSizes)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> l = 1 ; l &lt;= maxNGramSize ; l++)</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        <span class="keywordflow">if</span>(i+l &lt;= s.size())</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        <span class="keywordflow">if</span>(i + l &lt;= s.size())</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        {</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                            <span class="keywordflow">if</span>(ignoreNonAlphaNumeric &amp;&amp; containsNonAlphaNumeric(s, i, i + l))</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                            {</div>
@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=from; i&lt;to; i++)</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="keywordflow">if</span>(!std::isalnum(s[i]))</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    <span class="keywordflow">if</span>(!std::isalnum(s[i]) &amp;&amp; !std::isspace(s[i]))</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    }</div>
@@ -168,11 +168,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">#endif // NGRAMS_HPP</span></div>
 <div class="ttc" id="classutil_1_1NGrams_html"><div class="ttname"><a href="classutil_1_1NGrams.html">util::NGrams</a></div><div class="ttdef"><b>Definition:</b> ngrams.hpp:15</div></div>
 <div class="ttc" id="classutil_1_1NGrams_html_a3ec444dd85d851b00de4de81f05c1e53"><div class="ttname"><a href="classutil_1_1NGrams.html#a3ec444dd85d851b00de4de81f05c1e53">util::NGrams::NGrams</a></div><div class="ttdeci">NGrams()=delete</div></div>
-<div class="ttc" id="classutil_1_1NGrams_html_ae7d9c7ed881170947f485ff056cafda5"><div class="ttname"><a href="classutil_1_1NGrams.html#ae7d9c7ed881170947f485ff056cafda5">util::NGrams::ngrams</a></div><div class="ttdeci">static std::map&lt; std::string, int &gt; ngrams(const std::string &amp;s, std::vector&lt; int &gt; ngramsSizes, bool ignoreCase, bool ignoreNonAlphaNumeric)</div><div class="ttdef"><b>Definition:</b> ngrams.hpp:27</div></div>
+<div class="ttc" id="classutil_1_1NGrams_html_aa84c9a111a31026d35d7dc5399949a48"><div class="ttname"><a href="classutil_1_1NGrams.html#aa84c9a111a31026d35d7dc5399949a48">util::NGrams::ngrams</a></div><div class="ttdeci">static std::map&lt; std::string, int &gt; ngrams(const std::string &amp;s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlphaNumeric)</div><div class="ttdef"><b>Definition:</b> ngrams.hpp:27</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Thu Jan 12 2017 22:25:06 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 15 2017 10:17:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
