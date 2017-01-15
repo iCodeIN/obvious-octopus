@@ -156,7 +156,7 @@ void useModel()
 
 int main()
 {
-    //trainModel();
+    trainModel();
 
     testModel();
 

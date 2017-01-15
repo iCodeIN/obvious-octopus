@@ -2,7 +2,7 @@
 BOOST='/home/joris/Downloads/boost_1_63_0'
 MYDIR='/home/joris/Code/alexandria/'
 
-EXEC_OUT_NAME='GraphLayout'
+EXEC_OUT_NAME='alexandria'
 DOXY_OUT_NAME='_htmldoc'
 OBJS_OUT_NAME='_objects'
 

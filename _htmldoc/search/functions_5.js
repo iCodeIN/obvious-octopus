@@ -14,5 +14,5 @@ var searchData=
   ['fliphorizontal',['flipHorizontal',['../classSVG_1_1SVG.html#a5be929ad67753608ca7d1d8b0287d93c',1,'SVG::SVG']]],
   ['flipvertical',['flipVertical',['../classSVG_1_1SVG.html#acd27366306fcc945cf8f15b59b54961d',1,'SVG::SVG']]],
   ['forwarddft',['forwardDFT',['../classnumeric_1_1DFT.html#af9522b27f592ce3f8f673701a161254a',1,'numeric::DFT']]],
-  ['fromxml',['fromXML',['../classnlp_1_1NGramLanguageDetector.html#a5afb1f99b79b3a1954d3fccfc20d1bfa',1,'nlp::NGramLanguageDetector']]]
+  ['fromxml',['fromXML',['../classnlp_1_1DictionaryBasedTokenizer.html#a09c7c3d4fe7866c14a8b6e0a3ddba1f6',1,'nlp::DictionaryBasedTokenizer::fromXML()'],['../classnlp_1_1NGramLanguageDetector.html#a5afb1f99b79b3a1954d3fccfc20d1bfa',1,'nlp::NGramLanguageDetector::fromXML()']]]
 ];

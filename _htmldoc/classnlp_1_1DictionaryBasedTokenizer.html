@@ -122,8 +122,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abdaf44318a842549db087dbd0a307159"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3e2292ab1272b903f1132890b8c152c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html#aa3e2292ab1272b903f1132890b8c152c">~DictionaryBasedTokenizer</a> ()=default</td></tr>
 <tr class="separator:aa3e2292ab1272b903f1132890b8c152c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6b6e518d9c444c1e5b59d4774e0805e"><td class="memItemLeft" align="right" valign="top">std::vector&lt; std::string &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html#aa6b6e518d9c444c1e5b59d4774e0805e">tokenize</a> (std::string s) const override</td></tr>
-<tr class="separator:aa6b6e518d9c444c1e5b59d4774e0805e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a108f267ae529ea942c35724f8a68aeeb"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html#a108f267ae529ea942c35724f8a68aeeb">tokenize</a> (std::string s) const override</td></tr>
+<tr class="separator:a108f267ae529ea942c35724f8a68aeeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09c7c3d4fe7866c14a8b6e0a3ddba1f6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html#a09c7c3d4fe7866c14a8b6e0a3ddba1f6">fromXML</a> (std::unique_ptr&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt; xml)</td></tr>
+<tr class="separator:a09c7c3d4fe7866c14a8b6e0a3ddba1f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classnlp_1_1IModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnlp_1_1IModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classnlp_1_1IModel.html">nlp::IModel</a></td></tr>
 <tr class="memitem:acc7b584bf94862111dbfc4934db58888 inherit pub_methods_classnlp_1_1IModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1IModel.html#acc7b584bf94862111dbfc4934db58888">IModel</a> ()=default</td></tr>
 <tr class="separator:acc7b584bf94862111dbfc4934db58888 inherit pub_methods_classnlp_1_1IModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -191,7 +193,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aa6b6e518d9c444c1e5b59d4774e0805e"></a>
+<a class="anchor" id="a09c7c3d4fe7866c14a8b6e0a3ddba1f6"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -199,7 +201,32 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::vector&lt;std::string&gt; nlp::DictionaryBasedTokenizer::tokenize </td>
+          <td class="memname">virtual void nlp::DictionaryBasedTokenizer::fromXML </td>
+          <td>(</td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classXML_1_1IElement.html">XML::IElement</a> &gt;&#160;</td>
+          <td class="paramname"><em>xml</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>load a <a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html">DictionaryBasedTokenizer</a> from a given XML element </p>
+
+</div>
+</div>
+<a class="anchor" id="a108f267ae529ea942c35724f8a68aeeb"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;int&gt; nlp::DictionaryBasedTokenizer::tokenize </td>
           <td>(</td>
           <td class="paramtype">std::string&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
@@ -224,7 +251,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 15 2017 10:17:53 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 15 2017 13:52:40 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
