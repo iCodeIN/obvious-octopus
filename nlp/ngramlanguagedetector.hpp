@@ -30,7 +30,7 @@ namespace nlp
             void train(const std::string& text, const std::string& language)
             {
                 // extract ngrams
-                auto localModel = util::NGrams::ngrams(text, 3, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC));
+                auto localModel = util::NGrams::ngrams(text, 2, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC));
                 std::cout << localModel.size() << std::endl;
 
                 // add to global model
@@ -44,7 +44,7 @@ namespace nlp
             std::map<std::string, double> detect(const std::string& text) const
             {
                 // extract ngrams from text
-                auto textDist = numeric::Distribution<std::string,int>::relative(util::NGrams::ngrams(text, 3, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC)));
+                auto textDist = numeric::Distribution<std::string,int>::relative(util::NGrams::ngrams(text, 2, this->isSet(IGNORE_CASE), this->isSet(IGNORE_NON_ALPHANUMERIC)));
 
                 // compare to each model
                 std::map<std::string, double> retval;

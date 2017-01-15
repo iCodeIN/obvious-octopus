@@ -28,9 +28,43 @@ namespace nlp
             std::vector<int> tokenize(std::string s) const override
             {
                 std::vector<int> tokenBoundaries;
+                tokenBoundaries.push_back(0);
+
                 for(int i=0; i<s.size(); i++)
                 {
+                    auto token = s.substr(tokenBoundaries[tokenBoundaries.size()-1], i);
+                    // if the token is a valid prefix, continue building the token
+                    if(isPrefix(token))
+                    {
+                        continue;
+                    }
+                    // if the token is a word, mark the boundary
+                    else if(isWord(token))
+                    {
+                        tokenBoundaries.push_back(i);
+                        continue;
+                    }
+                    // unhappy flow
+                    else
+                    {
+                        if(token.size() == 1)
+                        {
+                            tokenBoundaries.push_back(i - 1);
+                            i--;
+                        }
+                        else
+                        {
+                            auto prevToken = token.substr(0, token.size() - 1);
+                            if(isPrefix(prevToken) || isWord(prevToken))
+                            {
+                                tokenBoundaries.push_back(i - 1);
+                            }
+                            else
+                            {
 
+                            }
+                        }
+                    }
                 }
                 return tokenBoundaries;
             }
@@ -56,6 +90,14 @@ namespace nlp
 
         private:
             // --- methods ---
+            bool isPrefix(const std::string& s) const
+            {
+                return m_prefixes.find(s) != m_prefixes.cend();
+            }
+            bool isWord(const std::string& s) const
+            {
+                return m_words.find(s) != m_words.cend();
+            }
             // --- members ---
             std::set<std::string> m_words;
             std::set<std::string> m_prefixes;

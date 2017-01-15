@@ -5,16 +5,6 @@
 		<ngram count="1.000000" text="P"/>
 		<ngram count="1087233.000000" text="&#32;"/>
 		<ngram count="61217.000000" text="&#32; "/>
-		<ngram count="25.000000" text=" 0"/>
-		<ngram count="5649.000000" text=" 1"/>
-		<ngram count="1390.000000" text=" 2"/>
-		<ngram count="785.000000" text=" 3"/>
-		<ngram count="654.000000" text=" 4"/>
-		<ngram count="985.000000" text=" 5"/>
-		<ngram count="592.000000" text=" 6"/>
-		<ngram count="598.000000" text=" 7"/>
-		<ngram count="589.000000" text=" 8"/>
-		<ngram count="507.000000" text=" 9"/>
 		<ngram count="67654.000000" text=" A"/>
 		<ngram count="35878.000000" text=" B"/>
 		<ngram count="7221.000000" text=" C"/>
@@ -41,338 +31,8 @@
 		<ngram count="163.000000" text=" X"/>
 		<ngram count="762.000000" text=" Y"/>
 		<ngram count="28074.000000" text=" Z"/>
-		<ngram count="3587.000000" text="0"/>
-		<ngram count="1674.000000" text="0 "/>
-		<ngram count="903.000000" text="00"/>
-		<ngram count="57.000000" text="01"/>
-		<ngram count="42.000000" text="02"/>
-		<ngram count="37.000000" text="03"/>
-		<ngram count="29.000000" text="04"/>
-		<ngram count="36.000000" text="05"/>
-		<ngram count="29.000000" text="06"/>
-		<ngram count="31.000000" text="07"/>
-		<ngram count="20.000000" text="08"/>
-		<ngram count="27.000000" text="09"/>
-		<ngram count="3.000000" text="0A"/>
-		<ngram count="8.000000" text="0B"/>
-		<ngram count="2.000000" text="0C"/>
-		<ngram count="22.000000" text="0E"/>
-		<ngram count="13.000000" text="0F"/>
-		<ngram count="14.000000" text="0G"/>
-		<ngram count="5.000000" text="0H"/>
-		<ngram count="2.000000" text="0I"/>
-		<ngram count="26.000000" text="0J"/>
-		<ngram count="2.000000" text="0K"/>
-		<ngram count="1.000000" text="0L"/>
-		<ngram count="8.000000" text="0M"/>
-		<ngram count="2.000000" text="0N"/>
-		<ngram count="1.000000" text="0O"/>
-		<ngram count="5.000000" text="0P"/>
-		<ngram count="1.000000" text="0R"/>
-		<ngram count="12.000000" text="0S"/>
-		<ngram count="8.000000" text="0T"/>
-		<ngram count="9.000000" text="0U"/>
-		<ngram count="2.000000" text="0V"/>
-		<ngram count="2.000000" text="0W"/>
-		<ngram count="9597.000000" text="1"/>
-		<ngram count="1089.000000" text="1 "/>
-		<ngram count="1232.000000" text="10"/>
-		<ngram count="792.000000" text="11"/>
-		<ngram count="721.000000" text="12"/>
-		<ngram count="636.000000" text="13"/>
-		<ngram count="672.000000" text="14"/>
-		<ngram count="956.000000" text="15"/>
-		<ngram count="597.000000" text="16"/>
-		<ngram count="467.000000" text="17"/>
-		<ngram count="913.000000" text="18"/>
-		<ngram count="377.000000" text="19"/>
-		<ngram count="10.000000" text="1A"/>
-		<ngram count="9.000000" text="1B"/>
-		<ngram count="2.000000" text="1C"/>
-		<ngram count="3.000000" text="1D"/>
-		<ngram count="5.000000" text="1E"/>
-		<ngram count="4.000000" text="1F"/>
-		<ngram count="2.000000" text="1G"/>
-		<ngram count="4.000000" text="1H"/>
-		<ngram count="6.000000" text="1I"/>
-		<ngram count="2.000000" text="1L"/>
-		<ngram count="2.000000" text="1M"/>
-		<ngram count="3.000000" text="1N"/>
-		<ngram count="2.000000" text="1O"/>
-		<ngram count="4.000000" text="1P"/>
-		<ngram count="1.000000" text="1Q"/>
-		<ngram count="2.000000" text="1R"/>
-		<ngram count="3.000000" text="1S"/>
-		<ngram count="16.000000" text="1T"/>
-		<ngram count="6.000000" text="1U"/>
-		<ngram count="1.000000" text="1V"/>
-		<ngram count="1.000000" text="1W"/>
-		<ngram count="3436.000000" text="2"/>
-		<ngram count="1075.000000" text="2 "/>
-		<ngram count="402.000000" text="20"/>
-		<ngram count="127.000000" text="21"/>
-		<ngram count="109.000000" text="22"/>
-		<ngram count="100.000000" text="23"/>
-		<ngram count="133.000000" text="24"/>
-		<ngram count="133.000000" text="25"/>
-		<ngram count="95.000000" text="26"/>
-		<ngram count="83.000000" text="27"/>
-		<ngram count="71.000000" text="28"/>
-		<ngram count="82.000000" text="29"/>
-		<ngram count="5.000000" text="2A"/>
-		<ngram count="3.000000" text="2B"/>
-		<ngram count="6.000000" text="2C"/>
-		<ngram count="6.000000" text="2D"/>
-		<ngram count="1.000000" text="2E"/>
-		<ngram count="6.000000" text="2F"/>
-		<ngram count="5.000000" text="2G"/>
-		<ngram count="4.000000" text="2H"/>
-		<ngram count="5.000000" text="2I"/>
-		<ngram count="1.000000" text="2J"/>
-		<ngram count="2.000000" text="2L"/>
-		<ngram count="7.000000" text="2M"/>
-		<ngram count="3.000000" text="2N"/>
-		<ngram count="5.000000" text="2O"/>
-		<ngram count="4.000000" text="2P"/>
-		<ngram count="1.000000" text="2R"/>
-		<ngram count="8.000000" text="2S"/>
-		<ngram count="5.000000" text="2T"/>
-		<ngram count="4.000000" text="2U"/>
-		<ngram count="5.000000" text="2V"/>
-		<ngram count="5.000000" text="2W"/>
-		<ngram count="1.000000" text="2X"/>
-		<ngram count="1.000000" text="2Y"/>
-		<ngram count="1.000000" text="2Z"/>
-		<ngram count="2425.000000" text="3"/>
-		<ngram count="1020.000000" text="3 "/>
-		<ngram count="186.000000" text="30"/>
-		<ngram count="83.000000" text="31"/>
-		<ngram count="51.000000" text="32"/>
-		<ngram count="58.000000" text="33"/>
-		<ngram count="29.000000" text="34"/>
-		<ngram count="48.000000" text="35"/>
-		<ngram count="47.000000" text="36"/>
-		<ngram count="35.000000" text="37"/>
-		<ngram count="47.000000" text="38"/>
-		<ngram count="30.000000" text="39"/>
-		<ngram count="6.000000" text="3A"/>
-		<ngram count="5.000000" text="3B"/>
-		<ngram count="4.000000" text="3C"/>
-		<ngram count="6.000000" text="3D"/>
-		<ngram count="3.000000" text="3F"/>
-		<ngram count="4.000000" text="3G"/>
-		<ngram count="5.000000" text="3H"/>
-		<ngram count="1.000000" text="3I"/>
-		<ngram count="1.000000" text="3J"/>
-		<ngram count="2.000000" text="3L"/>
-		<ngram count="5.000000" text="3M"/>
-		<ngram count="2.000000" text="3N"/>
-		<ngram count="2.000000" text="3O"/>
-		<ngram count="5.000000" text="3P"/>
-		<ngram count="1.000000" text="3R"/>
-		<ngram count="9.000000" text="3S"/>
-		<ngram count="4.000000" text="3T"/>
-		<ngram count="3.000000" text="3U"/>
-		<ngram count="1.000000" text="3V"/>
-		<ngram count="1.000000" text="3W"/>
-		<ngram count="2076.000000" text="4"/>
-		<ngram count="1025.000000" text="4 "/>
-		<ngram count="118.000000" text="40"/>
-		<ngram count="42.000000" text="41"/>
-		<ngram count="36.000000" text="42"/>
-		<ngram count="32.000000" text="43"/>
-		<ngram count="32.000000" text="44"/>
-		<ngram count="44.000000" text="45"/>
-		<ngram count="38.000000" text="46"/>
-		<ngram count="36.000000" text="47"/>
-		<ngram count="36.000000" text="48"/>
-		<ngram count="46.000000" text="49"/>
-		<ngram count="3.000000" text="4A"/>
-		<ngram count="3.000000" text="4C"/>
-		<ngram count="3.000000" text="4D"/>
-		<ngram count="7.000000" text="4E"/>
-		<ngram count="3.000000" text="4F"/>
-		<ngram count="7.000000" text="4G"/>
-		<ngram count="3.000000" text="4H"/>
-		<ngram count="7.000000" text="4I"/>
-		<ngram count="2.000000" text="4J"/>
-		<ngram count="1.000000" text="4K"/>
-		<ngram count="3.000000" text="4L"/>
-		<ngram count="4.000000" text="4M"/>
-		<ngram count="2.000000" text="4N"/>
-		<ngram count="4.000000" text="4O"/>
-		<ngram count="3.000000" text="4P"/>
-		<ngram count="1.000000" text="4Q"/>
-		<ngram count="11.000000" text="4S"/>
-		<ngram count="1.000000" text="4T"/>
-		<ngram count="3.000000" text="4U"/>
-		<ngram count="1.000000" text="4V"/>
-		<ngram count="7.000000" text="4W"/>
-		<ngram count="1.000000" text="4X"/>
-		<ngram count="1.000000" text="4Y"/>
-		<ngram count="1.000000" text="4Z"/>
-		<ngram count="2791.000000" text="5"/>
-		<ngram count="1584.000000" text="5 "/>
-		<ngram count="203.000000" text="50"/>
-		<ngram count="62.000000" text="51"/>
-		<ngram count="46.000000" text="52"/>
-		<ngram count="49.000000" text="53"/>
-		<ngram count="63.000000" text="54"/>
-		<ngram count="60.000000" text="55"/>
-		<ngram count="39.000000" text="56"/>
-		<ngram count="48.000000" text="57"/>
-		<ngram count="33.000000" text="58"/>
-		<ngram count="35.000000" text="59"/>
-		<ngram count="6.000000" text="5A"/>
-		<ngram count="7.000000" text="5B"/>
-		<ngram count="4.000000" text="5C"/>
-		<ngram count="3.000000" text="5D"/>
-		<ngram count="4.000000" text="5E"/>
-		<ngram count="6.000000" text="5F"/>
-		<ngram count="7.000000" text="5G"/>
-		<ngram count="2.000000" text="5H"/>
-		<ngram count="4.000000" text="5I"/>
-		<ngram count="7.000000" text="5J"/>
-		<ngram count="2.000000" text="5L"/>
-		<ngram count="1.000000" text="5M"/>
-		<ngram count="3.000000" text="5N"/>
-		<ngram count="3.000000" text="5O"/>
-		<ngram count="3.000000" text="5P"/>
-		<ngram count="3.000000" text="5R"/>
-		<ngram count="5.000000" text="5S"/>
-		<ngram count="6.000000" text="5T"/>
-		<ngram count="5.000000" text="5U"/>
-		<ngram count="1936.000000" text="6"/>
-		<ngram count="931.000000" text="6 "/>
-		<ngram count="92.000000" text="60"/>
-		<ngram count="49.000000" text="61"/>
-		<ngram count="57.000000" text="62"/>
-		<ngram count="37.000000" text="63"/>
-		<ngram count="43.000000" text="64"/>
-		<ngram count="43.000000" text="65"/>
-		<ngram count="25.000000" text="66"/>
-		<ngram count="34.000000" text="67"/>
-		<ngram count="32.000000" text="68"/>
-		<ngram count="33.000000" text="69"/>
-		<ngram count="4.000000" text="6A"/>
-		<ngram count="4.000000" text="6B"/>
-		<ngram count="2.000000" text="6C"/>
-		<ngram count="5.000000" text="6E"/>
-		<ngram count="3.000000" text="6F"/>
-		<ngram count="2.000000" text="6G"/>
-		<ngram count="7.000000" text="6H"/>
-		<ngram count="1.000000" text="6I"/>
-		<ngram count="1.000000" text="6J"/>
-		<ngram count="2.000000" text="6L"/>
-		<ngram count="3.000000" text="6M"/>
-		<ngram count="4.000000" text="6N"/>
-		<ngram count="1.000000" text="6O"/>
-		<ngram count="5.000000" text="6P"/>
-		<ngram count="7.000000" text="6S"/>
-		<ngram count="5.000000" text="6T"/>
-		<ngram count="1.000000" text="6U"/>
-		<ngram count="1.000000" text="6V"/>
-		<ngram count="4.000000" text="6W"/>
-		<ngram count="1.000000" text="6Y"/>
-		<ngram count="1785.000000" text="7"/>
-		<ngram count="818.000000" text="7 "/>
-		<ngram count="73.000000" text="70"/>
-		<ngram count="30.000000" text="71"/>
-		<ngram count="43.000000" text="72"/>
-		<ngram count="38.000000" text="73"/>
-		<ngram count="31.000000" text="74"/>
-		<ngram count="39.000000" text="75"/>
-		<ngram count="26.000000" text="76"/>
-		<ngram count="64.000000" text="77"/>
-		<ngram count="38.000000" text="78"/>
-		<ngram count="51.000000" text="79"/>
-		<ngram count="6.000000" text="7A"/>
-		<ngram count="4.000000" text="7B"/>
-		<ngram count="6.000000" text="7C"/>
-		<ngram count="3.000000" text="7D"/>
-		<ngram count="4.000000" text="7E"/>
-		<ngram count="3.000000" text="7F"/>
-		<ngram count="4.000000" text="7G"/>
-		<ngram count="3.000000" text="7H"/>
-		<ngram count="3.000000" text="7I"/>
-		<ngram count="2.000000" text="7L"/>
-		<ngram count="5.000000" text="7M"/>
-		<ngram count="2.000000" text="7N"/>
-		<ngram count="4.000000" text="7O"/>
-		<ngram count="2.000000" text="7P"/>
-		<ngram count="3.000000" text="7R"/>
-		<ngram count="3.000000" text="7S"/>
-		<ngram count="3.000000" text="7T"/>
-		<ngram count="5.000000" text="7U"/>
-		<ngram count="3.000000" text="7W"/>
-		<ngram count="1.000000" text="7X"/>
-		<ngram count="2217.000000" text="8"/>
-		<ngram count="841.000000" text="8 "/>
-		<ngram count="118.000000" text="80"/>
-		<ngram count="41.000000" text="81"/>
-		<ngram count="48.000000" text="82"/>
-		<ngram count="75.000000" text="83"/>
-		<ngram count="71.000000" text="84"/>
-		<ngram count="109.000000" text="85"/>
-		<ngram count="115.000000" text="86"/>
-		<ngram count="83.000000" text="87"/>
-		<ngram count="108.000000" text="88"/>
-		<ngram count="123.000000" text="89"/>
-		<ngram count="8.000000" text="8A"/>
-		<ngram count="2.000000" text="8B"/>
-		<ngram count="3.000000" text="8C"/>
-		<ngram count="3.000000" text="8D"/>
-		<ngram count="5.000000" text="8E"/>
-		<ngram count="3.000000" text="8F"/>
-		<ngram count="5.000000" text="8G"/>
-		<ngram count="1.000000" text="8H"/>
-		<ngram count="5.000000" text="8I"/>
-		<ngram count="1.000000" text="8K"/>
-		<ngram count="1.000000" text="8L"/>
-		<ngram count="4.000000" text="8M"/>
-		<ngram count="2.000000" text="8N"/>
-		<ngram count="1.000000" text="8O"/>
-		<ngram count="3.000000" text="8P"/>
-		<ngram count="1.000000" text="8R"/>
-		<ngram count="15.000000" text="8S"/>
-		<ngram count="4.000000" text="8T"/>
-		<ngram count="2.000000" text="8U"/>
-		<ngram count="1.000000" text="8W"/>
-		<ngram count="1629.000000" text="9"/>
-		<ngram count="741.000000" text="9 "/>
-		<ngram count="133.000000" text="90"/>
-		<ngram count="53.000000" text="91"/>
-		<ngram count="34.000000" text="92"/>
-		<ngram count="18.000000" text="93"/>
-		<ngram count="32.000000" text="94"/>
-		<ngram count="35.000000" text="95"/>
-		<ngram count="49.000000" text="96"/>
-		<ngram count="43.000000" text="97"/>
-		<ngram count="29.000000" text="98"/>
-		<ngram count="35.000000" text="99"/>
-		<ngram count="2.000000" text="9A"/>
-		<ngram count="2.000000" text="9B"/>
-		<ngram count="4.000000" text="9C"/>
-		<ngram count="4.000000" text="9D"/>
-		<ngram count="2.000000" text="9E"/>
-		<ngram count="1.000000" text="9F"/>
-		<ngram count="5.000000" text="9G"/>
-		<ngram count="2.000000" text="9H"/>
-		<ngram count="1.000000" text="9I"/>
-		<ngram count="1.000000" text="9K"/>
-		<ngram count="2.000000" text="9L"/>
-		<ngram count="2.000000" text="9N"/>
-		<ngram count="4.000000" text="9P"/>
-		<ngram count="1.000000" text="9Q"/>
-		<ngram count="5.000000" text="9S"/>
-		<ngram count="3.000000" text="9T"/>
-		<ngram count="3.000000" text="9V"/>
-		<ngram count="2.000000" text="9W"/>
-		<ngram count="1.000000" text="9X"/>
 		<ngram count="315815.000000" text="A"/>
 		<ngram count="9565.000000" text="A "/>
-		<ngram count="4.000000" text="A1"/>
-		<ngram count="1.000000" text="A2"/>
 		<ngram count="1147.000000" text="AA"/>
 		<ngram count="18129.000000" text="AB"/>
 		<ngram count="16430.000000" text="AC"/>
@@ -455,11 +115,6 @@
 		<ngram count="18.000000" text="CZ"/>
 		<ngram count="288426.000000" text="D"/>
 		<ngram count="43955.000000" text="D "/>
-		<ngram count="4.000000" text="D1"/>
-		<ngram count="2.000000" text="D2"/>
-		<ngram count="1.000000" text="D5"/>
-		<ngram count="1.000000" text="D6"/>
-		<ngram count="1.000000" text="D7"/>
 		<ngram count="32101.000000" text="DA"/>
 		<ngram count="455.000000" text="DB"/>
 		<ngram count="436.000000" text="DC"/>
@@ -487,11 +142,6 @@
 		<ngram count="201.000000" text="DZ"/>
 		<ngram count="942772.000000" text="E"/>
 		<ngram count="129343.000000" text="E "/>
-		<ngram count="12.000000" text="E1"/>
-		<ngram count="1.000000" text="E2"/>
-		<ngram count="1.000000" text="E3"/>
-		<ngram count="1.000000" text="E4"/>
-		<ngram count="2.000000" text="E5"/>
 		<ngram count="5295.000000" text="EA"/>
 		<ngram count="15864.000000" text="EB"/>
 		<ngram count="9718.000000" text="EC"/>
@@ -520,9 +170,6 @@
 		<ngram count="2389.000000" text="EZ"/>
 		<ngram count="102984.000000" text="F"/>
 		<ngram count="12072.000000" text="F "/>
-		<ngram count="1.000000" text="F1"/>
-		<ngram count="1.000000" text="F3"/>
-		<ngram count="1.000000" text="F5"/>
 		<ngram count="8434.000000" text="FA"/>
 		<ngram count="255.000000" text="FB"/>
 		<ngram count="77.000000" text="FC"/>
@@ -578,8 +225,6 @@
 		<ngram count="153.000000" text="GZ"/>
 		<ngram count="278166.000000" text="H"/>
 		<ngram count="43329.000000" text="H "/>
-		<ngram count="4.000000" text="H1"/>
-		<ngram count="1.000000" text="H3"/>
 		<ngram count="26285.000000" text="HA"/>
 		<ngram count="541.000000" text="HB"/>
 		<ngram count="38.000000" text="HC"/>
@@ -607,11 +252,6 @@
 		<ngram count="571.000000" text="HZ"/>
 		<ngram count="449073.000000" text="I"/>
 		<ngram count="7373.000000" text="I "/>
-		<ngram count="6.000000" text="I1"/>
-		<ngram count="2.000000" text="I2"/>
-		<ngram count="1.000000" text="I3"/>
-		<ngram count="1.000000" text="I4"/>
-		<ngram count="2.000000" text="I8"/>
 		<ngram count="2667.000000" text="IA"/>
 		<ngram count="3711.000000" text="IB"/>
 		<ngram count="66595.000000" text="IC"/>
@@ -683,8 +323,6 @@
 		<ngram count="185.000000" text="KZ"/>
 		<ngram count="217613.000000" text="L"/>
 		<ngram count="13472.000000" text="L "/>
-		<ngram count="1.000000" text="L1"/>
-		<ngram count="1.000000" text="L9"/>
 		<ngram count="17375.000000" text="LA"/>
 		<ngram count="5507.000000" text="LB"/>
 		<ngram count="4775.000000" text="LC"/>
@@ -713,11 +351,6 @@
 		<ngram count="1426.000000" text="LZ"/>
 		<ngram count="152462.000000" text="M"/>
 		<ngram count="38221.000000" text="M "/>
-		<ngram count="6.000000" text="M1"/>
-		<ngram count="5.000000" text="M2"/>
-		<ngram count="2.000000" text="M4"/>
-		<ngram count="2.000000" text="M7"/>
-		<ngram count="1.000000" text="M9"/>
 		<ngram count="17927.000000" text="MA"/>
 		<ngram count="1220.000000" text="MB"/>
 		<ngram count="111.000000" text="MC"/>
@@ -745,15 +378,6 @@
 		<ngram count="194.000000" text="MZ"/>
 		<ngram count="563723.000000" text="N"/>
 		<ngram count="162156.000000" text="N "/>
-		<ngram count="1.000000" text="N0"/>
-		<ngram count="24.000000" text="N1"/>
-		<ngram count="2.000000" text="N2"/>
-		<ngram count="2.000000" text="N3"/>
-		<ngram count="3.000000" text="N4"/>
-		<ngram count="1.000000" text="N5"/>
-		<ngram count="2.000000" text="N6"/>
-		<ngram count="2.000000" text="N8"/>
-		<ngram count="1.000000" text="N9"/>
 		<ngram count="17121.000000" text="NA"/>
 		<ngram count="3452.000000" text="NB"/>
 		<ngram count="2281.000000" text="NC"/>
@@ -782,7 +406,6 @@
 		<ngram count="7994.000000" text="NZ"/>
 		<ngram count="153625.000000" text="O"/>
 		<ngram count="12591.000000" text="O "/>
-		<ngram count="1.000000" text="O1"/>
 		<ngram count="543.000000" text="OA"/>
 		<ngram count="3638.000000" text="OB"/>
 		<ngram count="10373.000000" text="OC"/>
@@ -844,14 +467,6 @@
 		<ngram count="84.000000" text="QV"/>
 		<ngram count="406151.000000" text="R"/>
 		<ngram count="105018.000000" text="R "/>
-		<ngram count="13.000000" text="R1"/>
-		<ngram count="11.000000" text="R2"/>
-		<ngram count="2.000000" text="R3"/>
-		<ngram count="1.000000" text="R4"/>
-		<ngram count="1.000000" text="R5"/>
-		<ngram count="2.000000" text="R7"/>
-		<ngram count="2.000000" text="R8"/>
-		<ngram count="1.000000" text="R9"/>
 		<ngram count="27987.000000" text="RA"/>
 		<ngram count="7606.000000" text="RB"/>
 		<ngram count="6194.000000" text="RC"/>
@@ -880,10 +495,6 @@
 		<ngram count="5917.000000" text="RZ"/>
 		<ngram count="365387.000000" text="S"/>
 		<ngram count="72062.000000" text="S "/>
-		<ngram count="11.000000" text="S1"/>
-		<ngram count="2.000000" text="S2"/>
-		<ngram count="1.000000" text="S3"/>
-		<ngram count="1.000000" text="S8"/>
 		<ngram count="14040.000000" text="SA"/>
 		<ngram count="1401.000000" text="SB"/>
 		<ngram count="42851.000000" text="SC"/>
@@ -911,12 +522,6 @@
 		<ngram count="922.000000" text="SZ"/>
 		<ngram count="338853.000000" text="T"/>
 		<ngram count="74968.000000" text="T "/>
-		<ngram count="3.000000" text="T0"/>
-		<ngram count="8.000000" text="T1"/>
-		<ngram count="3.000000" text="T2"/>
-		<ngram count="4.000000" text="T3"/>
-		<ngram count="1.000000" text="T4"/>
-		<ngram count="1.000000" text="T5"/>
 		<ngram count="13478.000000" text="TA"/>
 		<ngram count="1224.000000" text="TB"/>
 		<ngram count="262.000000" text="TC"/>
@@ -945,8 +550,6 @@
 		<ngram count="10013.000000" text="TZ"/>
 		<ngram count="233778.000000" text="U"/>
 		<ngram count="15331.000000" text="U "/>
-		<ngram count="1.000000" text="U1"/>
-		<ngram count="1.000000" text="U3"/>
 		<ngram count="1835.000000" text="UA"/>
 		<ngram count="3154.000000" text="UB"/>
 		<ngram count="10273.000000" text="UC"/>
@@ -1023,8 +626,6 @@
 		<ngram count="779.000000" text="WY"/>
 		<ngram count="3437.000000" text="X"/>
 		<ngram count="612.000000" text="X "/>
-		<ngram count="1.000000" text="X2"/>
-		<ngram count="1.000000" text="X8"/>
 		<ngram count="250.000000" text="XA"/>
 		<ngram count="5.000000" text="XB"/>
 		<ngram count="110.000000" text="XC"/>
@@ -1052,7 +653,6 @@
 		<ngram count="10.000000" text="XZ"/>
 		<ngram count="9223.000000" text="Y"/>
 		<ngram count="605.000000" text="Y "/>
-		<ngram count="1.000000" text="Y1"/>
 		<ngram count="81.000000" text="YA"/>
 		<ngram count="72.000000" text="YB"/>
 		<ngram count="155.000000" text="YC"/>
@@ -1108,16 +708,6 @@
 	<EN>
 		<ngram count="1659785.000000" text="&#32;"/>
 		<ngram count="46760.000000" text="&#32; "/>
-		<ngram count="11.000000" text=" 0"/>
-		<ngram count="9030.000000" text=" 1"/>
-		<ngram count="4457.000000" text=" 2"/>
-		<ngram count="2893.000000" text=" 3"/>
-		<ngram count="1994.000000" text=" 4"/>
-		<ngram count="1646.000000" text=" 5"/>
-		<ngram count="1509.000000" text=" 6"/>
-		<ngram count="1478.000000" text=" 7"/>
-		<ngram count="1125.000000" text=" 8"/>
-		<ngram count="933.000000" text=" 9"/>
 		<ngram count="179827.000000" text=" A"/>
 		<ngram count="71294.000000" text=" B"/>
 		<ngram count="66464.000000" text=" C"/>
@@ -1144,348 +734,8 @@
 		<ngram count="1408.000000" text=" X"/>
 		<ngram count="12447.000000" text=" Y"/>
 		<ngram count="1053.000000" text=" Z"/>
-		<ngram count="11266.000000" text="0"/>
-		<ngram count="2349.000000" text="0 "/>
-		<ngram count="2556.000000" text="00"/>
-		<ngram count="310.000000" text="01"/>
-		<ngram count="263.000000" text="02"/>
-		<ngram count="308.000000" text="03"/>
-		<ngram count="268.000000" text="04"/>
-		<ngram count="286.000000" text="05"/>
-		<ngram count="234.000000" text="06"/>
-		<ngram count="251.000000" text="07"/>
-		<ngram count="248.000000" text="08"/>
-		<ngram count="294.000000" text="09"/>
-		<ngram count="10.000000" text="0A"/>
-		<ngram count="46.000000" text="0B"/>
-		<ngram count="22.000000" text="0C"/>
-		<ngram count="7.000000" text="0D"/>
-		<ngram count="5.000000" text="0E"/>
-		<ngram count="14.000000" text="0F"/>
-		<ngram count="3.000000" text="0G"/>
-		<ngram count="12.000000" text="0H"/>
-		<ngram count="1.000000" text="0I"/>
-		<ngram count="4.000000" text="0J"/>
-		<ngram count="1.000000" text="0K"/>
-		<ngram count="4.000000" text="0L"/>
-		<ngram count="25.000000" text="0M"/>
-		<ngram count="2.000000" text="0N"/>
-		<ngram count="6.000000" text="0O"/>
-		<ngram count="14.000000" text="0P"/>
-		<ngram count="1.000000" text="0Q"/>
-		<ngram count="1.000000" text="0R"/>
-		<ngram count="24.000000" text="0S"/>
-		<ngram count="28.000000" text="0T"/>
-		<ngram count="1.000000" text="0U"/>
-		<ngram count="1.000000" text="0V"/>
-		<ngram count="6.000000" text="0W"/>
-		<ngram count="1.000000" text="0X"/>
-		<ngram count="30.000000" text="0Y"/>
-		<ngram count="19641.000000" text="1"/>
-		<ngram count="655.000000" text="1 "/>
-		<ngram count="1865.000000" text="10"/>
-		<ngram count="1451.000000" text="11"/>
-		<ngram count="1353.000000" text="12"/>
-		<ngram count="1080.000000" text="13"/>
-		<ngram count="1148.000000" text="14"/>
-		<ngram count="1302.000000" text="15"/>
-		<ngram count="1343.000000" text="16"/>
-		<ngram count="1747.000000" text="17"/>
-		<ngram count="1673.000000" text="18"/>
-		<ngram count="1328.000000" text="19"/>
-		<ngram count="10.000000" text="1A"/>
-		<ngram count="14.000000" text="1B"/>
-		<ngram count="9.000000" text="1C"/>
-		<ngram count="5.000000" text="1D"/>
-		<ngram count="4.000000" text="1E"/>
-		<ngram count="5.000000" text="1F"/>
-		<ngram count="2.000000" text="1G"/>
-		<ngram count="4.000000" text="1H"/>
-		<ngram count="2.000000" text="1I"/>
-		<ngram count="2.000000" text="1J"/>
-		<ngram count="3.000000" text="1K"/>
-		<ngram count="5.000000" text="1L"/>
-		<ngram count="4.000000" text="1M"/>
-		<ngram count="4.000000" text="1N"/>
-		<ngram count="2.000000" text="1O"/>
-		<ngram count="8.000000" text="1P"/>
-		<ngram count="1.000000" text="1Q"/>
-		<ngram count="19.000000" text="1S"/>
-		<ngram count="17.000000" text="1T"/>
-		<ngram count="3.000000" text="1U"/>
-		<ngram count="1.000000" text="1V"/>
-		<ngram count="3.000000" text="1W"/>
-		<ngram count="4.000000" text="1Y"/>
-		<ngram count="12841.000000" text="2"/>
-		<ngram count="662.000000" text="2 "/>
-		<ngram count="1281.000000" text="20"/>
-		<ngram count="827.000000" text="21"/>
-		<ngram count="856.000000" text="22"/>
-		<ngram count="838.000000" text="23"/>
-		<ngram count="766.000000" text="24"/>
-		<ngram count="806.000000" text="25"/>
-		<ngram count="775.000000" text="26"/>
-		<ngram count="722.000000" text="27"/>
-		<ngram count="706.000000" text="28"/>
-		<ngram count="613.000000" text="29"/>
-		<ngram count="6.000000" text="2A"/>
-		<ngram count="17.000000" text="2B"/>
-		<ngram count="7.000000" text="2C"/>
-		<ngram count="3.000000" text="2D"/>
-		<ngram count="3.000000" text="2E"/>
-		<ngram count="7.000000" text="2F"/>
-		<ngram count="3.000000" text="2H"/>
-		<ngram count="5.000000" text="2I"/>
-		<ngram count="3.000000" text="2J"/>
-		<ngram count="4.000000" text="2K"/>
-		<ngram count="7.000000" text="2L"/>
-		<ngram count="4.000000" text="2M"/>
-		<ngram count="11.000000" text="2N"/>
-		<ngram count="9.000000" text="2P"/>
-		<ngram count="4.000000" text="2R"/>
-		<ngram count="8.000000" text="2S"/>
-		<ngram count="6.000000" text="2T"/>
-		<ngram count="2.000000" text="2U"/>
-		<ngram count="1.000000" text="2V"/>
-		<ngram count="4.000000" text="2W"/>
-		<ngram count="3.000000" text="2Y"/>
-		<ngram count="10485.000000" text="3"/>
-		<ngram count="543.000000" text="3 "/>
-		<ngram count="1036.000000" text="30"/>
-		<ngram count="651.000000" text="31"/>
-		<ngram count="642.000000" text="32"/>
-		<ngram count="540.000000" text="33"/>
-		<ngram count="578.000000" text="34"/>
-		<ngram count="578.000000" text="35"/>
-		<ngram count="606.000000" text="36"/>
-		<ngram count="594.000000" text="37"/>
-		<ngram count="579.000000" text="38"/>
-		<ngram count="529.000000" text="39"/>
-		<ngram count="9.000000" text="3A"/>
-		<ngram count="20.000000" text="3B"/>
-		<ngram count="9.000000" text="3C"/>
-		<ngram count="7.000000" text="3D"/>
-		<ngram count="5.000000" text="3E"/>
-		<ngram count="2.000000" text="3F"/>
-		<ngram count="3.000000" text="3G"/>
-		<ngram count="2.000000" text="3H"/>
-		<ngram count="3.000000" text="3I"/>
-		<ngram count="1.000000" text="3J"/>
-		<ngram count="3.000000" text="3L"/>
-		<ngram count="2.000000" text="3M"/>
-		<ngram count="2.000000" text="3N"/>
-		<ngram count="1.000000" text="3O"/>
-		<ngram count="9.000000" text="3P"/>
-		<ngram count="10.000000" text="3R"/>
-		<ngram count="2.000000" text="3S"/>
-		<ngram count="7.000000" text="3T"/>
-		<ngram count="2.000000" text="3U"/>
-		<ngram count="2.000000" text="3Y"/>
-		<ngram count="9443.000000" text="4"/>
-		<ngram count="397.000000" text="4 "/>
-		<ngram count="788.000000" text="40"/>
-		<ngram count="537.000000" text="41"/>
-		<ngram count="489.000000" text="42"/>
-		<ngram count="576.000000" text="43"/>
-		<ngram count="523.000000" text="44"/>
-		<ngram count="577.000000" text="45"/>
-		<ngram count="531.000000" text="46"/>
-		<ngram count="522.000000" text="47"/>
-		<ngram count="475.000000" text="48"/>
-		<ngram count="498.000000" text="49"/>
-		<ngram count="14.000000" text="4A"/>
-		<ngram count="18.000000" text="4B"/>
-		<ngram count="12.000000" text="4C"/>
-		<ngram count="5.000000" text="4D"/>
-		<ngram count="1.000000" text="4E"/>
-		<ngram count="4.000000" text="4F"/>
-		<ngram count="2.000000" text="4G"/>
-		<ngram count="4.000000" text="4H"/>
-		<ngram count="1.000000" text="4I"/>
-		<ngram count="3.000000" text="4J"/>
-		<ngram count="2.000000" text="4K"/>
-		<ngram count="3.000000" text="4L"/>
-		<ngram count="2.000000" text="4M"/>
-		<ngram count="1.000000" text="4N"/>
-		<ngram count="7.000000" text="4O"/>
-		<ngram count="7.000000" text="4P"/>
-		<ngram count="5.000000" text="4R"/>
-		<ngram count="4.000000" text="4S"/>
-		<ngram count="23.000000" text="4T"/>
-		<ngram count="1.000000" text="4U"/>
-		<ngram count="1.000000" text="4V"/>
-		<ngram count="3.000000" text="4W"/>
-		<ngram count="1.000000" text="4Y"/>
-		<ngram count="9202.000000" text="5"/>
-		<ngram count="582.000000" text="5 "/>
-		<ngram count="912.000000" text="50"/>
-		<ngram count="548.000000" text="51"/>
-		<ngram count="505.000000" text="52"/>
-		<ngram count="489.000000" text="53"/>
-		<ngram count="521.000000" text="54"/>
-		<ngram count="503.000000" text="55"/>
-		<ngram count="436.000000" text="56"/>
-		<ngram count="430.000000" text="57"/>
-		<ngram count="413.000000" text="58"/>
-		<ngram count="394.000000" text="59"/>
-		<ngram count="5.000000" text="5A"/>
-		<ngram count="18.000000" text="5B"/>
-		<ngram count="12.000000" text="5C"/>
-		<ngram count="2.000000" text="5D"/>
-		<ngram count="4.000000" text="5E"/>
-		<ngram count="6.000000" text="5F"/>
-		<ngram count="1.000000" text="5G"/>
-		<ngram count="6.000000" text="5H"/>
-		<ngram count="3.000000" text="5I"/>
-		<ngram count="1.000000" text="5K"/>
-		<ngram count="3.000000" text="5L"/>
-		<ngram count="8.000000" text="5M"/>
-		<ngram count="1.000000" text="5N"/>
-		<ngram count="4.000000" text="5O"/>
-		<ngram count="10.000000" text="5P"/>
-		<ngram count="1.000000" text="5Q"/>
-		<ngram count="2.000000" text="5R"/>
-		<ngram count="7.000000" text="5S"/>
-		<ngram count="16.000000" text="5T"/>
-		<ngram count="1.000000" text="5U"/>
-		<ngram count="1.000000" text="5V"/>
-		<ngram count="10.000000" text="5W"/>
-		<ngram count="6.000000" text="5Y"/>
-		<ngram count="8319.000000" text="6"/>
-		<ngram count="443.000000" text="6 "/>
-		<ngram count="661.000000" text="60"/>
-		<ngram count="419.000000" text="61"/>
-		<ngram count="400.000000" text="62"/>
-		<ngram count="414.000000" text="63"/>
-		<ngram count="418.000000" text="64"/>
-		<ngram count="436.000000" text="65"/>
-		<ngram count="448.000000" text="66"/>
-		<ngram count="394.000000" text="67"/>
-		<ngram count="502.000000" text="68"/>
-		<ngram count="573.000000" text="69"/>
-		<ngram count="7.000000" text="6A"/>
-		<ngram count="12.000000" text="6B"/>
-		<ngram count="12.000000" text="6C"/>
-		<ngram count="2.000000" text="6D"/>
-		<ngram count="2.000000" text="6E"/>
-		<ngram count="8.000000" text="6F"/>
-		<ngram count="5.000000" text="6G"/>
-		<ngram count="5.000000" text="6H"/>
-		<ngram count="4.000000" text="6I"/>
-		<ngram count="2.000000" text="6J"/>
-		<ngram count="3.000000" text="6L"/>
-		<ngram count="14.000000" text="6M"/>
-		<ngram count="6.000000" text="6N"/>
-		<ngram count="5.000000" text="6O"/>
-		<ngram count="7.000000" text="6P"/>
-		<ngram count="3.000000" text="6R"/>
-		<ngram count="12.000000" text="6S"/>
-		<ngram count="22.000000" text="6T"/>
-		<ngram count="1.000000" text="6V"/>
-		<ngram count="3.000000" text="6W"/>
-		<ngram count="3.000000" text="6Y"/>
-		<ngram count="1.000000" text="6Z"/>
-		<ngram count="8524.000000" text="7"/>
-		<ngram count="422.000000" text="7 "/>
-		<ngram count="671.000000" text="70"/>
-		<ngram count="581.000000" text="71"/>
-		<ngram count="499.000000" text="72"/>
-		<ngram count="515.000000" text="73"/>
-		<ngram count="456.000000" text="74"/>
-		<ngram count="479.000000" text="75"/>
-		<ngram count="385.000000" text="76"/>
-		<ngram count="437.000000" text="77"/>
-		<ngram count="392.000000" text="78"/>
-		<ngram count="397.000000" text="79"/>
-		<ngram count="9.000000" text="7A"/>
-		<ngram count="11.000000" text="7B"/>
-		<ngram count="9.000000" text="7C"/>
-		<ngram count="2.000000" text="7D"/>
-		<ngram count="2.000000" text="7E"/>
-		<ngram count="5.000000" text="7F"/>
-		<ngram count="1.000000" text="7G"/>
-		<ngram count="3.000000" text="7H"/>
-		<ngram count="4.000000" text="7I"/>
-		<ngram count="1.000000" text="7J"/>
-		<ngram count="3.000000" text="7L"/>
-		<ngram count="3.000000" text="7M"/>
-		<ngram count="2.000000" text="7N"/>
-		<ngram count="1.000000" text="7O"/>
-		<ngram count="3.000000" text="7P"/>
-		<ngram count="2.000000" text="7R"/>
-		<ngram count="5.000000" text="7S"/>
-		<ngram count="22.000000" text="7T"/>
-		<ngram count="1.000000" text="7U"/>
-		<ngram count="4.000000" text="7W"/>
-		<ngram count="1.000000" text="7Y"/>
-		<ngram count="7602.000000" text="8"/>
-		<ngram count="443.000000" text="8 "/>
-		<ngram count="563.000000" text="80"/>
-		<ngram count="422.000000" text="81"/>
-		<ngram count="373.000000" text="82"/>
-		<ngram count="353.000000" text="83"/>
-		<ngram count="422.000000" text="84"/>
-		<ngram count="416.000000" text="85"/>
-		<ngram count="429.000000" text="86"/>
-		<ngram count="387.000000" text="87"/>
-		<ngram count="333.000000" text="88"/>
-		<ngram count="308.000000" text="89"/>
-		<ngram count="4.000000" text="8A"/>
-		<ngram count="20.000000" text="8B"/>
-		<ngram count="9.000000" text="8C"/>
-		<ngram count="6.000000" text="8D"/>
-		<ngram count="2.000000" text="8E"/>
-		<ngram count="1.000000" text="8F"/>
-		<ngram count="1.000000" text="8G"/>
-		<ngram count="2.000000" text="8I"/>
-		<ngram count="6.000000" text="8J"/>
-		<ngram count="6.000000" text="8L"/>
-		<ngram count="7.000000" text="8M"/>
-		<ngram count="2.000000" text="8N"/>
-		<ngram count="4.000000" text="8O"/>
-		<ngram count="4.000000" text="8P"/>
-		<ngram count="5.000000" text="8R"/>
-		<ngram count="10.000000" text="8S"/>
-		<ngram count="20.000000" text="8T"/>
-		<ngram count="1.000000" text="8U"/>
-		<ngram count="6.000000" text="8V"/>
-		<ngram count="5.000000" text="8W"/>
-		<ngram count="3.000000" text="8Y"/>
-		<ngram count="6689.000000" text="9"/>
-		<ngram count="381.000000" text="9 "/>
-		<ngram count="361.000000" text="90"/>
-		<ngram count="587.000000" text="91"/>
-		<ngram count="314.000000" text="92"/>
-		<ngram count="268.000000" text="93"/>
-		<ngram count="277.000000" text="94"/>
-		<ngram count="275.000000" text="95"/>
-		<ngram count="279.000000" text="96"/>
-		<ngram count="256.000000" text="97"/>
-		<ngram count="278.000000" text="98"/>
-		<ngram count="272.000000" text="99"/>
-		<ngram count="6.000000" text="9A"/>
-		<ngram count="22.000000" text="9B"/>
-		<ngram count="15.000000" text="9C"/>
-		<ngram count="2.000000" text="9D"/>
-		<ngram count="4.000000" text="9E"/>
-		<ngram count="12.000000" text="9F"/>
-		<ngram count="4.000000" text="9G"/>
-		<ngram count="4.000000" text="9H"/>
-		<ngram count="3.000000" text="9I"/>
-		<ngram count="1.000000" text="9J"/>
-		<ngram count="4.000000" text="9L"/>
-		<ngram count="4.000000" text="9M"/>
-		<ngram count="3.000000" text="9N"/>
-		<ngram count="1.000000" text="9O"/>
-		<ngram count="6.000000" text="9P"/>
-		<ngram count="2.000000" text="9R"/>
-		<ngram count="11.000000" text="9S"/>
-		<ngram count="22.000000" text="9T"/>
-		<ngram count="1.000000" text="9U"/>
-		<ngram count="2.000000" text="9W"/>
 		<ngram count="638997.000000" text="A"/>
 		<ngram count="34853.000000" text="A "/>
-		<ngram count="1.000000" text="A1"/>
 		<ngram count="737.000000" text="AA"/>
 		<ngram count="15963.000000" text="AB"/>
 		<ngram count="25957.000000" text="AC"/>
@@ -1567,15 +817,6 @@
 		<ngram count="1.000000" text="CZ"/>
 		<ngram count="326859.000000" text="D"/>
 		<ngram count="156656.000000" text="D "/>
-		<ngram count="9.000000" text="D1"/>
-		<ngram count="4.000000" text="D2"/>
-		<ngram count="4.000000" text="D3"/>
-		<ngram count="1.000000" text="D4"/>
-		<ngram count="5.000000" text="D5"/>
-		<ngram count="6.000000" text="D6"/>
-		<ngram count="2.000000" text="D7"/>
-		<ngram count="1.000000" text="D8"/>
-		<ngram count="1.000000" text="D9"/>
 		<ngram count="13509.000000" text="DA"/>
 		<ngram count="816.000000" text="DB"/>
 		<ngram count="758.000000" text="DC"/>
@@ -1604,14 +845,6 @@
 		<ngram count="17.000000" text="DZ"/>
 		<ngram count="1006459.000000" text="E"/>
 		<ngram count="302414.000000" text="E "/>
-		<ngram count="13.000000" text="E1"/>
-		<ngram count="10.000000" text="E2"/>
-		<ngram count="2.000000" text="E3"/>
-		<ngram count="1.000000" text="E4"/>
-		<ngram count="3.000000" text="E5"/>
-		<ngram count="1.000000" text="E6"/>
-		<ngram count="1.000000" text="E7"/>
-		<ngram count="1.000000" text="E8"/>
 		<ngram count="46727.000000" text="EA"/>
 		<ngram count="4229.000000" text="EB"/>
 		<ngram count="23836.000000" text="EC"/>
@@ -1640,12 +873,6 @@
 		<ngram count="703.000000" text="EZ"/>
 		<ngram count="200324.000000" text="F"/>
 		<ngram count="83841.000000" text="F "/>
-		<ngram count="6.000000" text="F1"/>
-		<ngram count="5.000000" text="F2"/>
-		<ngram count="9.000000" text="F3"/>
-		<ngram count="2.000000" text="F4"/>
-		<ngram count="3.000000" text="F5"/>
-		<ngram count="2.000000" text="F6"/>
 		<ngram count="11774.000000" text="FA"/>
 		<ngram count="294.000000" text="FB"/>
 		<ngram count="421.000000" text="FC"/>
@@ -1674,9 +901,6 @@
 		<ngram count="30.000000" text="FZ"/>
 		<ngram count="146142.000000" text="G"/>
 		<ngram count="32035.000000" text="G "/>
-		<ngram count="3.000000" text="G1"/>
-		<ngram count="2.000000" text="G2"/>
-		<ngram count="1.000000" text="G7"/>
 		<ngram count="11669.000000" text="GA"/>
 		<ngram count="169.000000" text="GB"/>
 		<ngram count="111.000000" text="GC"/>
@@ -1704,10 +928,6 @@
 		<ngram count="3151.000000" text="GY"/>
 		<ngram count="511804.000000" text="H"/>
 		<ngram count="43796.000000" text="H "/>
-		<ngram count="7.000000" text="H1"/>
-		<ngram count="1.000000" text="H2"/>
-		<ngram count="3.000000" text="H3"/>
-		<ngram count="1.000000" text="H9"/>
 		<ngram count="65738.000000" text="HA"/>
 		<ngram count="650.000000" text="HB"/>
 		<ngram count="325.000000" text="HC"/>
@@ -1735,10 +955,6 @@
 		<ngram count="8.000000" text="HZ"/>
 		<ngram count="560819.000000" text="I"/>
 		<ngram count="9889.000000" text="I "/>
-		<ngram count="1.000000" text="I0"/>
-		<ngram count="2.000000" text="I1"/>
-		<ngram count="1.000000" text="I5"/>
-		<ngram count="1.000000" text="I8"/>
 		<ngram count="22368.000000" text="IA"/>
 		<ngram count="6319.000000" text="IB"/>
 		<ngram count="33222.000000" text="IC"/>
@@ -1781,8 +997,6 @@
 		<ngram count="6.000000" text="JY"/>
 		<ngram count="49463.000000" text="K"/>
 		<ngram count="8927.000000" text="K "/>
-		<ngram count="1.000000" text="K2"/>
-		<ngram count="1.000000" text="K3"/>
 		<ngram count="2173.000000" text="KA"/>
 		<ngram count="48.000000" text="KB"/>
 		<ngram count="51.000000" text="KC"/>
@@ -1810,9 +1024,6 @@
 		<ngram count="1.000000" text="KZ"/>
 		<ngram count="288117.000000" text="L"/>
 		<ngram count="30544.000000" text="L "/>
-		<ngram count="1.000000" text="L1"/>
-		<ngram count="1.000000" text="L3"/>
-		<ngram count="1.000000" text="L9"/>
 		<ngram count="30830.000000" text="LA"/>
 		<ngram count="391.000000" text="LB"/>
 		<ngram count="780.000000" text="LC"/>
@@ -1841,12 +1052,6 @@
 		<ngram count="38.000000" text="LZ"/>
 		<ngram count="191550.000000" text="M"/>
 		<ngram count="22812.000000" text="M "/>
-		<ngram count="2.000000" text="M1"/>
-		<ngram count="3.000000" text="M2"/>
-		<ngram count="2.000000" text="M3"/>
-		<ngram count="1.000000" text="M5"/>
-		<ngram count="1.000000" text="M7"/>
-		<ngram count="2.000000" text="M8"/>
 		<ngram count="32469.000000" text="MA"/>
 		<ngram count="4969.000000" text="MB"/>
 		<ngram count="104.000000" text="MC"/>
@@ -1874,13 +1079,6 @@
 		<ngram count="5.000000" text="MZ"/>
 		<ngram count="551649.000000" text="N"/>
 		<ngram count="118078.000000" text="N "/>
-		<ngram count="34.000000" text="N1"/>
-		<ngram count="4.000000" text="N2"/>
-		<ngram count="3.000000" text="N3"/>
-		<ngram count="3.000000" text="N4"/>
-		<ngram count="3.000000" text="N5"/>
-		<ngram count="7.000000" text="N7"/>
-		<ngram count="2.000000" text="N8"/>
 		<ngram count="18995.000000" text="NA"/>
 		<ngram count="1038.000000" text="NB"/>
 		<ngram count="22193.000000" text="NC"/>
@@ -1909,13 +1107,6 @@
 		<ngram count="125.000000" text="NZ"/>
 		<ngram count="588477.000000" text="O"/>
 		<ngram count="64966.000000" text="O "/>
-		<ngram count="5.000000" text="O1"/>
-		<ngram count="3.000000" text="O2"/>
-		<ngram count="2.000000" text="O3"/>
-		<ngram count="1.000000" text="O4"/>
-		<ngram count="2.000000" text="O5"/>
-		<ngram count="3.000000" text="O6"/>
-		<ngram count="1.000000" text="O7"/>
 		<ngram count="3731.000000" text="OA"/>
 		<ngram count="4831.000000" text="OB"/>
 		<ngram count="6720.000000" text="OC"/>
@@ -1944,7 +1135,6 @@
 		<ngram count="93.000000" text="OZ"/>
 		<ngram count="147979.000000" text="P"/>
 		<ngram count="5489.000000" text="P "/>
-		<ngram count="1.000000" text="P1"/>
 		<ngram count="15890.000000" text="PA"/>
 		<ngram count="56.000000" text="PB"/>
 		<ngram count="10.000000" text="PC"/>
@@ -1975,15 +1165,6 @@
 		<ngram count="7316.000000" text="QU"/>
 		<ngram count="477057.000000" text="R"/>
 		<ngram count="71806.000000" text="R "/>
-		<ngram count="27.000000" text="R1"/>
-		<ngram count="5.000000" text="R2"/>
-		<ngram count="3.000000" text="R3"/>
-		<ngram count="3.000000" text="R4"/>
-		<ngram count="17.000000" text="R5"/>
-		<ngram count="11.000000" text="R6"/>
-		<ngram count="6.000000" text="R7"/>
-		<ngram count="6.000000" text="R8"/>
-		<ngram count="4.000000" text="R9"/>
 		<ngram count="39594.000000" text="RA"/>
 		<ngram count="1549.000000" text="RB"/>
 		<ngram count="8069.000000" text="RC"/>
@@ -2012,14 +1193,6 @@
 		<ngram count="79.000000" text="RZ"/>
 		<ngram count="527453.000000" text="S"/>
 		<ngram count="167292.000000" text="S "/>
-		<ngram count="18.000000" text="S1"/>
-		<ngram count="8.000000" text="S2"/>
-		<ngram count="1.000000" text="S3"/>
-		<ngram count="3.000000" text="S4"/>
-		<ngram count="2.000000" text="S5"/>
-		<ngram count="3.000000" text="S6"/>
-		<ngram count="5.000000" text="S7"/>
-		<ngram count="1.000000" text="S9"/>
 		<ngram count="21393.000000" text="SA"/>
 		<ngram count="1290.000000" text="SB"/>
 		<ngram count="9928.000000" text="SC"/>
@@ -2048,16 +1221,6 @@
 		<ngram count="14.000000" text="SZ"/>
 		<ngram count="753326.000000" text="T"/>
 		<ngram count="125531.000000" text="T "/>
-		<ngram count="1.000000" text="T0"/>
-		<ngram count="12.000000" text="T1"/>
-		<ngram count="8.000000" text="T2"/>
-		<ngram count="7.000000" text="T3"/>
-		<ngram count="1.000000" text="T4"/>
-		<ngram count="8.000000" text="T5"/>
-		<ngram count="5.000000" text="T6"/>
-		<ngram count="1.000000" text="T7"/>
-		<ngram count="4.000000" text="T8"/>
-		<ngram count="3.000000" text="T9"/>
 		<ngram count="28171.000000" text="TA"/>
 		<ngram count="512.000000" text="TB"/>
 		<ngram count="1903.000000" text="TC"/>
@@ -2133,8 +1296,6 @@
 		<ngram count="286.000000" text="VY"/>
 		<ngram count="151331.000000" text="W"/>
 		<ngram count="10099.000000" text="W "/>
-		<ngram count="1.000000" text="W1"/>
-		<ngram count="1.000000" text="W2"/>
 		<ngram count="28944.000000" text="WA"/>
 		<ngram count="50.000000" text="WB"/>
 		<ngram count="83.000000" text="WC"/>
@@ -2162,8 +1323,6 @@
 		<ngram count="11.000000" text="WZ"/>
 		<ngram count="15793.000000" text="X"/>
 		<ngram count="791.000000" text="X "/>
-		<ngram count="1.000000" text="X1"/>
-		<ngram count="1.000000" text="X5"/>
 		<ngram count="1460.000000" text="XA"/>
 		<ngram count="4.000000" text="XB"/>
 		<ngram count="1742.000000" text="XC"/>
@@ -2188,13 +1347,6 @@
 		<ngram count="71.000000" text="XY"/>
 		<ngram count="138075.000000" text="Y"/>
 		<ngram count="73137.000000" text="Y "/>
-		<ngram count="3.000000" text="Y1"/>
-		<ngram count="2.000000" text="Y2"/>
-		<ngram count="2.000000" text="Y3"/>
-		<ngram count="1.000000" text="Y4"/>
-		<ngram count="2.000000" text="Y6"/>
-		<ngram count="1.000000" text="Y7"/>
-		<ngram count="1.000000" text="Y8"/>
 		<ngram count="3985.000000" text="YA"/>
 		<ngram count="726.000000" text="YB"/>
 		<ngram count="850.000000" text="YC"/>
@@ -2271,16 +1423,6 @@
 		<ngram count="2.000000" text="	Y"/>
 		<ngram count="1463255.000000" text="&#32;"/>
 		<ngram count="56374.000000" text="&#32; "/>
-		<ngram count="8.000000" text=" 0"/>
-		<ngram count="3061.000000" text=" 1"/>
-		<ngram count="1590.000000" text=" 2"/>
-		<ngram count="775.000000" text=" 3"/>
-		<ngram count="561.000000" text=" 4"/>
-		<ngram count="566.000000" text=" 5"/>
-		<ngram count="431.000000" text=" 6"/>
-		<ngram count="332.000000" text=" 7"/>
-		<ngram count="346.000000" text=" 8"/>
-		<ngram count="300.000000" text=" 9"/>
 		<ngram count="110139.000000" text=" A"/>
 		<ngram count="20641.000000" text=" B"/>
 		<ngram count="99600.000000" text=" C"/>
@@ -2307,241 +1449,9 @@
 		<ngram count="517.000000" text=" X"/>
 		<ngram count="61277.000000" text=" Y"/>
 		<ngram count="778.000000" text=" Z"/>
-		<ngram count="4031.000000" text="0"/>
-		<ngram count="3.000000" text="0	"/>
-		<ngram count="952.000000" text="0 "/>
-		<ngram count="499.000000" text="00"/>
-		<ngram count="99.000000" text="01"/>
-		<ngram count="82.000000" text="02"/>
-		<ngram count="81.000000" text="03"/>
-		<ngram count="84.000000" text="04"/>
-		<ngram count="228.000000" text="05"/>
-		<ngram count="79.000000" text="06"/>
-		<ngram count="81.000000" text="07"/>
-		<ngram count="106.000000" text="08"/>
-		<ngram count="109.000000" text="09"/>
-		<ngram count="1.000000" text="0A"/>
-		<ngram count="34.000000" text="0C"/>
-		<ngram count="3.000000" text="0D"/>
-		<ngram count="4.000000" text="0E"/>
-		<ngram count="1.000000" text="0H"/>
-		<ngram count="2.000000" text="0L"/>
-		<ngram count="2.000000" text="0M"/>
-		<ngram count="3.000000" text="0N"/>
-		<ngram count="3.000000" text="0P"/>
-		<ngram count="13.000000" text="0T"/>
-		<ngram count="2.000000" text="0V"/>
-		<ngram count="1.000000" text="0Y"/>
-		<ngram count="8697.000000" text="1"/>
-		<ngram count="4.000000" text="1	"/>
-		<ngram count="131.000000" text="1 "/>
-		<ngram count="1029.000000" text="10"/>
-		<ngram count="724.000000" text="11"/>
-		<ngram count="719.000000" text="12"/>
-		<ngram count="475.000000" text="13"/>
-		<ngram count="506.000000" text="14"/>
-		<ngram count="807.000000" text="15"/>
-		<ngram count="509.000000" text="16"/>
-		<ngram count="441.000000" text="17"/>
-		<ngram count="880.000000" text="18"/>
-		<ngram count="425.000000" text="19"/>
-		<ngram count="3.000000" text="1A"/>
-		<ngram count="2.000000" text="1B"/>
-		<ngram count="20.000000" text="1C"/>
-		<ngram count="3.000000" text="1D"/>
-		<ngram count="3.000000" text="1I"/>
-		<ngram count="4.000000" text="1L"/>
-		<ngram count="1.000000" text="1N"/>
-		<ngram count="3.000000" text="1S"/>
-		<ngram count="2.000000" text="1T"/>
-		<ngram count="1.000000" text="1U"/>
-		<ngram count="5473.000000" text="2"/>
-		<ngram count="2.000000" text="2	"/>
-		<ngram count="179.000000" text="2 "/>
-		<ngram count="582.000000" text="20"/>
-		<ngram count="323.000000" text="21"/>
-		<ngram count="321.000000" text="22"/>
-		<ngram count="316.000000" text="23"/>
-		<ngram count="312.000000" text="24"/>
-		<ngram count="481.000000" text="25"/>
-		<ngram count="304.000000" text="26"/>
-		<ngram count="269.000000" text="27"/>
-		<ngram count="269.000000" text="28"/>
-		<ngram count="253.000000" text="29"/>
-		<ngram count="2.000000" text="2A"/>
-		<ngram count="22.000000" text="2C"/>
-		<ngram count="5.000000" text="2D"/>
-		<ngram count="1.000000" text="2F"/>
-		<ngram count="1.000000" text="2H"/>
-		<ngram count="1.000000" text="2L"/>
-		<ngram count="1.000000" text="2P"/>
-		<ngram count="2.000000" text="2S"/>
-		<ngram count="4075.000000" text="3"/>
-		<ngram count="5.000000" text="3	"/>
-		<ngram count="136.000000" text="3 "/>
-		<ngram count="421.000000" text="30"/>
-		<ngram count="211.000000" text="31"/>
-		<ngram count="207.000000" text="32"/>
-		<ngram count="191.000000" text="33"/>
-		<ngram count="214.000000" text="34"/>
-		<ngram count="234.000000" text="35"/>
-		<ngram count="182.000000" text="36"/>
-		<ngram count="166.000000" text="37"/>
-		<ngram count="172.000000" text="38"/>
-		<ngram count="160.000000" text="39"/>
-		<ngram count="1.000000" text="3A"/>
-		<ngram count="23.000000" text="3C"/>
-		<ngram count="1.000000" text="3D"/>
-		<ngram count="2.000000" text="3E"/>
-		<ngram count="1.000000" text="3F"/>
-		<ngram count="1.000000" text="3H"/>
-		<ngram count="1.000000" text="3K"/>
-		<ngram count="2.000000" text="3L"/>
-		<ngram count="1.000000" text="3M"/>
-		<ngram count="1.000000" text="3N"/>
-		<ngram count="1.000000" text="3P"/>
-		<ngram count="1.000000" text="3V"/>
-		<ngram count="1.000000" text="3W"/>
-		<ngram count="3787.000000" text="4"/>
-		<ngram count="6.000000" text="4	"/>
-		<ngram count="199.000000" text="4 "/>
-		<ngram count="225.000000" text="40"/>
-		<ngram count="182.000000" text="41"/>
-		<ngram count="139.000000" text="42"/>
-		<ngram count="153.000000" text="43"/>
-		<ngram count="180.000000" text="44"/>
-		<ngram count="222.000000" text="45"/>
-		<ngram count="167.000000" text="46"/>
-		<ngram count="161.000000" text="47"/>
-		<ngram count="173.000000" text="48"/>
-		<ngram count="172.000000" text="49"/>
-		<ngram count="3.000000" text="4A"/>
-		<ngram count="1.000000" text="4B"/>
-		<ngram count="28.000000" text="4C"/>
-		<ngram count="2.000000" text="4D"/>
-		<ngram count="2.000000" text="4L"/>
-		<ngram count="1.000000" text="4M"/>
-		<ngram count="13.000000" text="4P"/>
-		<ngram count="4.000000" text="4T"/>
-		<ngram count="4246.000000" text="5"/>
-		<ngram count="6.000000" text="5	"/>
-		<ngram count="684.000000" text="5 "/>
-		<ngram count="286.000000" text="50"/>
-		<ngram count="166.000000" text="51"/>
-		<ngram count="159.000000" text="52"/>
-		<ngram count="184.000000" text="53"/>
-		<ngram count="186.000000" text="54"/>
-		<ngram count="157.000000" text="55"/>
-		<ngram count="156.000000" text="56"/>
-		<ngram count="157.000000" text="57"/>
-		<ngram count="165.000000" text="58"/>
-		<ngram count="115.000000" text="59"/>
-		<ngram count="3.000000" text="5A"/>
-		<ngram count="33.000000" text="5C"/>
-		<ngram count="4.000000" text="5D"/>
-		<ngram count="3.000000" text="5E"/>
-		<ngram count="2.000000" text="5H"/>
-		<ngram count="1.000000" text="5K"/>
-		<ngram count="1.000000" text="5L"/>
-		<ngram count="2.000000" text="5M"/>
-		<ngram count="1.000000" text="5N"/>
-		<ngram count="11.000000" text="5P"/>
-		<ngram count="1.000000" text="5R"/>
-		<ngram count="2.000000" text="5T"/>
-		<ngram count="2942.000000" text="6"/>
-		<ngram count="3.000000" text="6	"/>
-		<ngram count="145.000000" text="6 "/>
-		<ngram count="172.000000" text="60"/>
-		<ngram count="116.000000" text="61"/>
-		<ngram count="115.000000" text="62"/>
-		<ngram count="92.000000" text="63"/>
-		<ngram count="120.000000" text="64"/>
-		<ngram count="123.000000" text="65"/>
-		<ngram count="95.000000" text="66"/>
-		<ngram count="122.000000" text="67"/>
-		<ngram count="118.000000" text="68"/>
-		<ngram count="90.000000" text="69"/>
-		<ngram count="2.000000" text="6A"/>
-		<ngram count="22.000000" text="6C"/>
-		<ngram count="4.000000" text="6D"/>
-		<ngram count="5.000000" text="6E"/>
-		<ngram count="1.000000" text="6R"/>
-		<ngram count="3.000000" text="6T"/>
-		<ngram count="2737.000000" text="7"/>
-		<ngram count="1.000000" text="7	"/>
-		<ngram count="147.000000" text="7 "/>
-		<ngram count="157.000000" text="70"/>
-		<ngram count="96.000000" text="71"/>
-		<ngram count="114.000000" text="72"/>
-		<ngram count="134.000000" text="73"/>
-		<ngram count="109.000000" text="74"/>
-		<ngram count="101.000000" text="75"/>
-		<ngram count="90.000000" text="76"/>
-		<ngram count="102.000000" text="77"/>
-		<ngram count="107.000000" text="78"/>
-		<ngram count="121.000000" text="79"/>
-		<ngram count="2.000000" text="7A"/>
-		<ngram count="16.000000" text="7C"/>
-		<ngram count="1.000000" text="7D"/>
-		<ngram count="1.000000" text="7F"/>
-		<ngram count="2.000000" text="7L"/>
-		<ngram count="1.000000" text="7M"/>
-		<ngram count="1.000000" text="7N"/>
-		<ngram count="1.000000" text="7P"/>
-		<ngram count="2.000000" text="7T"/>
-		<ngram count="3242.000000" text="8"/>
-		<ngram count="3.000000" text="8	"/>
-		<ngram count="165.000000" text="8 "/>
-		<ngram count="195.000000" text="80"/>
-		<ngram count="154.000000" text="81"/>
-		<ngram count="137.000000" text="82"/>
-		<ngram count="144.000000" text="83"/>
-		<ngram count="148.000000" text="84"/>
-		<ngram count="159.000000" text="85"/>
-		<ngram count="137.000000" text="86"/>
-		<ngram count="181.000000" text="87"/>
-		<ngram count="138.000000" text="88"/>
-		<ngram count="141.000000" text="89"/>
-		<ngram count="2.000000" text="8A"/>
-		<ngram count="21.000000" text="8C"/>
-		<ngram count="3.000000" text="8D"/>
-		<ngram count="1.000000" text="8L"/>
-		<ngram count="2.000000" text="8P"/>
-		<ngram count="2.000000" text="8S"/>
-		<ngram count="6.000000" text="8T"/>
-		<ngram count="1.000000" text="8V"/>
-		<ngram count="2516.000000" text="9"/>
-		<ngram count="5.000000" text="9	"/>
-		<ngram count="98.000000" text="9 "/>
-		<ngram count="174.000000" text="90"/>
-		<ngram count="120.000000" text="91"/>
-		<ngram count="95.000000" text="92"/>
-		<ngram count="85.000000" text="93"/>
-		<ngram count="83.000000" text="94"/>
-		<ngram count="75.000000" text="95"/>
-		<ngram count="82.000000" text="96"/>
-		<ngram count="86.000000" text="97"/>
-		<ngram count="91.000000" text="98"/>
-		<ngram count="90.000000" text="99"/>
-		<ngram count="5.000000" text="9A"/>
-		<ngram count="18.000000" text="9C"/>
-		<ngram count="1.000000" text="9D"/>
-		<ngram count="1.000000" text="9H"/>
-		<ngram count="1.000000" text="9K"/>
-		<ngram count="1.000000" text="9N"/>
-		<ngram count="1.000000" text="9P"/>
-		<ngram count="2.000000" text="9R"/>
-		<ngram count="2.000000" text="9T"/>
-		<ngram count="1.000000" text="9U"/>
 		<ngram count="870102.000000" text="A"/>
 		<ngram count="5.000000" text="A	"/>
 		<ngram count="215654.000000" text="A "/>
-		<ngram count="14.000000" text="A0"/>
-		<ngram count="29.000000" text="A1"/>
-		<ngram count="21.000000" text="A2"/>
-		<ngram count="9.000000" text="A3"/>
-		<ngram count="1.000000" text="A4"/>
-		<ngram count="2.000000" text="A5"/>
 		<ngram count="1312.000000" text="AA"/>
 		<ngram count="43146.000000" text="AB"/>
 		<ngram count="28678.000000" text="AC"/>
@@ -2620,9 +1530,6 @@
 		<ngram count="9.000000" text="CZ"/>
 		<ngram count="355639.000000" text="D"/>
 		<ngram count="11483.000000" text="D "/>
-		<ngram count="5.000000" text="D1"/>
-		<ngram count="1.000000" text="D3"/>
-		<ngram count="1.000000" text="D8"/>
 		<ngram count="46843.000000" text="DA"/>
 		<ngram count="28.000000" text="DB"/>
 		<ngram count="58.000000" text="DC"/>
@@ -2650,14 +1557,6 @@
 		<ngram count="903803.000000" text="E"/>
 		<ngram count="1.000000" text="E	"/>
 		<ngram count="233492.000000" text="E "/>
-		<ngram count="12.000000" text="E0"/>
-		<ngram count="65.000000" text="E1"/>
-		<ngram count="40.000000" text="E2"/>
-		<ngram count="10.000000" text="E3"/>
-		<ngram count="1.000000" text="E4"/>
-		<ngram count="1.000000" text="E5"/>
-		<ngram count="1.000000" text="E6"/>
-		<ngram count="2.000000" text="E9"/>
 		<ngram count="10520.000000" text="EA"/>
 		<ngram count="6535.000000" text="EB"/>
 		<ngram count="28342.000000" text="EC"/>
@@ -2686,7 +1585,6 @@
 		<ngram count="8341.000000" text="EZ"/>
 		<ngram count="53577.000000" text="F"/>
 		<ngram count="2423.000000" text="F "/>
-		<ngram count="2.000000" text="F3"/>
 		<ngram count="5709.000000" text="FA"/>
 		<ngram count="5.000000" text="FB"/>
 		<ngram count="17.000000" text="FC"/>
@@ -2763,12 +1661,6 @@
 		<ngram count="393053.000000" text="I"/>
 		<ngram count="12.000000" text="I	"/>
 		<ngram count="12405.000000" text="I "/>
-		<ngram count="4.000000" text="I0"/>
-		<ngram count="4.000000" text="I1"/>
-		<ngram count="1.000000" text="I2"/>
-		<ngram count="3.000000" text="I3"/>
-		<ngram count="1.000000" text="I7"/>
-		<ngram count="1.000000" text="I8"/>
 		<ngram count="36844.000000" text="IA"/>
 		<ngram count="6793.000000" text="IB"/>
 		<ngram count="25399.000000" text="IC"/>
@@ -2832,12 +1724,6 @@
 		<ngram count="401669.000000" text="L"/>
 		<ngram count="4.000000" text="L	"/>
 		<ngram count="69657.000000" text="L "/>
-		<ngram count="3.000000" text="L0"/>
-		<ngram count="10.000000" text="L1"/>
-		<ngram count="8.000000" text="L2"/>
-		<ngram count="5.000000" text="L3"/>
-		<ngram count="1.000000" text="L4"/>
-		<ngram count="3.000000" text="L6"/>
 		<ngram count="106398.000000" text="LA"/>
 		<ngram count="627.000000" text="LB"/>
 		<ngram count="2819.000000" text="LC"/>
@@ -2866,7 +1752,6 @@
 		<ngram count="482.000000" text="LZ"/>
 		<ngram count="187622.000000" text="M"/>
 		<ngram count="903.000000" text="M "/>
-		<ngram count="1.000000" text="M2"/>
 		<ngram count="41491.000000" text="MA"/>
 		<ngram count="9690.000000" text="MB"/>
 		<ngram count="17.000000" text="MC"/>
@@ -2893,14 +1778,6 @@
 		<ngram count="474155.000000" text="N"/>
 		<ngram count="5.000000" text="N	"/>
 		<ngram count="124798.000000" text="N "/>
-		<ngram count="3.000000" text="N0"/>
-		<ngram count="38.000000" text="N1"/>
-		<ngram count="21.000000" text="N2"/>
-		<ngram count="6.000000" text="N3"/>
-		<ngram count="2.000000" text="N4"/>
-		<ngram count="2.000000" text="N5"/>
-		<ngram count="1.000000" text="N7"/>
-		<ngram count="4.000000" text="N8"/>
 		<ngram count="42481.000000" text="NA"/>
 		<ngram count="1774.000000" text="NB"/>
 		<ngram count="22478.000000" text="NC"/>
@@ -2930,13 +1807,6 @@
 		<ngram count="628407.000000" text="O"/>
 		<ngram count="22.000000" text="O	"/>
 		<ngram count="167088.000000" text="O "/>
-		<ngram count="9.000000" text="O0"/>
-		<ngram count="33.000000" text="O1"/>
-		<ngram count="24.000000" text="O2"/>
-		<ngram count="10.000000" text="O3"/>
-		<ngram count="1.000000" text="O4"/>
-		<ngram count="1.000000" text="O6"/>
-		<ngram count="1.000000" text="O8"/>
 		<ngram count="1695.000000" text="OA"/>
 		<ngram count="10570.000000" text="OB"/>
 		<ngram count="15593.000000" text="OC"/>
@@ -2965,15 +1835,6 @@
 		<ngram count="2111.000000" text="OZ"/>
 		<ngram count="174075.000000" text="P"/>
 		<ngram count="185.000000" text="P "/>
-		<ngram count="45.000000" text="P1"/>
-		<ngram count="11.000000" text="P2"/>
-		<ngram count="11.000000" text="P3"/>
-		<ngram count="11.000000" text="P4"/>
-		<ngram count="11.000000" text="P5"/>
-		<ngram count="11.000000" text="P6"/>
-		<ngram count="11.000000" text="P7"/>
-		<ngram count="11.000000" text="P8"/>
-		<ngram count="11.000000" text="P9"/>
 		<ngram count="39167.000000" text="PA"/>
 		<ngram count="1.000000" text="PB"/>
 		<ngram count="284.000000" text="PC"/>
@@ -3006,10 +1867,6 @@
 		<ngram count="463862.000000" text="R"/>
 		<ngram count="1.000000" text="R	"/>
 		<ngram count="56079.000000" text="R "/>
-		<ngram count="2.000000" text="R0"/>
-		<ngram count="12.000000" text="R1"/>
-		<ngram count="11.000000" text="R2"/>
-		<ngram count="3.000000" text="R3"/>
 		<ngram count="90340.000000" text="RA"/>
 		<ngram count="1805.000000" text="RB"/>
 		<ngram count="6994.000000" text="RC"/>
@@ -3039,13 +1896,6 @@
 		<ngram count="529472.000000" text="S"/>
 		<ngram count="1.000000" text="S	"/>
 		<ngram count="167479.000000" text="S "/>
-		<ngram count="6.000000" text="S0"/>
-		<ngram count="32.000000" text="S1"/>
-		<ngram count="14.000000" text="S2"/>
-		<ngram count="14.000000" text="S3"/>
-		<ngram count="3.000000" text="S4"/>
-		<ngram count="1.000000" text="S6"/>
-		<ngram count="1.000000" text="S9"/>
 		<ngram count="35911.000000" text="SA"/>
 		<ngram count="546.000000" text="SB"/>
 		<ngram count="12434.000000" text="SC"/>
@@ -3074,11 +1924,6 @@
 		<ngram count="40.000000" text="SZ"/>
 		<ngram count="302978.000000" text="T"/>
 		<ngram count="4610.000000" text="T "/>
-		<ngram count="4.000000" text="T1"/>
-		<ngram count="1.000000" text="T3"/>
-		<ngram count="2.000000" text="T5"/>
-		<ngram count="1.000000" text="T6"/>
-		<ngram count="2.000000" text="T8"/>
 		<ngram count="66272.000000" text="TA"/>
 		<ngram count="19.000000" text="TB"/>
 		<ngram count="511.000000" text="TC"/>
@@ -3107,9 +1952,6 @@
 		<ngram count="94.000000" text="TZ"/>
 		<ngram count="304187.000000" text="U"/>
 		<ngram count="13678.000000" text="U "/>
-		<ngram count="3.000000" text="U0"/>
-		<ngram count="3.000000" text="U1"/>
-		<ngram count="1.000000" text="U2"/>
 		<ngram count="20554.000000" text="UA"/>
 		<ngram count="4381.000000" text="UB"/>
 		<ngram count="9151.000000" text="UC"/>
@@ -3139,7 +1981,6 @@
 		<ngram count="72222.000000" text="V"/>
 		<ngram count="4.000000" text="V	"/>
 		<ngram count="99.000000" text="V "/>
-		<ngram count="3.000000" text="V2"/>
 		<ngram count="11772.000000" text="VA"/>
 		<ngram count="16.000000" text="VB"/>
 		<ngram count="10.000000" text="VC"/>
@@ -3210,10 +2051,6 @@
 		<ngram count="90832.000000" text="Y"/>
 		<ngram count="2.000000" text="Y	"/>
 		<ngram count="60006.000000" text="Y "/>
-		<ngram count="4.000000" text="Y0"/>
-		<ngram count="11.000000" text="Y1"/>
-		<ngram count="9.000000" text="Y2"/>
-		<ngram count="2.000000" text="Y3"/>
 		<ngram count="6246.000000" text="YA"/>
 		<ngram count="432.000000" text="YB"/>
 		<ngram count="601.000000" text="YC"/>
@@ -3271,16 +2108,6 @@
 	<FR>
 		<ngram count="1414803.000000" text="&#32;"/>
 		<ngram count="15084.000000" text="&#32; "/>
-		<ngram count="9.000000" text=" 0"/>
-		<ngram count="1736.000000" text=" 1"/>
-		<ngram count="389.000000" text=" 2"/>
-		<ngram count="222.000000" text=" 3"/>
-		<ngram count="152.000000" text=" 4"/>
-		<ngram count="151.000000" text=" 5"/>
-		<ngram count="135.000000" text=" 6"/>
-		<ngram count="116.000000" text=" 7"/>
-		<ngram count="133.000000" text=" 8"/>
-		<ngram count="161.000000" text=" 9"/>
 		<ngram count="74523.000000" text=" A"/>
 		<ngram count="32427.000000" text=" B"/>
 		<ngram count="99566.000000" text=" C"/>
@@ -3307,187 +2134,6 @@
 		<ngram count="429.000000" text=" X"/>
 		<ngram count="4163.000000" text=" Y"/>
 		<ngram count="450.000000" text=" Z"/>
-		<ngram count="1348.000000" text="0"/>
-		<ngram count="286.000000" text="0 "/>
-		<ngram count="333.000000" text="00"/>
-		<ngram count="27.000000" text="01"/>
-		<ngram count="34.000000" text="02"/>
-		<ngram count="29.000000" text="03"/>
-		<ngram count="27.000000" text="04"/>
-		<ngram count="18.000000" text="05"/>
-		<ngram count="36.000000" text="06"/>
-		<ngram count="31.000000" text="07"/>
-		<ngram count="35.000000" text="08"/>
-		<ngram count="33.000000" text="09"/>
-		<ngram count="1.000000" text="0A"/>
-		<ngram count="2.000000" text="0C"/>
-		<ngram count="1.000000" text="0D"/>
-		<ngram count="5.000000" text="0E"/>
-		<ngram count="7.000000" text="0F"/>
-		<ngram count="2.000000" text="0H"/>
-		<ngram count="2.000000" text="0L"/>
-		<ngram count="3.000000" text="0M"/>
-		<ngram count="1.000000" text="0P"/>
-		<ngram count="2.000000" text="0T"/>
-		<ngram count="3182.000000" text="1"/>
-		<ngram count="68.000000" text="1 "/>
-		<ngram count="276.000000" text="10"/>
-		<ngram count="221.000000" text="11"/>
-		<ngram count="237.000000" text="12"/>
-		<ngram count="231.000000" text="13"/>
-		<ngram count="272.000000" text="14"/>
-		<ngram count="224.000000" text="15"/>
-		<ngram count="208.000000" text="16"/>
-		<ngram count="357.000000" text="17"/>
-		<ngram count="604.000000" text="18"/>
-		<ngram count="64.000000" text="19"/>
-		<ngram count="36.000000" text="1E"/>
-		<ngram count="3.000000" text="1J"/>
-		<ngram count="1.000000" text="1M"/>
-		<ngram count="1.000000" text="1N"/>
-		<ngram count="1.000000" text="1O"/>
-		<ngram count="3.000000" text="1P"/>
-		<ngram count="9.000000" text="1R"/>
-		<ngram count="4.000000" text="1S"/>
-		<ngram count="1.000000" text="1T"/>
-		<ngram count="1156.000000" text="2"/>
-		<ngram count="81.000000" text="2 "/>
-		<ngram count="108.000000" text="20"/>
-		<ngram count="64.000000" text="21"/>
-		<ngram count="50.000000" text="22"/>
-		<ngram count="89.000000" text="23"/>
-		<ngram count="69.000000" text="24"/>
-		<ngram count="72.000000" text="25"/>
-		<ngram count="47.000000" text="26"/>
-		<ngram count="50.000000" text="27"/>
-		<ngram count="48.000000" text="28"/>
-		<ngram count="48.000000" text="29"/>
-		<ngram count="1.000000" text="2A"/>
-		<ngram count="1.000000" text="2D"/>
-		<ngram count="18.000000" text="2E"/>
-		<ngram count="1.000000" text="2F"/>
-		<ngram count="1.000000" text="2L"/>
-		<ngram count="1.000000" text="2N"/>
-		<ngram count="1.000000" text="2S"/>
-		<ngram count="1034.000000" text="3"/>
-		<ngram count="71.000000" text="3 "/>
-		<ngram count="75.000000" text="30"/>
-		<ngram count="47.000000" text="31"/>
-		<ngram count="38.000000" text="32"/>
-		<ngram count="39.000000" text="33"/>
-		<ngram count="35.000000" text="34"/>
-		<ngram count="41.000000" text="35"/>
-		<ngram count="36.000000" text="36"/>
-		<ngram count="41.000000" text="37"/>
-		<ngram count="49.000000" text="38"/>
-		<ngram count="38.000000" text="39"/>
-		<ngram count="1.000000" text="3A"/>
-		<ngram count="54.000000" text="3E"/>
-		<ngram count="1.000000" text="3F"/>
-		<ngram count="1.000000" text="3H"/>
-		<ngram count="1.000000" text="3I"/>
-		<ngram count="2.000000" text="3P"/>
-		<ngram count="24.000000" text="3R"/>
-		<ngram count="1.000000" text="3S"/>
-		<ngram count="1.000000" text="3T"/>
-		<ngram count="901.000000" text="4"/>
-		<ngram count="69.000000" text="4 "/>
-		<ngram count="65.000000" text="40"/>
-		<ngram count="42.000000" text="41"/>
-		<ngram count="32.000000" text="42"/>
-		<ngram count="43.000000" text="43"/>
-		<ngram count="39.000000" text="44"/>
-		<ngram count="42.000000" text="45"/>
-		<ngram count="40.000000" text="46"/>
-		<ngram count="41.000000" text="47"/>
-		<ngram count="41.000000" text="48"/>
-		<ngram count="39.000000" text="49"/>
-		<ngram count="3.000000" text="4D"/>
-		<ngram count="12.000000" text="4E"/>
-		<ngram count="1.000000" text="4F"/>
-		<ngram count="1.000000" text="4M"/>
-		<ngram count="903.000000" text="5"/>
-		<ngram count="92.000000" text="5 "/>
-		<ngram count="79.000000" text="50"/>
-		<ngram count="42.000000" text="51"/>
-		<ngram count="37.000000" text="52"/>
-		<ngram count="46.000000" text="53"/>
-		<ngram count="34.000000" text="54"/>
-		<ngram count="47.000000" text="55"/>
-		<ngram count="37.000000" text="56"/>
-		<ngram count="40.000000" text="57"/>
-		<ngram count="45.000000" text="58"/>
-		<ngram count="46.000000" text="59"/>
-		<ngram count="4.000000" text="5E"/>
-		<ngram count="1.000000" text="5O"/>
-		<ngram count="801.000000" text="6"/>
-		<ngram count="52.000000" text="6 "/>
-		<ngram count="61.000000" text="60"/>
-		<ngram count="39.000000" text="61"/>
-		<ngram count="36.000000" text="62"/>
-		<ngram count="35.000000" text="63"/>
-		<ngram count="31.000000" text="64"/>
-		<ngram count="34.000000" text="65"/>
-		<ngram count="42.000000" text="66"/>
-		<ngram count="47.000000" text="67"/>
-		<ngram count="38.000000" text="68"/>
-		<ngram count="33.000000" text="69"/>
-		<ngram count="1.000000" text="6A"/>
-		<ngram count="6.000000" text="6E"/>
-		<ngram count="1.000000" text="6O"/>
-		<ngram count="1.000000" text="6S"/>
-		<ngram count="939.000000" text="7"/>
-		<ngram count="51.000000" text="7 "/>
-		<ngram count="48.000000" text="70"/>
-		<ngram count="39.000000" text="71"/>
-		<ngram count="38.000000" text="72"/>
-		<ngram count="29.000000" text="73"/>
-		<ngram count="37.000000" text="74"/>
-		<ngram count="50.000000" text="75"/>
-		<ngram count="49.000000" text="76"/>
-		<ngram count="47.000000" text="77"/>
-		<ngram count="69.000000" text="78"/>
-		<ngram count="130.000000" text="79"/>
-		<ngram count="4.000000" text="7E"/>
-		<ngram count="1.000000" text="7G"/>
-		<ngram count="1.000000" text="7P"/>
-		<ngram count="1227.000000" text="8"/>
-		<ngram count="110.000000" text="8 "/>
-		<ngram count="165.000000" text="80"/>
-		<ngram count="171.000000" text="81"/>
-		<ngram count="76.000000" text="82"/>
-		<ngram count="62.000000" text="83"/>
-		<ngram count="47.000000" text="84"/>
-		<ngram count="78.000000" text="85"/>
-		<ngram count="30.000000" text="86"/>
-		<ngram count="37.000000" text="87"/>
-		<ngram count="28.000000" text="88"/>
-		<ngram count="59.000000" text="89"/>
-		<ngram count="5.000000" text="8B"/>
-		<ngram count="3.000000" text="8E"/>
-		<ngram count="3.000000" text="8F"/>
-		<ngram count="1.000000" text="8J"/>
-		<ngram count="1.000000" text="8M"/>
-		<ngram count="1.000000" text="8N"/>
-		<ngram count="2.000000" text="8O"/>
-		<ngram count="1.000000" text="8Q"/>
-		<ngram count="2.000000" text="8S"/>
-		<ngram count="1.000000" text="8T"/>
-		<ngram count="774.000000" text="9"/>
-		<ngram count="78.000000" text="9 "/>
-		<ngram count="33.000000" text="90"/>
-		<ngram count="37.000000" text="91"/>
-		<ngram count="43.000000" text="92"/>
-		<ngram count="67.000000" text="93"/>
-		<ngram count="35.000000" text="94"/>
-		<ngram count="28.000000" text="95"/>
-		<ngram count="21.000000" text="96"/>
-		<ngram count="21.000000" text="97"/>
-		<ngram count="29.000000" text="98"/>
-		<ngram count="30.000000" text="99"/>
-		<ngram count="4.000000" text="9E"/>
-		<ngram count="2.000000" text="9P"/>
-		<ngram count="3.000000" text="9T"/>
 		<ngram count="600591.000000" text="A"/>
 		<ngram count="71807.000000" text="A "/>
 		<ngram count="91.000000" text="AA"/>
@@ -3592,13 +2238,6 @@
 		<ngram count="7.000000" text="DZ"/>
 		<ngram count="1090899.000000" text="E"/>
 		<ngram count="351379.000000" text="E "/>
-		<ngram count="20.000000" text="E1"/>
-		<ngram count="10.000000" text="E2"/>
-		<ngram count="4.000000" text="E3"/>
-		<ngram count="2.000000" text="E4"/>
-		<ngram count="1.000000" text="E5"/>
-		<ngram count="1.000000" text="E6"/>
-		<ngram count="2.000000" text="E9"/>
 		<ngram count="11127.000000" text="EA"/>
 		<ngram count="1719.000000" text="EB"/>
 		<ngram count="16188.000000" text="EC"/>
@@ -3627,7 +2266,6 @@
 		<ngram count="9679.000000" text="EZ"/>
 		<ngram count="81921.000000" text="F"/>
 		<ngram count="1236.000000" text="F "/>
-		<ngram count="2.000000" text="F1"/>
 		<ngram count="17789.000000" text="FA"/>
 		<ngram count="63.000000" text="FC"/>
 		<ngram count="31.000000" text="FD"/>
@@ -3764,7 +2402,6 @@
 		<ngram count="34.000000" text="KY"/>
 		<ngram count="434379.000000" text="L"/>
 		<ngram count="33103.000000" text="L "/>
-		<ngram count="3.000000" text="L1"/>
 		<ngram count="74559.000000" text="LA"/>
 		<ngram count="455.000000" text="LB"/>
 		<ngram count="377.000000" text="LC"/>
@@ -3820,10 +2457,6 @@
 		<ngram count="7.000000" text="MZ"/>
 		<ngram count="497815.000000" text="N"/>
 		<ngram count="82424.000000" text="N "/>
-		<ngram count="28.000000" text="N1"/>
-		<ngram count="2.000000" text="N2"/>
-		<ngram count="1.000000" text="N8"/>
-		<ngram count="1.000000" text="N9"/>
 		<ngram count="20792.000000" text="NA"/>
 		<ngram count="299.000000" text="NB"/>
 		<ngram count="23507.000000" text="NC"/>
@@ -3852,7 +2485,6 @@
 		<ngram count="350.000000" text="NZ"/>
 		<ngram count="388975.000000" text="O"/>
 		<ngram count="2016.000000" text="O "/>
-		<ngram count="1.000000" text="O1"/>
 		<ngram count="188.000000" text="OA"/>
 		<ngram count="3652.000000" text="OB"/>
 		<ngram count="5273.000000" text="OC"/>
@@ -3924,9 +2556,6 @@
 		<ngram count="3.000000" text="QV"/>
 		<ngram count="492713.000000" text="R"/>
 		<ngram count="68107.000000" text="R "/>
-		<ngram count="3.000000" text="R1"/>
-		<ngram count="1.000000" text="R2"/>
-		<ngram count="1.000000" text="R5"/>
 		<ngram count="52638.000000" text="RA"/>
 		<ngram count="2295.000000" text="RB"/>
 		<ngram count="7715.000000" text="RC"/>
@@ -3955,10 +2584,6 @@
 		<ngram count="49.000000" text="RZ"/>
 		<ngram count="568939.000000" text="S"/>
 		<ngram count="214473.000000" text="S "/>
-		<ngram count="4.000000" text="S1"/>
-		<ngram count="2.000000" text="S2"/>
-		<ngram count="1.000000" text="S3"/>
-		<ngram count="1.000000" text="S9"/>
 		<ngram count="41367.000000" text="SA"/>
 		<ngram count="810.000000" text="SB"/>
 		<ngram count="6047.000000" text="SC"/>
@@ -3987,10 +2612,6 @@
 		<ngram count="7.000000" text="SZ"/>
 		<ngram count="521046.000000" text="T"/>
 		<ngram count="185338.000000" text="T "/>
-		<ngram count="4.000000" text="T1"/>
-		<ngram count="2.000000" text="T2"/>
-		<ngram count="1.000000" text="T4"/>
-		<ngram count="1.000000" text="T9"/>
 		<ngram count="43299.000000" text="TA"/>
 		<ngram count="360.000000" text="TB"/>
 		<ngram count="1530.000000" text="TC"/>
@@ -4018,11 +2639,6 @@
 		<ngram count="248.000000" text="TZ"/>
 		<ngram count="458269.000000" text="U"/>
 		<ngram count="35980.000000" text="U "/>
-		<ngram count="5.000000" text="U1"/>
-		<ngram count="1.000000" text="U2"/>
-		<ngram count="2.000000" text="U3"/>
-		<ngram count="1.000000" text="U4"/>
-		<ngram count="1.000000" text="U7"/>
 		<ngram count="7520.000000" text="UA"/>
 		<ngram count="3733.000000" text="UB"/>
 		<ngram count="8289.000000" text="UC"/>
@@ -4142,7 +2758,6 @@
 		<ngram count="14.000000" text="YZ"/>
 		<ngram count="13190.000000" text="Z"/>
 		<ngram count="6240.000000" text="Z "/>
-		<ngram count="1.000000" text="Z2"/>
 		<ngram count="1298.000000" text="ZA"/>
 		<ngram count="25.000000" text="ZB"/>
 		<ngram count="33.000000" text="ZC"/>
@@ -4172,16 +2787,6 @@
 	<NL>
 		<ngram count="619472.000000" text="&#32;"/>
 		<ngram count="28692.000000" text="&#32; "/>
-		<ngram count="16.000000" text=" 0"/>
-		<ngram count="1419.000000" text=" 1"/>
-		<ngram count="543.000000" text=" 2"/>
-		<ngram count="332.000000" text=" 3"/>
-		<ngram count="217.000000" text=" 4"/>
-		<ngram count="190.000000" text=" 5"/>
-		<ngram count="150.000000" text=" 6"/>
-		<ngram count="104.000000" text=" 7"/>
-		<ngram count="172.000000" text=" 8"/>
-		<ngram count="99.000000" text=" 9"/>
 		<ngram count="22412.000000" text=" A"/>
 		<ngram count="24946.000000" text=" B"/>
 		<ngram count="2138.000000" text=" C"/>
@@ -4208,254 +2813,8 @@
 		<ngram count="22.000000" text=" X"/>
 		<ngram count="108.000000" text=" Y"/>
 		<ngram count="40194.000000" text=" Z"/>
-		<ngram count="1850.000000" text="0"/>
-		<ngram count="672.000000" text="0 "/>
-		<ngram count="449.000000" text="00"/>
-		<ngram count="7.000000" text="01"/>
-		<ngram count="10.000000" text="02"/>
-		<ngram count="15.000000" text="03"/>
-		<ngram count="15.000000" text="04"/>
-		<ngram count="18.000000" text="05"/>
-		<ngram count="16.000000" text="06"/>
-		<ngram count="14.000000" text="07"/>
-		<ngram count="12.000000" text="08"/>
-		<ngram count="5.000000" text="09"/>
-		<ngram count="3.000000" text="0B"/>
-		<ngram count="1.000000" text="0C"/>
-		<ngram count="7.000000" text="0D"/>
-		<ngram count="20.000000" text="0E"/>
-		<ngram count="1.000000" text="0G"/>
-		<ngram count="2.000000" text="0H"/>
-		<ngram count="1.000000" text="0I"/>
-		<ngram count="3.000000" text="0K"/>
-		<ngram count="2.000000" text="0L"/>
-		<ngram count="11.000000" text="0M"/>
-		<ngram count="1.000000" text="0N"/>
-		<ngram count="3.000000" text="0O"/>
-		<ngram count="1.000000" text="0P"/>
-		<ngram count="3.000000" text="0R"/>
-		<ngram count="24.000000" text="0S"/>
-		<ngram count="1.000000" text="0T"/>
-		<ngram count="1.000000" text="0U"/>
-		<ngram count="4.000000" text="0V"/>
-		<ngram count="3.000000" text="0Z"/>
-		<ngram count="2255.000000" text="1"/>
-		<ngram count="144.000000" text="1 "/>
-		<ngram count="185.000000" text="10"/>
-		<ngram count="113.000000" text="11"/>
-		<ngram count="164.000000" text="12"/>
-		<ngram count="107.000000" text="13"/>
-		<ngram count="162.000000" text="14"/>
-		<ngram count="184.000000" text="15"/>
-		<ngram count="198.000000" text="16"/>
-		<ngram count="150.000000" text="17"/>
-		<ngram count="310.000000" text="18"/>
-		<ngram count="118.000000" text="19"/>
-		<ngram count="1.000000" text="1A"/>
-		<ngram count="1.000000" text="1B"/>
-		<ngram count="9.000000" text="1D"/>
-		<ngram count="26.000000" text="1E"/>
-		<ngram count="2.000000" text="1G"/>
-		<ngram count="2.000000" text="1J"/>
-		<ngram count="1.000000" text="1M"/>
-		<ngram count="3.000000" text="1O"/>
-		<ngram count="19.000000" text="1S"/>
-		<ngram count="1.000000" text="1V"/>
-		<ngram count="1.000000" text="1Z"/>
-		<ngram count="1286.000000" text="2"/>
-		<ngram count="190.000000" text="2 "/>
-		<ngram count="158.000000" text="20"/>
-		<ngram count="60.000000" text="21"/>
-		<ngram count="70.000000" text="22"/>
-		<ngram count="47.000000" text="23"/>
-		<ngram count="67.000000" text="24"/>
-		<ngram count="154.000000" text="25"/>
-		<ngram count="46.000000" text="26"/>
-		<ngram count="40.000000" text="27"/>
-		<ngram count="66.000000" text="28"/>
-		<ngram count="40.000000" text="29"/>
-		<ngram count="1.000000" text="2A"/>
-		<ngram count="1.000000" text="2B"/>
-		<ngram count="21.000000" text="2D"/>
-		<ngram count="41.000000" text="2E"/>
-		<ngram count="2.000000" text="2G"/>
-		<ngram count="4.000000" text="2I"/>
-		<ngram count="1.000000" text="2L"/>
-		<ngram count="1.000000" text="2M"/>
-		<ngram count="1.000000" text="2N"/>
-		<ngram count="4.000000" text="2O"/>
-		<ngram count="16.000000" text="2S"/>
-		<ngram count="1.000000" text="2T"/>
-		<ngram count="2.000000" text="2V"/>
-		<ngram count="2.000000" text="2W"/>
-		<ngram count="898.000000" text="3"/>
-		<ngram count="137.000000" text="3 "/>
-		<ngram count="126.000000" text="30"/>
-		<ngram count="30.000000" text="31"/>
-		<ngram count="34.000000" text="32"/>
-		<ngram count="23.000000" text="33"/>
-		<ngram count="24.000000" text="34"/>
-		<ngram count="70.000000" text="35"/>
-		<ngram count="35.000000" text="36"/>
-		<ngram count="36.000000" text="37"/>
-		<ngram count="33.000000" text="38"/>
-		<ngram count="34.000000" text="39"/>
-		<ngram count="1.000000" text="3A"/>
-		<ngram count="1.000000" text="3B"/>
-		<ngram count="22.000000" text="3D"/>
-		<ngram count="33.000000" text="3E"/>
-		<ngram count="1.000000" text="3G"/>
-		<ngram count="3.000000" text="3H"/>
-		<ngram count="2.000000" text="3N"/>
-		<ngram count="2.000000" text="3O"/>
-		<ngram count="6.000000" text="3S"/>
-		<ngram count="1.000000" text="3U"/>
-		<ngram count="1.000000" text="3V"/>
-		<ngram count="3.000000" text="3W"/>
-		<ngram count="804.000000" text="4"/>
-		<ngram count="164.000000" text="4 "/>
-		<ngram count="112.000000" text="40"/>
-		<ngram count="30.000000" text="41"/>
-		<ngram count="26.000000" text="42"/>
-		<ngram count="23.000000" text="43"/>
-		<ngram count="18.000000" text="44"/>
-		<ngram count="44.000000" text="45"/>
-		<ngram count="27.000000" text="46"/>
-		<ngram count="26.000000" text="47"/>
-		<ngram count="39.000000" text="48"/>
-		<ngram count="37.000000" text="49"/>
-		<ngram count="3.000000" text="4B"/>
-		<ngram count="21.000000" text="4D"/>
-		<ngram count="21.000000" text="4E"/>
-		<ngram count="1.000000" text="4G"/>
-		<ngram count="1.000000" text="4M"/>
-		<ngram count="1.000000" text="4N"/>
-		<ngram count="3.000000" text="4O"/>
-		<ngram count="1.000000" text="4R"/>
-		<ngram count="12.000000" text="4S"/>
-		<ngram count="1.000000" text="4T"/>
-		<ngram count="2.000000" text="4U"/>
-		<ngram count="1.000000" text="4V"/>
-		<ngram count="1.000000" text="4W"/>
-		<ngram count="1.000000" text="4Z"/>
-		<ngram count="1066.000000" text="5"/>
-		<ngram count="209.000000" text="5 "/>
-		<ngram count="206.000000" text="50"/>
-		<ngram count="18.000000" text="51"/>
-		<ngram count="30.000000" text="52"/>
-		<ngram count="34.000000" text="53"/>
-		<ngram count="41.000000" text="54"/>
-		<ngram count="40.000000" text="55"/>
-		<ngram count="33.000000" text="56"/>
-		<ngram count="32.000000" text="57"/>
-		<ngram count="16.000000" text="58"/>
-		<ngram count="26.000000" text="59"/>
-		<ngram count="2.000000" text="5A"/>
-		<ngram count="2.000000" text="5B"/>
-		<ngram count="1.000000" text="5C"/>
-		<ngram count="18.000000" text="5D"/>
-		<ngram count="14.000000" text="5E"/>
-		<ngram count="1.000000" text="5H"/>
-		<ngram count="1.000000" text="5K"/>
-		<ngram count="1.000000" text="5M"/>
-		<ngram count="1.000000" text="5N"/>
-		<ngram count="2.000000" text="5O"/>
-		<ngram count="1.000000" text="5R"/>
-		<ngram count="13.000000" text="5S"/>
-		<ngram count="1.000000" text="5U"/>
-		<ngram count="694.000000" text="6"/>
-		<ngram count="128.000000" text="6 "/>
-		<ngram count="130.000000" text="60"/>
-		<ngram count="32.000000" text="61"/>
-		<ngram count="31.000000" text="62"/>
-		<ngram count="21.000000" text="63"/>
-		<ngram count="24.000000" text="64"/>
-		<ngram count="23.000000" text="65"/>
-		<ngram count="19.000000" text="66"/>
-		<ngram count="17.000000" text="67"/>
-		<ngram count="22.000000" text="68"/>
-		<ngram count="10.000000" text="69"/>
-		<ngram count="2.000000" text="6B"/>
-		<ngram count="24.000000" text="6D"/>
-		<ngram count="15.000000" text="6E"/>
-		<ngram count="1.000000" text="6G"/>
-		<ngram count="1.000000" text="6H"/>
-		<ngram count="1.000000" text="6N"/>
-		<ngram count="1.000000" text="6O"/>
-		<ngram count="1.000000" text="6P"/>
-		<ngram count="13.000000" text="6S"/>
-		<ngram count="2.000000" text="6T"/>
-		<ngram count="2.000000" text="6U"/>
-		<ngram count="2.000000" text="6V"/>
-		<ngram count="1.000000" text="6Z"/>
-		<ngram count="559.000000" text="7"/>
-		<ngram count="107.000000" text="7 "/>
-		<ngram count="57.000000" text="70"/>
-		<ngram count="16.000000" text="71"/>
-		<ngram count="26.000000" text="72"/>
-		<ngram count="19.000000" text="73"/>
-		<ngram count="12.000000" text="74"/>
-		<ngram count="52.000000" text="75"/>
-		<ngram count="30.000000" text="76"/>
-		<ngram count="21.000000" text="77"/>
-		<ngram count="17.000000" text="78"/>
-		<ngram count="27.000000" text="79"/>
-		<ngram count="1.000000" text="7A"/>
-		<ngram count="2.000000" text="7B"/>
-		<ngram count="1.000000" text="7C"/>
-		<ngram count="18.000000" text="7D"/>
-		<ngram count="12.000000" text="7E"/>
-		<ngram count="1.000000" text="7G"/>
-		<ngram count="2.000000" text="7H"/>
-		<ngram count="1.000000" text="7N"/>
-		<ngram count="4.000000" text="7O"/>
-		<ngram count="7.000000" text="7S"/>
-		<ngram count="789.000000" text="8"/>
-		<ngram count="148.000000" text="8 "/>
-		<ngram count="63.000000" text="80"/>
-		<ngram count="31.000000" text="81"/>
-		<ngram count="45.000000" text="82"/>
-		<ngram count="54.000000" text="83"/>
-		<ngram count="69.000000" text="84"/>
-		<ngram count="90.000000" text="85"/>
-		<ngram count="26.000000" text="86"/>
-		<ngram count="29.000000" text="87"/>
-		<ngram count="27.000000" text="88"/>
-		<ngram count="28.000000" text="89"/>
-		<ngram count="13.000000" text="8D"/>
-		<ngram count="14.000000" text="8E"/>
-		<ngram count="1.000000" text="8H"/>
-		<ngram count="1.000000" text="8K"/>
-		<ngram count="1.000000" text="8M"/>
-		<ngram count="1.000000" text="8N"/>
-		<ngram count="2.000000" text="8O"/>
-		<ngram count="15.000000" text="8S"/>
-		<ngram count="2.000000" text="8T"/>
-		<ngram count="3.000000" text="8V"/>
-		<ngram count="574.000000" text="9"/>
-		<ngram count="102.000000" text="9 "/>
-		<ngram count="144.000000" text="90"/>
-		<ngram count="39.000000" text="91"/>
-		<ngram count="10.000000" text="92"/>
-		<ngram count="14.000000" text="93"/>
-		<ngram count="12.000000" text="94"/>
-		<ngram count="32.000000" text="95"/>
-		<ngram count="23.000000" text="96"/>
-		<ngram count="16.000000" text="97"/>
-		<ngram count="19.000000" text="98"/>
-		<ngram count="15.000000" text="99"/>
-		<ngram count="12.000000" text="9D"/>
-		<ngram count="12.000000" text="9E"/>
-		<ngram count="1.000000" text="9G"/>
-		<ngram count="1.000000" text="9H"/>
-		<ngram count="2.000000" text="9N"/>
-		<ngram count="1.000000" text="9O"/>
-		<ngram count="10.000000" text="9S"/>
-		<ngram count="1.000000" text="9V"/>
 		<ngram count="220986.000000" text="A"/>
 		<ngram count="2410.000000" text="A "/>
-		<ngram count="4.000000" text="A1"/>
-		<ngram count="1.000000" text="A2"/>
 		<ngram count="45093.000000" text="AA"/>
 		<ngram count="874.000000" text="AB"/>
 		<ngram count="5453.000000" text="AC"/>
@@ -4534,8 +2893,6 @@
 		<ngram count="3.000000" text="CZ"/>
 		<ngram count="185446.000000" text="D"/>
 		<ngram count="19645.000000" text="D "/>
-		<ngram count="2.000000" text="D1"/>
-		<ngram count="1.000000" text="D3"/>
 		<ngram count="21620.000000" text="DA"/>
 		<ngram count="259.000000" text="DB"/>
 		<ngram count="8.000000" text="DC"/>
@@ -4563,10 +2920,6 @@
 		<ngram count="412.000000" text="DZ"/>
 		<ngram count="572716.000000" text="E"/>
 		<ngram count="87702.000000" text="E "/>
-		<ngram count="6.000000" text="E1"/>
-		<ngram count="2.000000" text="E3"/>
-		<ngram count="1.000000" text="E7"/>
-		<ngram count="1.000000" text="E8"/>
 		<ngram count="608.000000" text="EA"/>
 		<ngram count="5682.000000" text="EB"/>
 		<ngram count="2250.000000" text="EC"/>
@@ -4595,11 +2948,6 @@
 		<ngram count="6250.000000" text="EZ"/>
 		<ngram count="19320.000000" text="F"/>
 		<ngram count="5141.000000" text="F "/>
-		<ngram count="5.000000" text="F1"/>
-		<ngram count="1.000000" text="F3"/>
-		<ngram count="3.000000" text="F4"/>
-		<ngram count="1.000000" text="F6"/>
-		<ngram count="2.000000" text="F7"/>
 		<ngram count="340.000000" text="FA"/>
 		<ngram count="82.000000" text="FB"/>
 		<ngram count="2.000000" text="FC"/>
@@ -4627,9 +2975,6 @@
 		<ngram count="92.000000" text="FZ"/>
 		<ngram count="96990.000000" text="G"/>
 		<ngram count="15428.000000" text="G "/>
-		<ngram count="1.000000" text="G1"/>
-		<ngram count="1.000000" text="G2"/>
-		<ngram count="1.000000" text="G3"/>
 		<ngram count="3807.000000" text="GA"/>
 		<ngram count="151.000000" text="GB"/>
 		<ngram count="46.000000" text="GC"/>
@@ -4682,7 +3027,6 @@
 		<ngram count="54.000000" text="HZ"/>
 		<ngram count="188202.000000" text="I"/>
 		<ngram count="1877.000000" text="I "/>
-		<ngram count="1.000000" text="I1"/>
 		<ngram count="652.000000" text="IA"/>
 		<ngram count="156.000000" text="IB"/>
 		<ngram count="5465.000000" text="IC"/>
@@ -4710,9 +3054,6 @@
 		<ngram count="783.000000" text="IZ"/>
 		<ngram count="63342.000000" text="J"/>
 		<ngram count="18511.000000" text="J "/>
-		<ngram count="5.000000" text="J1"/>
-		<ngram count="1.000000" text="J2"/>
-		<ngram count="1.000000" text="J3"/>
 		<ngram count="2566.000000" text="JA"/>
 		<ngram count="109.000000" text="JB"/>
 		<ngram count="11.000000" text="JC"/>
@@ -4764,7 +3105,6 @@
 		<ngram count="166.000000" text="KZ"/>
 		<ngram count="110757.000000" text="L"/>
 		<ngram count="12919.000000" text="L "/>
-		<ngram count="1.000000" text="L6"/>
 		<ngram count="14295.000000" text="LA"/>
 		<ngram count="319.000000" text="LB"/>
 		<ngram count="31.000000" text="LC"/>
@@ -4793,9 +3133,6 @@
 		<ngram count="250.000000" text="LZ"/>
 		<ngram count="69773.000000" text="M"/>
 		<ngram count="9104.000000" text="M "/>
-		<ngram count="1.000000" text="M1"/>
-		<ngram count="1.000000" text="M2"/>
-		<ngram count="1.000000" text="M3"/>
 		<ngram count="12193.000000" text="MA"/>
 		<ngram count="1101.000000" text="MB"/>
 		<ngram count="20.000000" text="MC"/>
@@ -4823,15 +3160,6 @@
 		<ngram count="111.000000" text="MZ"/>
 		<ngram count="315897.000000" text="N"/>
 		<ngram count="141176.000000" text="N "/>
-		<ngram count="1.000000" text="N0"/>
-		<ngram count="31.000000" text="N1"/>
-		<ngram count="11.000000" text="N2"/>
-		<ngram count="8.000000" text="N3"/>
-		<ngram count="3.000000" text="N4"/>
-		<ngram count="2.000000" text="N5"/>
-		<ngram count="2.000000" text="N7"/>
-		<ngram count="5.000000" text="N8"/>
-		<ngram count="1.000000" text="N9"/>
 		<ngram count="9907.000000" text="NA"/>
 		<ngram count="1764.000000" text="NB"/>
 		<ngram count="431.000000" text="NC"/>
@@ -4887,9 +3215,6 @@
 		<ngram count="556.000000" text="OZ"/>
 		<ngram count="36061.000000" text="P"/>
 		<ngram count="8796.000000" text="P "/>
-		<ngram count="3.000000" text="P1"/>
-		<ngram count="2.000000" text="P4"/>
-		<ngram count="1.000000" text="P8"/>
 		<ngram count="3072.000000" text="PA"/>
 		<ngram count="122.000000" text="PB"/>
 		<ngram count="11.000000" text="PC"/>
@@ -4920,13 +3245,6 @@
 		<ngram count="111.000000" text="QU"/>
 		<ngram count="173505.000000" text="R"/>
 		<ngram count="42809.000000" text="R "/>
-		<ngram count="9.000000" text="R1"/>
-		<ngram count="3.000000" text="R2"/>
-		<ngram count="1.000000" text="R3"/>
-		<ngram count="2.000000" text="R4"/>
-		<ngram count="1.000000" text="R5"/>
-		<ngram count="2.000000" text="R6"/>
-		<ngram count="3.000000" text="R9"/>
 		<ngram count="10081.000000" text="RA"/>
 		<ngram count="2237.000000" text="RB"/>
 		<ngram count="251.000000" text="RC"/>
@@ -4955,11 +3273,6 @@
 		<ngram count="1422.000000" text="RZ"/>
 		<ngram count="103685.000000" text="S"/>
 		<ngram count="30715.000000" text="S "/>
-		<ngram count="1.000000" text="S1"/>
-		<ngram count="1.000000" text="S2"/>
-		<ngram count="1.000000" text="S4"/>
-		<ngram count="3.000000" text="S5"/>
-		<ngram count="1.000000" text="S8"/>
 		<ngram count="1120.000000" text="SA"/>
 		<ngram count="420.000000" text="SB"/>
 		<ngram count="13822.000000" text="SC"/>
@@ -4987,14 +3300,6 @@
 		<ngram count="296.000000" text="SZ"/>
 		<ngram count="180340.000000" text="T"/>
 		<ngram count="68073.000000" text="T "/>
-		<ngram count="6.000000" text="T1"/>
-		<ngram count="2.000000" text="T2"/>
-		<ngram count="3.000000" text="T3"/>
-		<ngram count="1.000000" text="T4"/>
-		<ngram count="2.000000" text="T5"/>
-		<ngram count="1.000000" text="T6"/>
-		<ngram count="2.000000" text="T8"/>
-		<ngram count="1.000000" text="T9"/>
 		<ngram count="5652.000000" text="TA"/>
 		<ngram count="817.000000" text="TB"/>
 		<ngram count="44.000000" text="TC"/>

@@ -6,6 +6,6 @@ var searchData=
   ['nextprime',['nextPrime',['../classnumeric_1_1Prime.html#af9afe0d09423b69fb13b7d841d48d2fd',1,'numeric::Prime']]],
   ['ngramlanguagedetector',['NGramLanguageDetector',['../classnlp_1_1NGramLanguageDetector.html',1,'nlp']]],
   ['ngrams',['NGrams',['../classutil_1_1NGrams.html',1,'util']]],
-  ['ngrams',['NGrams',['../classutil_1_1NGrams.html#a3ec444dd85d851b00de4de81f05c1e53',1,'util::NGrams::NGrams()=delete'],['../classutil_1_1NGrams.html#aa84c9a111a31026d35d7dc5399949a48',1,'util::NGrams::ngrams(const std::string &amp;s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlphaNumeric)']]],
+  ['ngrams',['NGrams',['../classutil_1_1NGrams.html#a3ec444dd85d851b00de4de81f05c1e53',1,'util::NGrams::NGrams()=delete'],['../classutil_1_1NGrams.html#acbb90f2049c133f7524aae214f6105db',1,'util::NGrams::ngrams(const std::string &amp;s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlpha)']]],
   ['none',['NONE',['../classSVG_1_1SVG.html#adad70e278302823bd721b3f23bacfdffaf828cdb9af710c522098aa8251a1ce21',1,'SVG::SVG']]]
 ];

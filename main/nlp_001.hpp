@@ -71,6 +71,8 @@ void testModel()
     sizes.push_back(64);
     sizes.push_back(128);
     sizes.push_back(256);
+    sizes.push_back(512);
+    sizes.push_back(1024);
 
     // number of samples
     int nofSamples = 100;
@@ -132,7 +134,7 @@ void useModel()
     // init model
     NGramLanguageDetector ngld;
     ngld.setOption(IGNORE_CASE);
-    ngld.setOption(IGNORE_NON_ALPHANUMERIC);
+    //ngld.setOption(IGNORE_NON_ALPHANUMERIC);
 
     // read to xml
     ifstream ifs;

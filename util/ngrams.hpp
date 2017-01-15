@@ -24,7 +24,7 @@ namespace util
                 \param[in] s            the string to extract ngrams from
                 \param[in] ngramsSizes  the sizes of the ngrams to be extracted
              */
-            static std::map<std::string, int> ngrams(const std::string& s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlphaNumeric)
+            static std::map<std::string, int> ngrams(const std::string& s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlpha)
             {
                 std::map<std::string,int> count;
                 for(int i=0; i<s.size(); i++)
@@ -33,7 +33,7 @@ namespace util
                     {
                         if(i + l <= s.size())
                         {
-                            if(ignoreNonAlphaNumeric && containsNonAlphaNumeric(s, i, i + l))
+                            if(ignoreNonAlpha && containsNonAlpha(s, i, i + l))
                             {
                                 continue;
                             }
@@ -64,14 +64,21 @@ namespace util
                 return ret;
             }
 
-            static bool containsNonAlphaNumeric(const std::string& s, int from, int to)
+            static bool containsNonAlpha(const std::string& s, int from, int to)
             {
                 for(int i=from; i<to; i++)
                 {
-                    if(!std::isalnum(s[i]) && !std::isspace(s[i]))
+
+                    if(!std::isalpha(s[i]) && !std::isspace(s[i]))
                     {
                         return true;
                     }
+                    /*
+                    if(std::ispunct(s[i]) || std::iscntrl(s[i]) || std::isdigit(s[i]))
+                    {
+                        return true;
+                    }
+                    */
                 }
                 return false;
             }
