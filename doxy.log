@@ -1,7 +1,10 @@
+/home/joris/Code/alexandria/nlp/metaheuristictokenizer.hpp:11: warning: Compound nlp::MetaheuristicTokenizer is not documented.
+/home/joris/Code/alexandria/nlp/ipostagger.h:9: warning: Compound nlp::IPOSTagger is not documented.
 /home/joris/Code/alexandria/plotting/lineplot.hpp:17: warning: Compound plotting::LinePlot is not documented.
 /home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
 /home/joris/Code/alexandria/nlp/imodel.hpp:16: warning: Compound nlp::IModel is not documented.
 /home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.
+/home/joris/Code/alexandria/util/case.hpp:9: warning: Compound util::Case is not documented.
 /home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:16: warning: Compound graph_ui::SnapToGridGraphLayout is not documented.
 /home/joris/Code/alexandria/nlp/itokenizer.h:14: warning: Compound nlp::ITokenizer is not documented.
 /home/joris/Code/alexandria/geometry/convexhull.hpp:26: warning: Member wrap(const std::vector< PointType > &points) (function) of class geometry::ConvexHull is not documented.
@@ -44,6 +47,9 @@
 /home/joris/Code/alexandria/nlp/imodel.hpp:27: warning: Member setOption(IModelOption opt) (function) of class nlp::IModel is not documented.
 /home/joris/Code/alexandria/nlp/imodel.hpp:32: warning: Member unsetOption(IModelOption opt) (function) of class nlp::IModel is not documented.
 /home/joris/Code/alexandria/nlp/imodel.hpp:37: warning: Member isSet(IModelOption opt) const  (function) of class nlp::IModel is not documented.
+/home/joris/Code/alexandria/nlp/imodel.hpp:27: warning: Member setOption(IModelOption opt) (function) of class nlp::IModel is not documented.
+/home/joris/Code/alexandria/nlp/imodel.hpp:32: warning: Member unsetOption(IModelOption opt) (function) of class nlp::IModel is not documented.
+/home/joris/Code/alexandria/nlp/imodel.hpp:37: warning: Member isSet(IModelOption opt) const  (function) of class nlp::IModel is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:91: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/numeric/distribution.hpp:127: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
 /home/joris/Code/alexandria/plotting/lineplot.hpp:78: warning: Member plot() const  (function) of class plotting::LinePlot is not documented.
@@ -51,6 +57,8 @@
 /home/joris/Code/alexandria/svg/line.hpp:54: warning: Member clearStrokeArray() (function) of class SVG::Line is not documented.
 /home/joris/Code/alexandria/svg/path.hpp:17: warning: Member PathCommand (typedef) of class SVG::Path is not documented.
 /home/joris/Code/alexandria/svg/path.hpp:19: warning: Member Path(std::vector< PathCommand > cmds) (function) of class SVG::Path is not documented.
+/home/joris/Code/alexandria/util/case.hpp:15: warning: Member toUpper(const std::string &s) (function) of class util::Case is not documented.
+/home/joris/Code/alexandria/util/case.hpp:25: warning: Member toLower(const std::string &s) (function) of class util::Case is not documented.
 /home/joris/Code/alexandria/util/ngrams.hpp:23: warning: argument 'ngramsSizes' of command @param is not found in the argument list of util::NGrams::ngrams(const std::string &s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlpha)
 /home/joris/Code/alexandria/util/ngrams.hpp:23: warning: The following parameters of util::NGrams::ngrams(const std::string &s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlpha) are not documented:
   parameter 'maxNGramSize'

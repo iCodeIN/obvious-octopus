@@ -1,4 +1,5 @@
 <map id="nlp::ITokenizer" name="nlp::ITokenizer">
-<area shape="rect" id="node3" href="$classnlp_1_1DictionaryBasedTokenizer.html" title="nlp::DictionaryBasedTokenizer" alt="" coords="4,155,203,181"/>
-<area shape="rect" id="node2" href="$classnlp_1_1IModel.html" title="nlp::IModel" alt="" coords="61,5,147,32"/>
+<area shape="rect" id="node3" href="$classnlp_1_1DictionaryBasedTokenizer.html" title="nlp::DictionaryBasedTokenizer" alt="" coords="5,155,204,181"/>
+<area shape="rect" id="node4" href="$classnlp_1_1MetaheuristicTokenizer.html" title="nlp::MetaheuristicTokenizer" alt="" coords="230,155,412,181"/>
+<area shape="rect" id="node2" href="$classnlp_1_1IModel.html" title="nlp::IModel" alt="" coords="170,5,256,32"/>
 </map>

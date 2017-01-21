@@ -6,6 +6,8 @@ var searchData=
   ['maxentpostagger',['MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html',1,'nlp']]],
   ['maze',['Maze',['../classMaze.html',1,'Maze'],['../classMaze.html#a0334b6143afd7bbfb4cfe1774cd1c502',1,'Maze::Maze(int w, int h)'],['../classMaze.html#a81c6be816361ea11b61f9049e542b346',1,'Maze::Maze(const Maze &amp;)=delete'],['../classMaze.html#ad1ba7291c6f823f0e536a03ec1ca33c5',1,'Maze::Maze(Maze &amp;)=delete']]],
   ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html',1,'MazeDrawer'],['../classMazeDrawer.html#a6e658fa846d834d03e898034b5fb2c2e',1,'MazeDrawer::MazeDrawer()']]],
+  ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html',1,'nlp']]],
+  ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html#abb62046a7126f0cb230bbd21dff53ec4',1,'nlp::MetaheuristicTokenizer']]],
   ['metricfunctiontype',['MetricFunctionType',['../classgeometry_1_1KMeans.html#a78e25a0c58c43e228446bcd58f474ec3',1,'geometry::KMeans']]],
   ['min',['min',['../classmatrix_1_1IMatrix.html#af9ccc72c8f2e073a94136325a5a005de',1,'matrix::IMatrix']]],
   ['minimax',['Minimax',['../classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6',1,'game::Minimax']]],

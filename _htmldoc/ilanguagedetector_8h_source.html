@@ -106,23 +106,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classnlp_1_1ILanguageDetector.html">   14</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classnlp_1_1ILanguageDetector.html">ILanguageDetector</a> : <span class="keyword">public</span> <a class="code" href="classnlp_1_1IModel.html">IModel</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            <span class="keyword">virtual</span> std::map&lt;std::string, double&gt; <a class="code" href="classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b">detect</a>(<span class="keyword">const</span> std::string&amp; text) <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    };</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;}</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // ILANGUAGEDETECTOR_HPP</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classnlp_1_1ILanguageDetector.html">ILanguageDetector</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">virtual</span> ~<a class="code" href="classnlp_1_1ILanguageDetector.html">ILanguageDetector</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">virtual</span> std::map&lt;std::string, double&gt; <a class="code" href="classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b">detect</a>(<span class="keyword">const</span> std::string&amp; text) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    };</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;}</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="preprocessor">#endif // ILANGUAGEDETECTOR_HPP</span></div>
 <div class="ttc" id="classnlp_1_1ILanguageDetector_html"><div class="ttname"><a href="classnlp_1_1ILanguageDetector.html">nlp::ILanguageDetector</a></div><div class="ttdef"><b>Definition:</b> ilanguagedetector.h:14</div></div>
 <div class="ttc" id="classnlp_1_1ILanguageDetector_html_abf5308220122f063d5dc51ff0b0e992b"><div class="ttname"><a href="classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b">nlp::ILanguageDetector::detect</a></div><div class="ttdeci">virtual std::map&lt; std::string, double &gt; detect(const std::string &amp;text) const =0</div></div>
 <div class="ttc" id="classnlp_1_1IModel_html"><div class="ttname"><a href="classnlp_1_1IModel.html">nlp::IModel</a></div><div class="ttdef"><b>Definition:</b> imodel.hpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 15 2017 23:37:01 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 21 2017 19:28:51 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

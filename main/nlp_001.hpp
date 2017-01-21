@@ -49,7 +49,7 @@ void testModel()
     ifstream ifs;
     ifs.open ("ngrammodel.xml", ifstream::in);
 
-    // read graph
+    // read model
     auto elementPtr = std::unique_ptr<XML::IElement>(new XML::DefaultElementImpl(""));
     ifs >> *(elementPtr.get());
 

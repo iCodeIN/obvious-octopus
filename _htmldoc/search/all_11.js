@@ -4,7 +4,7 @@ var searchData=
   ['text',['Text',['../classSVG_1_1Text.html',1,'SVG']]],
   ['text',['Text',['../classSVG_1_1Text.html#a50f1954398efcfb9f7f26eb095b2b413',1,'SVG::Text::Text(int x, int y, const std::string &amp;text)'],['../classSVG_1_1Text.html#a1e68f0f0cdc963c9d2a0de340d6b61aa',1,'SVG::Text::Text(const Text &amp;)=delete'],['../classSVG_1_1Text.html#aad1d07419faee20c745534dc1f34a309',1,'SVG::Text::Text(Text &amp;)=delete']]],
   ['tictactoe',['TicTacToe',['../classgame_1_1TicTacToe.html',1,'game']]],
-  ['tokenize',['tokenize',['../classnlp_1_1DictionaryBasedTokenizer.html#a108f267ae529ea942c35724f8a68aeeb',1,'nlp::DictionaryBasedTokenizer::tokenize()'],['../classnlp_1_1ITokenizer.html#a4c07c22692ee44b76550ca895efb7d56',1,'nlp::ITokenizer::tokenize()']]],
+  ['tokenize',['tokenize',['../classnlp_1_1DictionaryBasedTokenizer.html#a684275a9398896981afea714ec00b10a',1,'nlp::DictionaryBasedTokenizer::tokenize()'],['../classnlp_1_1ITokenizer.html#a6e214c1d0f14557ac0224811b8860566',1,'nlp::ITokenizer::tokenize()'],['../classnlp_1_1MetaheuristicTokenizer.html#adf84bde2fdfc5474b3ee0b9c493ab526',1,'nlp::MetaheuristicTokenizer::tokenize()']]],
   ['torgb',['toRGB',['../classSVG_1_1HSV.html#aaca4ff81a71090a97884cb1625f48f50',1,'SVG::HSV']]],
   ['tostring',['toString',['../classnumeric_1_1BigInteger.html#a556eb805f62f99e926d93f8239d9701d',1,'numeric::BigInteger']]],
   ['totient',['totient',['../classnumeric_1_1Prime.html#a25d8d9d7ddb030a946586ee27c594ec7',1,'numeric::Prime']]],

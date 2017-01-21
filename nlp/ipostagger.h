@@ -8,6 +8,8 @@ namespace nlp
     class IPOSTagger : public IModel
     {
         public:
+            explicit IPOSTagger() = default;
+            virtual ~IPOSTagger() = default;
         private:
             // --- methods ---
             // --- members ---

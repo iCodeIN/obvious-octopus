@@ -33,17 +33,14 @@ namespace util
                     {
                         if(i + l <= s.size())
                         {
+                            auto ngram = s.substr(i, i + l);
                             if(ignoreNonAlpha && containsNonAlpha(s, i, i + l))
                             {
                                 continue;
                             }
                             if(ignoreCase)
                             {
-                                count[toUpper(s, i, i + l)]++;
-                            }
-                            else
-                            {
-                                count[s.substr(i, l)]++;
+                                count[ignoreCase ? Case::toUpper(ngram) : ngram]++;
                             }
                         }
                     }
@@ -53,16 +50,6 @@ namespace util
 
         private:
             // --- methods ---
-
-            static std::string toUpper(const std::string& s, int from, int to)
-            {
-                std::string ret;
-                for(int i=from; i<to; i++)
-                {
-                    ret += toupper(s[i]);
-                }
-                return ret;
-            }
 
             static bool containsNonAlpha(const std::string& s, int from, int to)
             {

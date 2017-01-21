@@ -104,7 +104,7 @@ Inheritance diagram for nlp::ITokenizer:</div>
 <div class="dyncontent">
 <div class="center"><img src="classnlp_1_1ITokenizer__inherit__graph.png" border="0" usemap="#nlp_1_1ITokenizer_inherit__map" alt="Inheritance graph"/></div>
 <map name="nlp_1_1ITokenizer_inherit__map" id="nlp_1_1ITokenizer_inherit__map">
-<area shape="rect" id="node3" href="classnlp_1_1DictionaryBasedTokenizer.html" title="nlp::DictionaryBasedTokenizer" alt="" coords="4,155,203,181"/><area shape="rect" id="node2" href="classnlp_1_1IModel.html" title="nlp::IModel" alt="" coords="61,5,147,32"/></map>
+<area shape="rect" id="node3" href="classnlp_1_1DictionaryBasedTokenizer.html" title="nlp::DictionaryBasedTokenizer" alt="" coords="5,155,204,181"/><area shape="rect" id="node4" href="classnlp_1_1MetaheuristicTokenizer.html" title="nlp::MetaheuristicTokenizer" alt="" coords="230,155,412,181"/><area shape="rect" id="node2" href="classnlp_1_1IModel.html" title="nlp::IModel" alt="" coords="170,5,256,32"/></map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
 Collaboration diagram for nlp::ITokenizer:</div>
@@ -116,8 +116,8 @@ Collaboration diagram for nlp::ITokenizer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a4c07c22692ee44b76550ca895efb7d56"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1ITokenizer.html#a4c07c22692ee44b76550ca895efb7d56">tokenize</a> (std::string s) const =0</td></tr>
-<tr class="separator:a4c07c22692ee44b76550ca895efb7d56"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6e214c1d0f14557ac0224811b8860566"><td class="memItemLeft" align="right" valign="top">virtual std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1ITokenizer.html#a6e214c1d0f14557ac0224811b8860566">tokenize</a> (const std::string &amp;s) const =0</td></tr>
+<tr class="separator:a6e214c1d0f14557ac0224811b8860566"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classnlp_1_1IModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnlp_1_1IModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classnlp_1_1IModel.html">nlp::IModel</a></td></tr>
 <tr class="memitem:acc7b584bf94862111dbfc4934db58888 inherit pub_methods_classnlp_1_1IModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1IModel.html#acc7b584bf94862111dbfc4934db58888">IModel</a> ()=default</td></tr>
 <tr class="separator:acc7b584bf94862111dbfc4934db58888 inherit pub_methods_classnlp_1_1IModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,7 +134,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
 <tr class="separator:a798cd3a4fbc3c64c1a60ab048e0bd4a8 inherit pub_methods_classnlp_1_1IModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a4c07c22692ee44b76550ca895efb7d56"></a>
+<a class="anchor" id="a6e214c1d0f14557ac0224811b8860566"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -144,7 +144,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
         <tr>
           <td class="memname">virtual std::vector&lt;int&gt; nlp::ITokenizer::tokenize </td>
           <td>(</td>
-          <td class="paramtype">std::string&#160;</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>s</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -157,7 +157,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
 </div><div class="memdoc">
 <dl class="section return"><dt>Returns</dt><dd>a tokenized std::string </dd></dl>
 
-<p>Implemented in <a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html#a108f267ae529ea942c35724f8a68aeeb">nlp::DictionaryBasedTokenizer</a>.</p>
+<p>Implemented in <a class="el" href="classnlp_1_1DictionaryBasedTokenizer.html#a684275a9398896981afea714ec00b10a">nlp::DictionaryBasedTokenizer</a>, and <a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#adf84bde2fdfc5474b3ee0b9c493ab526">nlp::MetaheuristicTokenizer</a>.</p>
 
 </div>
 </div>
@@ -167,7 +167,7 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isSet</b> (IModelOpti
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 15 2017 23:37:01 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 21 2017 19:28:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

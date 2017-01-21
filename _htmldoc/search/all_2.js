@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['case',['Case',['../classutil_1_1Case.html',1,'util']]],
+  ['case',['Case',['../classutil_1_1Case.html#a458bb942bd25e192d6e2e82d71710ab8',1,'util::Case']]],
   ['circle',['Circle',['../classSVG_1_1Circle.html',1,'SVG']]],
   ['circle',['Circle',['../classSVG_1_1Circle.html#a7d2535eede6a3fbdfd248e485b10352e',1,'SVG::Circle::Circle(int cx, int cy, int r)'],['../classSVG_1_1Circle.html#a887c4b053544ad243ddf3a7c343a6ef1',1,'SVG::Circle::Circle(const Circle &amp;)=delete'],['../classSVG_1_1Circle.html#a6e144c0d9f29cc7971ef7ede19ddd6a2',1,'SVG::Circle::Circle(Circle &amp;)=delete']]],
   ['clearfill',['clearFill',['../classSVG_1_1IElement.html#a655d72f0b66419251bae6dffbb7074cd',1,'SVG::IElement']]],
@@ -11,8 +13,8 @@ var searchData=
   ['clearviewbox',['clearViewBox',['../classSVG_1_1SVG.html#a0d4a62a0f2a0ff5c9a3b62b5f199e1ff',1,'SVG::SVG']]],
   ['cols',['cols',['../classmatrix_1_1BoostMatrixImpl.html#a07746e5540b51ea610548afcc25344bf',1,'matrix::BoostMatrixImpl::cols()'],['../classmatrix_1_1IMatrix.html#abc15a34b9c6db169768c8a5b30b7c815',1,'matrix::IMatrix::cols()']]],
   ['compare',['compare',['../classnumeric_1_1BigInteger.html#a7445c0a794735c54e5de02e5ba49d95c',1,'numeric::BigInteger']]],
-  ['convexhull',['ConvexHull',['../classgeometry_1_1ConvexHull.html',1,'geometry']]],
   ['convexhull',['ConvexHull',['../classgeometry_1_1ConvexHull.html#abd62e470217d60ff9289b40314f11947',1,'geometry::ConvexHull']]],
+  ['convexhull',['ConvexHull',['../classgeometry_1_1ConvexHull.html',1,'geometry']]],
   ['countchildren',['countChildren',['../classXML_1_1DefaultElementImpl.html#a57740f84580917649449374dbf212a50',1,'XML::DefaultElementImpl::countChildren()'],['../classXML_1_1IElement.html#a1e2b4dc6f81c118cf92b5254fb46b32c',1,'XML::IElement::countChildren()']]],
   ['cycle',['Cycle',['../classgraph_1_1CycleFinder.html#a540ea3d51572b6f1137f967e3b3c37c8',1,'graph::CycleFinder']]],
   ['cyclefinder',['CycleFinder',['../classgraph_1_1CycleFinder.html',1,'graph']]],
