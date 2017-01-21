@@ -15,7 +15,12 @@ namespace graph
     class IGraph
     {
         public:
+            /* default constructor
+             */
             explicit IGraph() = default;
+
+            /* default destructor
+             */
             virtual ~IGraph() = default;
 
             /*! Insert an edge into the graph

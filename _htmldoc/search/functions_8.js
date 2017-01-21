@@ -10,5 +10,7 @@ var searchData=
   ['insertvertex',['insertVertex',['../classgraph_1_1AdjecencyListGraph.html#abced78b89342fe405a04b53219a6cf81',1,'graph::AdjecencyListGraph::insertVertex()'],['../classgraph_1_1AdjecencyListTree.html#a0147d373ec195f25d2af909fc78ecb3c',1,'graph::AdjecencyListTree::insertVertex()'],['../classgraph_1_1IGraph.html#a9f899502cdfdd2d6c1c31686a38e1029',1,'graph::IGraph::insertVertex()']]],
   ['inversedft',['inverseDFT',['../classnumeric_1_1DFT.html#aefafd1c70aef4b273508fbd7f5308303',1,'numeric::DFT']]],
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
-  ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]]
+  ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]],
+  ['isset',['isSet',['../classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8',1,'nlp::IModel']]],
+  ['itree',['ITree',['../classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf',1,'graph::ITree']]]
 ];

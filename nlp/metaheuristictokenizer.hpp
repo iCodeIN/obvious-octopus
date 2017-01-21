@@ -17,11 +17,11 @@ namespace nlp
             {
             }
 
-            /*! destructor
+            /*! default destructor
              */
             virtual ~MetaheuristicTokenizer() = default;
 
-            // --- ITokenizer ---
+            //! --- ITokenizer ---
             std::vector<int> tokenize(const std::string& s) const override
             {
                 // perform initial tokenization

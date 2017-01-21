@@ -107,19 +107,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classgraph_1_1ITree.html">   16</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgraph_1_1ITree.html">ITree</a> : <span class="keyword">public</span> <a class="code" href="classgraph_1_1IGraph.html">IGraph</a>&lt;T&gt;</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> std::set&lt;T&gt; <a class="code" href="classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44">leaves</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf">ITree</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">virtual</span> T <a class="code" href="classgraph_1_1ITree.html#ad6c2d22aab71ccb1bed8e225813eac6b">parent</a>(<span class="keyword">const</span> T&amp; vertex) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgraph_1_1ITree.html#a01de6b8b963e7746030c8d93e9b7f810">~ITree</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">virtual</span> T <a class="code" href="classgraph_1_1ITree.html#acd968eb4305300eeba5f9d358caf1445">root</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> std::set&lt;T&gt; <a class="code" href="classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44">leaves</a>() <span class="keyword">const</span> = 0;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classgraph_1_1ITree.html#ad0c371eaba88df60210583d393ba0d70">depth</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="preprocessor">#endif // ITREE_HPP</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="keyword">virtual</span> T <a class="code" href="classgraph_1_1ITree.html#ad6c2d22aab71ccb1bed8e225813eac6b">parent</a>(<span class="keyword">const</span> T&amp; vertex) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keyword">virtual</span> T <a class="code" href="classgraph_1_1ITree.html#acd968eb4305300eeba5f9d358caf1445">root</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classgraph_1_1ITree.html#ad0c371eaba88df60210583d393ba0d70">depth</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // ITREE_HPP</span></div>
 <div class="ttc" id="classgraph_1_1ITree_html_ad6c2d22aab71ccb1bed8e225813eac6b"><div class="ttname"><a href="classgraph_1_1ITree.html#ad6c2d22aab71ccb1bed8e225813eac6b">graph::ITree::parent</a></div><div class="ttdeci">virtual T parent(const T &amp;vertex) const =0</div></div>
 <div class="ttc" id="classgraph_1_1ITree_html_a397b04fa22a1b26ac5828c9a31ebbd44"><div class="ttname"><a href="classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44">graph::ITree::leaves</a></div><div class="ttdeci">virtual const std::set&lt; T &gt; leaves() const =0</div></div>
+<div class="ttc" id="classgraph_1_1ITree_html_a01de6b8b963e7746030c8d93e9b7f810"><div class="ttname"><a href="classgraph_1_1ITree.html#a01de6b8b963e7746030c8d93e9b7f810">graph::ITree::~ITree</a></div><div class="ttdeci">virtual ~ITree()=default</div></div>
+<div class="ttc" id="classgraph_1_1ITree_html_a73b96ff7fdd1623fc77ca8fdd751b1bf"><div class="ttname"><a href="classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf">graph::ITree::ITree</a></div><div class="ttdeci">ITree()=default</div></div>
 <div class="ttc" id="classgraph_1_1ITree_html_ad0c371eaba88df60210583d393ba0d70"><div class="ttname"><a href="classgraph_1_1ITree.html#ad0c371eaba88df60210583d393ba0d70">graph::ITree::depth</a></div><div class="ttdeci">virtual int depth() const =0</div></div>
 <div class="ttc" id="classgraph_1_1ITree_html"><div class="ttname"><a href="classgraph_1_1ITree.html">graph::ITree</a></div><div class="ttdef"><b>Definition:</b> itree.hpp:16</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html"><div class="ttname"><a href="classgraph_1_1IGraph.html">graph::IGraph</a></div><div class="ttdef"><b>Definition:</b> igraph.hpp:15</div></div>
@@ -127,7 +133,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 19:28:51 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

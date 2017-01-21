@@ -10,6 +10,7 @@ var searchData=
   ['_7eielement',['~IElement',['../classSVG_1_1IElement.html#ab9492424a820131384e2ac4448cb8b31',1,'SVG::IElement::~IElement()'],['../classXML_1_1IElement.html#af130a92f3022e56bbe36a6013a949449',1,'XML::IElement::~IElement()']]],
   ['_7eimatrix',['~IMatrix',['../classmatrix_1_1IMatrix.html#a6c12c83081d1bba960b628a7dfec7f21',1,'matrix::IMatrix']]],
   ['_7eimodel',['~IModel',['../classnlp_1_1IModel.html#ad70602e49682254ed6346a088ff105ff',1,'nlp::IModel']]],
+  ['_7eitree',['~ITree',['../classgraph_1_1ITree.html#a01de6b8b963e7746030c8d93e9b7f810',1,'graph::ITree']]],
   ['_7eline',['~Line',['../classSVG_1_1Line.html#a7083a62f9e5cbc44bba5baf63116f758',1,'SVG::Line']]],
   ['_7elineplot',['~LinePlot',['../classplotting_1_1LinePlot.html#aed57fd6161c03296c732d45db1621234',1,'plotting::LinePlot']]],
   ['_7emaze',['~Maze',['../classMaze.html#a84a64c830d5ad80c8e13482c31122cd1',1,'Maze']]],
@@ -19,5 +20,6 @@ var searchData=
   ['_7epolyline',['~Polyline',['../classSVG_1_1Polyline.html#a4b018d4e425d24418b706f7c008b77c1',1,'SVG::Polyline']]],
   ['_7erectangle',['~Rectangle',['../classSVG_1_1Rectangle.html#ad720a126b1d2ffed1c343bfea3e8e695',1,'SVG::Rectangle']]],
   ['_7esvg',['~SVG',['../classSVG_1_1SVG.html#adc050d33a0abf55a438ef5f23ef7c7a2',1,'SVG::SVG']]],
-  ['_7etext',['~Text',['../classSVG_1_1Text.html#a42aac6a3e87d571c7e10a4cb6c14ce8b',1,'SVG::Text']]]
+  ['_7etext',['~Text',['../classSVG_1_1Text.html#a42aac6a3e87d571c7e10a4cb6c14ce8b',1,'SVG::Text']]],
+  ['_7etictactoe',['~TicTacToe',['../classgame_1_1TicTacToe.html#a9a9d64cee4add4b8608fee8823775c5a',1,'game::TicTacToe']]]
 ];

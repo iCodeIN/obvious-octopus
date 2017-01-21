@@ -12,6 +12,7 @@ var searchData=
   ['setminxmargin',['setMinXMargin',['../classgraph__ui_1_1AbstractGraphLayout.html#a81c97b688b2275ca9d6ca594335ce8b7',1,'graph_ui::AbstractGraphLayout']]],
   ['setminymargin',['setMinYMargin',['../classgraph__ui_1_1AbstractGraphLayout.html#a33b6feef6b8e09565621b66efc9ace74',1,'graph_ui::AbstractGraphLayout']]],
   ['setname',['setName',['../classXML_1_1DefaultElementImpl.html#a3e5e12d8f89190ca760fd217962fd133',1,'XML::DefaultElementImpl::setName()'],['../classXML_1_1IElement.html#a506878ed2740a37f4998c569d6a052be',1,'XML::IElement::setName()']]],
+  ['setoption',['setOption',['../classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b',1,'nlp::IModel']]],
   ['setpreserveaspectratio',['setPreserveAspectRatio',['../classSVG_1_1SVG.html#a170cfcf2de3915f5fe54ee754a2405e2',1,'SVG::SVG']]],
   ['setstroke',['setStroke',['../classSVG_1_1IElement.html#ae3b4f886c7070fc173755443625d1e9e',1,'SVG::IElement']]],
   ['setstrokeopacity',['setStrokeOpacity',['../classSVG_1_1IElement.html#ae765e1bdf662ed8363f84aefa3778492',1,'SVG::IElement']]],

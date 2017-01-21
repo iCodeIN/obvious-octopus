@@ -23,7 +23,9 @@ var searchData=
   ['ipostagger',['IPOSTagger',['../classnlp_1_1IPOSTagger.html',1,'nlp']]],
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
   ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]],
+  ['isset',['isSet',['../classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8',1,'nlp::IModel']]],
   ['itokenizer',['ITokenizer',['../classnlp_1_1ITokenizer.html',1,'nlp']]],
+  ['itree',['ITree',['../classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf',1,'graph::ITree']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html',1,'graph']]],
   ['itree_3c_20bktreenode_3c_20t_20_3e_20_2a_20_3e',['ITree&lt; BKTreeNode&lt; T &gt; * &gt;',['../classgraph_1_1ITree.html',1,'graph']]]
 ];

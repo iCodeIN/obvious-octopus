@@ -18,6 +18,14 @@ namespace game
     {
         public:
 
+            /*! default constructor
+             */
+            explicit TicTacToe() = default;
+
+            /*! default destructor
+             */
+            virtual ~TicTacToe = default;
+
             /*! main method for demo tic-tac-toe game with minimax
              */
             static void play()

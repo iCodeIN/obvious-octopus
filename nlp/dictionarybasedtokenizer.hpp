@@ -6,7 +6,6 @@
 #include "nlp/itokenizer.h"
 #include "util/case.hpp"
 #include "xml/xml.hpp"
-#include <iostream> // debug
 
 namespace nlp
 {
@@ -16,17 +15,17 @@ namespace nlp
     {
         public:
 
-            /*! constructor
+            /*! default constructor
              */
             explicit DictionaryBasedTokenizer()
             {
             }
 
-            /*! destructor
+            /*! default destructor
              */
             virtual ~DictionaryBasedTokenizer() = default;
 
-            // --- ITokenizer ---
+            //! --- ITokenizer ---
             std::vector<int> tokenize(const std::string& s) const override
             {
                 std::vector<int> tokenBoundaries;

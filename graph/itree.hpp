@@ -16,6 +16,14 @@ namespace graph
     class ITree : public IGraph<T>
     {
         public:
+            /*! default constructor
+             */
+            explicit ITree() = default;
+
+            /*! default destructor
+             */
+            virtual ~ITree() = default;
+
             /*! \return the leaves of the ITree
              */
             virtual const std::set<T> leaves() const = 0;

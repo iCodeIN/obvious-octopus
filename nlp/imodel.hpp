@@ -24,16 +24,22 @@ namespace nlp
              */
             virtual ~IModel() = default;
 
+            /*! Set a flag on this IModel
+             */
             void setOption(IModelOption opt)
             {
                 opts.insert(opt);
             }
 
+            /*! Unset a flag on this IModel
+             */
             void unsetOption(IModelOption opt)
             {
                 opts.erase(opt);
             }
 
+            /*! \return true iff  the given IModelOption was set, false otherwise
+             */
             bool isSet(IModelOption opt) const
             {
                 return opts.find(opt) != opts.cend();

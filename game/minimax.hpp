@@ -38,6 +38,8 @@ namespace game
             {
             }
 
+            virtual ~Minimax() = default;
+
             /*! \return the next (optimal) position given the starting positions
                 This method uses minimax, and alpha-beta pruning.
              */

@@ -118,6 +118,10 @@ Collaboration diagram for graph::ITree&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:a73b96ff7fdd1623fc77ca8fdd751b1bf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf">ITree</a> ()=default</td></tr>
+<tr class="separator:a73b96ff7fdd1623fc77ca8fdd751b1bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a01de6b8b963e7746030c8d93e9b7f810"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#a01de6b8b963e7746030c8d93e9b7f810">~ITree</a> ()=default</td></tr>
+<tr class="separator:a01de6b8b963e7746030c8d93e9b7f810"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a397b04fa22a1b26ac5828c9a31ebbd44"><td class="memItemLeft" align="right" valign="top">virtual const std::set&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44">leaves</a> () const =0</td></tr>
 <tr class="separator:a397b04fa22a1b26ac5828c9a31ebbd44"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6c2d22aab71ccb1bed8e225813eac6b"><td class="memItemLeft" align="right" valign="top">virtual T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1ITree.html#ad6c2d22aab71ccb1bed8e225813eac6b">parent</a> (const T &amp;vertex) const =0</td></tr>
@@ -151,7 +155,60 @@ Public Member Functions</h2></td></tr>
 class graph::ITree&lt; T &gt;</h3>
 
 <p>In computer science, a tree is a widely used abstract data type (ADT)—or data structure implementing this ADT—that simulates a hierarchical tree structure, with a root value and subtrees of children with a parent node, represented as a set of linked nodes. A tree data structure can be defined recursively (locally) as a collection of nodes (starting at a root node), where each node is a data structure consisting of a value, together with a list of references to nodes (the "children"), with the constraints that no reference is duplicated, and node points to the root. Alternatively, a tree can be defined abstractly as a whole (globally) as an ordered tree, with a value assigned to each node. Both these perspectives are useful: while a tree can be analyzed mathematically as a whole, when actually represented as a data structure it is usually represented and worked with separately by node (rather than as a list of nodes and an adjacency list of edges between nodes, as one may represent a digraph, for instance). For example, looking at a tree as a whole, one can talk about "the parent node" of a given node, but in general as a data structure a given node only contains the list of its children, but does not contain a reference to its parent (if any). </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a73b96ff7fdd1623fc77ca8fdd751b1bf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgraph_1_1ITree.html">graph::ITree</a>&lt; T &gt;::<a class="el" href="classgraph_1_1ITree.html">ITree</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a01de6b8b963e7746030c8d93e9b7f810"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classgraph_1_1ITree.html">graph::ITree</a>&lt; T &gt;::~<a class="el" href="classgraph_1_1ITree.html">ITree</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default destructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="ad0c371eaba88df60210583d393ba0d70"></a>
 <div class="memitem">
 <div class="memproto">
@@ -271,7 +328,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 19:28:52 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

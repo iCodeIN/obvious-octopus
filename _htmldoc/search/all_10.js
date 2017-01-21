@@ -13,6 +13,7 @@ var searchData=
   ['setminxmargin',['setMinXMargin',['../classgraph__ui_1_1AbstractGraphLayout.html#a81c97b688b2275ca9d6ca594335ce8b7',1,'graph_ui::AbstractGraphLayout']]],
   ['setminymargin',['setMinYMargin',['../classgraph__ui_1_1AbstractGraphLayout.html#a33b6feef6b8e09565621b66efc9ace74',1,'graph_ui::AbstractGraphLayout']]],
   ['setname',['setName',['../classXML_1_1DefaultElementImpl.html#a3e5e12d8f89190ca760fd217962fd133',1,'XML::DefaultElementImpl::setName()'],['../classXML_1_1IElement.html#a506878ed2740a37f4998c569d6a052be',1,'XML::IElement::setName()']]],
+  ['setoption',['setOption',['../classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b',1,'nlp::IModel']]],
   ['setpreserveaspectratio',['setPreserveAspectRatio',['../classSVG_1_1SVG.html#a170cfcf2de3915f5fe54ee754a2405e2',1,'SVG::SVG']]],
   ['setstroke',['setStroke',['../classSVG_1_1IElement.html#ae3b4f886c7070fc173755443625d1e9e',1,'SVG::IElement']]],
   ['setstrokeopacity',['setStrokeOpacity',['../classSVG_1_1IElement.html#ae765e1bdf662ed8363f84aefa3778492',1,'SVG::IElement']]],
@@ -31,12 +32,12 @@ var searchData=
   ['snaptogridgraphlayout',['SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html',1,'graph_ui']]],
   ['sometimes',['sometimes',['../classmeta_1_1AbstractMetaHeuristic.html#ae4fb328cee7109eedc3aa0eb8be5c888',1,'meta::AbstractMetaHeuristic']]],
   ['sorteddft',['sortedDFT',['../classnumeric_1_1DFT.html#a95ef27ca473b1381784407bd7acec82f',1,'numeric::DFT']]],
-  ['split',['Split',['../classutil_1_1Split.html',1,'util']]],
   ['split',['split',['../classutil_1_1Split.html#a89b174397884de389a830e65885e8a38',1,'util::Split::split(const std::string &amp;s, std::function&lt; bool(char)&gt; splitFunction)'],['../classutil_1_1Split.html#a58f5584404cecf2ea5c7fc1f8f630988',1,'util::Split::Split()=delete']]],
+  ['split',['Split',['../classutil_1_1Split.html',1,'util']]],
   ['splitpunctandspace',['splitPunctAndSpace',['../classutil_1_1Split.html#a1ae0a27c2362440c1cd0321be9c698b0',1,'util::Split']]],
   ['sub',['sub',['../classnumeric_1_1BigInteger.html#a2e3cddb33588b58bfd4f61dbad82182f',1,'numeric::BigInteger']]],
-  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]],
   ['svg',['SVG',['../classSVG_1_1SVG.html#ac85aa23716d229d89b26e237365d9d98',1,'SVG::SVG::SVG()=default'],['../classSVG_1_1SVG.html#a91f8c40460dd462d733996a1ef0db511',1,'SVG::SVG::SVG(const SVG &amp;)=delete'],['../classSVG_1_1SVG.html#a2031b2ba044abb2252c54ac37f0297dc',1,'SVG::SVG::SVG(SVG &amp;)=delete']]],
+  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]],
   ['swapcols',['swapCols',['../classmatrix_1_1IMatrix.html#a156d2f262c656ea62f0da784ced4fb26',1,'matrix::IMatrix']]],
   ['swaprows',['swapRows',['../classmatrix_1_1IMatrix.html#a747304978363f970807830364f539e63',1,'matrix::IMatrix']]]
 ];

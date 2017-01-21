@@ -115,36 +115,39 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classnlp_1_1IModel.html#ad70602e49682254ed6346a088ff105ff">~IModel</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keywordtype">void</span> setOption(IModelOption opt)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                opts.insert(opt);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordtype">void</span> unsetOption(IModelOption opt)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                opts.erase(opt);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            <span class="keywordtype">bool</span> isSet(IModelOption opt)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> opts.find(opt) != opts.cend();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            std::set&lt;IModelOption&gt; opts;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    };</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;}</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="preprocessor">#endif // IMODEL_HPP</span></div>
+<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">   29</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">setOption</a>(IModelOption opt)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                opts.insert(opt);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classnlp_1_1IModel.html#a02b027809cfd0d0bb2f6c81f153bd283">   36</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classnlp_1_1IModel.html#a02b027809cfd0d0bb2f6c81f153bd283">unsetOption</a>(IModelOption opt)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                opts.erase(opt);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8">   43</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8">isSet</a>(IModelOption opt)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">return</span> opts.find(opt) != opts.cend();</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            std::set&lt;IModelOption&gt; opts;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    };</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="preprocessor">#endif // IMODEL_HPP</span></div>
+<div class="ttc" id="classnlp_1_1IModel_html_a14f089172434d3bd98b0599ed8cd3e3b"><div class="ttname"><a href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">nlp::IModel::setOption</a></div><div class="ttdeci">void setOption(IModelOption opt)</div><div class="ttdef"><b>Definition:</b> imodel.hpp:29</div></div>
+<div class="ttc" id="classnlp_1_1IModel_html_a798cd3a4fbc3c64c1a60ab048e0bd4a8"><div class="ttname"><a href="classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8">nlp::IModel::isSet</a></div><div class="ttdeci">bool isSet(IModelOption opt) const </div><div class="ttdef"><b>Definition:</b> imodel.hpp:43</div></div>
 <div class="ttc" id="classnlp_1_1IModel_html_ad70602e49682254ed6346a088ff105ff"><div class="ttname"><a href="classnlp_1_1IModel.html#ad70602e49682254ed6346a088ff105ff">nlp::IModel::~IModel</a></div><div class="ttdeci">virtual ~IModel()=default</div></div>
 <div class="ttc" id="classnlp_1_1IModel_html_acc7b584bf94862111dbfc4934db58888"><div class="ttname"><a href="classnlp_1_1IModel.html#acc7b584bf94862111dbfc4934db58888">nlp::IModel::IModel</a></div><div class="ttdeci">IModel()=default</div></div>
 <div class="ttc" id="classnlp_1_1IModel_html"><div class="ttname"><a href="classnlp_1_1IModel.html">nlp::IModel</a></div><div class="ttdef"><b>Definition:</b> imodel.hpp:15</div></div>
+<div class="ttc" id="classnlp_1_1IModel_html_a02b027809cfd0d0bb2f6c81f153bd283"><div class="ttname"><a href="classnlp_1_1IModel.html#a02b027809cfd0d0bb2f6c81f153bd283">nlp::IModel::unsetOption</a></div><div class="ttdeci">void unsetOption(IModelOption opt)</div><div class="ttdef"><b>Definition:</b> imodel.hpp:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 19:28:51 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -2,8 +2,8 @@
 #ifndef ADJECENCYLISTTREE_HPP
 #define ADJECENCYLISTTREE_HPP
 
-#include "adjecencylistgraph.hpp"
-#include "itree.hpp"
+#include "graph/adjecencylistgraph.hpp"
+#include "graph/itree.hpp"
 
 #include <assert.h>
 #include <memory>
@@ -28,7 +28,7 @@ namespace graph
              */
             virtual ~AdjecencyListTree() = default;
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual void insertEdge(const T& source, const T& target) override
             {
                 assert(m_graph->incoming(target).size() == 0);
@@ -37,55 +37,55 @@ namespace graph
                 m_graph->insertEdge(source, target);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual void eraseEdge(const T& source, const T& target) override
             {
                 m_graph->eraseEdge(source, target);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual bool hasEdge(const T& source, const T& target) const override
             {
                 return m_graph->hasEdge(source, target);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual const std::set<T> outgoing(const T& source) const override
             {
                 return m_graph->outgoing(source);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual const std::set<T> incoming(const T& target) const override
             {
                 return m_graph->incoming(target);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual const std::set<T> vertices() const override
             {
                 return m_graph->vertices();
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual void insertVertex(const T& vertex) override
             {
                 m_graph->insertVertex(vertex);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual void eraseVertex(const T& vertex) override
             {
                 m_graph->eraseVertex(vertex);
             }
 
-            // --- IGraph ---
+            //! --- IGraph ---
             virtual bool hasVertex(const T& vertex) const override
             {
                 return m_graph->hasVertex(vertex);
             }
 
-            // --- ITree ---
+            //! --- ITree ---
             virtual const std::set<T> leaves() const override
             {
                 std::set<T> l;
@@ -99,14 +99,14 @@ namespace graph
                 return l;
             }
 
-            // --- ITree ---
+            //! --- ITree ---
             virtual T parent(const T& vertex) const override
             {
                 auto &in = incoming(vertex);
                 return *in.begin();
             }
 
-            // --- ITree ---
+            //! --- ITree ---
             virtual T root() const override
             {
                 std::set<T> r;
@@ -121,7 +121,7 @@ namespace graph
                 return *(r.begin());
             }
 
-            // --- ITree ---
+            //! --- ITree ---
             virtual int depth() const override
             {
                 return depthAt(root());

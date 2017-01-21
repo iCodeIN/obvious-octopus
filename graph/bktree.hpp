@@ -60,6 +60,8 @@ namespace graph
             {
             }
 
+            /* default destructor
+             */
             virtual ~BKTree()
             {
                 for(auto &vertex : this->vertices())

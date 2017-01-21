@@ -107,8 +107,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="comment">// init model</span></div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classnlp_1_1NGramLanguageDetector.html">NGramLanguageDetector</a> ngld;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    ngld.setOption(IGNORE_CASE);</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ngld.setOption(IGNORE_NON_ALPHANUMERIC);</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    ngld.<a class="code" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">setOption</a>(IGNORE_CASE);</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    ngld.<a class="code" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">setOption</a>(IGNORE_NON_ALPHANUMERIC);</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="comment">// train</span></div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    ngld.<a class="code" href="classnlp_1_1NGramLanguageDetector.html#a95a766d2da6546fed3eb073d2117f7e3">train</a>(FileToString::readFile(<span class="stringliteral">&quot;/home/joris/Code/alexandria/corpus/en.txt&quot;</span>), <span class="stringliteral">&quot;EN&quot;</span>);</div>
@@ -137,8 +137,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;{</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="comment">// init model</span></div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    <a class="code" href="classnlp_1_1NGramLanguageDetector.html">NGramLanguageDetector</a> ngld;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ngld.setOption(IGNORE_CASE);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ngld.setOption(IGNORE_NON_ALPHANUMERIC);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    ngld.<a class="code" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">setOption</a>(IGNORE_CASE);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    ngld.<a class="code" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">setOption</a>(IGNORE_NON_ALPHANUMERIC);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="comment">// read to xml</span></div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    ifstream ifs;</div>
@@ -228,7 +228,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;{</div>
 <div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    <span class="comment">// init model</span></div>
 <div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <a class="code" href="classnlp_1_1NGramLanguageDetector.html">NGramLanguageDetector</a> ngld;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    ngld.setOption(IGNORE_CASE);</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    ngld.<a class="code" href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">setOption</a>(IGNORE_CASE);</div>
 <div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="comment">//ngld.setOption(IGNORE_NON_ALPHANUMERIC);</span></div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;</div>
 <div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="comment">// read to xml</span></div>
@@ -264,6 +264,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;}</div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html">nlp::NGramLanguageDetector</a></div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:22</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_afd29d6166c5da4db3a515d258bdc2c20"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#afd29d6166c5da4db3a515d258bdc2c20">nlp::NGramLanguageDetector::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:62</div></div>
+<div class="ttc" id="classnlp_1_1IModel_html_a14f089172434d3bd98b0599ed8cd3e3b"><div class="ttname"><a href="classnlp_1_1IModel.html#a14f089172434d3bd98b0599ed8cd3e3b">nlp::IModel::setOption</a></div><div class="ttdeci">void setOption(IModelOption opt)</div><div class="ttdef"><b>Definition:</b> imodel.hpp:29</div></div>
 <div class="ttc" id="classXML_1_1DefaultElementImpl_html"><div class="ttname"><a href="classXML_1_1DefaultElementImpl.html">XML::DefaultElementImpl</a></div><div class="ttdef"><b>Definition:</b> defaultelementimpl.hpp:19</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_a5afb1f99b79b3a1954d3fccfc20d1bfa"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#a5afb1f99b79b3a1954d3fccfc20d1bfa">nlp::NGramLanguageDetector::fromXML</a></div><div class="ttdeci">virtual void fromXML(std::unique_ptr&lt; XML::IElement &gt; xml)</div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:90</div></div>
 <div class="ttc" id="classnlp_1_1NGramLanguageDetector_html_a2174a7aafadd6411ebee123d24670cf2"><div class="ttname"><a href="classnlp_1_1NGramLanguageDetector.html#a2174a7aafadd6411ebee123d24670cf2">nlp::NGramLanguageDetector::detect</a></div><div class="ttdeci">std::map&lt; std::string, double &gt; detect(const std::string &amp;text) const </div><div class="ttdef"><b>Definition:</b> ngramlanguagedetector.hpp:44</div></div>
@@ -271,7 +272,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 19:28:51 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

@@ -5,6 +5,8 @@
 
 namespace util
 {
+    /*! Utility class for converting to uppercase and lowercase
+     */
     class Case final
     {
         public:
@@ -12,6 +14,8 @@ namespace util
              */
             explicit Case() = delete;
 
+            /*! \return an std::string where each character of the input has been converted to uppercase by calling std::toupper
+             */
             static std::string toUpper(const std::string& s)
             {
                 std::string retval;
@@ -22,6 +26,8 @@ namespace util
                 return retval;
             }
 
+            /*! \return an std::string where each character of the input has been converted to lowercase by calling std::tolower
+             */
             static std::string toLower(const std::string& s)
             {
                 std::string retval;
