@@ -10,6 +10,8 @@
 
 namespace graph_ui
 {
+    /*! common abstract base class for graph layout algorithms
+     */
     template <typename T>
     class IGraphLayout
     {

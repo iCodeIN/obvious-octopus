@@ -11,6 +11,9 @@
 
 namespace graph_ui
 {
+    /*! IGraphLayout implementation that forces all edges and vertices locations (produced by another IGraphLayout) to be integer multiples of a given constant.
+        This has the visual effect of snapping the IGraphLayout to a grid.
+     */
     template <typename T>
     class SnapToGridGraphLayout : public AbstractGraphLayout<T>
     {

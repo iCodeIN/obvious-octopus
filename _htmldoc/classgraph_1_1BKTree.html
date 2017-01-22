@@ -119,13 +119,12 @@ Collaboration diagram for graph::BKTree&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a4a5ab8ed577cf04d5138c8b43d3e267d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a4a5ab8ed577cf04d5138c8b43d3e267d"></a>
-using&#160;</td><td class="memItemRight" valign="bottom"><b>MetricFunctionType</b> = std::function&lt; int(const T &amp;t0, const T &amp;t1)&gt;</td></tr>
+<tr class="memitem:a4a5ab8ed577cf04d5138c8b43d3e267d"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d">MetricFunctionType</a> = std::function&lt; int(const T &amp;t0, const T &amp;t1)&gt;</td></tr>
 <tr class="separator:a4a5ab8ed577cf04d5138c8b43d3e267d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:ac0539e5c48a9c4e1de0078f7e6d89b1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1BKTree.html#ac0539e5c48a9c4e1de0078f7e6d89b1d">BKTree</a> (const MetricFunctionType &amp;metric)</td></tr>
+<tr class="memitem:ac0539e5c48a9c4e1de0078f7e6d89b1d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1BKTree.html#ac0539e5c48a9c4e1de0078f7e6d89b1d">BKTree</a> (const <a class="el" href="classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d">MetricFunctionType</a> &amp;metric)</td></tr>
 <tr class="separator:ac0539e5c48a9c4e1de0078f7e6d89b1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aac3398fca981d84d4c767c4a4a1a913e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1BKTree.html#aac3398fca981d84d4c767c4a4a1a913e">insert</a> (const T &amp;t)</td></tr>
 <tr class="separator:aac3398fca981d84d4c767c4a4a1a913e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -203,7 +202,23 @@ virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hre
 class graph::BKTree&lt; T &gt;</h3>
 
 <p>A BK-tree is a metric tree suggested by Walter Austin Burkhard and Robert M. Keller specifically adapted to discrete metric spaces. For simplicity, let us consider integer discrete metric d(x, y). Then, BK-tree is defined in the following way; An arbitrary element a is selected as root node. The root node may have zero or more subtrees. The k-th subtree is recursively built of all elements b such that d(a, b) = k. BK-trees can be used for approximate string matching in a dictionary </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+</div><h2 class="groupheader">Member Typedef Documentation</h2>
+<a class="anchor" id="a4a5ab8ed577cf04d5138c8b43d3e267d"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">using <a class="el" href="classgraph_1_1BKTree.html">graph::BKTree</a>&lt; T &gt;::<a class="el" href="classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d">MetricFunctionType</a> =  std::function&lt;int(const T&amp; t0, const T&amp; t1)&gt;</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>define a metric over T i.e. a function that takes two const references of type T and outputs the 'distance' (a positive, int-valued number) between them </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="ac0539e5c48a9c4e1de0078f7e6d89b1d"></a>
 <div class="memitem">
 <div class="memproto">
@@ -216,7 +231,7 @@ template&lt;typename T&gt; </div>
         <tr>
           <td class="memname"><a class="el" href="classgraph_1_1BKTree.html">graph::BKTree</a>&lt; T &gt;::<a class="el" href="classgraph_1_1BKTree.html">BKTree</a> </td>
           <td>(</td>
-          <td class="paramtype">const MetricFunctionType &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d">MetricFunctionType</a> &amp;&#160;</td>
           <td class="paramname"><em>metric</em></td><td>)</td>
           <td></td>
         </tr>
@@ -302,7 +317,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 22 2017 01:17:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 22 2017 13:04:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

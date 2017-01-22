@@ -1,9 +1,0 @@
-/home/joris/Code/alexandria/plotting/lineplot.hpp:17: warning: Compound plotting::LinePlot is not documented.
-/home/joris/Code/alexandria/graph_ui/igraphlayout.h:15: warning: Compound graph_ui::IGraphLayout is not documented.
-/home/joris/Code/alexandria/graph_ui/resizegraphlayout.hpp:16: warning: Compound graph_ui::ResizeGraphLayout is not documented.
-/home/joris/Code/alexandria/graph_ui/snaptogridgraphlayout.hpp:16: warning: Compound graph_ui::SnapToGridGraphLayout is not documented.
-/home/joris/Code/alexandria/geometry/convexhull.hpp:26: warning: Member wrap(const std::vector< PointType > &points) (function) of class geometry::ConvexHull is not documented.
-/home/joris/Code/alexandria/graph/bktree.hpp:54: warning: Member MetricFunctionType (typedef) of class graph::BKTree is not documented.
-/home/joris/Code/alexandria/numeric/distribution.hpp:91: warning: Member left(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
-/home/joris/Code/alexandria/numeric/distribution.hpp:127: warning: Member right(const DistributionType &d, double p) (function) of class numeric::Distribution is not documented.
-/home/joris/Code/alexandria/plotting/lineplot.hpp:78: warning: Member plot() const  (function) of class plotting::LinePlot is not documented.

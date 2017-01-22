@@ -21,7 +21,7 @@ namespace geometry
              */
             using PointType = std::tuple<double,double>;
 
-            /*!
+            /*! \return the convex hull of a given cloud of points
              */
             static std::vector<PointType> wrap(const std::vector<PointType>& points)
             {

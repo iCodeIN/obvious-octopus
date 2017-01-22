@@ -8,7 +8,7 @@ var searchData=
   ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html',1,'MazeDrawer'],['../classMazeDrawer.html#a6e658fa846d834d03e898034b5fb2c2e',1,'MazeDrawer::MazeDrawer()']]],
   ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html',1,'nlp']]],
   ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html#abb62046a7126f0cb230bbd21dff53ec4',1,'nlp::MetaheuristicTokenizer']]],
-  ['metricfunctiontype',['MetricFunctionType',['../classgeometry_1_1KMeans.html#a78e25a0c58c43e228446bcd58f474ec3',1,'geometry::KMeans']]],
+  ['metricfunctiontype',['MetricFunctionType',['../classgeometry_1_1KMeans.html#a78e25a0c58c43e228446bcd58f474ec3',1,'geometry::KMeans::MetricFunctionType()'],['../classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d',1,'graph::BKTree::MetricFunctionType()']]],
   ['min',['min',['../classmatrix_1_1IMatrix.html#af9ccc72c8f2e073a94136325a5a005de',1,'matrix::IMatrix']]],
   ['minimax',['Minimax',['../classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6',1,'game::Minimax']]],
   ['minimax',['Minimax',['../classgame_1_1Minimax.html',1,'game']]],

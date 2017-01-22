@@ -11,6 +11,8 @@
 
 namespace graph_ui
 {
+    /*! IGraphLayout implementation that resizes the output of another IGraphLayout to fit a given width/height
+     */
     template <typename T>
     class ResizeGraphLayout : public AbstractGraphLayout<T>
     {

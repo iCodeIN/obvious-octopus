@@ -118,11 +118,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a0c4c0d58d34eb26450b6fb31b300237b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3a81305af24cefab1a55b4e5c1f7fc4e"><td class="memItemLeft" align="right" valign="top">static const Y&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a3a81305af24cefab1a55b4e5c1f7fc4e">dev</a> (const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;d)</td></tr>
 <tr class="separator:a3a81305af24cefab1a55b4e5c1f7fc4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a2b840084aac5bca95cd790c933c58600"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a2b840084aac5bca95cd790c933c58600"></a>
-static const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>left</b> (const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;d, double p)</td></tr>
+<tr class="memitem:a2b840084aac5bca95cd790c933c58600"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a2b840084aac5bca95cd790c933c58600">left</a> (const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;d, double p)</td></tr>
 <tr class="separator:a2b840084aac5bca95cd790c933c58600"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a76777f506361af711663dc1092ccd4cc"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a76777f506361af711663dc1092ccd4cc"></a>
-static const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><b>right</b> (const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;d, double p)</td></tr>
+<tr class="memitem:a76777f506361af711663dc1092ccd4cc"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnumeric_1_1Distribution.html#a76777f506361af711663dc1092ccd4cc">right</a> (const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;d, double p)</td></tr>
 <tr class="separator:a76777f506361af711663dc1092ccd4cc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -238,6 +236,43 @@ template&lt;typename X , typename Y &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a2b840084aac5bca95cd790c933c58600"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename X , typename Y &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; X, Y &gt;::left </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the lowest p percentile of the given distribution This essentially sorts the original distribution by frequency, the gathers those entries (starting smallest to largest) so that their relative mass sums up to at least p. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="ab10a6ba37d1663f87216acd1f9653a06"></a>
 <div class="memitem">
 <div class="memproto">
@@ -265,13 +300,50 @@ template&lt;typename X , typename Y &gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a76777f506361af711663dc1092ccd4cc"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename X , typename Y &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> <a class="el" href="classnumeric_1_1Distribution.html">numeric::Distribution</a>&lt; X, Y &gt;::right </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392">DistributionType</a> &amp;&#160;</td>
+          <td class="paramname"><em>d</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>p</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>the highest p percentile of the given distribution This essentially sorts the original distribution by frequency, the gathers those entries (starting largest to smallest) so that their relative mass sums up to at least p. </dd></dl>
+
+</div>
+</div>
 <hr/>The documentation for this class was generated from the following file:<ul>
 <li>numeric/<a class="el" href="distribution_8hpp_source.html">distribution.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 22 2017 01:17:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 22 2017 13:04:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

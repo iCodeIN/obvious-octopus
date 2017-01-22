@@ -13,6 +13,12 @@
 
 namespace plotting
 {
+    /*! A line chart or line graph is a type of chart which displays information as a series of data points called 'markers' connected by straight line segments.
+        It is a basic type of chart common in many fields.
+        It is similar to a scatter plot except that the measurement points are ordered (typically by their x-axis value) and joined with straight line segments.
+        A line chart is often used to visualize a trend in data over intervals of time – a time series – thus the line is often drawn chronologically.
+        In these cases they are known as run charts.
+     */
     class LinePlot
     {
         public:
@@ -74,7 +80,7 @@ namespace plotting
                 m_series.push_back(s);
             }
 
-            // --- IPlot ---
+            //! --- IPlot ---
             std::unique_ptr<SVG::SVG> plot() const
             {
                 // create image

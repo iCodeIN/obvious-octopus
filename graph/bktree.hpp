@@ -51,6 +51,9 @@ namespace graph
     class BKTree : public AdjecencyListTree<BKTreeNode<T>*>
     {
         public:
+            /*! define a metric over T
+                i.e. a function that takes two const references of type T and outputs the 'distance' (a positive, int-valued number) between them
+             */
             using MetricFunctionType = std::function<int(const T& t0, const T& t1)>;
 
             /*! constructor

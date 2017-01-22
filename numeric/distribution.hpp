@@ -86,7 +86,9 @@ namespace numeric
                 return (Y) (retval / d.size());
             }
 
-            /*!
+            /*! \return the lowest p percentile of the given distribution
+                This essentially sorts the original distribution by frequency, the gathers those entries (starting smallest to largest)
+                so that their relative mass sums up to at least p.
              */
             static const DistributionType left(const DistributionType &d, double p)
             {
@@ -122,7 +124,9 @@ namespace numeric
                 return retval;
             }
 
-            /*!
+            /*! \return the highest p percentile of the given distribution
+                This essentially sorts the original distribution by frequency, the gathers those entries (starting largest to smallest)
+                so that their relative mass sums up to at least p.
              */
             static const DistributionType right(const DistributionType &d, double p)
             {
