@@ -22,7 +22,12 @@ namespace graph_ui
     class AbstractGraphLayout : public IGraphLayout<T>
     {
         public:
+            /*! default constructor
+             */
             explicit AbstractGraphLayout() = default;
+
+            /*! default destructor
+             */
             virtual ~AbstractGraphLayout() = default;
 
             /*! define a phyiscal point
@@ -38,7 +43,7 @@ namespace graph_ui
              */
             using SizeFunctionType = typename std::function<SizeType(const T &vertex)>;
 
-            // --- IGraphLayout ---
+            //! --- IGraphLayout ---
             virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const SizeFunctionType &size) const = 0;
 
             /*! set the minimal margin on the x-axis between vertices

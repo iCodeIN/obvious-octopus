@@ -19,7 +19,15 @@ namespace graph_ui
     class RandomGraphLayout : public AbstractGraphLayout<T>
     {
         public:
-            // --- AbstractGraphLayout ---
+            /*! default constructor
+             */
+            explicit RandomGraphLayout() = default;
+
+            /*! default destructor
+             */
+            virtual ~RandomGraphLayout() = default;
+
+            //! --- AbstractGraphLayout ---
             virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const typename AbstractGraphLayout<T>::SizeFunctionType &size) const override
             {
                 // create new I2DGraph

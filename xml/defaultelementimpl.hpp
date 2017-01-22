@@ -47,31 +47,31 @@ namespace XML
              */
             void operator=(DefaultElementImpl&) = delete;
 
-            // --- IElement ---
+            //! --- IElement ---
             void setName(const std::string &name) override
             {
                 m_name = name;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             const std::string getName() const override
             {
                 return m_name;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void setText(const std::string &text) override
             {
                 m_text = text;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             const std::string getText() const override
             {
                 return m_text;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void add(std::unique_ptr<XML::IElement> n) override
             {
                 auto rawPtr = n.get();
@@ -79,7 +79,7 @@ namespace XML
                 m_children.push_back(std::move(n));
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void remove(int i) override
             {
                 assert(hasChild(i));
@@ -92,26 +92,26 @@ namespace XML
                 return (int) m_children.size();
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             const XML::IElement& getChild(int i) const override
             {
                 assert(hasChild(i));
                 return *m_children[i].get();
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             bool hasChild(int i) const override
             {
                 return m_children.size() > i;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void setAttribute(const std::string &attribute, const std::string &value) override
             {
                 m_attributes[attribute] = value;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void setAttribute(const std::string &attribute, int value) override
             {
                 std::ostringstream stream;
@@ -119,7 +119,7 @@ namespace XML
                 setAttribute(attribute, stream.str());
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void setAttribute(const std::string &attribute, double value) override
             {
                 std::ostringstream stream;
@@ -127,7 +127,7 @@ namespace XML
                 setAttribute(attribute, stream.str());
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void setAttribute(const std::string &attribute, long value) override
             {
                 std::ostringstream stream;
@@ -135,7 +135,7 @@ namespace XML
                 setAttribute(attribute, stream.str());
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             void setAttribute(const std::string &attribute, float value) override
             {
                 std::ostringstream stream;
@@ -143,13 +143,13 @@ namespace XML
                 setAttribute(attribute, stream.str());
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             bool hasAttribute(const std::string &attribute) const override
             {
                 return m_attributes.find(attribute) != m_attributes.end();
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             const std::string getAttribute(const std::string &attribute) const override
             {
                 assert(hasAttribute(attribute));
@@ -157,7 +157,7 @@ namespace XML
                 return it->second;
             }
 
-            // --- IElement ---
+            //! --- IElement ---
             const std::map<std::string, std::string> getAttributes() const override
             {
                 return m_attributes;

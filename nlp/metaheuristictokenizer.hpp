@@ -7,6 +7,8 @@
 
 namespace nlp
 {
+    /*! ITokenizer implementation using meta-heuristic to improve the result obtained by a more naive ITokenizer
+     */
     class MetaheuristicTokenizer : public ITokenizer
     {
         public:

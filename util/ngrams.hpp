@@ -21,8 +21,10 @@ namespace util
             explicit NGrams() = delete;
 
             /*! \return a frequency-map of all ngrams in the given std:string
-                \param[in] s            the string to extract ngrams from
-                \param[in] ngramsSizes  the sizes of the ngrams to be extracted
+                \param[in] s                the string to extract ngrams from
+                \param[in] maxNGramSize     the maximum length (number of characters) of the ngrams to be extracted
+                \param[in] ignoreCase       whether case-information is ignored or not when counting n-grams
+                \param[in] ignoreNonAlpha   whether n-grams containing non-alpha characters are ignored or not
              */
             static std::map<std::string, int> ngrams(const std::string& s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlpha)
             {

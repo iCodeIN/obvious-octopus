@@ -15,7 +15,7 @@ namespace graph_ui
     class ResizeGraphLayout : public AbstractGraphLayout<T>
     {
         public:
-            /*! default constructor
+            /*! constructor
              */
             public ResizeGraphLayout(std::unique_ptr<IGraphLayout<T>> &wrappedLayout, int width, int height)
                 : m_wrappedLayout(wrappedLayout)
@@ -25,7 +25,11 @@ namespace graph_ui
                 assert(m_wrappedLayout);
             }
 
-            // --- AbstractGraphLayout ---
+            /*! default destructor
+             */
+            virtual ~ResizeGraphLayout() = default;
+
+            //! --- AbstractGraphLayout ---
             virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const typename AbstractGraphLayout<T>::SizeFunctionType &size) const override
             {
                 // perform initial layout

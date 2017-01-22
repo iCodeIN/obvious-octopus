@@ -112,58 +112,64 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classgraph__ui_1_1RandomGraphLayout.html">   19</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgraph__ui_1_1RandomGraphLayout.html">RandomGraphLayout</a> : <span class="keyword">public</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html">AbstractGraphLayout</a>&lt;T&gt;</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="comment">// --- AbstractGraphLayout ---</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;graph::I2DGraph&lt;T&gt;&gt; layout(<span class="keyword">const</span> <a class="code" href="classgraph_1_1IGraph.html">graph::IGraph&lt;T&gt;</a> &amp;graph, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">AbstractGraphLayout&lt;T&gt;::SizeFunctionType</a> &amp;size)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                <span class="comment">// create new I2DGraph</span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="keyword">auto</span> retval = std::unique_ptr&lt;graph::AdjecencyListGraph&lt;T&gt;&gt;(<span class="keyword">new</span> <a class="code" href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph&lt;T&gt;</a>());</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="comment">// init random</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                std::random_device rd;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                std::mt19937 gen(rd());</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                std::uniform_int_distribution&lt;ulong&gt; dis(0, 1000);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="comment">// add vertices</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;vertex : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    retval-&gt;insertVertex(vertex);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    <span class="comment">// assign random coordinates to each vertex</span></div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keyword">auto</span> x = dis(gen);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                    <span class="keyword">auto</span> y = dis(gen);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    retval-&gt;setVertexPoint(vertex, std::make_pair(x,y));</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                }</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="comment">// add vertices</span></div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;source : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;target : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                        <span class="keywordflow">if</span>(graph.<a class="code" href="classgraph_1_1IGraph.html#abec9a1b359aadcda924f69a2f61af835">hasEdge</a>(source, target))</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                            retval-&gt;insertEdge(source, target);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                            <span class="comment">// apply straight line for each edge</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                            std::vector&lt;std::pair&lt;int,int&gt;&gt; edgePoints;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                            edgePoints.push_back(retval-&gt;getVertexPoint(source));</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            edgePoints.push_back(retval-&gt;getVertexPoint(target));</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            retval-&gt;setEdgePoints(source, target, edgePoints);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="comment">// return</span></div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keywordflow">return</span> std::move(retval);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // RANDOM_GRAPH_LAYOUT_HPP</span></div>
-<div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html_aa73fd17c800396b0636aa768eb2c0aa8"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">graph_ui::AbstractGraphLayout::SizeFunctionType</a></div><div class="ttdeci">typename std::function&lt; SizeType(const T &amp;vertex)&gt; SizeFunctionType</div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:39</div></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classgraph__ui_1_1RandomGraphLayout.html#a83d4bb352af9a59ffccb6b14ab70beb5">RandomGraphLayout</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgraph__ui_1_1RandomGraphLayout.html#a6f018f3852ae511963f03e2ac7df0e1f">~RandomGraphLayout</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classgraph__ui_1_1RandomGraphLayout.html#a8d49947394db9794001ba4c3255550fa">   31</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;graph::I2DGraph&lt;T&gt;&gt; <a class="code" href="classgraph__ui_1_1RandomGraphLayout.html#a8d49947394db9794001ba4c3255550fa">layout</a>(<span class="keyword">const</span> <a class="code" href="classgraph_1_1IGraph.html">graph::IGraph&lt;T&gt;</a> &amp;graph, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">AbstractGraphLayout&lt;T&gt;::SizeFunctionType</a> &amp;size)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <span class="comment">// create new I2DGraph</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keyword">auto</span> retval = std::unique_ptr&lt;graph::AdjecencyListGraph&lt;T&gt;&gt;(<span class="keyword">new</span> <a class="code" href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph&lt;T&gt;</a>());</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="comment">// init random</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                std::random_device rd;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                std::mt19937 gen(rd());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                std::uniform_int_distribution&lt;ulong&gt; dis(0, 1000);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="comment">// add vertices</span></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;vertex : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    retval-&gt;insertVertex(vertex);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="comment">// assign random coordinates to each vertex</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    <span class="keyword">auto</span> x = dis(gen);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="keyword">auto</span> y = dis(gen);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    retval-&gt;setVertexPoint(vertex, std::make_pair(x,y));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <span class="comment">// add vertices</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;source : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;target : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        <span class="keywordflow">if</span>(graph.<a class="code" href="classgraph_1_1IGraph.html#abec9a1b359aadcda924f69a2f61af835">hasEdge</a>(source, target))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                            retval-&gt;insertEdge(source, target);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                            <span class="comment">// apply straight line for each edge</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                            std::vector&lt;std::pair&lt;int,int&gt;&gt; edgePoints;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                            edgePoints.push_back(retval-&gt;getVertexPoint(source));</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                            edgePoints.push_back(retval-&gt;getVertexPoint(target));</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                            retval-&gt;setEdgePoints(source, target, edgePoints);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                <span class="comment">// return</span></div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> std::move(retval);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    };</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif // RANDOM_GRAPH_LAYOUT_HPP</span></div>
+<div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html_aa73fd17c800396b0636aa768eb2c0aa8"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">graph_ui::AbstractGraphLayout::SizeFunctionType</a></div><div class="ttdeci">typename std::function&lt; SizeType(const T &amp;vertex)&gt; SizeFunctionType</div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:44</div></div>
 <div class="ttc" id="classgraph_1_1AdjecencyListGraph_html"><div class="ttname"><a href="classgraph_1_1AdjecencyListGraph.html">graph::AdjecencyListGraph</a></div><div class="ttdef"><b>Definition:</b> adjecencylistgraph.hpp:21</div></div>
+<div class="ttc" id="classgraph__ui_1_1RandomGraphLayout_html_a8d49947394db9794001ba4c3255550fa"><div class="ttname"><a href="classgraph__ui_1_1RandomGraphLayout.html#a8d49947394db9794001ba4c3255550fa">graph_ui::RandomGraphLayout::layout</a></div><div class="ttdeci">virtual std::unique_ptr&lt; graph::I2DGraph&lt; T &gt; &gt; layout(const graph::IGraph&lt; T &gt; &amp;graph, const typename AbstractGraphLayout&lt; T &gt;::SizeFunctionType &amp;size) const override</div><div class="ttdoc">— AbstractGraphLayout — </div><div class="ttdef"><b>Definition:</b> randomgraphlayout.hpp:31</div></div>
+<div class="ttc" id="classgraph__ui_1_1RandomGraphLayout_html_a83d4bb352af9a59ffccb6b14ab70beb5"><div class="ttname"><a href="classgraph__ui_1_1RandomGraphLayout.html#a83d4bb352af9a59ffccb6b14ab70beb5">graph_ui::RandomGraphLayout::RandomGraphLayout</a></div><div class="ttdeci">RandomGraphLayout()=default</div></div>
 <div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html">graph_ui::AbstractGraphLayout</a></div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:22</div></div>
+<div class="ttc" id="classgraph__ui_1_1RandomGraphLayout_html_a6f018f3852ae511963f03e2ac7df0e1f"><div class="ttname"><a href="classgraph__ui_1_1RandomGraphLayout.html#a6f018f3852ae511963f03e2ac7df0e1f">graph_ui::RandomGraphLayout::~RandomGraphLayout</a></div><div class="ttdeci">virtual ~RandomGraphLayout()=default</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html_abec9a1b359aadcda924f69a2f61af835"><div class="ttname"><a href="classgraph_1_1IGraph.html#abec9a1b359aadcda924f69a2f61af835">graph::IGraph::hasEdge</a></div><div class="ttdeci">virtual bool hasEdge(const T &amp;source, const T &amp;target) const =0</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html_a6d174ae789ce6025880675708ca6e0cf"><div class="ttname"><a href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">graph::IGraph::vertices</a></div><div class="ttdeci">virtual const std::set&lt; T &gt; vertices() const =0</div></div>
 <div class="ttc" id="classgraph__ui_1_1RandomGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1RandomGraphLayout.html">graph_ui::RandomGraphLayout</a></div><div class="ttdef"><b>Definition:</b> randomgraphlayout.hpp:19</div></div>
@@ -171,7 +177,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 22 2017 01:17:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

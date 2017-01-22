@@ -1,7 +1,7 @@
 var searchData=
 [
   ['gaussianelimination',['GaussianElimination',['../classmatrix_1_1GaussianElimination.html',1,'matrix']]],
-  ['gaussianelimination',['gaussianElimination',['../classmatrix_1_1GaussianElimination.html#af8302b1e39f0b466b70842e9966705c4',1,'matrix::GaussianElimination::gaussianElimination(IMatrix &amp;matrix)'],['../classmatrix_1_1GaussianElimination.html#ad504070668d5226854e6e4f477818eb0',1,'matrix::GaussianElimination::GaussianElimination()=delete']]],
+  ['gaussianelimination',['GaussianElimination',['../classmatrix_1_1GaussianElimination.html#ad504070668d5226854e6e4f477818eb0',1,'matrix::GaussianElimination::GaussianElimination()=delete'],['../classmatrix_1_1GaussianElimination.html#af8302b1e39f0b466b70842e9966705c4',1,'matrix::GaussianElimination::gaussianElimination(IMatrix &amp;matrix)']]],
   ['geneticalgorithm',['GeneticAlgorithm',['../classmeta_1_1GeneticAlgorithm.html',1,'meta']]],
   ['get',['get',['../classmatrix_1_1BoostMatrixImpl.html#a256a0b5e6399886e0a85f9d6c93f62c5',1,'matrix::BoostMatrixImpl::get()'],['../classmatrix_1_1IMatrix.html#afe5c0f7fc0190bf35ca669a01fce5537',1,'matrix::IMatrix::get()']]],
   ['getattribute',['getAttribute',['../classXML_1_1DefaultElementImpl.html#a17aa0fcd4fdbe46ffc2115569a13bf31',1,'XML::DefaultElementImpl::getAttribute()'],['../classXML_1_1IElement.html#a5f3d0289bb05a1fc856f7cddddbb3097',1,'XML::IElement::getAttribute()']]],

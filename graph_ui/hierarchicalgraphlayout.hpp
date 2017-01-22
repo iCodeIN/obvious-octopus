@@ -24,7 +24,15 @@ namespace graph_ui
     class HierarchicalGraphLayout : public AbstractGraphLayout<T>
     {
         public:
-            // --- AbstractGraphLayout ---
+            /*! default constructor
+             */
+            explicit HierarchicalGraphLayout() = default;
+
+            /*! default destructor
+             */
+            virtual ~HierarchicalGraphLayout() = default;
+
+            //! --- AbstractGraphLayout ---
             virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const typename AbstractGraphLayout<T>::SizeFunctionType &size) const override
             {
                 assert(!graph::CycleFinder<T>::hasCycle(graph));

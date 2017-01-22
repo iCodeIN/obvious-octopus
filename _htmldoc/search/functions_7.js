@@ -8,5 +8,6 @@ var searchData=
   ['hasvertex',['hasVertex',['../classgraph_1_1AdjecencyListGraph.html#a8ef13ebd42b9cee9699a1a6ca617ff54',1,'graph::AdjecencyListGraph::hasVertex()'],['../classgraph_1_1AdjecencyListTree.html#a08ab12baeb9e95f442831691c2fcd750',1,'graph::AdjecencyListTree::hasVertex()'],['../classgraph_1_1IGraph.html#ab659a04f986ae7a1451ad68ed69c55d1',1,'graph::IGraph::hasVertex()']]],
   ['haswall',['hasWall',['../classMaze.html#a696c3e358c7e123451ea392219d618d0',1,'Maze']]],
   ['height',['height',['../classMaze.html#a53de30abea69713225ab77703e753d81',1,'Maze']]],
+  ['hierarchicalgraphlayout',['HierarchicalGraphLayout',['../classgraph__ui_1_1HierarchicalGraphLayout.html#ad3bfd767693fe1fd1100863ef403f7c2',1,'graph_ui::HierarchicalGraphLayout']]],
   ['hsv',['HSV',['../classSVG_1_1HSV.html#a1b9319b7d41ef770d8d490e030969cb5',1,'SVG::HSV']]]
 ];

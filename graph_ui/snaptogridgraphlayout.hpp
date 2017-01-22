@@ -15,7 +15,7 @@ namespace graph_ui
     class SnapToGridGraphLayout : public AbstractGraphLayout<T>
     {
         public:
-            /*! default constructor
+            /*! constructor
              */
             public SnapToGridGraphLayout(std::unique_ptr<IGraphLayout<T>> &wrappedLayout)
                 : m_wrappedLayout(wrappedLayout)
@@ -25,7 +25,11 @@ namespace graph_ui
                 assert(m_wrappedLayout);
             }
 
-            // --- AbstractGraphLayout ---
+            /*! default destructor
+             */
+            virtual ~SnapToGridGraphLayout() = default;
+
+            //! --- AbstractGraphLayout ---
             virtual std::unique_ptr<graph::I2DGraph<T>> layout(const graph::IGraph<T> &graph, const typename AbstractGraphLayout<T>::SizeFunctionType &size) const override
             {
                 // perform initial layout

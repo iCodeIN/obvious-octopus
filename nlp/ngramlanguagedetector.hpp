@@ -23,6 +23,14 @@ namespace nlp
     {
         public:
 
+            /*! default constructor
+             */
+            explicit NGramLanguageDetector() = default;
+
+            /*! default destructor
+             */
+            virtual ~NGramLanguageDetector() = default;
+
             /*! Train this model to accept the given piece of text to correspond to the given language
                 \param[in] text         the text the model is to be trained on
                 \param[in] language     the language (abbreviation) that the given text is written in
@@ -40,7 +48,7 @@ namespace nlp
                 }
             }
 
-            // --- ILanguageDetector ---
+            //! --- ILanguageDetector ---
             std::map<std::string, double> detect(const std::string& text) const
             {
                 // extract ngrams from text

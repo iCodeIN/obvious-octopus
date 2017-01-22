@@ -12,6 +12,8 @@ namespace nlp
         IGNORE_NON_DICTIONARY
     };
 
+    /*! common abstract base class for NLP models
+     */
     class IModel
     {
         public:

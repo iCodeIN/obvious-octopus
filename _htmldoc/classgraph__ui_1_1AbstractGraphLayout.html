@@ -133,8 +133,14 @@ Public Types</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a7a27721996ad62bd93e751db838199c2"><td class="memItemLeft" align="right" valign="top">virtual std::unique_ptr<br class="typebreak" />
+<tr class="memitem:aad1b429daa41040c5983930ab882c503"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html#aad1b429daa41040c5983930ab882c503">AbstractGraphLayout</a> ()=default</td></tr>
+<tr class="separator:aad1b429daa41040c5983930ab882c503"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6c77803cd3b477d482f208ab52d1dedf"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html#a6c77803cd3b477d482f208ab52d1dedf">~AbstractGraphLayout</a> ()=default</td></tr>
+<tr class="separator:a6c77803cd3b477d482f208ab52d1dedf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a27721996ad62bd93e751db838199c2"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a7a27721996ad62bd93e751db838199c2"></a>
+virtual std::unique_ptr<br class="typebreak" />
 &lt; <a class="el" href="classgraph_1_1I2DGraph.html">graph::I2DGraph</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html#a7a27721996ad62bd93e751db838199c2">layout</a> (const <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt; &amp;graph, const <a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">SizeFunctionType</a> &amp;size) const =0</td></tr>
+<tr class="memdesc:a7a27721996ad62bd93e751db838199c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">&mdash; <a class="el" href="classgraph__ui_1_1IGraphLayout.html">IGraphLayout</a> &mdash; <br /></td></tr>
 <tr class="separator:a7a27721996ad62bd93e751db838199c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a81c97b688b2275ca9d6ca594335ce8b7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html#a81c97b688b2275ca9d6ca594335ce8b7">setMinXMargin</a> (int margin)</td></tr>
 <tr class="separator:a81c97b688b2275ca9d6ca594335ce8b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -201,6 +207,59 @@ template&lt;typename T&gt; </div>
       </table>
 </div><div class="memdoc">
 <p>define a size (bounding box) type </p>
+
+</div>
+</div>
+<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aad1b429daa41040c5983930ab882c503"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html">graph_ui::AbstractGraphLayout</a>&lt; T &gt;::<a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html">AbstractGraphLayout</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a6c77803cd3b477d482f208ab52d1dedf"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html">graph_ui::AbstractGraphLayout</a>&lt; T &gt;::~<a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html">AbstractGraphLayout</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default destructor </p>
 
 </div>
 </div>
@@ -314,45 +373,6 @@ template&lt;typename T&gt; </div>
 <dl class="section return"><dt>Returns</dt><dd>the minimal margin on the y-axis between vertices </dd></dl>
 
 <p>Implements <a class="el" href="classgraph__ui_1_1IGraphLayout.html#aae7ee6f3c41dbfbe318ce095514e65e8">graph_ui::IGraphLayout&lt; T &gt;</a>.</p>
-
-</div>
-</div>
-<a class="anchor" id="a7a27721996ad62bd93e751db838199c2"></a>
-<div class="memitem">
-<div class="memproto">
-<div class="memtemplate">
-template&lt;typename T&gt; </div>
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">virtual std::unique_ptr&lt;<a class="el" href="classgraph_1_1I2DGraph.html">graph::I2DGraph</a>&lt;T&gt; &gt; <a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html">graph_ui::AbstractGraphLayout</a>&lt; T &gt;::layout </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt; &amp;&#160;</td>
-          <td class="paramname"><em>graph</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const <a class="el" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">SizeFunctionType</a> &amp;&#160;</td>
-          <td class="paramname"><em>size</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<p>Layout a graph </p>
-
-<p>Implements <a class="el" href="classgraph__ui_1_1IGraphLayout.html#af069b7e3d3abff539fb10696cd500699">graph_ui::IGraphLayout&lt; T &gt;</a>.</p>
 
 </div>
 </div>
@@ -470,7 +490,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 22 2017 01:17:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

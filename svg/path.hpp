@@ -14,8 +14,22 @@ namespace SVG
     {
         public:
 
+            /*! define a tuple containing a single command that belongs in an SVG path
+                - M moveto
+                - L lineto
+                - H horizontal lineto
+                - V vertical lineto
+                - C curveto
+                - S smooth curveto
+                - Q quadratic bézier curveto
+                - T smooth quadratic bézier curveto
+                - A elliptical arc
+                - Z closepath
+             */
             using PathCommand = std::tuple<char, std::vector<double>>;
 
+            /*! construct a Path from an std::vector of PathCommands
+             */
             explicit Path(std::vector<PathCommand> cmds)
             {
                 for(int i=0; i<cmds.size(); i++)

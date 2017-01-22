@@ -118,57 +118,60 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                assert(m_wrappedLayout);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="comment">// --- AbstractGraphLayout ---</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;graph::I2DGraph&lt;T&gt;&gt; layout(<span class="keyword">const</span> <a class="code" href="classgraph_1_1IGraph.html">graph::IGraph&lt;T&gt;</a> &amp;graph, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">AbstractGraphLayout&lt;T&gt;::SizeFunctionType</a> &amp;size)<span class="keyword"> const override</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="comment">// perform initial layout</span></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="keyword">auto</span> initLayout = m_wrappedLayout-&gt;layout(graph, size);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                assert(initLayout);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="comment">// adjust coordinates of vertices</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;vertex : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    <span class="keyword">auto</span> &amp;point = initLayout-&gt;getVertexPoint(vertex);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                <span class="comment">// adjust coordinates of edges</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;source : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;target : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                        <span class="keywordflow">if</span>(graph.<a class="code" href="classgraph_1_1IGraph.html#ab659a04f986ae7a1451ad68ed69c55d1">hasVertex</a>(source, target))</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                            <span class="keyword">auto</span> &amp;path = initLayout-&gt;getEdgePoints(source, target);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="comment">// return</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">return</span> std::move(initLayout);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgraph__ui_1_1ResizeGraphLayout.html#a8389a387cb890d57881db60510d85501">~ResizeGraphLayout</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="classgraph__ui_1_1ResizeGraphLayout.html#add32e82828c7ccc72886303503ed5726">   33</a></span>&#160;            <span class="keyword">virtual</span> std::unique_ptr&lt;graph::I2DGraph&lt;T&gt;&gt; <a class="code" href="classgraph__ui_1_1ResizeGraphLayout.html#add32e82828c7ccc72886303503ed5726">layout</a>(<span class="keyword">const</span> <a class="code" href="classgraph_1_1IGraph.html">graph::IGraph&lt;T&gt;</a> &amp;graph, <span class="keyword">const</span> <span class="keyword">typename</span> <a class="code" href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">AbstractGraphLayout&lt;T&gt;::SizeFunctionType</a> &amp;size)<span class="keyword"> const override</span></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="comment">// perform initial layout</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keyword">auto</span> initLayout = m_wrappedLayout-&gt;layout(graph, size);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                assert(initLayout);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="comment">// adjust coordinates of vertices</span></div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;vertex : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    <span class="keyword">auto</span> &amp;point = initLayout-&gt;getVertexPoint(vertex);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="comment">// adjust coordinates of edges</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;source : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;target : graph.<a class="code" href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">vertices</a>())</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                        <span class="keywordflow">if</span>(graph.<a class="code" href="classgraph_1_1IGraph.html#ab659a04f986ae7a1451ad68ed69c55d1">hasVertex</a>(source, target))</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                        {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                            <span class="keyword">auto</span> &amp;path = initLayout-&gt;getEdgePoints(source, target);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        }</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                }</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keywordtype">int</span>                                 m_maxWidth;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordtype">int</span>                                 m_maxHeight;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            std::unique_ptr&lt;IGraphLayout&lt;T&gt;&gt;    m_wrappedLayout;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    };</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;}</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;<span class="preprocessor">#endif // RESIZE_GRAPH_LAYOUT.HPP</span></div>
-<div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html_aa73fd17c800396b0636aa768eb2c0aa8"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">graph_ui::AbstractGraphLayout::SizeFunctionType</a></div><div class="ttdeci">typename std::function&lt; SizeType(const T &amp;vertex)&gt; SizeFunctionType</div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:39</div></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                <span class="comment">// return</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="keywordflow">return</span> std::move(initLayout);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordtype">int</span>                                 m_maxWidth;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordtype">int</span>                                 m_maxHeight;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            std::unique_ptr&lt;IGraphLayout&lt;T&gt;&gt;    m_wrappedLayout;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    };</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // RESIZE_GRAPH_LAYOUT.HPP</span></div>
+<div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html_aa73fd17c800396b0636aa768eb2c0aa8"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8">graph_ui::AbstractGraphLayout::SizeFunctionType</a></div><div class="ttdeci">typename std::function&lt; SizeType(const T &amp;vertex)&gt; SizeFunctionType</div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:44</div></div>
+<div class="ttc" id="classgraph__ui_1_1ResizeGraphLayout_html_add32e82828c7ccc72886303503ed5726"><div class="ttname"><a href="classgraph__ui_1_1ResizeGraphLayout.html#add32e82828c7ccc72886303503ed5726">graph_ui::ResizeGraphLayout::layout</a></div><div class="ttdeci">virtual std::unique_ptr&lt; graph::I2DGraph&lt; T &gt; &gt; layout(const graph::IGraph&lt; T &gt; &amp;graph, const typename AbstractGraphLayout&lt; T &gt;::SizeFunctionType &amp;size) const override</div><div class="ttdoc">— AbstractGraphLayout — </div><div class="ttdef"><b>Definition:</b> resizegraphlayout.hpp:33</div></div>
 <div class="ttc" id="classgraph__ui_1_1AbstractGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1AbstractGraphLayout.html">graph_ui::AbstractGraphLayout</a></div><div class="ttdef"><b>Definition:</b> abstractgraphlayout.hpp:22</div></div>
 <div class="ttc" id="classgraph__ui_1_1ResizeGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1ResizeGraphLayout.html">graph_ui::ResizeGraphLayout</a></div><div class="ttdef"><b>Definition:</b> resizegraphlayout.hpp:15</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html_ab659a04f986ae7a1451ad68ed69c55d1"><div class="ttname"><a href="classgraph_1_1IGraph.html#ab659a04f986ae7a1451ad68ed69c55d1">graph::IGraph::hasVertex</a></div><div class="ttdeci">virtual bool hasVertex(const T &amp;vertex) const =0</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html_a6d174ae789ce6025880675708ca6e0cf"><div class="ttname"><a href="classgraph_1_1IGraph.html#a6d174ae789ce6025880675708ca6e0cf">graph::IGraph::vertices</a></div><div class="ttdeci">virtual const std::set&lt; T &gt; vertices() const =0</div></div>
 <div class="ttc" id="classgraph__ui_1_1IGraphLayout_html"><div class="ttname"><a href="classgraph__ui_1_1IGraphLayout.html">graph_ui::IGraphLayout</a></div><div class="ttdef"><b>Definition:</b> igraphlayout.h:14</div></div>
+<div class="ttc" id="classgraph__ui_1_1ResizeGraphLayout_html_a8389a387cb890d57881db60510d85501"><div class="ttname"><a href="classgraph__ui_1_1ResizeGraphLayout.html#a8389a387cb890d57881db60510d85501">graph_ui::ResizeGraphLayout::~ResizeGraphLayout</a></div><div class="ttdeci">virtual ~ResizeGraphLayout()=default</div></div>
 <div class="ttc" id="classgraph__ui_1_1ResizeGraphLayout_html_a0b643a5e957325f77447cc71f061657e"><div class="ttname"><a href="classgraph__ui_1_1ResizeGraphLayout.html#a0b643a5e957325f77447cc71f061657e">graph_ui::ResizeGraphLayout::ResizeGraphLayout</a></div><div class="ttdeci">public ResizeGraphLayout(std::unique_ptr&lt; IGraphLayout&lt; T &gt;&gt; &amp;wrappedLayout, int width, int height)</div><div class="ttdef"><b>Definition:</b> resizegraphlayout.hpp:20</div></div>
 <div class="ttc" id="classgraph_1_1IGraph_html"><div class="ttname"><a href="classgraph_1_1IGraph.html">graph::IGraph</a></div><div class="ttdef"><b>Definition:</b> igraph.hpp:15</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 22 2017 01:17:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

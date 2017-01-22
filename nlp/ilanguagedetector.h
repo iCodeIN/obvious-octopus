@@ -14,7 +14,12 @@ namespace nlp
     class ILanguageDetector : public IModel
     {
         public:
+            /*! default constructor
+             */
             explicit ILanguageDetector() = default;
+
+            /*! default destructor
+             */
             virtual ~ILanguageDetector() = default;
 
             /*! \return a ranking of all languages known to the model

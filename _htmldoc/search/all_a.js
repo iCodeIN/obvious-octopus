@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['layout',['layout',['../classgraph__ui_1_1AbstractGraphLayout.html#a7a27721996ad62bd93e751db838199c2',1,'graph_ui::AbstractGraphLayout::layout()'],['../classgraph__ui_1_1IGraphLayout.html#af069b7e3d3abff539fb10696cd500699',1,'graph_ui::IGraphLayout::layout()']]],
+  ['layout',['layout',['../classgraph__ui_1_1AbstractGraphLayout.html#a7a27721996ad62bd93e751db838199c2',1,'graph_ui::AbstractGraphLayout::layout()'],['../classgraph__ui_1_1HierarchicalGraphLayout.html#a6ea32ec9f0d05fa3b4d3ee972ade617d',1,'graph_ui::HierarchicalGraphLayout::layout()'],['../classgraph__ui_1_1IGraphLayout.html#af069b7e3d3abff539fb10696cd500699',1,'graph_ui::IGraphLayout::layout()'],['../classgraph__ui_1_1RandomGraphLayout.html#a8d49947394db9794001ba4c3255550fa',1,'graph_ui::RandomGraphLayout::layout()'],['../classgraph__ui_1_1ResizeGraphLayout.html#add32e82828c7ccc72886303503ed5726',1,'graph_ui::ResizeGraphLayout::layout()'],['../classgraph__ui_1_1SnapToGridGraphLayout.html#a3879e67b5209213016eb5fbee57aa3bf',1,'graph_ui::SnapToGridGraphLayout::layout()']]],
   ['leaves',['leaves',['../classgraph_1_1AdjecencyListTree.html#ae756ae699a30f27fe636b0c732cfdc33',1,'graph::AdjecencyListTree::leaves()'],['../classgraph_1_1ITree.html#a397b04fa22a1b26ac5828c9a31ebbd44',1,'graph::ITree::leaves()']]],
   ['levenshtein',['Levenshtein',['../classutil_1_1Levenshtein.html',1,'util']]],
   ['line',['Line',['../classSVG_1_1Line.html',1,'SVG']]],

@@ -1,7 +1,7 @@
 var searchData=
 [
   ['parent',['parent',['../classgraph_1_1AdjecencyListTree.html#ab86007801ca9a62ad9ba01a1d504e8ea',1,'graph::AdjecencyListTree::parent()'],['../classgraph_1_1ITree.html#ad6c2d22aab71ccb1bed8e225813eac6b',1,'graph::ITree::parent()']]],
-  ['path',['Path',['../classSVG_1_1Path.html#a314100e3d7325103e56fd9cd71c20ba6',1,'SVG::Path::Path(const Path &amp;)=delete'],['../classSVG_1_1Path.html#a90f04a2e131b4d9711aa650a620dd478',1,'SVG::Path::Path(Path &amp;)=delete']]],
+  ['path',['Path',['../classSVG_1_1Path.html#add4db08b164707b936364bcdbe2d0f94',1,'SVG::Path::Path(std::vector&lt; PathCommand &gt; cmds)'],['../classSVG_1_1Path.html#a314100e3d7325103e56fd9cd71c20ba6',1,'SVG::Path::Path(const Path &amp;)=delete'],['../classSVG_1_1Path.html#a90f04a2e131b4d9711aa650a620dd478',1,'SVG::Path::Path(Path &amp;)=delete']]],
   ['permutationsearch',['PermutationSearch',['../classmeta_1_1PermutationSearch.html#a0a69951fbdaa15c23afa81ba27ccece3',1,'meta::PermutationSearch']]],
   ['play',['play',['../classgame_1_1TicTacToe.html#aed0c5788e4b1cfa46ec9cae508639f97',1,'game::TicTacToe']]],
   ['polygon',['Polygon',['../classSVG_1_1Polygon.html#a01621d7e0fbd044a071a87bbe8c76d11',1,'SVG::Polygon::Polygon(const std::vector&lt; std::pair&lt; double, double &gt;&gt; &amp;points)'],['../classSVG_1_1Polygon.html#ad45e4aad74f4370004042b2e45378c7b',1,'SVG::Polygon::Polygon(const Polygon &amp;)=delete'],['../classSVG_1_1Polygon.html#abcdd391aa09617036bd449c4cb9a63b0',1,'SVG::Polygon::Polygon(Polygon &amp;)=delete']]],

@@ -99,6 +99,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">nlp::MetaheuristicTokenizer Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><code>#include &lt;<a class="el" href="metaheuristictokenizer_8hpp_source.html">metaheuristictokenizer.hpp</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for nlp::MetaheuristicTokenizer:</div>
 <div class="dyncontent">
@@ -120,8 +122,15 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abb62046a7126f0cb230bbd21dff53ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1f91cfc66dc6d65c506bf652da33323"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#ab1f91cfc66dc6d65c506bf652da33323">~MetaheuristicTokenizer</a> ()=default</td></tr>
 <tr class="separator:ab1f91cfc66dc6d65c506bf652da33323"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adf84bde2fdfc5474b3ee0b9c493ab526"><td class="memItemLeft" align="right" valign="top">std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#adf84bde2fdfc5474b3ee0b9c493ab526">tokenize</a> (const std::string &amp;s) const override</td></tr>
+<tr class="memitem:adf84bde2fdfc5474b3ee0b9c493ab526"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf84bde2fdfc5474b3ee0b9c493ab526"></a>
+std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#adf84bde2fdfc5474b3ee0b9c493ab526">tokenize</a> (const std::string &amp;s) const override</td></tr>
+<tr class="memdesc:adf84bde2fdfc5474b3ee0b9c493ab526"><td class="mdescLeft">&#160;</td><td class="mdescRight">&mdash; <a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> &mdash; <br /></td></tr>
 <tr class="separator:adf84bde2fdfc5474b3ee0b9c493ab526"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classnlp_1_1ITokenizer"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnlp_1_1ITokenizer')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classnlp_1_1ITokenizer.html">nlp::ITokenizer</a></td></tr>
+<tr class="memitem:a42b0acf567177f1ad99fa6631d6473e8 inherit pub_methods_classnlp_1_1ITokenizer"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1ITokenizer.html#a42b0acf567177f1ad99fa6631d6473e8">ITokenizer</a> ()=default</td></tr>
+<tr class="separator:a42b0acf567177f1ad99fa6631d6473e8 inherit pub_methods_classnlp_1_1ITokenizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3b82ea39ea483339e95caae98189fdf9 inherit pub_methods_classnlp_1_1ITokenizer"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1ITokenizer.html#a3b82ea39ea483339e95caae98189fdf9">~ITokenizer</a> ()=default</td></tr>
+<tr class="separator:a3b82ea39ea483339e95caae98189fdf9 inherit pub_methods_classnlp_1_1ITokenizer"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classnlp_1_1IModel"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classnlp_1_1IModel')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classnlp_1_1IModel.html">nlp::IModel</a></td></tr>
 <tr class="memitem:acc7b584bf94862111dbfc4934db58888 inherit pub_methods_classnlp_1_1IModel"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1IModel.html#acc7b584bf94862111dbfc4934db58888">IModel</a> ()=default</td></tr>
 <tr class="separator:acc7b584bf94862111dbfc4934db58888 inherit pub_methods_classnlp_1_1IModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -134,7 +143,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a798cd3a4fbc3c64c1a60ab048e0bd4a8 inherit pub_methods_classnlp_1_1IModel"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8">isSet</a> (IModelOption opt) const </td></tr>
 <tr class="separator:a798cd3a4fbc3c64c1a60ab048e0bd4a8 inherit pub_methods_classnlp_1_1IModel"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> implementation using meta-heuristic to improve the result obtained by a more naive <a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="abb62046a7126f0cb230bbd21dff53ec4"></a>
 <div class="memitem">
 <div class="memproto">
@@ -180,35 +191,7 @@ Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>destructor </p>
-
-</div>
-</div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="adf84bde2fdfc5474b3ee0b9c493ab526"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::vector&lt;int&gt; nlp::MetaheuristicTokenizer::tokenize </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>s</em></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-<dl class="section return"><dt>Returns</dt><dd>a tokenized std::string </dd></dl>
-
-<p>Implements <a class="el" href="classnlp_1_1ITokenizer.html#a6e214c1d0f14557ac0224811b8860566">nlp::ITokenizer</a>.</p>
+<p>default destructor </p>
 
 </div>
 </div>
@@ -218,7 +201,7 @@ Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 21 2017 21:38:44 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 22 2017 01:17:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
