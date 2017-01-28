@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['path',['Path',['../classSVG_1_1Path.html',1,'SVG']]],
-  ['permutationsearch',['PermutationSearch',['../classmeta_1_1PermutationSearch.html',1,'meta']]],
-  ['polygon',['Polygon',['../classSVG_1_1Polygon.html',1,'SVG']]],
-  ['polyline',['Polyline',['../classSVG_1_1Polyline.html',1,'SVG']]],
-  ['polynomialsmoothing',['PolynomialSmoothing',['../classsmooth_1_1PolynomialSmoothing.html',1,'smooth']]],
-  ['porterstemmer',['PorterStemmer',['../classnlp_1_1PorterStemmer.html',1,'nlp']]],
-  ['prime',['Prime',['../classnumeric_1_1Prime.html',1,'numeric']]]
+  ['randomgraphlayout',['RandomGraphLayout',['../classgraph__ui_1_1RandomGraphLayout.html',1,'graph_ui']]],
+  ['rectangle',['Rectangle',['../classSVG_1_1Rectangle.html',1,'SVG']]],
+  ['resizegraphlayout',['ResizeGraphLayout',['../classgraph__ui_1_1ResizeGraphLayout.html',1,'graph_ui']]]
 ];

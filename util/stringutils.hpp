@@ -12,6 +12,8 @@ namespace util
      */
     namespace string
     {
+        /*! \return true iff an std::string s ends with an given suffix std::string
+         */
         static bool endsWith(const std::string& s, const std::string& suffix)
         {
             if(s.length() < suffix.length())

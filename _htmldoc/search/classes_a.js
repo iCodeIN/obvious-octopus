@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['levenshtein',['Levenshtein',['../classutil_1_1Levenshtein.html',1,'util']]],
-  ['line',['Line',['../classSVG_1_1Line.html',1,'SVG']]],
-  ['lineplot',['LinePlot',['../classplotting_1_1LinePlot.html',1,'plotting']]],
-  ['localsearch',['LocalSearch',['../classmeta_1_1LocalSearch.html',1,'meta']]]
+  ['maxentpostagger',['MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html',1,'nlp']]],
+  ['maze',['Maze',['../classMaze.html',1,'']]],
+  ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html',1,'']]],
+  ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html',1,'nlp']]],
+  ['minimax',['Minimax',['../classgame_1_1Minimax.html',1,'game']]]
 ];

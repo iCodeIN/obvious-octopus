@@ -3,6 +3,9 @@
 
 #include "nlp/imodel.hpp"
 
+#include <string>
+#include <vector>
+
 namespace nlp
 {
     /*! In corpus linguistics, part-of-speech tagging (POS tagging or POST), also called grammatical tagging or word-category disambiguation,
@@ -20,6 +23,11 @@ namespace nlp
             /*! default destructor
              */
             virtual ~IPOSTagger() = default;
+
+            /*! \return the tags for a given std::vector of tokens
+             */
+            virtual std::vector<std::string> tag(const std::vector<std::string>& tokens) const = 0;
+
         private:
             // --- methods ---
             // --- members ---

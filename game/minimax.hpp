@@ -38,7 +38,25 @@ namespace game
             {
             }
 
+            /*! default destructor
+             */
             virtual ~Minimax() = default;
+
+            /*! Prohibit const copy constructor
+             */
+            Minimax(const Minimax&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            Minimax(Minimax&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const Minimax&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(Minimax&) = delete;
 
             /*! \return the next (optimal) position given the starting positions
                 This method uses minimax, and alpha-beta pruning.

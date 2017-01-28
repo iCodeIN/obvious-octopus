@@ -30,6 +30,8 @@ namespace graph
             {
             }
 
+            /*! default destructor
+             */
             virtual ~AdjecencyListGraph()
             {
                 m_vertexIds.clear();

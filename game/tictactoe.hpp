@@ -26,6 +26,22 @@ namespace game
              */
             virtual ~TicTacToe = default;
 
+            /*! Prohibit const copy constructor
+             */
+            TicTacToe(const TicTacToe&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            TicTacToe(TicTacToe&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const TicTacToe&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(TicTacToe&) = delete;
+
             /*! main method for demo tic-tac-toe game with minimax
              */
             static void play()

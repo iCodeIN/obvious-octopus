@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['randomgraphlayout',['RandomGraphLayout',['../classgraph__ui_1_1RandomGraphLayout.html',1,'graph_ui']]],
-  ['rectangle',['Rectangle',['../classSVG_1_1Rectangle.html',1,'SVG']]],
-  ['resizegraphlayout',['ResizeGraphLayout',['../classgraph__ui_1_1ResizeGraphLayout.html',1,'graph_ui']]]
+  ['simulatedannealing',['SimulatedAnnealing',['../classmeta_1_1SimulatedAnnealing.html',1,'meta']]],
+  ['snaptogridgraphlayout',['SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html',1,'graph_ui']]],
+  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]]
 ];

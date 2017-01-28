@@ -1,17 +1,12 @@
 var searchData=
 [
-  ['m_5fgenerator',['m_generator',['../classmeta_1_1AbstractMetaHeuristic.html#a9b6b5313e4c148023d54a77ab9d377da',1,'meta::AbstractMetaHeuristic']]],
-  ['matrix',['matrix',['../classSVG_1_1IElement.html#acb302b3a025522197e4e7cdfe064c46f',1,'SVG::IElement']]],
-  ['max',['max',['../classmatrix_1_1IMatrix.html#a09fc99aa085940e8e4702513b85d51f5',1,'matrix::IMatrix']]],
-  ['maxentpostagger',['MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html',1,'nlp']]],
-  ['maze',['Maze',['../classMaze.html',1,'Maze'],['../classMaze.html#a0334b6143afd7bbfb4cfe1774cd1c502',1,'Maze::Maze(int w, int h)'],['../classMaze.html#a81c6be816361ea11b61f9049e542b346',1,'Maze::Maze(const Maze &amp;)=delete'],['../classMaze.html#ad1ba7291c6f823f0e536a03ec1ca33c5',1,'Maze::Maze(Maze &amp;)=delete']]],
-  ['mazedrawer',['MazeDrawer',['../classMazeDrawer.html',1,'MazeDrawer'],['../classMazeDrawer.html#a6e658fa846d834d03e898034b5fb2c2e',1,'MazeDrawer::MazeDrawer()']]],
-  ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html',1,'nlp']]],
-  ['metaheuristictokenizer',['MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html#abb62046a7126f0cb230bbd21dff53ec4',1,'nlp::MetaheuristicTokenizer']]],
-  ['metricfunctiontype',['MetricFunctionType',['../classgeometry_1_1KMeans.html#a78e25a0c58c43e228446bcd58f474ec3',1,'geometry::KMeans::MetricFunctionType()'],['../classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d',1,'graph::BKTree::MetricFunctionType()']]],
-  ['min',['min',['../classmatrix_1_1IMatrix.html#af9ccc72c8f2e073a94136325a5a005de',1,'matrix::IMatrix']]],
-  ['minimax',['Minimax',['../classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6',1,'game::Minimax']]],
-  ['minimax',['Minimax',['../classgame_1_1Minimax.html',1,'game']]],
-  ['mod',['mod',['../classnumeric_1_1BigInteger.html#a5cf5ffbf111a689d637211cc5c17f81e',1,'numeric::BigInteger']]],
-  ['mul',['mul',['../classmatrix_1_1BoostMatrixImpl.html#a7f2f2a31cbb283cb12b88fc3473f928c',1,'matrix::BoostMatrixImpl::mul()'],['../classmatrix_1_1IMatrix.html#afbbb3948e7908be43bdc2e9fb5fe55c0',1,'matrix::IMatrix::mul()'],['../classnumeric_1_1BigInteger.html#aaea0ae622600519ccdce369b8a4b70c4',1,'numeric::BigInteger::mul()']]]
+  ['neighbour',['neighbour',['../classmeta_1_1AbstractMetaHeuristic.html#ac790357e744c70f7e248b34c6ea7be95',1,'meta::AbstractMetaHeuristic']]],
+  ['next',['next',['../classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08',1,'game::Minimax']]],
+  ['nextmovefunctiontype',['NextMoveFunctionType',['../classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d',1,'game::Minimax']]],
+  ['nextprime',['nextPrime',['../classnumeric_1_1Prime.html#af9afe0d09423b69fb13b7d841d48d2fd',1,'numeric::Prime']]],
+  ['ngramlanguagedetector',['NGramLanguageDetector',['../classnlp_1_1NGramLanguageDetector.html',1,'nlp']]],
+  ['ngramlanguagedetector',['NGramLanguageDetector',['../classnlp_1_1NGramLanguageDetector.html#ac4842af69d9061a83cad9e1dd47621dc',1,'nlp::NGramLanguageDetector']]],
+  ['ngrams',['NGrams',['../classutil_1_1NGrams.html',1,'util']]],
+  ['ngrams',['ngrams',['../classutil_1_1NGrams.html#acbb90f2049c133f7524aae214f6105db',1,'util::NGrams::ngrams(const std::string &amp;s, int maxNGramSize, bool ignoreCase, bool ignoreNonAlpha)'],['../classutil_1_1NGrams.html#a3ec444dd85d851b00de4de81f05c1e53',1,'util::NGrams::NGrams()=delete']]],
+  ['none',['NONE',['../classSVG_1_1SVG.html#adad70e278302823bd721b3f23bacfdffaf828cdb9af710c522098aa8251a1ce21',1,'SVG::SVG']]]
 ];

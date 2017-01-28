@@ -97,75 +97,69 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef CONVEXHULL_HPP</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define CONVEXHULL_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>geometry</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classgeometry_1_1ConvexHull.html">   12</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgeometry_1_1ConvexHull.html">ConvexHull</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classgeometry_1_1ConvexHull.html#abd62e470217d60ff9289b40314f11947">ConvexHull</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classgeometry_1_1ConvexHull.html#ae16168737a60a9c0f11adf68dffec87c">   22</a></span>&#160;            <span class="keyword">using</span> <a class="code" href="classgeometry_1_1ConvexHull.html#ae16168737a60a9c0f11adf68dffec87c">PointType</a> = std::tuple&lt;double,double&gt;;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classgeometry_1_1ConvexHull.html#abef56161ebd38e9556e9ad8d5b10b876">   26</a></span>&#160;            <span class="keyword">static</span> std::vector&lt;PointType&gt; <a class="code" href="classgeometry_1_1ConvexHull.html#abef56161ebd38e9556e9ad8d5b10b876">wrap</a>(<span class="keyword">const</span> std::vector&lt;PointType&gt;&amp; points)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="comment">// find corner points</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keyword">auto</span> corner = points[0];</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : points)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <span class="keyword">auto</span> d0 = std::get&lt;0&gt;(point) * std::get&lt;0&gt;(point) + std::get&lt;1&gt;(point) * std::get&lt;1&gt;(point);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    <span class="keyword">auto</span> d1 = std::get&lt;0&gt;(corner) * std::get&lt;0&gt;(corner) + std::get&lt;1&gt;(corner) * std::get&lt;1&gt;(corner);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    <span class="keywordflow">if</span>(d0 &lt; d1)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        corner = point;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    }</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="comment">// init wrap</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                std::vector&lt;PointType&gt; retval;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                retval.push_back(corner);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="comment">// main loop</span></div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                <span class="keywordflow">while</span>(retval.size() == 1 &amp;&amp; retval[0] != retval[retval.size() -1 ])</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                {</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                    <span class="keyword">auto</span> curr = retval[retval.size() - 1];</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="keyword">auto</span> prev = retval.size() == 1 ? std::make_tuple(std::get&lt;0&gt;(curr), 0) : retval[retval.size() - 2];</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    <span class="comment">// find next point</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="keyword">auto</span> candidate = points[0];</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : points)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                        <span class="keywordflow">if</span>(angle(prev, curr, point) &gt; angle(prev, curr, candidate))</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                            candidate = point;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                        }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                    }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    retval.push_back(candidate);</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;    <span class="keywordtype">double</span> angle(   <span class="keyword">const</span> std::tuple&lt;double,double&gt;&amp; p0,</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;                    <span class="keyword">const</span> std::tuple&lt;double,double&gt;&amp; p1,</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;                    <span class="keyword">const</span> std::tuple&lt;double,double&gt;&amp; p2)</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keywordflow">return</span> 0.0;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;}</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>geometry</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">namespace </span>algorithm</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">using</span> PointType = std::tuple&lt;double,double&gt;;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keyword">static</span> std::vector&lt;PointType&gt; convexHull(<span class="keyword">const</span> std::vector&lt;PointType&gt;&amp; points)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="comment">// find corner points</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">auto</span> corner = points[0];</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : points)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keyword">auto</span> d0 = std::get&lt;0&gt;(point) * std::get&lt;0&gt;(point) + std::get&lt;1&gt;(point) * std::get&lt;1&gt;(point);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                <span class="keyword">auto</span> d1 = std::get&lt;0&gt;(corner) * std::get&lt;0&gt;(corner) + std::get&lt;1&gt;(corner) * std::get&lt;1&gt;(corner);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                <span class="keywordflow">if</span>(d0 &lt; d1)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                    corner = point;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="comment">// init wrap</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            std::vector&lt;PointType&gt; retval;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            retval.push_back(corner);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="comment">// main loop</span></div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">while</span>(retval.size() == 1 &amp;&amp; retval[0] != retval[retval.size() -1 ])</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keyword">auto</span> curr = retval[retval.size() - 1];</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                <span class="keyword">auto</span> prev = retval.size() == 1 ? std::make_tuple(std::get&lt;0&gt;(curr), 0) : retval[retval.size() - 2];</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                <span class="comment">// find next point</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                <span class="keyword">auto</span> candidate = points[0];</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : points)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                    <span class="keywordflow">if</span>(angle(prev, curr, point) &gt; angle(prev, curr, candidate))</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        candidate = point;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    }</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="comment">// return</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="keywordflow">return</span> retval;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">double</span> angle(<span class="keyword">const</span> <a class="code" href="classgeometry_1_1ConvexHull.html#ae16168737a60a9c0f11adf68dffec87c">PointType</a>&amp; p0, <span class="keyword">const</span> <a class="code" href="classgeometry_1_1ConvexHull.html#ae16168737a60a9c0f11adf68dffec87c">PointType</a>&amp; p1, <span class="keyword">const</span> <a class="code" href="classgeometry_1_1ConvexHull.html#ae16168737a60a9c0f11adf68dffec87c">PointType</a> &amp;p2)</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            {</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keywordflow">return</span> 0.0;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    };</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;}</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;<span class="preprocessor">#endif // CONVEXHULL_HPP</span></div>
-<div class="ttc" id="classgeometry_1_1ConvexHull_html_abef56161ebd38e9556e9ad8d5b10b876"><div class="ttname"><a href="classgeometry_1_1ConvexHull.html#abef56161ebd38e9556e9ad8d5b10b876">geometry::ConvexHull::wrap</a></div><div class="ttdeci">static std::vector&lt; PointType &gt; wrap(const std::vector&lt; PointType &gt; &amp;points)</div><div class="ttdef"><b>Definition:</b> convexhull.hpp:26</div></div>
-<div class="ttc" id="classgeometry_1_1ConvexHull_html_ae16168737a60a9c0f11adf68dffec87c"><div class="ttname"><a href="classgeometry_1_1ConvexHull.html#ae16168737a60a9c0f11adf68dffec87c">geometry::ConvexHull::PointType</a></div><div class="ttdeci">std::tuple&lt; double, double &gt; PointType</div><div class="ttdef"><b>Definition:</b> convexhull.hpp:22</div></div>
-<div class="ttc" id="classgeometry_1_1ConvexHull_html_abd62e470217d60ff9289b40314f11947"><div class="ttname"><a href="classgeometry_1_1ConvexHull.html#abd62e470217d60ff9289b40314f11947">geometry::ConvexHull::ConvexHull</a></div><div class="ttdeci">ConvexHull()=delete</div></div>
-<div class="ttc" id="classgeometry_1_1ConvexHull_html"><div class="ttname"><a href="classgeometry_1_1ConvexHull.html">geometry::ConvexHull</a></div><div class="ttdef"><b>Definition:</b> convexhull.hpp:12</div></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                retval.push_back(candidate);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="comment">// return</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;<span class="preprocessor">#endif // CONVEXHULL_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 21:28:39 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sat Jan 28 2017 23:55:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

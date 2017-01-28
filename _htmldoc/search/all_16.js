@@ -19,6 +19,7 @@ var searchData=
   ['_7eitree',['~ITree',['../classgraph_1_1ITree.html#a01de6b8b963e7746030c8d93e9b7f810',1,'graph::ITree']]],
   ['_7eline',['~Line',['../classSVG_1_1Line.html#a7083a62f9e5cbc44bba5baf63116f758',1,'SVG::Line']]],
   ['_7elineplot',['~LinePlot',['../classplotting_1_1LinePlot.html#aed57fd6161c03296c732d45db1621234',1,'plotting::LinePlot']]],
+  ['_7emaxentpostagger',['~MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html#aae44f8f136031f1dadc4692500a4e613',1,'nlp::MaxEntPOSTagger']]],
   ['_7emaze',['~Maze',['../classMaze.html#a84a64c830d5ad80c8e13482c31122cd1',1,'Maze']]],
   ['_7emetaheuristictokenizer',['~MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html#ab1f91cfc66dc6d65c506bf652da33323',1,'nlp::MetaheuristicTokenizer']]],
   ['_7engramlanguagedetector',['~NGramLanguageDetector',['../classnlp_1_1NGramLanguageDetector.html#aab87ff8cb32a54d870b414c8c9222de4',1,'nlp::NGramLanguageDetector']]],
