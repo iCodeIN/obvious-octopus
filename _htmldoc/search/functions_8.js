@@ -14,6 +14,7 @@ var searchData=
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
   ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]],
   ['isset',['isSet',['../classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8',1,'nlp::IModel']]],
+  ['istemmer',['IStemmer',['../classnlp_1_1IStemmer.html#a03b5d53bfd793ac8bb82f5f3b4ac19ee',1,'nlp::IStemmer']]],
   ['itokenizer',['ITokenizer',['../classnlp_1_1ITokenizer.html#a42b0acf567177f1ad99fa6631d6473e8',1,'nlp::ITokenizer']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf',1,'graph::ITree']]]
 ];

@@ -4,7 +4,7 @@
 #include <set>
 
 #include "nlp/itokenizer.h"
-#include "util/case.hpp"
+#include "util/stringutils.hpp"
 #include "xml/xml.hpp"
 
 namespace nlp
@@ -37,7 +37,7 @@ namespace nlp
                     auto token = s.substr(tokenBoundaries[tokenBoundaries.size()-1], len);
                     if(this->isSet(IGNORE_CASE))
                     {
-                        token = util::Case::toUpper(token);
+                        token = util::string::toUpper(token);
                     }
 
                     // if the token is a valid prefix, continue building the token
@@ -102,7 +102,7 @@ namespace nlp
                     auto word = xml->getChild(i).getText();
                     if(this->isSet(IGNORE_CASE))
                     {
-                        word = util::Case::toUpper(word);
+                        word = util::string::toUpper(word);
                     }
                     m_words.insert(word);
                     for(int j=0; j<word.size(); j++)

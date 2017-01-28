@@ -10,6 +10,7 @@ var searchData=
   ['imatrix',['IMatrix',['../classmatrix_1_1IMatrix.html',1,'matrix']]],
   ['imodel',['IModel',['../classnlp_1_1IModel.html',1,'nlp']]],
   ['ipostagger',['IPOSTagger',['../classnlp_1_1IPOSTagger.html',1,'nlp']]],
+  ['istemmer',['IStemmer',['../classnlp_1_1IStemmer.html',1,'nlp']]],
   ['itokenizer',['ITokenizer',['../classnlp_1_1ITokenizer.html',1,'nlp']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html',1,'graph']]],
   ['itree_3c_20bktreenode_3c_20t_20_3e_20_2a_20_3e',['ITree&lt; BKTreeNode&lt; T &gt; * &gt;',['../classgraph_1_1ITree.html',1,'graph']]]

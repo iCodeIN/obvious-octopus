@@ -2,6 +2,7 @@
 
 #include "nlp/imodel.hpp"
 #include "nlp/dictionarybasedtokenizer.hpp"
+#include "nlp/porterstemmer.hpp"
 
 using namespace std;
 using namespace nlp;
@@ -25,15 +26,21 @@ int main()
     dbt.fromXML(std::move(elementPtr));
 
     // tokenize
-    auto text = std::string("This is my life. Don't you forget");
+    auto text = std::string("These are my cats");
     auto tokens = dbt.tokenize(text);
     std::cout << tokens.size() << std::endl;
+
+    // stemmer
+    PorterStemmer stm;
+    stm.setOption(IGNORE_CASE);
 
     // print
     for(int i=1; i < tokens.size(); i++)
     {
         auto len = tokens[i] - tokens[i-1];
-        std::cout << i << "\t" <<  text.substr(tokens[i-1], len) << std::endl;
+        auto token = text.substr(tokens[i-1], len);
+        auto stem =  stm.stem(token);
+        std::cout << i << "\t" <<  token << "\t" << stem << std::endl;
     }
 
     // return
