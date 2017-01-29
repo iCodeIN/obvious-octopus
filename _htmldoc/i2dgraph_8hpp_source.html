@@ -113,18 +113,27 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgraph_1_1I2DGraph.html#ac845fbcb82e52df701e0a9e487a52bde">~I2DGraph</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> std::pair&lt;int,int&gt; <a class="code" href="classgraph_1_1I2DGraph.html#ad61d3682e86588a554d38b97c8b5028e">getVertexPoint</a>(<span class="keyword">const</span> T &amp;vertex) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <a class="code" href="classgraph_1_1I2DGraph.html#a1d621da30f092c82deacbce7f7be650e">I2DGraph</a>(<span class="keyword">const</span> <a class="code" href="classgraph_1_1I2DGraph.html">I2DGraph</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keyword">virtual</span> std::vector&lt;std::pair&lt;int,int&gt;&gt; <span class="keyword">const</span> <a class="code" href="classgraph_1_1I2DGraph.html#aeb6fb87427c48c9fc7861f95c251d3b3">getEdgePoints</a>(<span class="keyword">const</span> T&amp; source, <span class="keyword">const</span> T&amp; target) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <a class="code" href="classgraph_1_1I2DGraph.html#a1d621da30f092c82deacbce7f7be650e">I2DGraph</a>(<a class="code" href="classgraph_1_1I2DGraph.html">I2DGraph</a>&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;}</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;<span class="preprocessor">#endif // I2DGRAPH_HPP</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgraph_1_1I2DGraph.html#ac78d37e3c40685a93ad9d9a5b4081e62">operator=</a>(<span class="keyword">const</span> <a class="code" href="classgraph_1_1I2DGraph.html">I2DGraph</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgraph_1_1I2DGraph.html#ac78d37e3c40685a93ad9d9a5b4081e62">operator=</a>(<a class="code" href="classgraph_1_1I2DGraph.html">I2DGraph</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">virtual</span> <span class="keyword">const</span> std::pair&lt;int,int&gt; <a class="code" href="classgraph_1_1I2DGraph.html#ad61d3682e86588a554d38b97c8b5028e">getVertexPoint</a>(<span class="keyword">const</span> T &amp;vertex) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            <span class="keyword">virtual</span> std::vector&lt;std::pair&lt;int,int&gt;&gt; <span class="keyword">const</span> <a class="code" href="classgraph_1_1I2DGraph.html#aeb6fb87427c48c9fc7861f95c251d3b3">getEdgePoints</a>(<span class="keyword">const</span> T&amp; source, <span class="keyword">const</span> T&amp; target) <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    };</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">#endif // I2DGRAPH_HPP</span></div>
 <div class="ttc" id="classgraph_1_1I2DGraph_html_ad61d3682e86588a554d38b97c8b5028e"><div class="ttname"><a href="classgraph_1_1I2DGraph.html#ad61d3682e86588a554d38b97c8b5028e">graph::I2DGraph::getVertexPoint</a></div><div class="ttdeci">virtual const std::pair&lt; int, int &gt; getVertexPoint(const T &amp;vertex) const =0</div></div>
+<div class="ttc" id="classgraph_1_1I2DGraph_html_ac78d37e3c40685a93ad9d9a5b4081e62"><div class="ttname"><a href="classgraph_1_1I2DGraph.html#ac78d37e3c40685a93ad9d9a5b4081e62">graph::I2DGraph::operator=</a></div><div class="ttdeci">void operator=(const I2DGraph &amp;)=delete</div></div>
 <div class="ttc" id="classgraph_1_1I2DGraph_html"><div class="ttname"><a href="classgraph_1_1I2DGraph.html">graph::I2DGraph</a></div><div class="ttdef"><b>Definition:</b> i2dgraph.hpp:15</div></div>
 <div class="ttc" id="classgraph_1_1I2DGraph_html_a1d621da30f092c82deacbce7f7be650e"><div class="ttname"><a href="classgraph_1_1I2DGraph.html#a1d621da30f092c82deacbce7f7be650e">graph::I2DGraph::I2DGraph</a></div><div class="ttdeci">I2DGraph()=default</div></div>
 <div class="ttc" id="classgraph_1_1I2DGraph_html_aeb6fb87427c48c9fc7861f95c251d3b3"><div class="ttname"><a href="classgraph_1_1I2DGraph.html#aeb6fb87427c48c9fc7861f95c251d3b3">graph::I2DGraph::getEdgePoints</a></div><div class="ttdeci">virtual std::vector&lt; std::pair&lt; int, int &gt; &gt; const getEdgePoints(const T &amp;source, const T &amp;target) const =0</div></div>
@@ -133,7 +142,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 23:55:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 29 2017 02:01:59 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

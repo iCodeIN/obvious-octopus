@@ -1,7 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classgraph_1_1IGraph.html" title="graph::IGraph\&lt; T \&gt;" alt="" coords="5,31,139,57"/>
-<area shape="rect" id="node2" href="$classgraph_1_1I2DGraph.html" title="graph::I2DGraph\&lt; T \&gt;" alt="" coords="187,5,338,32"/>
-<area shape="rect" id="node4" href="$classgraph_1_1ITree.html" title="graph::ITree\&lt; T \&gt;" alt="" coords="201,56,325,83"/>
-<area shape="rect" id="node3" href="$classgraph_1_1AdjecencyListGraph.html" title="graph::AdjecencyListGraph\&lt; T \&gt;" alt="" coords="387,5,597,32"/>
-<area shape="rect" id="node5" href="$classgraph_1_1AdjecencyListTree.html" title="graph::AdjecencyListTree\&lt; T \&gt;" alt="" coords="391,56,593,83"/>
+<area shape="rect" id="node1" href="$classgraph__ui_1_1IGraphLayout.html" title="graph_ui::IGraphLayout\&lt; T \&gt;" alt="" coords="5,96,195,123"/>
+<area shape="rect" id="node2" href="$classgraph__ui_1_1AbstractGraphLayout.html" title="graph_ui::AbstractGraphLayout\&lt; T \&gt;" alt="" coords="243,96,477,123"/>
+<area shape="rect" id="node3" href="$classgraph__ui_1_1HierarchicalGraphLayout.html" title="graph_ui::HierarchicalGraph\lLayout\&lt; T \&gt;" alt="" coords="551,5,734,46"/>
+<area shape="rect" id="node4" href="$classgraph__ui_1_1RandomGraphLayout.html" title="graph_ui::RandomGraphLayout\&lt; T \&gt;" alt="" coords="525,71,760,97"/>
+<area shape="rect" id="node5" href="$classgraph__ui_1_1ResizeGraphLayout.html" title="graph_ui::ResizeGraphLayout\&lt; T \&gt;" alt="" coords="529,121,756,148"/>
+<area shape="rect" id="node6" href="$classgraph__ui_1_1SnapToGridGraphLayout.html" title="graph_ui::SnapToGridGraph\lLayout\&lt; T \&gt;" alt="" coords="551,173,734,214"/>
 </map>

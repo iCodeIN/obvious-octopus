@@ -2,7 +2,7 @@
 #ifndef ADJECENCYLISTGRAPH_HPP
 #define ADJECENCYLISTGRAPH_HPP
 
-#include "i2dgraph.hpp"
+#include "graph/i2dgraph.hpp"
 
 #include <assert.h>
 #include <boost/bimap.hpp>
@@ -36,6 +36,22 @@ namespace graph
             {
                 m_vertexIds.clear();
             }
+
+            /*! Prohibit const copy constructor
+             */
+            AdjecencyListGraph(const AdjecencyListGraph&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            AdjecencyListGraph(AdjecencyListGraph&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const AdjecencyListGraph&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(AdjecencyListGraph&) = delete;
 
             /*! transfer function definition
                 \param[in] source source vertex

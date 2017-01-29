@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['metricfunctiontype',['MetricFunctionType',['../classgraph_1_1BKTree.html#a4a5ab8ed577cf04d5138c8b43d3e267d',1,'graph::BKTree']]]
+  ['nextmovefunctiontype',['NextMoveFunctionType',['../classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d',1,'game::Minimax']]]
 ];

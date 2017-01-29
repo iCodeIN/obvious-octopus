@@ -1,11 +1,12 @@
 var searchData=
 [
   ['i2dgraph',['I2DGraph',['../classgraph_1_1I2DGraph.html',1,'graph']]],
-  ['i2dgraph',['I2DGraph',['../classgraph_1_1I2DGraph.html#a1d621da30f092c82deacbce7f7be650e',1,'graph::I2DGraph']]],
+  ['i2dgraph',['I2DGraph',['../classgraph_1_1I2DGraph.html#a1d621da30f092c82deacbce7f7be650e',1,'graph::I2DGraph::I2DGraph()=default'],['../classgraph_1_1I2DGraph.html#ac6eb93b90eaddacbf4f5f733c55933d6',1,'graph::I2DGraph::I2DGraph(const I2DGraph &amp;)=delete'],['../classgraph_1_1I2DGraph.html#afdc4480bb552c1852c1890f7c7574a49',1,'graph::I2DGraph::I2DGraph(I2DGraph &amp;)=delete']]],
   ['ielement',['IElement',['../classXML_1_1IElement.html',1,'XML']]],
   ['ielement',['IElement',['../classSVG_1_1IElement.html#a1cb6c4d44c3491048fe1477f07618a05',1,'SVG::IElement::IElement()=default'],['../classSVG_1_1IElement.html#a5bdf42b1f244c9da973055845b422526',1,'SVG::IElement::IElement(const IElement &amp;)=delete'],['../classSVG_1_1IElement.html#ae79d8477cd00557cb24f96148b40f242',1,'SVG::IElement::IElement(IElement &amp;)=delete'],['../classXML_1_1IElement.html#a26f5b0e9e94cb6686e95b2f4b914b146',1,'XML::IElement::IElement()=default'],['../classXML_1_1IElement.html#a71d442a1bcdd4ad4105e08c2fe80b174',1,'XML::IElement::IElement(const IElement &amp;)=delete'],['../classXML_1_1IElement.html#a4c2cd854c8a57735c0f341cb4e1f571d',1,'XML::IElement::IElement(IElement &amp;)=delete']]],
   ['ielement',['IElement',['../classSVG_1_1IElement.html',1,'SVG']]],
   ['igraph',['IGraph',['../classgraph_1_1IGraph.html',1,'graph']]],
+  ['igraph',['IGraph',['../classgraph_1_1IGraph.html#aee11cd02e9bbba84615bfcaf98b3455c',1,'graph::IGraph::IGraph(const IGraph &amp;)=delete'],['../classgraph_1_1IGraph.html#aff8f5ac7f83678d5fea21c85c5125d6e',1,'graph::IGraph::IGraph(IGraph &amp;)=delete']]],
   ['igraph_3c_20bktreenode_3c_20t_20_3e_20_2a_20_3e',['IGraph&lt; BKTreeNode&lt; T &gt; * &gt;',['../classgraph_1_1IGraph.html',1,'graph']]],
   ['igraphlayout',['IGraphLayout',['../classgraph__ui_1_1IGraphLayout.html',1,'graph_ui']]],
   ['ilanguagedetector',['ILanguageDetector',['../classnlp_1_1ILanguageDetector.html#a132f85c8becc97b4473dc3a8c273af63',1,'nlp::ILanguageDetector']]],
@@ -30,7 +31,7 @@ var searchData=
   ['istemmer',['IStemmer',['../classnlp_1_1IStemmer.html',1,'nlp']]],
   ['itokenizer',['ITokenizer',['../classnlp_1_1ITokenizer.html#a42b0acf567177f1ad99fa6631d6473e8',1,'nlp::ITokenizer']]],
   ['itokenizer',['ITokenizer',['../classnlp_1_1ITokenizer.html',1,'nlp']]],
+  ['itree',['ITree',['../classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf',1,'graph::ITree::ITree()=default'],['../classgraph_1_1ITree.html#aaa2fdf903904dd57c0dcbbcec16873b1',1,'graph::ITree::ITree(const ITree &amp;)=delete'],['../classgraph_1_1ITree.html#a08b14c53269d0212cd83521dc963acd1',1,'graph::ITree::ITree(ITree &amp;)=delete']]],
   ['itree',['ITree',['../classgraph_1_1ITree.html',1,'graph']]],
-  ['itree',['ITree',['../classgraph_1_1ITree.html#a73b96ff7fdd1623fc77ca8fdd751b1bf',1,'graph::ITree']]],
   ['itree_3c_20bktreenode_3c_20t_20_3e_20_2a_20_3e',['ITree&lt; BKTreeNode&lt; T &gt; * &gt;',['../classgraph_1_1ITree.html',1,'graph']]]
 ];

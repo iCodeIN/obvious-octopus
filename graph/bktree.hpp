@@ -73,6 +73,22 @@ namespace graph
                 }
             }
 
+            /*! Prohibit const copy constructor
+            */
+            BKTree(const BKTree&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            BKTree(BKTree&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const BKTree&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(BKTree&) = delete;
+
             /*! Insert a new T in this BKTree
                 \return true iff the tree was modified as a result of this operation, false otherwise
              */

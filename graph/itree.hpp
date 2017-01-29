@@ -24,6 +24,22 @@ namespace graph
              */
             virtual ~ITree() = default;
 
+            /*! Prohibit const copy constructor
+             */
+            ITree(const ITree&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            ITree(ITree&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const ITree&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(ITree&) = delete;
+
             /*! \return the leaves of the ITree
              */
             virtual const std::set<T> leaves() const = 0;

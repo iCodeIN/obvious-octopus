@@ -112,6 +112,14 @@ Inheritance diagram for graph::IGraph&lt; T &gt;:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
+<tr class="memitem:aee11cd02e9bbba84615bfcaf98b3455c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#aee11cd02e9bbba84615bfcaf98b3455c">IGraph</a> (const <a class="el" href="classgraph_1_1IGraph.html">IGraph</a> &amp;)=delete</td></tr>
+<tr class="separator:aee11cd02e9bbba84615bfcaf98b3455c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aff8f5ac7f83678d5fea21c85c5125d6e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#aff8f5ac7f83678d5fea21c85c5125d6e">IGraph</a> (<a class="el" href="classgraph_1_1IGraph.html">IGraph</a> &amp;)=delete</td></tr>
+<tr class="separator:aff8f5ac7f83678d5fea21c85c5125d6e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07777a7d01ea65e7973b7816cfa4a090"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#a07777a7d01ea65e7973b7816cfa4a090">operator=</a> (const <a class="el" href="classgraph_1_1IGraph.html">IGraph</a> &amp;)=delete</td></tr>
+<tr class="separator:a07777a7d01ea65e7973b7816cfa4a090"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af88e9c982bb8d7373f998592f553c698"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#af88e9c982bb8d7373f998592f553c698">operator=</a> (<a class="el" href="classgraph_1_1IGraph.html">IGraph</a> &amp;)=delete</td></tr>
+<tr class="separator:af88e9c982bb8d7373f998592f553c698"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af76777565d4a744f275553186487dade"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#af76777565d4a744f275553186487dade">insertEdge</a> (const T &amp;source, const T &amp;target)=0</td></tr>
 <tr class="separator:af76777565d4a744f275553186487dade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d75dde9ffaa23d9e38193c1e2fc4697"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classgraph_1_1IGraph.html#a5d75dde9ffaa23d9e38193c1e2fc4697">eraseEdge</a> (const T &amp;source, const T &amp;target)=0</td></tr>
@@ -136,7 +144,62 @@ Public Member Functions</h2></td></tr>
 class graph::IGraph&lt; T &gt;</h3>
 
 <p>In mathematics, and more specifically in graph theory, a graph is a representation of a set of objects where some pairs of objects are connected by links. The interconnected objects are represented by mathematical abstractions called vertices (also called nodes or points), and the links that connect some pairs of vertices are called edges (also called arcs or lines). Typically, a graph is depicted in diagrammatic form as a set of dots for the vertices, joined by lines or curves for the edges. Graphs are one of the objects of study in discrete mathematics. The edges may be directed or undirected. For example, if the vertices represent people at a party, and there is an edge between two people if they shake hands, then this is an undirected graph, because if person A shook hands with person B, then person B also shook hands with person A. In contrast, if there is an edge from person A to person B when person A knows of person B, then this graph is directed, because knowledge of someone is not necessarily a symmetric relation (that is, one person knowing another person does not necessarily imply the reverse; for example, many fans may know of a celebrity, but the celebrity is unlikely to know of all their fans). The former type of graph is called an undirected graph and the edges are called undirected edges while the latter type of graph is called a directed graph and the edges are called directed edges. Graphs are the basic subject studied by graph theory. The word "graph" was first used in this sense by J. J. Sylvester in 1878. </p>
-</div><h2 class="groupheader">Member Function Documentation</h2>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="aee11cd02e9bbba84615bfcaf98b3455c"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt;::<a class="el" href="classgraph_1_1IGraph.html">IGraph</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgraph_1_1IGraph.html">IGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit const copy constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="aff8f5ac7f83678d5fea21c85c5125d6e"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt;::<a class="el" href="classgraph_1_1IGraph.html">IGraph</a> </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgraph_1_1IGraph.html">IGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit copy constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a5d75dde9ffaa23d9e38193c1e2fc4697"></a>
 <div class="memitem">
 <div class="memproto">
@@ -399,6 +462,60 @@ template&lt;typename T&gt; </div>
 
 </div>
 </div>
+<a class="anchor" id="a07777a7d01ea65e7973b7816cfa4a090"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classgraph_1_1IGraph.html">IGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit const assignment operator </p>
+
+</div>
+</div>
+<a class="anchor" id="af88e9c982bb8d7373f998592f553c698"></a>
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T&gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void <a class="el" href="classgraph_1_1IGraph.html">graph::IGraph</a>&lt; T &gt;::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classgraph_1_1IGraph.html">IGraph</a>&lt; T &gt; &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit assignment operator </p>
+
+</div>
+</div>
 <a class="anchor" id="a34b90bb8597f289e2482ca53737ad7c0"></a>
 <div class="memitem">
 <div class="memproto">
@@ -462,7 +579,7 @@ template&lt;typename T&gt; </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Jan 28 2017 23:55:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Jan 29 2017 02:01:59 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

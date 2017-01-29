@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['evaluationfunctiontype',['EvaluationFunctionType',['../classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74',1,'game::Minimax']]]
+  ['functiontype',['FunctionType',['../classmeta_1_1AbstractMetaHeuristic.html#aaf6dc9eb432129d080ae115cd2e0adc7',1,'meta::AbstractMetaHeuristic']]]
 ];

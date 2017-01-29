@@ -23,6 +23,22 @@ namespace graph
              */
             virtual ~IGraph() = default;
 
+            /*! Prohibit const copy constructor
+             */
+            IGraph(const IGraph&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            IGraph(IGraph&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const IGraph&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(IGraph&) = delete;
+
             /*! Insert an edge into the graph
                 \param[in] source the source vertex
                 \param[in] target the target vertex

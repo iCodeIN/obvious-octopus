@@ -23,6 +23,22 @@ namespace graph
              */
             virtual ~I2DGraph() = default;
 
+            /*! Prohibit const copy constructor
+             */
+            I2DGraph(const I2DGraph&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            I2DGraph(I2DGraph&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const I2DGraph&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(I2DGraph&) = delete;
+
             /*! \return the PointType at which the given vertex is located
              */
             virtual const std::pair<int,int> getVertexPoint(const T &vertex) const = 0;

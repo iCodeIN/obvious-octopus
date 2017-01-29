@@ -28,6 +28,22 @@ namespace graph
              */
             virtual ~AdjecencyListTree() = default;
 
+            /*! Prohibit const copy constructor
+             */
+            AdjecencyListTree(const AdjecencyListTree&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            AdjecencyListTree(AdjecencyListTree&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const AdjecencyListTree&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(AdjecencyListTree&) = delete;
+
             //! --- IGraph ---
             virtual void insertEdge(const T& source, const T& target) override
             {
