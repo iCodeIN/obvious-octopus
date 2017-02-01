@@ -2,6 +2,7 @@
 #include <functional>
 #include <iostream>
 
+#include "graph/bfs.hpp"
 #include "graph/randomgraphgenerator.hpp"
 #include "graph/stringgraph.hpp"
 #include "xml/graphml.hpp"
@@ -13,7 +14,11 @@ using namespace std;
 int main()
 {
     // generate random graph
-    auto graphPtr = graph::algorithm::generate(3, 5, 3, 8);
+    auto graphPtr = graph::algorithm::generate( 2,  // min depth
+                    4,  // max depth
+                    4,  // min nof branches
+                    16  // max nof branches
+                                              );
 
     // IGraph<std::string>
     auto stringFunction = [](long l)
@@ -28,6 +33,9 @@ int main()
     ofs.open("/home/joris/random_graph.graphml");
     ofs << *(sGraphPtr.get());
     ofs.close();
+
+    // convert to tree
+    // auto treePtr = graph::algorithm::bfs<long>(*(graphPtr.get()), 0L);
 
     // return
     return 0;

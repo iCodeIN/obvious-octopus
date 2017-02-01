@@ -28,7 +28,7 @@ namespace graph
             tree->insertVertex(root);
             while(!q.empty())
             {
-                auto &vertex = q.front();
+                auto vertex = q.front();
                 q.pop();
 
                 if(tree->hasVertex(vertex) && !tree->outgoing(vertex).empty())
@@ -36,7 +36,7 @@ namespace graph
                     continue;
                 }
 
-                for(auto &nextVertex : graph.outgoing(vertex))
+                for(auto nextVertex : graph.outgoing(vertex))
                 {
                     if(tree->hasVertex(nextVertex) && !tree->incoming(nextVertex).empty())
                     {

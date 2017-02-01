@@ -115,7 +115,8 @@ namespace graph
             // --- IGraph ---
             virtual void insertEdge(const T& source, const T& target) override
             {
-                assert(hasVertex(source) && hasVertex(target));
+                assert(hasVertex(source));
+                assert(hasVertex(target));
                 auto sourceId = m_vertexIds.left.find(source)->second;
                 auto targetId = m_vertexIds.left.find(target)->second;
                 m_edges[sourceId].insert(targetId);
@@ -124,7 +125,8 @@ namespace graph
             // --- IGraph ---
             virtual void eraseEdge(const T& source, const T& target) override
             {
-                assert(hasVertex(source) && hasVertex(target));
+                assert(hasVertex(source));
+                assert(hasVertex(target));
                 auto sourceId = m_vertexIds.left.find(source)->second;
                 auto targetId = m_vertexIds.left.find(target)->second;
                 m_edges[sourceId].erase(targetId);

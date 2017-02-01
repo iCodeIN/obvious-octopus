@@ -120,7 +120,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            tree-&gt;insertVertex(root);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keywordflow">while</span>(!q.empty())</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keyword">auto</span> &amp;vertex = q.front();</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                <span class="keyword">auto</span> vertex = q.front();</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                q.pop();</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">if</span>(tree-&gt;hasVertex(vertex) &amp;&amp; !tree-&gt;outgoing(vertex).empty())</div>
@@ -128,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <span class="keywordflow">continue</span>;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;nextVertex : graph.outgoing(vertex))</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> nextVertex : graph.outgoing(vertex))</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                {</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    <span class="keywordflow">if</span>(tree-&gt;hasVertex(nextVertex) &amp;&amp; !tree-&gt;incoming(nextVertex).empty())</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                    {</div>
@@ -155,7 +155,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Jan 29 2017 02:01:59 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Feb 1 2017 20:42:02 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
