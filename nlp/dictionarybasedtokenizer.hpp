@@ -31,7 +31,7 @@ namespace nlp
                 std::vector<int> tokenBoundaries;
                 tokenBoundaries.push_back(0);
 
-                for(int i=0; i<s.size(); i++)
+                for(int i=0; i <= s.size(); i++)
                 {
                     auto len = i - tokenBoundaries[tokenBoundaries.size() - 1];
                     auto token = s.substr(tokenBoundaries[tokenBoundaries.size()-1], len);
@@ -43,11 +43,13 @@ namespace nlp
                     // if the token is a valid prefix, continue building the token
                     if(isPrefix(token))
                     {
+                        // std::cout << token << ", pos : " << i << ", valid prefix, continue" << std::endl;
                         continue;
                     }
                     // if the token is a word, mark the boundary
                     else if(isWord(token))
                     {
+                        // std::cout << token << ", pos : " << i << ", valid word, push boundary" << std::endl;
                         tokenBoundaries.push_back(i);
                         continue;
                     }
@@ -59,6 +61,7 @@ namespace nlp
                          */
                         if(token.size() == 1)
                         {
+                            // std::cout << token << ", pos : " << i << ", single char token, push boundary" << std::endl;
                             tokenBoundaries.push_back(i);
                         }
                         else
@@ -69,11 +72,13 @@ namespace nlp
                             auto prevToken = token.substr(0, token.size() - 1);
                             if(isPrefix(prevToken) || isWord(prevToken))
                             {
+                                // std::cout << token << ", pos : " << i << ", prev token was valid prefix, or valid word, push boundary, resume from " << (i-1) << std::endl;
                                 tokenBoundaries.push_back(i - 1);
                                 i--;
                             }
                             else
                             {
+                                // std::cout << token << ", pos : " << i << ", no useful information, push boundary" << std::endl;
                                 tokenBoundaries.push_back(i);
                             }
                         }

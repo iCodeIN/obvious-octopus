@@ -148,7 +148,7 @@ void useModel()
     ngld.fromXML(std::move(elementPtr));
 
     // use model
-    string text = "This is merely a test to determine the quality of the prediction, which hopefully improves as I make the string longer.";
+    std::string text = "This is merely a test to determine the quality of the prediction, which hopefully improves as I make the string longer.";
     auto cls = ngld.detect(text);
     for(auto &pair : cls)
     {
@@ -158,7 +158,7 @@ void useModel()
 
 int main()
 {
-    trainModel();
+    // trainModel();
 
     testModel();
 

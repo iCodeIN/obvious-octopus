@@ -30,6 +30,39 @@ namespace util
             return true;
         }
 
+        /*! \return true iff an std::string s starts with a given prefix std::string
+         */
+        static bool startsWith(const std::string& s, const std::string& prefix)
+        {
+            if(s.length() < prefix.length())
+            {
+                return false;
+            }
+            for(int i=0; i<prefix.length(); i++)
+            {
+                if(s[i] != prefix[i])
+                {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        /*! \return true iff an std::string s contains characters that are not alphabetic
+         */
+        static bool hasNonAlpha(const std::string& s)
+        {
+            for(int i=0; i<s.length(); i++)
+            {
+
+                if(!std::isalpha(s[i]) && !std::isspace(s[i]))
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
         /*! \return an std::string where each character of the input has been converted to uppercase by calling std::toupper
          */
         static std::string toUpper(const std::string& s)

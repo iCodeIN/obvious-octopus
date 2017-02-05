@@ -34,9 +34,6 @@ int main()
     ofs << *(sGraphPtr.get());
     ofs.close();
 
-    // convert to tree
-    // auto treePtr = graph::algorithm::bfs<long>(*(graphPtr.get()), 0L);
-
     // return
     return 0;
 }

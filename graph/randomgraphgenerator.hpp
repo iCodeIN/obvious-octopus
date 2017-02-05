@@ -12,6 +12,16 @@ namespace graph
 {
     namespace algorithm
     {
+        /*! Generates a random graph:
+            1. build initial node, call it X
+            2. create random number of nodes (between minNofBranch and maxNofBranches) to be connected to node X
+            3. FOR EACH node N that was created
+            4.  IF the depth of N is greater than the maxDepth OR greater than a random number generated between minDepth and maxDepth
+            5.      DO NOTHING
+            6.  ELSE
+            7.      start again at step 2, using N as X
+            \return randomly generated graph
+         */
         static std::unique_ptr<IGraph<long>> generate(int minDepth, int maxDepth, int minNofBranches, int maxNofBrances)
         {
             auto retval = std::unique_ptr<IGraph<long>>(new AdjecencyListGraph<long>());
