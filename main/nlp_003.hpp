@@ -26,7 +26,7 @@ int main()
     dbt.fromXML(std::move(elementPtr));
 
     // tokenize
-    auto text = std::string("These are my cats.");
+    auto text = std::string("Once upon a time I was falling in love, now I'm only falling apart.");
     auto tokens = dbt.tokenize(text);
     std::cout << tokens.size() << std::endl;
 

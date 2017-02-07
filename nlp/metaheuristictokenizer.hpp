@@ -3,7 +3,7 @@
 
 #include <memory>
 
-#include "nlp/itokenizer.hpp"
+#include "nlp/itokenizer.h"
 
 namespace nlp
 {
@@ -15,7 +15,7 @@ namespace nlp
             /*! constructor
              */
             explicit MetaheuristicTokenizer(std::unique_ptr<ITokenizer> tokenizer)
-                : m_tokenizer(tokenizer)
+                : m_tokenizer(std::move(tokenizer))
             {
             }
 
@@ -46,17 +46,43 @@ namespace nlp
                 }
 
                 // delegate to ranges
-                for(int i=1; i<ranges.size(); i++)
+                for(int i=1; i < ranges.size(); i++)
                 {
-                    tokenizeRange(s, ranges[i-1], ranges[i]);
+                    // appropriate subvector
+                    std::vector<int> subInitTokenization;
+                    for(auto &p : initialTokenization)
+                    {
+                        if(p >= ranges[i-1] && p<=ranges[i])
+                        {
+                            subInitTokenization.push_back(p);
+                        }
+                    }
+                    // delegate
+                    tokenizeRange(s, subInitTokenization);
                 }
             }
 
         private:
             // --- methods ---
-            void tokenizeRange(const std::string& s, int start, int end)
+            void tokenizeRange(const std::string& s, std::vector<int>& initialTokenization) const
             {
+                auto start = initialTokenization[0];
+                auto end = initialTokenization[initialTokenization.size() - 1];
 
+                // set up metric
+                auto tokenizationMetric = []()
+                {
+                    // each token that constitutes a recognized word gets full marks (proportional to its length)
+                    // each token that consitutes a pseudo-recognized word gets half marks (proportional to its length)
+                    // each token that occurs more than twice is counted as a fully recognized token
+                    // minimize nr of tokens
+                };
+
+                // release the meta-heuristic
+
+                // convert result back to std::vector<int>
+
+                // return
             }
 
             // --- members ---

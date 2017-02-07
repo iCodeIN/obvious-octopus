@@ -99,7 +99,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;nlp/itokenizer.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;nlp/itokenizer.h&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>nlp</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
@@ -107,7 +107,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        <span class="keyword">public</span>:</div>
 <div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classnlp_1_1MetaheuristicTokenizer.html#abb62046a7126f0cb230bbd21dff53ec4">   17</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classnlp_1_1MetaheuristicTokenizer.html#abb62046a7126f0cb230bbd21dff53ec4">MetaheuristicTokenizer</a>(std::unique_ptr&lt;ITokenizer&gt; tokenizer)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                : m_tokenizer(tokenizer)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                : m_tokenizer(std::move(tokenizer))</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            {</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            }</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
@@ -135,26 +135,52 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                }</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="comment">// delegate to ranges</span></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;ranges.size(); i++)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i &lt; ranges.size(); i++)</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    tokenizeRange(s, ranges[i-1], ranges[i]);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keywordtype">void</span> tokenizeRange(<span class="keyword">const</span> std::string&amp; s, <span class="keywordtype">int</span> start, <span class="keywordtype">int</span> end)</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            std::unique_ptr&lt;ITokenizer&gt; m_tokenizer;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            <span class="keywordtype">int</span>                         m_maximumNofCharsPerRange = 64;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    };</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;}</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="preprocessor">#endif // METAHEURISTICTOKENIZER_HPP</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="comment">// appropriate subvector</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    std::vector&lt;int&gt; subInitTokenization;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;p : initialTokenization)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                        <span class="keywordflow">if</span>(p &gt;= ranges[i-1] &amp;&amp; p&lt;=ranges[i])</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                            subInitTokenization.push_back(p);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                        }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="comment">// delegate</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                    tokenizeRange(s, subInitTokenization);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <span class="keywordtype">void</span> tokenizeRange(<span class="keyword">const</span> std::string&amp; s, std::vector&lt;int&gt;&amp; initialTokenization)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                <span class="keyword">auto</span> start = initialTokenization[0];</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;                <span class="keyword">auto</span> end = initialTokenization[initialTokenization.size() - 1];</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                <span class="comment">// set up metric</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keyword">auto</span> tokenizationMetric = []()</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                    <span class="comment">// each token that constitutes a recognized word gets full marks (proportional to its length)</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <span class="comment">// each token that consitutes a pseudo-recognized word gets half marks (proportional to its length)</span></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    <span class="comment">// each token that occurs more than twice is counted as a fully recognized token</span></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;                    <span class="comment">// minimize nr of tokens</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;                };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                <span class="comment">// release the meta-heuristic</span></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="comment">// convert result back to std::vector&lt;int&gt;</span></div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                <span class="comment">// return</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            std::unique_ptr&lt;ITokenizer&gt; m_tokenizer;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <span class="keywordtype">int</span>                         m_maximumNofCharsPerRange = 64;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;    };</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;}</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;<span class="preprocessor">#endif // METAHEURISTICTOKENIZER_HPP</span></div>
 <div class="ttc" id="classnlp_1_1MetaheuristicTokenizer_html"><div class="ttname"><a href="classnlp_1_1MetaheuristicTokenizer.html">nlp::MetaheuristicTokenizer</a></div><div class="ttdef"><b>Definition:</b> metaheuristictokenizer.hpp:12</div></div>
 <div class="ttc" id="classnlp_1_1MetaheuristicTokenizer_html_adf84bde2fdfc5474b3ee0b9c493ab526"><div class="ttname"><a href="classnlp_1_1MetaheuristicTokenizer.html#adf84bde2fdfc5474b3ee0b9c493ab526">nlp::MetaheuristicTokenizer::tokenize</a></div><div class="ttdeci">std::vector&lt; int &gt; tokenize(const std::string &amp;s) const override</div><div class="ttdoc">— ITokenizer — </div><div class="ttdef"><b>Definition:</b> metaheuristictokenizer.hpp:27</div></div>
 <div class="ttc" id="classnlp_1_1MetaheuristicTokenizer_html_ab1f91cfc66dc6d65c506bf652da33323"><div class="ttname"><a href="classnlp_1_1MetaheuristicTokenizer.html#ab1f91cfc66dc6d65c506bf652da33323">nlp::MetaheuristicTokenizer::~MetaheuristicTokenizer</a></div><div class="ttdeci">virtual ~MetaheuristicTokenizer()=default</div></div>
@@ -163,7 +189,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 5 2017 13:44:35 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Feb 7 2017 23:56:42 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

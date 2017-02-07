@@ -5,6 +5,7 @@
 #include "graph/bfs.hpp"
 #include "graph/randomgraphgenerator.hpp"
 #include "graph/stringgraph.hpp"
+#include "graph/eigenvalues.hpp"
 #include "xml/graphml.hpp"
 
 using namespace graph;
@@ -19,6 +20,13 @@ int main()
                     4,  // min nof branches
                     16  // max nof branches
                                               );
+
+    // calculate eigenvalues
+    auto ev = graph::algorithm::eigenvalues(*graphPtr);
+    for(auto &entry : ev)
+    {
+        cout << entry.first << "\t" << entry.second << endl;
+    }
 
     // IGraph<std::string>
     auto stringFunction = [](long l)
