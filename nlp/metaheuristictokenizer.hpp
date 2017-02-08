@@ -66,17 +66,77 @@ namespace nlp
             // --- methods ---
             void tokenizeRange(const std::string& s, std::vector<int>& initialTokenization) const
             {
-                auto start = initialTokenization[0];
-                auto end = initialTokenization[initialTokenization.size() - 1];
 
                 // set up metric
-                auto tokenizationMetric = []()
+                auto tokenizationMetric = [s, initialTokenization](std::vector<double>& tuple)
                 {
+                    auto start = initialTokenization[0];
+                    auto end = initialTokenization[initialTokenization.size() - 1];
+
+                    // build tokenization
+                    int j = 0;
+                    std::string token = "";
+                    std::vector<std::string> tokens;
+                    for(int i=start; i<=end; i++)
+                    {
+                        if(i == initialTokenization[j])
+                        {
+                            if(tuple[j])
+                            {
+                                if(token.size() != 0)
+                                {
+                                    tokens.push_back(token);
+                                }
+                                token = "";
+                            }
+                            j++;
+                        }
+                        token += s[i];
+                    }
+
+                    // debug
+                    for(int i=0; i<tokens.size(); i++)
+                    {
+                        std::cout << tokens[i] << std::endl;
+                    }
+
                     // each token that constitutes a recognized word gets full marks (proportional to its length)
+                    auto recognizedTokenScore = 0.0;
+
                     // each token that consitutes a pseudo-recognized word gets half marks (proportional to its length)
+                    auto pseudoRecognizedTokenScore = 0.0;
+
                     // each token that occurs more than twice is counted as a fully recognized token
+                    auto unrecognizedTokensScore = 0.0;
+                    std::map<std::string, int> freq;
+                    for(int i=0; i<tokens.size(); i++)
+                    {
+                        freq[tokens[i]]++;
+                    }
+                    for(auto &entry : freq)
+                    {
+                        if(entry.second >= 2)
+                        {
+                            unrecognizedTokensScore += entry.first.length();
+                        }
+                    }
+
                     // minimize nr of tokens
+                    auto nofTokensScore = 0.0;
+
+                    // return
+                    return recognizedTokenScore + pseudoRecognizedTokenScore + unrecognizedTokensScore + nofTokensScore;
                 };
+
+                // debug
+                std::cout << "==================================" << std::endl;
+                std::vector<double> init;
+                for(int i=0; i<initialTokenization.size(); i++)
+                {
+                    init.push_back(1);
+                }
+
+                tokenizationMetric(init);
 
                 // release the meta-heuristic
 
