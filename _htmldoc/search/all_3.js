@@ -9,6 +9,7 @@ var searchData=
   ['dev',['dev',['../classnumeric_1_1Distribution.html#a3a81305af24cefab1a55b4e5c1f7fc4e',1,'numeric::Distribution']]],
   ['dft',['DFT',['../classnumeric_1_1DFT.html#acccd34ffdc8ecc474e79954b6c935b23',1,'numeric::DFT']]],
   ['dft',['DFT',['../classnumeric_1_1DFT.html',1,'numeric']]],
+  ['dictionary',['Dictionary',['../classnlp_1_1Dictionary.html',1,'nlp']]],
   ['dictionarybasedtokenizer',['DictionaryBasedTokenizer',['../classnlp_1_1DictionaryBasedTokenizer.html',1,'nlp']]],
   ['dictionarybasedtokenizer',['DictionaryBasedTokenizer',['../classnlp_1_1DictionaryBasedTokenizer.html#abdaf44318a842549db087dbd0a307159',1,'nlp::DictionaryBasedTokenizer']]],
   ['digitalroot',['digitalRoot',['../classnumeric_1_1Digits.html#a225d22829fb051225b7d5d27fcf0e971',1,'numeric::Digits']]],
