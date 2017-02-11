@@ -8,6 +8,7 @@
 #include <vector>
 
 #ifdef __linux__
+#include <dirent.h>
 #include <sys/stat.h>
 #include <sys/types.h>
 #elif _WIN32
@@ -155,11 +156,28 @@ namespace os
             {
                 auto fullPath = getPath();
                 std::vector<File> retval;
-                auto temp = isWindows() ? exec("dir " + fullPath) : exec("ls " + fullPath);
-                for(auto &t : temp)
+
+#ifdef __linux__
+                DIR           *d;
+                struct dirent *dir;
+                d = opendir(getPath().c_str());
+                if (d)
                 {
-                    retval.push_back(File(*this, t));
+                    while ((dir = readdir(d)) != NULL)
+                    {
+                        auto name = std::string(dir->d_name);
+                        // unix has the unfortunate habit of sneaking in the virtual paths "." and ".."
+                        if(name.compare(".")==0 || name.compare("..") == 0)
+                        {
+                            continue;
+                        }
+                        retval.push_back(File(*this, name));
+                    }
+                    closedir(d);
                 }
+#elif _WIN32
+#else
+#endif
                 return retval;
             }
 
