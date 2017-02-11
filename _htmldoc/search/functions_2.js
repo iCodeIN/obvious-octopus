@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['canread',['canRead',['../classos_1_1File.html#a18420560a891e849e17be973b4b6c972',1,'os::File']]],
   ['circle',['Circle',['../classSVG_1_1Circle.html#a7d2535eede6a3fbdfd248e485b10352e',1,'SVG::Circle::Circle(int cx, int cy, int r)'],['../classSVG_1_1Circle.html#a887c4b053544ad243ddf3a7c343a6ef1',1,'SVG::Circle::Circle(const Circle &amp;)=delete'],['../classSVG_1_1Circle.html#a6e144c0d9f29cc7971ef7ede19ddd6a2',1,'SVG::Circle::Circle(Circle &amp;)=delete']]],
   ['cleardasharray',['clearDashArray',['../classSVG_1_1Line.html#ab1364788c04cbd57dd0e3ab09a2244e6',1,'SVG::Line']]],
   ['clearfill',['clearFill',['../classSVG_1_1IElement.html#a655d72f0b66419251bae6dffbb7074cd',1,'SVG::IElement']]],

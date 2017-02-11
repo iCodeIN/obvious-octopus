@@ -13,6 +13,7 @@ var searchData=
   ['inversedft',['inverseDFT',['../classnumeric_1_1DFT.html#aefafd1c70aef4b273508fbd7f5308303',1,'numeric::DFT']]],
   ['ipostagger',['IPOSTagger',['../classnlp_1_1IPOSTagger.html#ac58826a2c24ae9f48e09e971a7f016eb',1,'nlp::IPOSTagger']]],
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
+  ['isdirectory',['isDirectory',['../classos_1_1File.html#a781e3cfd83fbef7d2079fff99506385d',1,'os::File']]],
   ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]],
   ['isset',['isSet',['../classnlp_1_1IModel.html#a798cd3a4fbc3c64c1a60ab048e0bd4a8',1,'nlp::IModel']]],
   ['istemmer',['IStemmer',['../classnlp_1_1IStemmer.html#a03b5d53bfd793ac8bb82f5f3b4ac19ee',1,'nlp::IStemmer']]],

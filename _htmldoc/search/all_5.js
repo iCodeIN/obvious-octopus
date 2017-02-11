@@ -1,5 +1,7 @@
 var searchData=
 [
+  ['file',['File',['../classos_1_1File.html',1,'os']]],
+  ['file',['File',['../classos_1_1File.html#a9334f199d8d2e5812ac31b3a30307b1a',1,'os::File::File(const std::string &amp;s)'],['../classos_1_1File.html#ab2aef17f177da9d02385905620dae1f8',1,'os::File::File(const File &amp;parent, const std::string &amp;file)']]],
   ['filetostring',['FileToString',['../classutil_1_1FileToString.html',1,'util']]],
   ['filetostring',['FileToString',['../classutil_1_1FileToString.html#a9e2d6e9aba88cbaca9b3a431d6a6b799',1,'util::FileToString']]],
   ['find',['find',['../classgraph_1_1BKTree.html#aad0ec5ac8298742eaf9409f3e98d4c1b',1,'graph::BKTree']]],

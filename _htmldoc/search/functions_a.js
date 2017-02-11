@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['makedirectory',['makeDirectory',['../classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e',1,'os::File']]],
   ['matrix',['matrix',['../classSVG_1_1IElement.html#acb302b3a025522197e4e7cdfe064c46f',1,'SVG::IElement']]],
   ['max',['max',['../classmatrix_1_1IMatrix.html#a09fc99aa085940e8e4702513b85d51f5',1,'matrix::IMatrix']]],
   ['maxentpostagger',['MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html#ad956337ac73ac50398fc346d6c459114',1,'nlp::MaxEntPOSTagger']]],
