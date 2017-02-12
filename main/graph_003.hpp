@@ -1,8 +1,8 @@
-#include <iostream>
-#include <string>
-
 #include "graph/bktree.hpp"
 #include "util/levenshtein.hpp"
+
+#include <iostream>
+#include <string>
 
 using namespace graph;
 

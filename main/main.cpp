@@ -1,3 +1,7 @@
+/* SVG main methods
+ */
+#include "svg_001.hpp"
+
 /* GRAPH main methods
  */
 
@@ -16,4 +20,4 @@
 
 /* OS main methods
  */
-#include "os_001.hpp"
+// #include "os_001.hpp"

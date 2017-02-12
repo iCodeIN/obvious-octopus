@@ -1,12 +1,12 @@
-#include <fstream>
-#include <functional>
-#include <iostream>
-
 #include "graph/bfs.hpp"
 #include "graph/randomgraphgenerator.hpp"
 #include "graph/stringgraph.hpp"
 #include "graph/eigenvalues.hpp"
 #include "xml/graphml.hpp"
+
+#include <fstream>
+#include <functional>
+#include <iostream>
 
 using namespace graph;
 using namespace XML;

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SNAP_TO_GRID_GRAPH_LAYOUT_HPP
-#define SNAP_TO_GRID_GRAPH_LAYOUT_HPP
+#ifndef GRAPH_UI_SNAPTOGRIDGRAPHLAYOUT_HPP
+#define GRAPH_UI_SNAPTOGRIDGRAPHLAYOUT_HPP
 
 #include "graph_ui/abstractgraphlayout.hpp"
 
@@ -78,4 +78,4 @@ namespace graph_ui
     };
 }
 
-#endif // SNAP_TO_GRID_GRAPH_LAYOUT_HPP
+#endif // GRAPH_UI_SNAPTOGRIDGRAPHLAYOUT_HPP

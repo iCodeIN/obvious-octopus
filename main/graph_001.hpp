@@ -1,6 +1,3 @@
-#ifndef GRAPH_MEMLEAK_HPP
-#define GRAPH_MEMLEAK_HPP
-
 #include "graph/adjecencylistgraph.hpp"
 
 #include <string>
@@ -17,5 +14,3 @@ int main()
     graphPtr->insertEdge("banaan", "appel");
 
 }
-
-#endif // GRAPH_MEMLEAK_HPP

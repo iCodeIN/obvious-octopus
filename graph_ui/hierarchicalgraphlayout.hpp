@@ -1,6 +1,6 @@
 #pragma once
-#ifndef HIERARCHICAL_GRAPH_LAYOUT_HPP
-#define HIERARCHICAL_GRAPH_LAYOUT_HPP
+#ifndef GRAPH_UI_HIERARCHICALGRAPHLAYOUT_HPP
+#define GRAPH_UI_HIERARCHICALGRAPHLAYOUT_HPP
 
 #include "graph_ui/abstractgraphlayout.hpp"
 
@@ -89,4 +89,4 @@ namespace graph_ui
     };
 }
 
-#endif // HIERARCHICAL_GRAPH_LAYOUT_HPP
+#endif // GRAPH_UI_HIERARCHICALGRAPHLAYOUT_HPP

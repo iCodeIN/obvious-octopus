@@ -1,7 +1,8 @@
-#ifndef BOOST_MATRIX_IMPL_HPP
-#define BOOST_MATRIX_IMPL_HPP
+#pragma once
+#ifndef MATRIX_BOOSTMATRIXIMPL_HPP
+#define MATRIX_BOOSTMATRIXIMPL_HPP
 
-#include "imatrix.hpp"
+#include "matrix/imatrix.hpp"
 
 #include <assert.h>
 #include <boost/numeric/ublas/matrix.hpp>
@@ -106,4 +107,4 @@ namespace matrix
 
     };
 }
-#endif // BOOST_MATRIX_IMPL_HPP
+#endif // MATRIX_BOOSTMATRIXIMPL_HPP

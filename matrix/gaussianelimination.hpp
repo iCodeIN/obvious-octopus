@@ -1,8 +1,8 @@
-#ifndef GAUSSIAN_ELIMINATION_HPP
-#define GAUSSIAN_ELIMINATION_HPP
+#pragma once
+#ifndef MATRIX_GAUSSIANELIMINATION_HPP
+#define MATRIX_GAUSSIANELIMINATION_HPP
 
-#include "imatrix.hpp"
-#include "matrix.hpp"
+#include "matrix/imatrix.hpp"
 
 namespace matrix
 {
@@ -96,4 +96,4 @@ namespace matrix
     };
 }
 
-#endif // GAUSSIAN_ELIMINATION_HPP
+#endif // MATRIX_GAUSSIAN_ELIMINATION_HPP

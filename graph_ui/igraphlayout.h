@@ -1,6 +1,6 @@
 #pragma once
-#ifndef IGRAPH_LAYOUT_H
-#define IGRAPH_LAYOUT_H
+#ifndef GRAPH_UI_IGRAPHLAYOUT_H
+#define GRAPH_UI_IGRAPHLAYOUT_H
 
 #include "graph/igraph.hpp"
 #include "graph/i2dgraph.hpp"
@@ -52,4 +52,4 @@ namespace graph_ui
     };
 }
 
-#endif // IGRAPH_LAYOUT_H
+#endif // GRAPH_UI_IGRAPHLAYOUT_H

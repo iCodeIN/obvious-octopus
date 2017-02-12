@@ -1,7 +1,7 @@
+#include "util/ngrams.hpp"
+
 #include <iostream>
 #include <string>
-
-#include "util/ngrams.hpp"
 
 using namespace util::string;
 using namespace std;

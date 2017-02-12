@@ -94,11 +94,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">gaussianelimination.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAUSSIAN_ELIMINATION_HPP</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAUSSIAN_ELIMINATION_HPP</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;imatrix.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;matrix.hpp&quot;</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MATRIX_GAUSSIANELIMINATION_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define MATRIX_GAUSSIANELIMINATION_HPP</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;matrix/imatrix.hpp&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span>matrix</div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
@@ -172,20 +172,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    };</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // GAUSSIAN_ELIMINATION_HPP</span></div>
-<div class="ttc" id="classmatrix_1_1IMatrix_html_a747304978363f970807830364f539e63"><div class="ttname"><a href="classmatrix_1_1IMatrix.html#a747304978363f970807830364f539e63">matrix::IMatrix::swapRows</a></div><div class="ttdeci">virtual void swapRows(int r0, int r1)</div><div class="ttdef"><b>Definition:</b> imatrix.hpp:68</div></div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;<span class="preprocessor">#endif // MATRIX_GAUSSIAN_ELIMINATION_HPP</span></div>
+<div class="ttc" id="classmatrix_1_1IMatrix_html_a747304978363f970807830364f539e63"><div class="ttname"><a href="classmatrix_1_1IMatrix.html#a747304978363f970807830364f539e63">matrix::IMatrix::swapRows</a></div><div class="ttdeci">virtual void swapRows(int r0, int r1)</div><div class="ttdef"><b>Definition:</b> imatrix.hpp:69</div></div>
 <div class="ttc" id="classmatrix_1_1IMatrix_html_a4194cbc5b5bfc23d7ffdb839ae6c93c8"><div class="ttname"><a href="classmatrix_1_1IMatrix.html#a4194cbc5b5bfc23d7ffdb839ae6c93c8">matrix::IMatrix::rows</a></div><div class="ttdeci">virtual int rows() const =0</div></div>
 <div class="ttc" id="classmatrix_1_1GaussianElimination_html"><div class="ttname"><a href="classmatrix_1_1GaussianElimination.html">matrix::GaussianElimination</a></div><div class="ttdef"><b>Definition:</b> gaussianelimination.hpp:17</div></div>
 <div class="ttc" id="classmatrix_1_1IMatrix_html_abc15a34b9c6db169768c8a5b30b7c815"><div class="ttname"><a href="classmatrix_1_1IMatrix.html#abc15a34b9c6db169768c8a5b30b7c815">matrix::IMatrix::cols</a></div><div class="ttdeci">virtual int cols() const =0</div></div>
 <div class="ttc" id="classmatrix_1_1IMatrix_html_ac9e86902e3fcc212b0a7025b24e0bf32"><div class="ttname"><a href="classmatrix_1_1IMatrix.html#ac9e86902e3fcc212b0a7025b24e0bf32">matrix::IMatrix::set</a></div><div class="ttdeci">virtual void set(int row, int col, double val)=0</div></div>
-<div class="ttc" id="classmatrix_1_1IMatrix_html"><div class="ttname"><a href="classmatrix_1_1IMatrix.html">matrix::IMatrix</a></div><div class="ttdef"><b>Definition:</b> imatrix.hpp:18</div></div>
+<div class="ttc" id="classmatrix_1_1IMatrix_html"><div class="ttname"><a href="classmatrix_1_1IMatrix.html">matrix::IMatrix</a></div><div class="ttdef"><b>Definition:</b> imatrix.hpp:19</div></div>
 <div class="ttc" id="classmatrix_1_1GaussianElimination_html_ad504070668d5226854e6e4f477818eb0"><div class="ttname"><a href="classmatrix_1_1GaussianElimination.html#ad504070668d5226854e6e4f477818eb0">matrix::GaussianElimination::GaussianElimination</a></div><div class="ttdeci">GaussianElimination()=delete</div></div>
 <div class="ttc" id="classmatrix_1_1GaussianElimination_html_af8302b1e39f0b466b70842e9966705c4"><div class="ttname"><a href="classmatrix_1_1GaussianElimination.html#af8302b1e39f0b466b70842e9966705c4">matrix::GaussianElimination::gaussianElimination</a></div><div class="ttdeci">static void gaussianElimination(IMatrix &amp;matrix)</div><div class="ttdef"><b>Definition:</b> gaussianelimination.hpp:34</div></div>
 <div class="ttc" id="classmatrix_1_1IMatrix_html_afe5c0f7fc0190bf35ca669a01fce5537"><div class="ttname"><a href="classmatrix_1_1IMatrix.html#afe5c0f7fc0190bf35ca669a01fce5537">matrix::IMatrix::get</a></div><div class="ttdeci">virtual double get(int row, int col) const =0</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 12 2017 10:41:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 12 2017 12:11:47 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

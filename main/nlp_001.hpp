@@ -1,8 +1,8 @@
-#include <iostream>
-#include <random>
-
 #include "nlp/ngramlanguagedetector.hpp"
 #include "util/filetostring.hpp"
+
+#include <iostream>
+#include <random>
 
 using namespace nlp;
 using namespace std;

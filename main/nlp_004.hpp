@@ -1,9 +1,9 @@
-#include <iostream>
-
-#include "nlp/imodel.hpp"
 #include "nlp/dictionarybasedtokenizer.hpp"
+#include "nlp/imodel.hpp"
 #include "nlp/metaheuristictokenizer.hpp"
 #include "nlp/porterstemmer.hpp"
+
+#include <iostream>
 
 using namespace std;
 using namespace nlp;

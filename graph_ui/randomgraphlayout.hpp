@@ -1,6 +1,6 @@
 #pragma once
-#ifndef RANDOM_GRAPH_LAYOUT_HPP
-#define RANDOM_GRAPH_LAYOUT_HPP
+#ifndef GRAPH_UI_RANDOMGRAPHLAYOUT_HPP
+#define GRAPH_UI_RANDOMGRAPHLAYOUT_HPP
 
 #include "graph_ui/abstractgraphlayout.hpp"
 
@@ -75,4 +75,4 @@ namespace graph_ui
     };
 }
 
-#endif // RANDOM_GRAPH_LAYOUT_HPP
+#endif // GRAPH_UI_RANDOMGRAPHLAYOUT_HPP

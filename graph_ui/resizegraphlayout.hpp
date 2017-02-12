@@ -1,6 +1,6 @@
 #pragma once
-#ifndef RESIZE_GRAPH_LAYOUT_HPP
-#define RESIZE_GRAPH_LAYOUT_HPP
+#ifndef GRAPH_UI_RESIZEGRAPHLAYOUT_HPP
+#define GRAPH_UI_RESIZEGRAPHLAYOUT_HPP
 
 #include "graph_ui/abstractgraphlayout.hpp"
 
@@ -69,4 +69,4 @@ namespace graph_ui
     };
 }
 
-#endif // RESIZE_GRAPH_LAYOUT.HPP
+#endif // GRAPH_UI_RESIZEGRAPHLAYOUT.HPP

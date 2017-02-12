@@ -1,5 +1,6 @@
-#ifndef IMATRIX_HPP
-#define IMATRIX_HPP
+#pragma once
+#ifndef MATRIX_IMATRIX_HPP
+#define MATRIX_IMATRIX_HPP
 
 #include <assert.h>
 #include <functional>
@@ -133,4 +134,4 @@ namespace matrix
     };
 }
 
-#endif // IMATRIX_HPP
+#endif // MATRIX_IMATRIX_HPP

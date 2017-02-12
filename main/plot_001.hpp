@@ -1,13 +1,9 @@
-#ifndef PLOT_001_HPP
-#define PLOT_001_HPP
-
 #include "plotting/lineplot.hpp"
 
 #include <iostream>
 
 using namespace plotting;
 using namespace std;
-
 
 int main()
 {
@@ -33,5 +29,3 @@ int main()
     // return
     return 0;
 }
-
-#endif // PLOT_001_HPP

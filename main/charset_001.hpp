@@ -1,14 +1,11 @@
 #include <clocale>
 #include <cwchar>
+#include <fstream>
 #include <iostream>
 #include <set>
 #include <string>
-#include <fstream>
-
-// #include "util/filetostring.hpp"
 
 using namespace std;
-//using namespace util;
 
 static std::wstring readStream(std::wistream& s)
 {

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ABSTRACTGRAPHLAYOUT_HPP
-#define ABSTRACTGRAPHLAYOUT_HPP
+#ifndef GRAPH_UI_ABSTRACTGRAPHLAYOUT_HPP
+#define GRAPH_UI_ABSTRACTGRAPHLAYOUT_HPP
 
 #include "graph_ui/igraphlayout.h"
 
@@ -112,4 +112,4 @@ namespace graph_ui
     };
 }
 
-#endif // ABSTRACTGRAPHLAYOUT_HPP
+#endif // GRAPH_UI_ABSTRACTGRAPHLAYOUT_HPP

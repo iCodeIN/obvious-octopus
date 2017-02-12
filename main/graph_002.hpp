@@ -1,14 +1,13 @@
-#include "xml/defaultelementimpl.hpp"
 #include "graph/adjecencylistgraph.hpp"
-
 #include "graph_ui/randomgraphlayout.hpp"
 
+#include "xml/defaultelementimpl.hpp"
 #include "xml/graphml.hpp"
 
 #include <assert.h>
+#include <fstream>
 #include <functional>
 #include <iostream>
-#include <fstream>
 #include <memory>
 #include <set>
 #include <string>
