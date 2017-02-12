@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ASSIGNMENTSEARCH_HPP
-#define ASSIGNMENTSEARCH_HPP
+#ifndef META_ASSIGNMENTSEARCH_HPP
+#define META_ASSIGNMENTSEARCH_HPP
 
 #include "meta/abstractmetaheuristic.hpp"
 
@@ -182,4 +182,4 @@ namespace meta
     };
 }
 
-#endif // ASSIGNMENTSEARCH_HPP
+#endif // META_ASSIGNMENTSEARCH_HPP

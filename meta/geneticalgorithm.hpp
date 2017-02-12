@@ -1,8 +1,6 @@
 #pragma once
-#ifndef GENETICALGORITHM_HPP
-#define GENETICALGORITHM_HPP
-
-#include <iostream> // debug
+#ifndef META_GENETICALGORITHM_HPP
+#define META_GENETICALGORITHM_HPP
 
 #include "abstractmetaheuristic.hpp"
 
@@ -64,7 +62,6 @@ namespace meta
 
                     // keep track of best individual
                     auto generationBest = best(solutions, function);
-                    std::cout << "gen : " << i << ", max : " << function(generationBest) << std::endl;
                     if(function(generationBest) > function(retval))
                     {
                         retval = generationBest;
@@ -224,4 +221,4 @@ namespace meta
     };
 }
 
-#endif //GENETICALGORITHM_HPP
+#endif // META_GENETICALGORITHM_HPP

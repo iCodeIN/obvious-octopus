@@ -1,9 +1,9 @@
 #pragma once
-#ifndef XML_HPP
-#define XML_HPP
+#ifndef XML_XML_HPP
+#define XML_XML_HPP
 
-#include "defaultelementimpl.hpp"
-#include "ielement.hpp"
+#include "xml/defaultelementimpl.hpp"
+#include "xml/ielement.hpp"
 
 #include <algorithm>
 #include <assert.h>
@@ -144,4 +144,4 @@ static std::istream& operator>>(std::istream& is, XML::IElement &e)
     return is;
 }
 
-#endif // XML_HPP
+#endif // XML_XML_HPP

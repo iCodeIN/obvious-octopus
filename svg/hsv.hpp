@@ -1,6 +1,6 @@
 #pragma once
-#ifndef HSV_HPP
-#define HSV_HPP
+#ifndef SVG_HSV_HPP
+#define SVG_HSV_HPP
 
 #include <assert.h>
 #include <tuple>
@@ -104,4 +104,4 @@ namespace SVG
     };
 }
 
-#endif // HSV_HPP
+#endif // SVG_HSV_HPP

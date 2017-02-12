@@ -1,3 +1,4 @@
+#pragma once
 #ifndef XML_IELEMENT_HPP
 #define XML_IELEMENT_HPP
 

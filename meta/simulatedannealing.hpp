@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SIMULATEDANNEALING_HPP
-#define SIMULATEDANNEALING_HPP
+#ifndef META_SIMULATEDANNEALING_HPP
+#define META_SIMULATEDANNEALING_HPP
 
 #include "abstractmetaheuristic.hpp"
 
@@ -99,4 +99,4 @@ namespace meta
     };
 }
 
-#endif // SIMULATEDANNEALING_HPP
+#endif // META_SIMULATEDANNEALING_HPP

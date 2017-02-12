@@ -1,5 +1,6 @@
-#ifndef NGRAMS_HPP
-#define NGRAMS_HPP
+#pragma once
+#ifndef UTIL_NGRAMS_HPP
+#define UTIL_NGRAMS_HPP
 
 #include "util/stringutils.hpp"
 
@@ -44,4 +45,4 @@ namespace util
     }
 }
 
-#endif // NGRAMS_HPP
+#endif // UTIL_NGRAMS_HPP

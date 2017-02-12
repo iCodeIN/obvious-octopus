@@ -1,5 +1,6 @@
-#ifndef FILE_HPP
-#define FILE_HPP
+#pragma once
+#ifndef OS_FILE_HPP
+#define OS_FILE_HPP
 
 #include "os/os.hpp"
 
@@ -203,4 +204,4 @@ namespace os
     };
 }
 
-#endif // FILE_HPP
+#endif // OS_FILE_HPP

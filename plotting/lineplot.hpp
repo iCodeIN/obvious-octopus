@@ -1,5 +1,6 @@
-#ifndef LINEPLOT_HPP
-#define LINEPLOT_HPP
+#pragma once
+#ifndef PLOTTING_LINEPLOT_HPP
+#define PLOTTING_LINEPLOT_HPP
 
 #include "svg/hsv.hpp"
 #include "svg/line.hpp"
@@ -259,4 +260,4 @@ namespace plotting
     };
 }
 
-#endif // LINEPLOT_HPP
+#endif // PLOTTING_LINEPLOT_HPP

@@ -1,5 +1,5 @@
-#ifndef MAXENTPOSTAGGER_HPP
-#define MAXENTPOSTAGGER_HPP
+#ifndef NLP_MAXENTPOSTAGGER_HPP
+#define NLP_MAXENTPOSTAGGER_HPP
 
 #include "nlp/ipostagger.h"
 
@@ -34,4 +34,4 @@ namespace nlp
     };
 }
 
-#endif // MAXENTPOSTAGGER_HPP
+#endif // NLP_MAXENTPOSTAGGER_HPP

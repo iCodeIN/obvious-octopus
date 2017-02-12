@@ -1,6 +1,6 @@
 #pragma once
-#ifndef CIRCLE_HPP
-#define CIRCLE_HPP
+#ifndef SVG_CIRCLE_HPP
+#define SVG_CIRCLE_HPP
 
 #include "ielement.hpp"
 
@@ -68,4 +68,4 @@ namespace SVG
 
 }
 
-#endif // CIRCLe_HPP
+#endif // SVG_CIRCLE_HPP

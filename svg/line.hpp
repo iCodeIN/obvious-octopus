@@ -1,8 +1,8 @@
 #pragma once
-#ifndef LINE_HPP
-#define LINE_HPP
+#ifndef SVG_LINE_HPP
+#define SVG_LINE_HPP
 
-#include "ielement.hpp"
+#include "svg/ielement.hpp"
 
 namespace SVG
 {
@@ -96,4 +96,4 @@ namespace SVG
 
 }
 
-#endif // LINE_HPP
+#endif // SVG_LINE_HPP

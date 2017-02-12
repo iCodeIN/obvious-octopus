@@ -1,5 +1,5 @@
-#ifndef BIGINTEGER_HPP
-#define BIGINTEGER_HPP
+#ifndef NUMERIC_BIGINTEGER_HPP
+#define NUMERIC_BIGINTEGER_HPP
 
 #include <assert.h>
 #include <iostream> // debug
@@ -386,4 +386,4 @@ namespace numeric
     };
 }
 
-#endif // BIGINTEGER_HPP
+#endif // NUMERIC_BIGINTEGER_HPP

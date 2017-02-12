@@ -1,8 +1,8 @@
 #pragma once
-#ifndef POLYGON_HPP
-#define POLYGON_HPP
+#ifndef SVG_POLYGON_HPP
+#define SVG_POLYGON_HPP
 
-#include "ielement.hpp"
+#include "svg/ielement.hpp"
 
 namespace SVG
 {
@@ -65,4 +65,4 @@ namespace SVG
 
 }
 
-#endif // POLYGON_HPP
+#endif // SVG_POLYGON_HPP

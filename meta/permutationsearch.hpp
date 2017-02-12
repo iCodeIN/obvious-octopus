@@ -1,6 +1,6 @@
 #pragma once
-#ifndef PERMUTATIONSEARCH_HPP
-#define PERMUTATIONSEARCH_HPP
+#ifndef META_PERMUTATIONSEARCH_HPP
+#define META_PERMUTATIONSEARCH_HPP
 
 #include "meta/abstractmetaheuristic.hpp"
 
@@ -172,4 +172,4 @@ namespace meta
     };
 }
 
-#endif // PERMUTATIONSEARCH_HPP
+#endif // META_PERMUTATIONSEARCH_HPP

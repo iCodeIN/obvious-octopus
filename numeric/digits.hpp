@@ -1,5 +1,5 @@
-#ifndef DIGITS_HPP
-#define DIGITS_HPP
+#ifndef NUMERIC_DIGITS_HPP
+#define NUMERIC_DIGITS_HPP
 
 #include <algorithm>
 #include <math.h>
@@ -57,4 +57,4 @@ namespace numeric
     };
 }
 
-#endif // DIGITS_HPP
+#endif // NUMERIC_DIGITS_HPP

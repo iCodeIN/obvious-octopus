@@ -1,6 +1,6 @@
 #pragma once
-#ifndef TABUSEARCH_HPP
-#define TABUSEARCH_HPP
+#ifndef META_TABUSEARCH_HPP
+#define META_TABUSEARCH_HPP
 
 #include "abstractmetaheuristic.hpp"
 
@@ -86,4 +86,4 @@ namespace meta
     };
 }
 
-#endif // TABUSEARCH_HPP
+#endif // META_TABUSEARCH_HPP

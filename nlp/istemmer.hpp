@@ -1,5 +1,5 @@
-#ifndef ISTEMMER_HPP
-#define ISTEMMER_HPP
+#ifndef NLP_ISTEMMER_HPP
+#define NLP_ISTEMMER_HPP
 
 #include "nlp/imodel.hpp"
 
@@ -33,4 +33,4 @@ namespace nlp
     };
 }
 
-#endif // ISTEMMER_HPP
+#endif // NLP_ISTEMMER_HPP

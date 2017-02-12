@@ -1,5 +1,6 @@
-#ifndef FILETOSTRING_HPP
-#define FILETOSTRING_HPP
+#pragma once
+#ifndef UTIL_FILETOSTRING_HPP
+#define UTIL_FILETOSTRING_HPP
 
 #include <fstream>
 #include <string>
@@ -51,4 +52,4 @@ namespace util
     };
 }
 
-#endif // FILETOSTRING_HPP
+#endif // UTIL_FILETOSTRING_HPP

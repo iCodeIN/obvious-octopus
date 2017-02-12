@@ -1,5 +1,6 @@
-#ifndef STRINGUTILS_HPP
-#define STRINGUTILS_HPP
+#pragma once
+#ifndef UTIL_STRINGUTILS_HPP
+#define UTIL_STRINGUTILS_HPP
 
 #include <functional>
 #include <cctype>
@@ -124,4 +125,4 @@ namespace util
     }
 }
 
-#endif // STRINGUTILS_HPP
+#endif // UTIL_STRINGUTILS_HPP

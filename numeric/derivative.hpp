@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DERIVATIVE_HPP
-#define DERIVATIVE_HPP
+#ifndef NUMERIC_DERIVATIVE_HPP
+#define NUMERIC_DERIVATIVE_HPP
 
 #include <functional>
 #include <math.h>
@@ -34,4 +34,4 @@ namespace numeric
     };
 }
 
-#endif // DERIVATIVE_HPP
+#endif // NUMERIC_DERIVATIVE_HPP

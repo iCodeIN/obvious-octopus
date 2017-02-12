@@ -1,5 +1,5 @@
-#ifndef PORTERSTEMMER_HPP
-#define PORTERSTEMMER_HPP
+#ifndef NLP_PORTERSTEMMER_HPP
+#define NLP_PORTERSTEMMER_HPP
 
 #include "nlp/istemmer.hpp"
 #include "util/stringutils.hpp"
@@ -449,4 +449,4 @@ namespace nlp
     };
 }
 
-#endif // PORTERSTEMMER_HPP
+#endif // NLP_PORTERSTEMMER_HPP

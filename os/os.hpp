@@ -1,5 +1,6 @@
-#ifndef OS_HPP
-#define OS_HPP
+#pragma once
+#ifndef OS_OS_HPP
+#define OS_OS_HPP
 
 #include <array>
 #include <iostream>

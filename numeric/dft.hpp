@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DFT_HPP
-#define DFT_HPP
+#ifndef NUMERIC_DFT_HPP
+#define NUMERIC_DFT_HPP
 
 #include <algorithm>
 #include <complex>
@@ -105,4 +105,4 @@ namespace numeric
     };
 }
 
-#endif // DFT_HPP
+#endif // NUMERIC_DFT_HPP

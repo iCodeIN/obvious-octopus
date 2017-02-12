@@ -1,11 +1,12 @@
-#ifndef DICTIONARYBASEDTOKENIZER_HPP
-#define DICTIONARYBASEDTOKENIZER_HPP
-
-#include <set>
+#pragma once
+#ifndef NLP_DICTIONARYBASEDTOKENIZER_HPP
+#define NLP_DICTIONARYBASEDTOKENIZER_HPP
 
 #include "nlp/itokenizer.h"
 #include "util/stringutils.hpp"
 #include "xml/xml.hpp"
+
+#include <set>
 
 namespace nlp
 {
@@ -136,4 +137,4 @@ namespace nlp
     };
 }
 
-#endif // DICTIONARYBASEDTOKENIZER_HPP
+#endif // NLP_DICTIONARYBASEDTOKENIZER_HPP

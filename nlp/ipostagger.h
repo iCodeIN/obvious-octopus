@@ -1,5 +1,5 @@
-#ifndef IPOSTAGGER_HPP
-#define IPOSTAGGER_HPP
+#ifndef NLP_IPOSTAGGER_HPP
+#define NLP_IPOSTAGGER_HPP
 
 #include "nlp/imodel.hpp"
 
@@ -34,4 +34,4 @@ namespace nlp
     };
 }
 
-#endif // IPOSTAGGER_HPP
+#endif // NLP_IPOSTAGGER_HPP

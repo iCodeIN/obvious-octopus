@@ -1,6 +1,6 @@
 #pragma once
-#ifndef SVG_HPP
-#define SVG_HPP
+#ifndef SVG_SVG_HPP
+#define SVG_SVG_HPP
 
 #include "svg/ielement.hpp"
 
@@ -189,15 +189,14 @@ namespace SVG
             // --- Members ---
             std::vector<std::unique_ptr<IElement>> m_elements;
 
-            PreserveAspectRatio                    m_preserveAspectRatio   = PreserveAspectRatio::NONE;  //!< PreserveAspectRatio attribute
-            int												m_viewbox_minX 	      = -1;		                     //!< ViewBox upper-left corner X
-            int 												m_viewbox_minY 	      = -1;		                     //!< ViewBox upper-left corner Y
-            int 												m_viewbox_width 	      = -1;		                     //!< ViewBox width property
-            int 												m_viewbox_height 	      = -1;		                     //!< ViewBox height property
-
-            int 												m_width 				      = -1;		                     //!< width
-            int 												m_height				      = -1;		                     //!< height
+            PreserveAspectRatio                     m_preserveAspectRatio   = PreserveAspectRatio::NONE;  //!< PreserveAspectRatio attribute
+            int									    m_viewbox_minX 	        = -1;		                     //!< ViewBox upper-left corner X
+            int 									m_viewbox_minY 	        = -1;		                     //!< ViewBox upper-left corner Y
+            int 									m_viewbox_width 	    = -1;		                     //!< ViewBox width property
+            int 									m_viewbox_height 	    = -1;		                     //!< ViewBox height proper
+            int 									m_width 			    = -1;		                     //!< width
+            int 									m_height			    = -1;		                     //!< height
     };
 }
 
-#endif // SVG_HPP
+#endif // SVG_SVG_HPP

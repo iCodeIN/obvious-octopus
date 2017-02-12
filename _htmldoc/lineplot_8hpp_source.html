@@ -94,260 +94,261 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">lineplot.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef LINEPLOT_HPP</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define LINEPLOT_HPP</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;svg/hsv.hpp&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;svg/line.hpp&quot;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;svg/polyline.hpp&quot;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;svg/rectangle.hpp&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;svg/svg.hpp&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>plotting</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00029"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#adff5ef1b89e293bae53ca57848ae42f1">   29</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classplotting_1_1LinePlot.html#adff5ef1b89e293bae53ca57848ae42f1">LinePlot</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                : m_height(height)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                , m_width(width)</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                , m_verticalAxis(true)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                , m_horizontalAxis(true)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                , m_verticalGrid(true)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                , m_horizontalGrid(true)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                assert(m_height &gt; 0 &amp;&amp; m_width &gt; 0);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">   42</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">LinePlot</a>()</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                : m_height(400)</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                , m_width(650)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                , m_verticalAxis(true)</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                , m_horizontalAxis(true)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                , m_verticalGrid(true)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                , m_horizontalGrid(true)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classplotting_1_1LinePlot.html#aed57fd6161c03296c732d45db1621234">~LinePlot</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">LinePlot</a>(<a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;n) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">LinePlot</a>(<span class="keyword">const</span> <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;n) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> <a class="code" href="classplotting_1_1LinePlot.html#a29865ca32750b1de595e91b32d554221">operator=</a>(<a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> <a class="code" href="classplotting_1_1LinePlot.html#a29865ca32750b1de595e91b32d554221">operator=</a>(<span class="keyword">const</span> <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;</div>
-<div class="line"><a name="l00074"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">   74</a></span>&#160;            <span class="keyword">using</span> <a class="code" href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">SeriesType</a> = std::vector&lt;std::pair&lt;double,double&gt;&gt;;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
-<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5">   78</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5">addSeries</a>(<span class="keyword">const</span> <a class="code" href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">SeriesType</a>&amp; s)</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            {</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                m_series.push_back(s);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
-<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#aa4b69bbed6a33e108539165f34c40bd1">   84</a></span>&#160;            std::unique_ptr&lt;SVG::SVG&gt; <a class="code" href="classplotting_1_1LinePlot.html#aa4b69bbed6a33e108539165f34c40bd1">plot</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                <span class="comment">// create image</span></div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="keyword">auto</span> img = std::unique_ptr&lt;SVG::SVG&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>());</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;                <span class="comment">// set data range</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="keyword">const_cast&lt;</span><a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;setDataRange();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                <span class="comment">// draw background</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                drawBackground(*img);</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                <span class="comment">// draw axis</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                drawAxis(*img);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                <span class="comment">// draw axis labels</span></div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                drawAxisLabels(*img);</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;                <span class="comment">// draw grid</span></div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                drawGrid(*img);</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;                <span class="comment">// draw series</span></div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                drawSeries(*img);</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                <span class="comment">// return</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="keywordflow">return</span> std::move(img);</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;            }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;            <span class="keywordtype">void</span> setDataRange()</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            {</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;                m_minX = m_series.empty() ? 0 : m_series[0][0].first;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                m_minY = m_series.empty() ? 0 : m_series[0][0].second;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                m_maxX = m_minX;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                m_maxY = m_minY;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;serie : m_series)</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                {</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : serie)</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                        <span class="keyword">auto</span> x = point.first;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        <span class="keyword">auto</span> y = point.second;</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        m_minX = std::min(m_minX, x);</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        m_minY = std::min(m_minY, y);</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        m_maxX = std::max(m_maxX, x);</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                        m_maxY = std::max(m_maxY, y);</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                    }</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                }</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                m_xDataRange = m_maxX - m_minX;</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                m_yDataRange = m_maxY - m_minY;</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;            }</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            <span class="keywordtype">void</span> drawBackground(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;                <span class="keyword">auto</span> background = std::unique_ptr&lt;SVG::Rectangle&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Rectangle.html">SVG::Rectangle</a>(0, 0, m_width, m_height));</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                background-&gt;setStrokeWidth(0);</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                background-&gt;setFillOpacity(1.0);</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                background-&gt;setFill(255,255,255);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(background));</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;            }</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;            <span class="keywordtype">void</span> drawAxis(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;                <span class="keywordflow">if</span>(m_horizontalAxis)</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                {</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                    <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_height - m_bottomMargin, m_width - m_rightMargin, m_height - m_bottomMargin));</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    line-&gt;setStrokeWidth(1);</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    line-&gt;setStroke(0, 0, 0);</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                <span class="keywordflow">if</span>(m_verticalAxis)</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                    <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_height - m_bottomMargin, m_leftMargin, m_topMargin));</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    line-&gt;setStrokeWidth(1);</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    line-&gt;setStroke(0, 0, 0);</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                    svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                }</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;            }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;            <span class="keywordtype">void</span> drawAxisLabels(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;                <span class="keywordflow">if</span>(m_horizontalAxis)</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    {</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="comment">// TODO</span></div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                    }</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                }</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                <span class="keywordflow">if</span>(m_verticalAxis)</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                {</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    {</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                        <span class="comment">// TODO</span></div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                    }</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                }</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;            }</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            <span class="keywordtype">void</span> drawGrid(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;                std::vector&lt;int&gt; dashes;</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                dashes.push_back(1);</div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef PLOTTING_LINEPLOT_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define PLOTTING_LINEPLOT_HPP</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;svg/hsv.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;svg/line.hpp&quot;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &quot;svg/polyline.hpp&quot;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;svg/rectangle.hpp&quot;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &quot;svg/svg.hpp&quot;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">namespace </span>plotting</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;{</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html">   23</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#adff5ef1b89e293bae53ca57848ae42f1">   30</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classplotting_1_1LinePlot.html#adff5ef1b89e293bae53ca57848ae42f1">LinePlot</a>(<span class="keywordtype">int</span> width, <span class="keywordtype">int</span> height)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                : m_height(height)</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                , m_width(width)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                , m_verticalAxis(true)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                , m_horizontalAxis(true)</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                , m_verticalGrid(true)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                , m_horizontalGrid(true)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                assert(m_height &gt; 0 &amp;&amp; m_width &gt; 0);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00043"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">   43</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">LinePlot</a>()</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                : m_height(400)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                , m_width(650)</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                , m_verticalAxis(true)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                , m_horizontalAxis(true)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                , m_verticalGrid(true)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                , m_horizontalGrid(true)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classplotting_1_1LinePlot.html#aed57fd6161c03296c732d45db1621234">~LinePlot</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">LinePlot</a>(<a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;n) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">LinePlot</a>(<span class="keyword">const</span> <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;n) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> <a class="code" href="classplotting_1_1LinePlot.html#a29865ca32750b1de595e91b32d554221">operator=</a>(<a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> <a class="code" href="classplotting_1_1LinePlot.html#a29865ca32750b1de595e91b32d554221">operator=</a>(<span class="keyword">const</span> <a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a> &amp;&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;</div>
+<div class="line"><a name="l00075"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">   75</a></span>&#160;            <span class="keyword">using</span> <a class="code" href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">SeriesType</a> = std::vector&lt;std::pair&lt;double,double&gt;&gt;;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;</div>
+<div class="line"><a name="l00079"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5">   79</a></span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5">addSeries</a>(<span class="keyword">const</span> <a class="code" href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">SeriesType</a>&amp; s)</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;                m_series.push_back(s);</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="classplotting_1_1LinePlot.html#aa4b69bbed6a33e108539165f34c40bd1">   85</a></span>&#160;            std::unique_ptr&lt;SVG::SVG&gt; <a class="code" href="classplotting_1_1LinePlot.html#aa4b69bbed6a33e108539165f34c40bd1">plot</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                <span class="comment">// create image</span></div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keyword">auto</span> img = std::unique_ptr&lt;SVG::SVG&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>());</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                <span class="comment">// set data range</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                <span class="keyword">const_cast&lt;</span><a class="code" href="classplotting_1_1LinePlot.html">LinePlot</a>*<span class="keyword">&gt;</span>(<span class="keyword">this</span>)-&gt;setDataRange();</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                <span class="comment">// draw background</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                drawBackground(*img);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                <span class="comment">// draw axis</span></div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                drawAxis(*img);</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                <span class="comment">// draw axis labels</span></div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                drawAxisLabels(*img);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;                <span class="comment">// draw grid</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;                drawGrid(*img);</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;                <span class="comment">// draw series</span></div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                drawSeries(*img);</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                <span class="comment">// return</span></div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordflow">return</span> std::move(img);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;            }</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            <span class="keywordtype">void</span> setDataRange()</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;            {</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                m_minX = m_series.empty() ? 0 : m_series[0][0].first;</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                m_minY = m_series.empty() ? 0 : m_series[0][0].second;</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                m_maxX = m_minX;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                m_maxY = m_minY;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;                <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;serie : m_series)</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;                {</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : serie)</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                    {</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                        <span class="keyword">auto</span> x = point.first;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;                        <span class="keyword">auto</span> y = point.second;</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;                        m_minX = std::min(m_minX, x);</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;                        m_minY = std::min(m_minY, y);</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;                        m_maxX = std::max(m_maxX, x);</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;                        m_maxY = std::max(m_maxY, y);</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;                    }</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;                }</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;                m_xDataRange = m_maxX - m_minX;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                m_yDataRange = m_maxY - m_minY;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            }</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordtype">void</span> drawBackground(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;                <span class="keyword">auto</span> background = std::unique_ptr&lt;SVG::Rectangle&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Rectangle.html">SVG::Rectangle</a>(0, 0, m_width, m_height));</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;                background-&gt;setStrokeWidth(0);</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                background-&gt;setFillOpacity(1.0);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                background-&gt;setFill(255,255,255);</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(background));</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;            }</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;            <span class="keywordtype">void</span> drawAxis(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;                <span class="keywordflow">if</span>(m_horizontalAxis)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;                {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;                    <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_height - m_bottomMargin, m_width - m_rightMargin, m_height - m_bottomMargin));</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                    line-&gt;setStrokeWidth(1);</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                    line-&gt;setStroke(0, 0, 0);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;                    svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;                }</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;                <span class="keywordflow">if</span>(m_verticalAxis)</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                {</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;                    <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_height - m_bottomMargin, m_leftMargin, m_topMargin));</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;                    line-&gt;setStrokeWidth(1);</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                    line-&gt;setStroke(0, 0, 0);</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;                    svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;                }</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;            }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;</div>
+<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;            <span class="keywordtype">void</span> drawAxisLabels(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                <span class="keywordflow">if</span>(m_horizontalAxis)</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                {</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                    {</div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        <span class="comment">// TODO</span></div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                    }</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                }</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                <span class="keywordflow">if</span>(m_verticalAxis)</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                {</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                        <span class="comment">// TODO</span></div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;                    }</div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;                }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            }</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            <span class="keywordtype">void</span> drawGrid(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160;                std::vector&lt;int&gt; dashes;</div>
 <div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;                dashes.push_back(1);</div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                <span class="keywordflow">if</span>(m_horizontalGrid)</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                {</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    {</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                        <span class="keyword">auto</span> y = (m_height - m_topMargin - m_bottomMargin) / 10;</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_bottomMargin + y * i, m_width - m_rightMargin, m_bottomMargin + y * i));</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        line-&gt;setStrokeWidth(1);</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                        line-&gt;setStroke(66,66,66);</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        line-&gt;setStrokeArray(dashes);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                    }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                }</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                <span class="keywordflow">if</span>(m_verticalGrid)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    {</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                        <span class="keyword">auto</span> x = (m_width - m_leftMargin - m_rightMargin) / 10;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                        <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin + x * i, m_topMargin, m_leftMargin + x * i, m_height - m_bottomMargin));</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        line-&gt;setStrokeWidth(1);</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        line-&gt;setStroke(66,66,66);</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        line-&gt;setStrokeArray(dashes);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                    }</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            }</div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            <span class="keywordtype">void</span> drawSeries(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;                <span class="comment">// calculate scaling information for all series</span></div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                <span class="keyword">auto</span> xPlotRange = m_width - m_leftMargin - m_rightMargin;</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keyword">auto</span> yPlotRange = m_height - m_topMargin - m_bottomMargin;</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="comment">// draw series</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keyword">auto</span> colors = <a class="code" href="classSVG_1_1HSV.html#a0b902a26b77102f1d689c9346b7b33c9">SVG::HSV::equidistant</a>(m_series.size() + 2);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m_series.size(); i++)</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                {</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    std::vector&lt;std::pair&lt;double,double&gt;&gt; modPoints;</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : m_series[i])</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    {</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                        <span class="keyword">auto</span> x = point.first;</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                        <span class="keyword">auto</span> y = point.second;</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        modPoints.push_back(std::pair&lt;double,double&gt;((x - m_minX) * xPlotRange / m_xDataRange + m_leftMargin, m_height - m_bottomMargin - (y - m_minY) * yPlotRange / m_yDataRange));</div>
-<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                    }</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Polyline&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Polyline.html">SVG::Polyline</a>(modPoints));</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    line-&gt;setStrokeWidth(1);</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    <span class="keyword">auto</span> color = <a class="code" href="classSVG_1_1HSV.html#aaca4ff81a71090a97884cb1625f48f50">SVG::HSV::toRGB</a>(colors[i]);</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    line-&gt;setStroke(std::get&lt;0&gt;(color), std::get&lt;1&gt;(color), std::get&lt;2&gt;(color));</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
-<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                }</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;            }</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            std::vector&lt;SeriesType&gt;    m_series;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            <span class="keywordtype">bool</span>                       m_horizontalAxis;</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordtype">bool</span>                       m_verticalAxis;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;            <span class="keywordtype">bool</span>                       m_horizontalGrid;</div>
-<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordtype">bool</span>                       m_verticalGrid;</div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;            <span class="keywordtype">double</span>                      m_minX = 0;</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordtype">double</span>                      m_minY = 0;</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordtype">double</span>                      m_maxX = 0;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordtype">double</span>                      m_maxY = 0;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordtype">double</span>                      m_xDataRange = 0;</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordtype">double</span>                      m_yDataRange = 0;</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;</div>
-<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;            <span class="keywordtype">int</span>                         m_leftMargin     = 10;</div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordtype">int</span>                         m_rightMargin    = 10;</div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordtype">int</span>                         m_topMargin      = 10;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordtype">int</span>                         m_bottomMargin   = 10;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;</div>
-<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;            <span class="keywordtype">int</span>                         m_width;</div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordtype">int</span>                         m_height;</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;    };</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;}</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;<span class="preprocessor">#endif // LINEPLOT_HPP</span></div>
-<div class="ttc" id="classplotting_1_1LinePlot_html_aa4b69bbed6a33e108539165f34c40bd1"><div class="ttname"><a href="classplotting_1_1LinePlot.html#aa4b69bbed6a33e108539165f34c40bd1">plotting::LinePlot::plot</a></div><div class="ttdeci">std::unique_ptr&lt; SVG::SVG &gt; plot() const </div><div class="ttdoc">— IPlot — </div><div class="ttdef"><b>Definition:</b> lineplot.hpp:84</div></div>
+<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;                dashes.push_back(1);</div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;                <span class="keywordflow">if</span>(m_horizontalGrid)</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                    {</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                        <span class="keyword">auto</span> y = (m_height - m_topMargin - m_bottomMargin) / 10;</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_bottomMargin + y * i, m_width - m_rightMargin, m_bottomMargin + y * i));</div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                        line-&gt;setStrokeWidth(1);</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        line-&gt;setStroke(66,66,66);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        line-&gt;setStrokeArray(dashes);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                        svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                }</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                <span class="keywordflow">if</span>(m_verticalGrid)</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;                {</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;                    <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;=10; i++)</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;                    {</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;                        <span class="keyword">auto</span> x = (m_width - m_leftMargin - m_rightMargin) / 10;</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin + x * i, m_topMargin, m_leftMargin + x * i, m_height - m_bottomMargin));</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        line-&gt;setStrokeWidth(1);</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        line-&gt;setStroke(66,66,66);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        line-&gt;setStrokeArray(dashes);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    }</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                }</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;            }</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            <span class="keywordtype">void</span> drawSeries(<a class="code" href="classSVG_1_1SVG.html">SVG::SVG</a>&amp; svg)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;                <span class="comment">// calculate scaling information for all series</span></div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;                <span class="keyword">auto</span> xPlotRange = m_width - m_leftMargin - m_rightMargin;</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;                <span class="keyword">auto</span> yPlotRange = m_height - m_topMargin - m_bottomMargin;</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="comment">// draw series</span></div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                <span class="keyword">auto</span> colors = <a class="code" href="classSVG_1_1HSV.html#a0b902a26b77102f1d689c9346b7b33c9">SVG::HSV::equidistant</a>(m_series.size() + 2);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;m_series.size(); i++)</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                {</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    std::vector&lt;std::pair&lt;double,double&gt;&gt; modPoints;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;point : m_series[i])</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    {</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                        <span class="keyword">auto</span> x = point.first;</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                        <span class="keyword">auto</span> y = point.second;</div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;                        modPoints.push_back(std::pair&lt;double,double&gt;((x - m_minX) * xPlotRange / m_xDataRange + m_leftMargin, m_height - m_bottomMargin - (y - m_minY) * yPlotRange / m_yDataRange));</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                    }</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                    <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Polyline&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Polyline.html">SVG::Polyline</a>(modPoints));</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                    line-&gt;setStrokeWidth(1);</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                    <span class="keyword">auto</span> color = <a class="code" href="classSVG_1_1HSV.html#aaca4ff81a71090a97884cb1625f48f50">SVG::HSV::toRGB</a>(colors[i]);</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    line-&gt;setStroke(std::get&lt;0&gt;(color), std::get&lt;1&gt;(color), std::get&lt;2&gt;(color));</div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;                    svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                }</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;            }</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            std::vector&lt;SeriesType&gt;    m_series;</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            <span class="keywordtype">bool</span>                       m_horizontalAxis;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;            <span class="keywordtype">bool</span>                       m_verticalAxis;</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;</div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;            <span class="keywordtype">bool</span>                       m_horizontalGrid;</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;            <span class="keywordtype">bool</span>                       m_verticalGrid;</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;            <span class="keywordtype">double</span>                      m_minX = 0;</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;            <span class="keywordtype">double</span>                      m_minY = 0;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;            <span class="keywordtype">double</span>                      m_maxX = 0;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;            <span class="keywordtype">double</span>                      m_maxY = 0;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;            <span class="keywordtype">double</span>                      m_xDataRange = 0;</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            <span class="keywordtype">double</span>                      m_yDataRange = 0;</div>
+<div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="keywordtype">int</span>                         m_leftMargin     = 10;</div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            <span class="keywordtype">int</span>                         m_rightMargin    = 10;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            <span class="keywordtype">int</span>                         m_topMargin      = 10;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            <span class="keywordtype">int</span>                         m_bottomMargin   = 10;</div>
+<div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160;</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordtype">int</span>                         m_width;</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            <span class="keywordtype">int</span>                         m_height;</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;    };</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;}</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;</div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;<span class="preprocessor">#endif // PLOTTING_LINEPLOT_HPP</span></div>
+<div class="ttc" id="classplotting_1_1LinePlot_html_aa4b69bbed6a33e108539165f34c40bd1"><div class="ttname"><a href="classplotting_1_1LinePlot.html#aa4b69bbed6a33e108539165f34c40bd1">plotting::LinePlot::plot</a></div><div class="ttdeci">std::unique_ptr&lt; SVG::SVG &gt; plot() const </div><div class="ttdoc">— IPlot — </div><div class="ttdef"><b>Definition:</b> lineplot.hpp:85</div></div>
 <div class="ttc" id="classSVG_1_1HSV_html_aaca4ff81a71090a97884cb1625f48f50"><div class="ttname"><a href="classSVG_1_1HSV.html#aaca4ff81a71090a97884cb1625f48f50">SVG::HSV::toRGB</a></div><div class="ttdeci">static RGBColor toRGB(HSVColor hsv)</div><div class="ttdef"><b>Definition:</b> hsv.hpp:34</div></div>
 <div class="ttc" id="classplotting_1_1LinePlot_html_a29865ca32750b1de595e91b32d554221"><div class="ttname"><a href="classplotting_1_1LinePlot.html#a29865ca32750b1de595e91b32d554221">plotting::LinePlot::operator=</a></div><div class="ttdeci">LinePlot operator=(LinePlot &amp;&amp;)=delete</div></div>
-<div class="ttc" id="classplotting_1_1LinePlot_html"><div class="ttname"><a href="classplotting_1_1LinePlot.html">plotting::LinePlot</a></div><div class="ttdef"><b>Definition:</b> lineplot.hpp:22</div></div>
+<div class="ttc" id="classplotting_1_1LinePlot_html"><div class="ttname"><a href="classplotting_1_1LinePlot.html">plotting::LinePlot</a></div><div class="ttdef"><b>Definition:</b> lineplot.hpp:23</div></div>
 <div class="ttc" id="classSVG_1_1HSV_html_a0b902a26b77102f1d689c9346b7b33c9"><div class="ttname"><a href="classSVG_1_1HSV.html#a0b902a26b77102f1d689c9346b7b33c9">SVG::HSV::equidistant</a></div><div class="ttdeci">static std::vector&lt; HSVColor &gt; equidistant(int n)</div><div class="ttdef"><b>Definition:</b> hsv.hpp:91</div></div>
-<div class="ttc" id="classplotting_1_1LinePlot_html_a58e3679d171917f9b6f0fa058d3f4ffc"><div class="ttname"><a href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">plotting::LinePlot::SeriesType</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; double, double &gt;&gt; SeriesType</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:74</div></div>
-<div class="ttc" id="classplotting_1_1LinePlot_html_adff5ef1b89e293bae53ca57848ae42f1"><div class="ttname"><a href="classplotting_1_1LinePlot.html#adff5ef1b89e293bae53ca57848ae42f1">plotting::LinePlot::LinePlot</a></div><div class="ttdeci">LinePlot(int width, int height)</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:29</div></div>
-<div class="ttc" id="classplotting_1_1LinePlot_html_ae86b4ce43e79e294ef1d687340c16762"><div class="ttname"><a href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">plotting::LinePlot::LinePlot</a></div><div class="ttdeci">LinePlot()</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:42</div></div>
+<div class="ttc" id="classplotting_1_1LinePlot_html_a58e3679d171917f9b6f0fa058d3f4ffc"><div class="ttname"><a href="classplotting_1_1LinePlot.html#a58e3679d171917f9b6f0fa058d3f4ffc">plotting::LinePlot::SeriesType</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; double, double &gt;&gt; SeriesType</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:75</div></div>
+<div class="ttc" id="classplotting_1_1LinePlot_html_adff5ef1b89e293bae53ca57848ae42f1"><div class="ttname"><a href="classplotting_1_1LinePlot.html#adff5ef1b89e293bae53ca57848ae42f1">plotting::LinePlot::LinePlot</a></div><div class="ttdeci">LinePlot(int width, int height)</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:30</div></div>
+<div class="ttc" id="classplotting_1_1LinePlot_html_ae86b4ce43e79e294ef1d687340c16762"><div class="ttname"><a href="classplotting_1_1LinePlot.html#ae86b4ce43e79e294ef1d687340c16762">plotting::LinePlot::LinePlot</a></div><div class="ttdeci">LinePlot()</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:43</div></div>
 <div class="ttc" id="classSVG_1_1Rectangle_html"><div class="ttname"><a href="classSVG_1_1Rectangle.html">SVG::Rectangle</a></div><div class="ttdef"><b>Definition:</b> rectangle.hpp:14</div></div>
 <div class="ttc" id="classSVG_1_1Line_html"><div class="ttname"><a href="classSVG_1_1Line.html">SVG::Line</a></div><div class="ttdef"><b>Definition:</b> line.hpp:12</div></div>
 <div class="ttc" id="classSVG_1_1SVG_html_a16a57a2cf338dc191b1382df380d7fdd"><div class="ttname"><a href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">SVG::SVG::add</a></div><div class="ttdeci">void add(std::unique_ptr&lt; IElement &gt; e)</div><div class="ttdef"><b>Definition:</b> svg.hpp:47</div></div>
-<div class="ttc" id="classplotting_1_1LinePlot_html_aacddebf243791d66224bf34b296cb7c5"><div class="ttname"><a href="classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5">plotting::LinePlot::addSeries</a></div><div class="ttdeci">void addSeries(const SeriesType &amp;s)</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:78</div></div>
+<div class="ttc" id="classplotting_1_1LinePlot_html_aacddebf243791d66224bf34b296cb7c5"><div class="ttname"><a href="classplotting_1_1LinePlot.html#aacddebf243791d66224bf34b296cb7c5">plotting::LinePlot::addSeries</a></div><div class="ttdeci">void addSeries(const SeriesType &amp;s)</div><div class="ttdef"><b>Definition:</b> lineplot.hpp:79</div></div>
 <div class="ttc" id="classSVG_1_1SVG_html"><div class="ttname"><a href="classSVG_1_1SVG.html">SVG::SVG</a></div><div class="ttdef"><b>Definition:</b> svg.hpp:18</div></div>
 <div class="ttc" id="classplotting_1_1LinePlot_html_aed57fd6161c03296c732d45db1621234"><div class="ttname"><a href="classplotting_1_1LinePlot.html#aed57fd6161c03296c732d45db1621234">plotting::LinePlot::~LinePlot</a></div><div class="ttdeci">virtual ~LinePlot()=default</div></div>
 <div class="ttc" id="classSVG_1_1Polyline_html"><div class="ttname"><a href="classSVG_1_1Polyline.html">SVG::Polyline</a></div><div class="ttdef"><b>Definition:</b> polyline.hpp:12</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 12 2017 12:11:47 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 12 2017 15:05:40 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

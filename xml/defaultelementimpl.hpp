@@ -1,7 +1,8 @@
-#ifndef DEFAULTELEMENTIMPL_HPP
-#define DEFAULTELEMENTIMPL_HPP
+#pragma once
+#ifndef XML_DEFAULTELEMENTIMPL_HPP
+#define XML_DEFAULTELEMENTIMPL_HPP
 
-#include "ielement.hpp"
+#include "xml/ielement.hpp"
 
 #include <assert.h>
 #include <istream>
@@ -173,4 +174,4 @@ namespace XML
     };
 }
 
-#endif // DEFAULTELEMENTIMPL_HPP
+#endif // XML_DEFAULTELEMENTIMPL_HPP

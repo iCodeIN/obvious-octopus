@@ -1,7 +1,7 @@
-#ifndef ILANGUAGEDETECTOR_HPP
-#define ILANGUAGEDETECTOR_HPP
+#ifndef NLP_ILANGUAGEDETECTOR_HPP
+#define NLP_ILANGUAGEDETECTOR_HPP
 
-#include "imodel.hpp"
+#include "nlp/imodel.hpp"
 
 #include <map>
 #include <string>
@@ -32,4 +32,4 @@ namespace nlp
     };
 }
 
-#endif // ILANGUAGEDETECTOR_HPP
+#endif // NLP_ILANGUAGEDETECTOR_HPP

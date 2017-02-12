@@ -1,6 +1,6 @@
 #pragma once
-#ifndef PRIME_HPP
-#define PRIME_HPP
+#ifndef NUMERIC_PRIME_HPP
+#define NUMERIC_PRIME_HPP
 
 #include <assert.h>
 #include <random>
@@ -288,4 +288,4 @@ namespace numeric
     };
 }
 
-#endif // PRIME_HPP
+#endif // NUMERIC_PRIME_HPP

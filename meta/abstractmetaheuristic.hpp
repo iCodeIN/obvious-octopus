@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ABSTRACTMETAHEURISTIC_HPP
-#define ABSTRACTMETAHEURISTIC_HPP
+#ifndef META_ABSTRACTMETAHEURISTIC_HPP
+#define META_ABSTRACTMETAHEURISTIC_HPP
 
 #include <algorithm>
 #include <assert.h>
@@ -232,5 +232,5 @@ namespace meta
     };
 }
 
-#endif // ABSTRACTMETAHEURISTIC_HPP
+#endif // META_ABSTRACTMETAHEURISTIC_HPP
 

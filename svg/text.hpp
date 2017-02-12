@@ -1,7 +1,8 @@
-#ifndef TEXT_HPP
-#define TEXT_HPP
+#pragma once
+#ifndef SVG_TEXT_HPP
+#define SVG_TEXT_HPP
 
-#include "ielement.hpp"
+#include "svg/ielement.hpp"
 
 namespace SVG
 {
@@ -59,4 +60,4 @@ namespace SVG
     };
 }
 
-#endif TEXT_HPP
+#endif SVG_TEXT_HPP

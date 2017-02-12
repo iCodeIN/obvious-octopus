@@ -1,5 +1,5 @@
-#ifndef NGRAMLANGUAGEDETECTOR_HPP
-#define NGRAMLANGUAGEDETECTOR_HPP
+#ifndef NLP_NGRAMLANGUAGEDETECTOR_HPP
+#define NLP_NGRAMLANGUAGEDETECTOR_HPP
 
 #include "nlp/ilanguagedetector.h"
 #include "numeric/distribution.hpp"
@@ -153,4 +153,4 @@ namespace nlp
     };
 }
 
-#endif // NGRAMLANGUAGEDETECTOR_HPP
+#endif // NLP_NGRAMLANGUAGEDETECTOR_HPP

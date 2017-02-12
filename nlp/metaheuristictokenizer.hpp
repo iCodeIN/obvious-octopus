@@ -1,9 +1,9 @@
-#ifndef METAHEURISTICTOKENIZER_HPP
-#define METAHEURISTICTOKENIZER_HPP
-
-#include <memory>
+#ifndef NLP_METAHEURISTICTOKENIZER_HPP
+#define NLP_METAHEURISTICTOKENIZER_HPP
 
 #include "nlp/itokenizer.h"
+
+#include <memory>
 
 namespace nlp
 {
@@ -151,4 +151,4 @@ namespace nlp
     };
 }
 
-#endif // METAHEURISTICTOKENIZER_HPP
+#endif // NLP_METAHEURISTICTOKENIZER_HPP

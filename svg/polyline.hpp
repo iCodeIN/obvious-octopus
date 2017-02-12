@@ -1,8 +1,8 @@
 #pragma once
-#ifndef POLYLINE_HPP
-#define POLYLINE_HPP
+#ifndef SVG_POLYLINE_HPP
+#define SVG_POLYLINE_HPP
 
-#include "ielement.hpp"
+#include "svg/ielement.hpp"
 
 namespace SVG
 {
@@ -67,4 +67,4 @@ namespace SVG
 
 }
 
-#endif // POLYLINE_HPP
+#endif // SVG_POLYLINE_HPP

@@ -1,5 +1,5 @@
-#ifndef IMODEL_HPP
-#define IMODEL_HPP
+#ifndef NLP_IMODEL_HPP
+#define NLP_IMODEL_HPP
 
 #include <set>
 
@@ -54,4 +54,4 @@ namespace nlp
     };
 }
 
-#endif // IMODEL_HPP
+#endif // NLP_IMODEL_HPP

@@ -1,5 +1,5 @@
-#ifndef DICTIONARY_HPP
-#define DICTIONARY_HPP
+#ifndef NLP_DICTIONARY_HPP
+#define NLP_DICTIONARY_HPP
 
 namespace nlp
 {
@@ -14,4 +14,4 @@ namespace nlp
     };
 }
 
-#endif // DICTIONARY_HPP
+#endif // NLP_DICTIONARY_HPP

@@ -1,8 +1,8 @@
 #pragma once
-#ifndef RECTANGLE_HPP
-#define RECTANGLE_HPP
+#ifndef SVG_RECTANGLE_HPP
+#define SVG_RECTANGLE_HPP
 
-#include "ielement.hpp"
+#include "svg/ielement.hpp"
 
 #include <assert.h>
 
@@ -97,4 +97,4 @@ namespace SVG
 
 }
 
-#endif // RECTANGLE_HPP
+#endif // SVG_RECTANGLE_HPP

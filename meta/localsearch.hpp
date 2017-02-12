@@ -1,8 +1,6 @@
 #pragma once
-#ifndef LOCAL_SEARCH_H
-#define LOCAL_SEARCH_H
-
-#include <iostream> // debug
+#ifndef META_LOCALSEARCH_H
+#define META_LOCALSEARCH_H
 
 #include "abstractmetaheuristic.hpp"
 
@@ -59,4 +57,4 @@ namespace meta
     };
 }
 
-#endif // LOCAL_SEARCH_H
+#endif // META_LOCALSEARCH_H

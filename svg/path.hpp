@@ -1,8 +1,8 @@
 #pragma once
-#ifndef PATH_HPP
-#define PATH_HPP
+#ifndef SVG_PATH_HPP
+#define SVG_PATH_HPP
 
-#include "ielement.hpp"
+#include "svg/ielement.hpp"
 
 #include <assert.h>
 
@@ -115,4 +115,4 @@ namespace SVG
     };
 }
 
-#endif // PATH_HPP
+#endif // SVG_PATH_HPP

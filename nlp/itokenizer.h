@@ -1,5 +1,5 @@
-#ifndef ITOKENIZER_HPP
-#define ITOKENIZER_HPP
+#ifndef NLP_ITOKENIZER_HPP
+#define NLP_ITOKENIZER_HPP
 
 #include "nlp/imodel.hpp"
 
@@ -33,4 +33,4 @@ namespace nlp
     };
 }
 
-#endif // ITOKENIZER_HPP
+#endif // NLP_ITOKENIZER_HPP

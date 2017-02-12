@@ -1,6 +1,6 @@
 #pragma once
-#ifndef bGRAPHML_HPP
-#define bGRAPHML_HPP
+#ifndef XML_GRAPHML_HPP
+#define XML_GRAPHML_HPP
 
 #include "graph/igraph.hpp"
 #include "graph/adjecencylistgraph.hpp"
@@ -105,4 +105,4 @@ static std::istream& operator>>(std::istream& is, graph::IGraph<std::string> &g)
     return is;
 }
 
-#endif // GRAPHML_HPP
+#endif // XML_GRAPHML_HPP

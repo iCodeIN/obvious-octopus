@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DISTRIBUTION_HPP
-#define DISTRIBUTION_HPP
+#ifndef NUMERIC_DISTRIBUTION_HPP
+#define NUMERIC_DISTRIBUTION_HPP
 
 #include <algorithm>
 #include <assert.h>
@@ -166,4 +166,4 @@ namespace numeric
     };
 }
 
-#endif // DISTRIBUTION_HPP
+#endif // NUMERIC_DISTRIBUTION_HPP

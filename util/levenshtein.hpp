@@ -1,5 +1,6 @@
-#ifndef LEVENSHTEIN_HPP
-#define LEVENSHTEIN_HPP
+#pragma once
+#ifndef UTIL_LEVENSHTEIN_HPP
+#define UTIL_LEVENSHTEIN_HPP
 
 #include <string>
 #include <vector>
@@ -61,4 +62,4 @@ namespace util
     }
 }
 
-#endif // LEVENSHTEIN_HPP
+#endif // UTIL_LEVENSHTEIN_HPP

@@ -95,8 +95,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef SVG_HPP</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define SVG_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef SVG_SVG_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define SVG_SVG_HPP</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;svg/ielement.hpp&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
@@ -233,18 +233,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            <span class="comment">// --- Members ---</span></div>
 <div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            std::vector&lt;std::unique_ptr&lt;IElement&gt;&gt; m_elements;</div>
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            PreserveAspectRatio                    m_preserveAspectRatio   = PreserveAspectRatio::NONE;  </div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordtype">int</span>                                             m_viewbox_minX        = -1;                          </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">int</span>                                                 m_viewbox_minY        = -1;                          </div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordtype">int</span>                                                 m_viewbox_width           = -1;                          </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordtype">int</span>                                                 m_viewbox_height          = -1;                          </div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordtype">int</span>                                                 m_width                       = -1;                          </div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="keywordtype">int</span>                                                 m_height                      = -1;                          </div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;    };</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;}</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;<span class="preprocessor">#endif // SVG_HPP</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;            PreserveAspectRatio                     m_preserveAspectRatio   = PreserveAspectRatio::NONE;  </div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;            <span class="keywordtype">int</span>                                     m_viewbox_minX          = -1;                            </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            <span class="keywordtype">int</span>                                     m_viewbox_minY          = -1;                            </div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;            <span class="keywordtype">int</span>                                     m_viewbox_width         = -1;                            </div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            <span class="keywordtype">int</span>                                     m_viewbox_height        = -1;                            </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordtype">int</span>                                     m_width                 = -1;                            </div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;            <span class="keywordtype">int</span>                                     m_height                = -1;                            </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;    };</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;}</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="preprocessor">#endif // SVG_SVG_HPP</span></div>
 <div class="ttc" id="classSVG_1_1SVG_html_adad70e278302823bd721b3f23bacfdffab0c90d4e5d3c7df6fbe277e0958ac882"><div class="ttname"><a href="classSVG_1_1SVG.html#adad70e278302823bd721b3f23bacfdffab0c90d4e5d3c7df6fbe277e0958ac882">SVG::SVG::XMINYMIN</a></div><div class="ttdoc">Align the min-x of the element&#39;s viewBox with the smallest X value of the viewport. Align the min-y of the element&#39;s viewBox with the smallest Y value of the viewport. </div><div class="ttdef"><b>Definition:</b> svg.hpp:118</div></div>
 <div class="ttc" id="classSVG_1_1SVG_html_a170cfcf2de3915f5fe54ee754a2405e2"><div class="ttname"><a href="classSVG_1_1SVG.html#a170cfcf2de3915f5fe54ee754a2405e2">SVG::SVG::setPreserveAspectRatio</a></div><div class="ttdeci">void setPreserveAspectRatio(SVG::PreserveAspectRatio &amp;aspectRatio)</div><div class="ttdef"><b>Definition:</b> svg.hpp:133</div></div>
 <div class="ttc" id="classSVG_1_1SVG_html_adccdac0b5479e3be76ee05b0e54c9e1c"><div class="ttname"><a href="classSVG_1_1SVG.html#adccdac0b5479e3be76ee05b0e54c9e1c">SVG::SVG::toXML</a></div><div class="ttdeci">virtual std::unique_ptr&lt; XML::IElement &gt; toXML() const </div><div class="ttdef"><b>Definition:</b> svg.hpp:147</div></div>
@@ -271,7 +270,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 12 2017 12:11:47 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 12 2017 15:05:41 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
