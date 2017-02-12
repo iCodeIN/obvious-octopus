@@ -1,5 +1,6 @@
-#ifndef EIGENVALUES_HPP
-#define EIGENVALUES_HPP
+#pragma once
+#ifndef GRAPH_EIGENVALUES_HPP
+#define GRAPH_EIGENVALUES_HPP
 
 #include "graph/igraph.hpp"
 
@@ -51,4 +52,4 @@ namespace graph
     }
 }
 
-#endif // EIGENVALUES_HPP
+#endif // GRAPH_EIGENVALUES_HPP

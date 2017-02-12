@@ -1,6 +1,6 @@
 #pragma once
-#ifndef CYCLEFINDER_HPP
-#define CYCLEFINDER_HPP
+#ifndef GRAPH_CYCLEFINDER_HPP
+#define GRAPH_CYCLEFINDER_HPP
 
 #include "graph/bfs.hpp"
 #include "graph/igraph.hpp"
@@ -89,4 +89,4 @@ namespace graph
 }
 }
 
-#endif // CYCLEFINDER_HPP
+#endif // GRAPH_CYCLEFINDER_HPP

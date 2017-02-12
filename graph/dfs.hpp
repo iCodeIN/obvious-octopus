@@ -1,6 +1,6 @@
 #pragma once
-#ifndef DFS_HPP
-#define DFS_HPP
+#ifndef GRAPH_DFS_HPP
+#define GRAPH_DFS_HPP
 
 #include "graph/itree.hpp"
 #include "graph/igraph.hpp"
@@ -58,4 +58,4 @@ namespace graph
     }
 }
 
-#endif // DFS_HPP
+#endif // GRAPH_DFS_HPP

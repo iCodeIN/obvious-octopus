@@ -1,6 +1,6 @@
 #pragma once
-#ifndef MINIMAX_HPP
-#define MINIMAX_HPP
+#define GAME_MINIMAX_HPP
+#ifndef GAME_MINIMAX_HPP
 
 #include <algorithm>
 #include <assert.h>
@@ -232,4 +232,4 @@ namespace game
     };
 }
 
-#endif // MINIMAX_HPP
+#endif // GAME_MINIMAX_HPP

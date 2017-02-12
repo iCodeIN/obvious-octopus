@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ADJECENCYLISTTREE_HPP
-#define ADJECENCYLISTTREE_HPP
+#ifndef GRAPH_ADJECENCYLISTTREE_HPP
+#define GRAPH_ADJECENCYLISTTREE_HPP
 
 #include "graph/adjecencylistgraph.hpp"
 #include "graph/itree.hpp"
@@ -168,4 +168,4 @@ namespace graph
     };
 }
 
-#endif // ADJECENCYLISTTREE_HPP
+#endif // GRAPH_ADJECENCYLISTTREE_HPP

@@ -1,5 +1,5 @@
-#ifndef TICTACTOE_HPP
-#define TICTACTOE_HPP
+#ifndef GAME_TICTACTOE_HPP
+#define GAME_TICTACTOE_HPP
 
 #include "minimax.hpp"
 
@@ -266,4 +266,4 @@ namespace game
     };
 }
 
-#endif // TICTACTOE_HPP
+#endif // GAME_TICTACTOE_HPP

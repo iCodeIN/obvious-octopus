@@ -23,7 +23,6 @@ var searchData=
   ['_7emaxentpostagger',['~MaxEntPOSTagger',['../classnlp_1_1MaxEntPOSTagger.html#aae44f8f136031f1dadc4692500a4e613',1,'nlp::MaxEntPOSTagger']]],
   ['_7emaze',['~Maze',['../classMaze.html#a84a64c830d5ad80c8e13482c31122cd1',1,'Maze']]],
   ['_7emetaheuristictokenizer',['~MetaheuristicTokenizer',['../classnlp_1_1MetaheuristicTokenizer.html#ab1f91cfc66dc6d65c506bf652da33323',1,'nlp::MetaheuristicTokenizer']]],
-  ['_7eminimax',['~Minimax',['../classgame_1_1Minimax.html#a3347160ffc162c6965c365b180675280',1,'game::Minimax']]],
   ['_7engramlanguagedetector',['~NGramLanguageDetector',['../classnlp_1_1NGramLanguageDetector.html#aab87ff8cb32a54d870b414c8c9222de4',1,'nlp::NGramLanguageDetector']]],
   ['_7epath',['~Path',['../classSVG_1_1Path.html#a477555c4d7f921c0ceaf90ee1248a8c2',1,'SVG::Path']]],
   ['_7epolygon',['~Polygon',['../classSVG_1_1Polygon.html#aa15e0c1f9b3b556629919557aa8c8f5e',1,'SVG::Polygon']]],

@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ITREE_HPP
-#define ITREE_HPP
+#ifndef GRAPH_ITREE_HPP
+#define GRAPH_ITREE_HPP
 
 #include "graph/igraph.hpp"
 
@@ -58,4 +58,4 @@ namespace graph
     };
 }
 
-#endif // ITREE_HPP
+#endif // GRAPH_ITREE_HPP

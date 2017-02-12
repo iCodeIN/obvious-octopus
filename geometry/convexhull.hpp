@@ -1,5 +1,6 @@
-#ifndef CONVEXHULL_HPP
-#define CONVEXHULL_HPP
+#pragma once
+#ifndef GEOMETRY_CONVEXHULL_HPP
+#define GEOMETRY_CONVEXHULL_HPP
 
 namespace
 {
@@ -67,4 +68,4 @@ namespace geometry
     }
 }
 
-#endif // CONVEXHULL_HPP
+#endif // GEOMETRY_CONVEXHULL_HPP

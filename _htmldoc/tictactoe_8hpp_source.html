@@ -94,8 +94,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">tictactoe.hpp</div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef TICTACTOE_HPP</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define TICTACTOE_HPP</span></div>
+<div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef GAME_TICTACTOE_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAME_TICTACTOE_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;minimax.hpp&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;</div>
@@ -127,21 +127,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                <span class="comment">/* game evaluation function</span></div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">                 */</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                <a class="code" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">Minimax&lt;BoardType&gt;::EvaluationFunctionType</a> sFunction = [](<span class="keyword">const</span> BoardType&amp; b)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                Minimax&lt;BoardType&gt;::EvaluationFunctionType sFunction = [](<span class="keyword">const</span> BoardType&amp; b)</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                {</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                    <span class="keywordflow">return</span> score2(b, 0);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                };</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                <span class="comment">/* next move generation function</span></div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="comment">                 */</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <a class="code" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">Minimax&lt;BoardType&gt;::NextMoveFunctionType</a> nFunction = [](<span class="keyword">const</span> BoardType&amp; b)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                Minimax&lt;BoardType&gt;::NextMoveFunctionType nFunction = [](<span class="keyword">const</span> BoardType&amp; b)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                {</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                    <span class="keywordflow">return</span> nextMoves(b);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                };</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                <span class="comment">/* init minimax</span></div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;<span class="comment">                 */</span></div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keyword">auto</span> minimax = <a class="code" href="classgame_1_1Minimax.html">game::Minimax&lt;BoardType&gt;</a>(sFunction, nFunction);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                <span class="keyword">auto</span> minimax = game::Minimax&lt;BoardType&gt;(sFunction, nFunction);</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                <span class="keyword">auto</span> board = empty();</div>
 <div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
@@ -150,7 +150,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                <span class="keywordflow">while</span>(score(board,0) == 0)</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                    <span class="comment">// calculate next moves</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    board  = minimax.<a class="code" href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">next</a>(board);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;                    board  = minimax.next(board);</div>
 <div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                    <span class="comment">// print board</span></div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;                    print(board);</div>
@@ -341,19 +341,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    };</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160;}</div>
 <div class="line"><a name="l00268"></a><span class="lineno">  268</span>&#160;</div>
-<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#endif // TICTACTOE_HPP</span></div>
+<div class="line"><a name="l00269"></a><span class="lineno">  269</span>&#160;<span class="preprocessor">#endif // GAME_TICTACTOE_HPP</span></div>
 <div class="ttc" id="classgame_1_1TicTacToe_html"><div class="ttname"><a href="classgame_1_1TicTacToe.html">game::TicTacToe</a></div><div class="ttdef"><b>Definition:</b> tictactoe.hpp:17</div></div>
 <div class="ttc" id="classgame_1_1TicTacToe_html_a769bef6c2856a881e11170de45a0a01a"><div class="ttname"><a href="classgame_1_1TicTacToe.html#a769bef6c2856a881e11170de45a0a01a">game::TicTacToe::TicTacToe</a></div><div class="ttdeci">TicTacToe()=default</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_aa372d231ddf506e0ddc7de4187b2fc8d"><div class="ttname"><a href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">game::Minimax::NextMoveFunctionType</a></div><div class="ttdeci">std::function&lt; std::vector&lt; T &gt;(const T &amp;position)&gt; NextMoveFunctionType</div><div class="ttdef"><b>Definition:</b> minimax.hpp:30</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_a55364b949135aa4aee8879696ef3fc08"><div class="ttname"><a href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">game::Minimax::next</a></div><div class="ttdeci">T next(const T &amp;startingPosition)</div><div class="ttdef"><b>Definition:</b> minimax.hpp:64</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_ab0ff22fe8f6f71f318b952afa3872e74"><div class="ttname"><a href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">game::Minimax::EvaluationFunctionType</a></div><div class="ttdeci">std::function&lt; int(const T &amp;position)&gt; EvaluationFunctionType</div><div class="ttdef"><b>Definition:</b> minimax.hpp:27</div></div>
 <div class="ttc" id="classgame_1_1TicTacToe_html_a44df3a250c13626375fdb3b9b8030514"><div class="ttname"><a href="classgame_1_1TicTacToe.html#a44df3a250c13626375fdb3b9b8030514">game::TicTacToe::operator=</a></div><div class="ttdeci">void operator=(const TicTacToe &amp;)=delete</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html"><div class="ttname"><a href="classgame_1_1Minimax.html">game::Minimax</a></div><div class="ttdef"><b>Definition:</b> minimax.hpp:22</div></div>
 <div class="ttc" id="classgame_1_1TicTacToe_html_aed0c5788e4b1cfa46ec9cae508639f97"><div class="ttname"><a href="classgame_1_1TicTacToe.html#aed0c5788e4b1cfa46ec9cae508639f97">game::TicTacToe::play</a></div><div class="ttdeci">static void play()</div><div class="ttdef"><b>Definition:</b> tictactoe.hpp:47</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 11 2017 23:21:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 12 2017 10:41:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

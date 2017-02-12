@@ -1,6 +1,6 @@
 #pragma once
-#ifndef I2DGRAPH_HPP
-#define I2DGRAPH_HPP
+#ifndef GRAPH_I2DGRAPH_HPP
+#define GRAPH_I2DGRAPH_HPP
 
 #include "igraph.hpp"
 
@@ -53,4 +53,4 @@ namespace graph
     };
 }
 
-#endif // I2DGRAPH_HPP
+#endif // GRAPH_I2DGRAPH_HPP

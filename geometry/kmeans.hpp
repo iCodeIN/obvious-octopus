@@ -1,5 +1,6 @@
-#ifndef KMEANS_HPP
-#define KMEANS_HPP
+#pragma once
+#ifndef GEOMETRY_KMEANS_HPP
+#define GEOMETRY_KMEANS_HPP
 
 #include <algorithm>
 #include <assert.h>
@@ -159,4 +160,4 @@ namespace geometry
     }
 }
 
-#endif // KMEANS_HPP
+#endif // GEOMETRY_KMEANS_HPP

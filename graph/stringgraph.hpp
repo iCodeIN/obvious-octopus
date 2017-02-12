@@ -1,5 +1,6 @@
-#ifndef STRINGGRAPH_HPP
-#define STRINGGRAPH_HPP
+#pragma once
+#ifndef GRAPH_STRINGGRAPH_HPP
+#define GRAPH_STRINGGRAPH_HPP
 
 #include "graph/adjecencylistgraph.hpp"
 
@@ -36,4 +37,4 @@ namespace graph
     }
 }
 
-#endif // STRINGGRAPH_HPP
+#endif // GRAPH_STRINGGRAPH_HPP

@@ -95,8 +95,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef MINIMAX_HPP</span></div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define MINIMAX_HPP</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define GAME_MINIMAX_HPP</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#ifndef GAME_MINIMAX_HPP</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;algorithm&gt;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
@@ -110,30 +110,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>game</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="classgame_1_1Minimax.html">   22</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classgame_1_1Minimax.html">Minimax</a> final</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">class </span>Minimax final</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">   27</a></span>&#160;            <span class="keyword">using</span> <a class="code" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a> = std::function&lt;int(const T&amp; position)&gt;;</div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">   30</a></span>&#160;            <span class="keyword">using</span> <a class="code" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a> = std::function&lt;std::vector&lt;T&gt;(<span class="keyword">const</span> T&amp; position)&gt;;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">using</span> EvaluationFunctionType = std::function&lt;int(const T&amp; position)&gt;;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <span class="keyword">using</span> NextMoveFunctionType = std::function&lt;std::vector&lt;T&gt;(<span class="keyword">const</span> T&amp; position)&gt;;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno"><a class="line" href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">   34</a></span>&#160;            <a class="code" href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">Minimax</a>(<a class="code" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a> &amp;evalFunction, <a class="code" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a> &amp;nextMoveFunction)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            Minimax(EvaluationFunctionType &amp;evalFunction, NextMoveFunctionType &amp;nextMoveFunction)</div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                : m_eval(evalFunction)</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                , m_nextMove(nextMoveFunction)</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                , m_nofPlayers(2)</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            {</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classgame_1_1Minimax.html#a3347160ffc162c6965c365b180675280">~Minimax</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">virtual</span> ~Minimax() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <a class="code" href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">Minimax</a>(<span class="keyword">const</span> <a class="code" href="classgame_1_1Minimax.html">Minimax</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            Minimax(<span class="keyword">const</span> Minimax&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            <a class="code" href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">Minimax</a>(<a class="code" href="classgame_1_1Minimax.html">Minimax</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            Minimax(Minimax&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgame_1_1Minimax.html#a20ee9fdcafedce30383f85410a4eaa49">operator=</a>(<span class="keyword">const</span> <a class="code" href="classgame_1_1Minimax.html">Minimax</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keywordtype">void</span> operator=(<span class="keyword">const</span> Minimax&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">void</span> <a class="code" href="classgame_1_1Minimax.html#a20ee9fdcafedce30383f85410a4eaa49">operator=</a>(<a class="code" href="classgame_1_1Minimax.html">Minimax</a>&amp;) = <span class="keyword">delete</span>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordtype">void</span> operator=(Minimax&amp;) = <span class="keyword">delete</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;</div>
-<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">   64</a></span>&#160;            T <a class="code" href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">next</a>(<span class="keyword">const</span> T &amp;startingPosition)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            T next(<span class="keyword">const</span> T &amp;startingPosition)</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            {</div>
 <div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="comment">// insert starting position into memory</span></div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                m_root = std::unique_ptr&lt;Node&gt;(<span class="keyword">new</span> Node(startingPosition,<span class="keyword">this</span>));</div>
@@ -153,7 +153,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            <span class="keyword">class </span>Node</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
 <div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    Node(<span class="keyword">const</span> T&amp; position, <a class="code" href="classgame_1_1Minimax.html">Minimax</a>* minimax)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                    Node(<span class="keyword">const</span> T&amp; position, Minimax* minimax)</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;                        : m_game(position)</div>
 <div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;                        , m_minimax(minimax)</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;                        , m_parent(this)</div>
@@ -180,7 +180,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;                        <span class="keywordflow">return</span> recursiveaAlphaBeta(std::numeric_limits&lt;int&gt;::min(), std::numeric_limits&lt;int&gt;::max(), 0);</div>
 <div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    T <a class="code" href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">next</a>()</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                    T next()</div>
 <div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    {</div>
 <div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                        <span class="keywordflow">for</span>(<span class="keyword">auto</span> &amp;leaf : leaves())</div>
 <div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                        {</div>
@@ -292,30 +292,23 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                    <span class="comment">// --- members ---</span></div>
 <div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    T                                       m_game;         <span class="comment">// current position in the game</span></div>
 <div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                    std::vector&lt;std::unique_ptr&lt;Node&gt;&gt;      m_children;     <span class="comment">// child nodes</span></div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    <a class="code" href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">Minimax</a>*                                m_minimax;      <span class="comment">// overlying minimax class (used for getting next moves, and evaluating game positions)</span></div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;                    Minimax*                                m_minimax;      <span class="comment">// overlying minimax class (used for getting next moves, and evaluating game positions)</span></div>
 <div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                    Node*                                   m_parent;       <span class="comment">// parent node (pointer to self in case of root)</span></div>
 <div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                    <span class="keywordtype">int</span>                                     m_value;</div>
 <div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;            };</div>
 <div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;            std::unique_ptr&lt;Node&gt;               m_root;</div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            <a class="code" href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">EvaluationFunctionType</a>&amp;             m_eval;</div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            <a class="code" href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">NextMoveFunctionType</a>&amp;               m_nextMove;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;            EvaluationFunctionType&amp;             m_eval;</div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;            NextMoveFunctionType&amp;               m_nextMove;</div>
 <div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;            <span class="keywordtype">int</span>                                 m_nofPlayers;</div>
 <div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;    };</div>
 <div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;}</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160;</div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif // MINIMAX_HPP</span></div>
-<div class="ttc" id="classgame_1_1Minimax_html_a3347160ffc162c6965c365b180675280"><div class="ttname"><a href="classgame_1_1Minimax.html#a3347160ffc162c6965c365b180675280">game::Minimax::~Minimax</a></div><div class="ttdeci">virtual ~Minimax()=default</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_aa372d231ddf506e0ddc7de4187b2fc8d"><div class="ttname"><a href="classgame_1_1Minimax.html#aa372d231ddf506e0ddc7de4187b2fc8d">game::Minimax::NextMoveFunctionType</a></div><div class="ttdeci">std::function&lt; std::vector&lt; T &gt;(const T &amp;position)&gt; NextMoveFunctionType</div><div class="ttdef"><b>Definition:</b> minimax.hpp:30</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_af94301ccbd35de51308eacc4c2e192c6"><div class="ttname"><a href="classgame_1_1Minimax.html#af94301ccbd35de51308eacc4c2e192c6">game::Minimax::Minimax</a></div><div class="ttdeci">Minimax(EvaluationFunctionType &amp;evalFunction, NextMoveFunctionType &amp;nextMoveFunction)</div><div class="ttdef"><b>Definition:</b> minimax.hpp:34</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_a55364b949135aa4aee8879696ef3fc08"><div class="ttname"><a href="classgame_1_1Minimax.html#a55364b949135aa4aee8879696ef3fc08">game::Minimax::next</a></div><div class="ttdeci">T next(const T &amp;startingPosition)</div><div class="ttdef"><b>Definition:</b> minimax.hpp:64</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_ab0ff22fe8f6f71f318b952afa3872e74"><div class="ttname"><a href="classgame_1_1Minimax.html#ab0ff22fe8f6f71f318b952afa3872e74">game::Minimax::EvaluationFunctionType</a></div><div class="ttdeci">std::function&lt; int(const T &amp;position)&gt; EvaluationFunctionType</div><div class="ttdef"><b>Definition:</b> minimax.hpp:27</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html_a20ee9fdcafedce30383f85410a4eaa49"><div class="ttname"><a href="classgame_1_1Minimax.html#a20ee9fdcafedce30383f85410a4eaa49">game::Minimax::operator=</a></div><div class="ttdeci">void operator=(const Minimax &amp;)=delete</div></div>
-<div class="ttc" id="classgame_1_1Minimax_html"><div class="ttname"><a href="classgame_1_1Minimax.html">game::Minimax</a></div><div class="ttdef"><b>Definition:</b> minimax.hpp:22</div></div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="preprocessor">#endif // GAME_MINIMAX_HPP</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 11 2017 23:21:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 12 2017 10:41:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

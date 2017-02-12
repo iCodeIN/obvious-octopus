@@ -1,9 +1,9 @@
 #pragma once
-#ifndef IGRAPH_HPP
-#define IGRAPH_HPP
+#ifndef GRAPH_IGRAPH_HPP
+#define GRAPH_IGRAPH_HPP
 
-#include <set>
 #include <functional>
+#include <set>
 
 namespace graph
 {
@@ -89,4 +89,4 @@ namespace graph
     };
 }
 
-#endif // IGRAPH_HPP
+#endif // GRAPH_IGRAPH_HPP

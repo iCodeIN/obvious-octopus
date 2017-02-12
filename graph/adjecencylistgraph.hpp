@@ -1,6 +1,6 @@
 #pragma once
-#ifndef ADJECENCYLISTGRAPH_HPP
-#define ADJECENCYLISTGRAPH_HPP
+#ifndef GRAPH_ADJECENCYLISTGRAPH_HPP
+#define GRAPH_ADJECENCYLISTGRAPH_HPP
 
 #include "graph/i2dgraph.hpp"
 
@@ -318,4 +318,4 @@ namespace graph
     };
 }
 
-#endif // ADJECENCYLISTGRAPH_HPP
+#endif // GRAPH_ADJECENCYLISTGRAPH_HPP

@@ -1,5 +1,6 @@
-#ifndef RANDOMGRAPHGENERATOR_HPP
-#define RANDOMGRAPHGENERATOR_HPP
+#pragma once
+#ifndef GRAPH_RANDOMGRAPHGENERATOR_HPP
+#define GRAPH_RANDOMGRAPHGENERATOR_HPP
 
 #include "graph/adjecencylistgraph.hpp"
 
@@ -75,4 +76,4 @@ namespace graph
     }
 }
 
-#endif // RANDOMGRAPHGENERATOR_HPP
+#endif // GRAPH_RANDOMGRAPHGENERATOR_HPP

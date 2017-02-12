@@ -1,5 +1,6 @@
-#ifndef BKTREE_HPP
-#define BKTREE_HPP
+#pragma once
+#ifndef GRAPH_BKTREE_HPP
+#define GRAPH_BKTREE_HPP
 
 #include "graph/adjecencylisttree.hpp"
 
@@ -174,4 +175,4 @@ namespace graph
     };
 }
 
-#endif // BKTREE_HPP
+#endif // GRAPH_BKTREE_HPP

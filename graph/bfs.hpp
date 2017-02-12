@@ -1,6 +1,6 @@
 #pragma once
-#ifndef BFS_HPP
-#define BFS_HPP
+#ifndef GRAPH_BFS_HPP
+#define GRAPH_BFS_HPP
 
 #include "graph/itree.hpp"
 #include "graph/igraph.hpp"
@@ -59,4 +59,4 @@ namespace graph
     }
 }
 
-#endif // BFS_HPP
+#endif // GRAPH_BFS_HPP

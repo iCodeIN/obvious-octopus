@@ -240,48 +240,49 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;                    <span class="keywordflow">while</span> ((dir = readdir(d)) != NULL)</div>
 <div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;                    {</div>
 <div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;                        <span class="keyword">auto</span> name = std::string(dir-&gt;d_name);</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="keywordflow">if</span>(name.compare(<span class="stringliteral">&quot;.&quot;</span>)==0 || name.compare(<span class="stringliteral">&quot;..&quot;</span>) == 0)</div>
-<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        {</div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                            <span class="keywordflow">continue</span>;</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                        }</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        retval.push_back(<a class="code" href="classos_1_1File.html#a9334f199d8d2e5812ac31b3a30307b1a">File</a>(*<span class="keyword">this</span>, name));</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                    }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    closedir(d);</div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                }</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="preprocessor">#elif _WIN32</span></div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;                <span class="keywordflow">return</span> retval;</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;            }</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;</div>
-<div class="line"><a name="l00185"></a><span class="lineno"><a class="line" href="classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e">  185</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e">makeDirectory</a>()<span class="keyword"> const</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="keyword">            </span>{</div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="preprocessor">#ifdef __linux__</span></div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;                mkdir(<a class="code" href="classos_1_1File.html#a1cccec77b8d46a58bb85a5cd9ce40caf">getPath</a>().c_str(), S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IWOTH | S_IXOTH);</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<span class="preprocessor">#elif _WIN32</span></div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;                <span class="comment">// #TODO</span></div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;<span class="preprocessor">#else</span></div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            }</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            std::vector&lt;std::string&gt; path;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;    };</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;}</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="preprocessor">#endif // FILE_HPP</span></div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;                        <span class="comment">// unix has the unfortunate habit of sneaking in the virtual paths &quot;.&quot; and &quot;..&quot;</span></div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;                        <span class="keywordflow">if</span>(name.compare(<span class="stringliteral">&quot;.&quot;</span>)==0 || name.compare(<span class="stringliteral">&quot;..&quot;</span>) == 0)</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;                        {</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;                            <span class="keywordflow">continue</span>;</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                        }</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;                        retval.push_back(<a class="code" href="classos_1_1File.html#a9334f199d8d2e5812ac31b3a30307b1a">File</a>(*<span class="keyword">this</span>, name));</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;                    }</div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;                    closedir(d);</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                }</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="preprocessor">#elif _WIN32</span></div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;                <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;            }</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;</div>
+<div class="line"><a name="l00186"></a><span class="lineno"><a class="line" href="classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e">  186</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e">makeDirectory</a>()<span class="keyword"> const</span></div>
+<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="preprocessor">#ifdef __linux__</span></div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;                mkdir(<a class="code" href="classos_1_1File.html#a1cccec77b8d46a58bb85a5cd9ce40caf">getPath</a>().c_str(), S_IRUSR | S_IWUSR | S_IXUSR | S_IRGRP | S_IWGRP | S_IXGRP | S_IROTH | S_IWOTH | S_IXOTH);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="preprocessor">#elif _WIN32</span></div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="comment">// #TODO</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="preprocessor">#else</span></div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            }</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;            std::vector&lt;std::string&gt; path;</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;    };</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;}</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="preprocessor">#endif // FILE_HPP</span></div>
 <div class="ttc" id="classos_1_1File_html_a1cccec77b8d46a58bb85a5cd9ce40caf"><div class="ttname"><a href="classos_1_1File.html#a1cccec77b8d46a58bb85a5cd9ce40caf">os::File::getPath</a></div><div class="ttdeci">std::string getPath() const </div><div class="ttdef"><b>Definition:</b> file.hpp:120</div></div>
 <div class="ttc" id="classos_1_1File_html"><div class="ttname"><a href="classos_1_1File.html">os::File</a></div><div class="ttdef"><b>Definition:</b> file.hpp:21</div></div>
 <div class="ttc" id="classos_1_1File_html_ac546946cf2d4b0427955e1078464e9c9"><div class="ttname"><a href="classos_1_1File.html#ac546946cf2d4b0427955e1078464e9c9">os::File::getParentFile</a></div><div class="ttdeci">File getParentFile() const </div><div class="ttdef"><b>Definition:</b> file.hpp:108</div></div>
 <div class="ttc" id="classos_1_1File_html_ab2aef17f177da9d02385905620dae1f8"><div class="ttname"><a href="classos_1_1File.html#ab2aef17f177da9d02385905620dae1f8">os::File::File</a></div><div class="ttdeci">File(const File &amp;parent, const std::string &amp;file)</div><div class="ttdef"><b>Definition:</b> file.hpp:50</div></div>
 <div class="ttc" id="classos_1_1File_html_a73d64cdfa810dbf4b5dfe1fab6baff25"><div class="ttname"><a href="classos_1_1File.html#a73d64cdfa810dbf4b5dfe1fab6baff25">os::File::getName</a></div><div class="ttdeci">std::string getName() const </div><div class="ttdef"><b>Definition:</b> file.hpp:101</div></div>
 <div class="ttc" id="classos_1_1File_html_a9334f199d8d2e5812ac31b3a30307b1a"><div class="ttname"><a href="classos_1_1File.html#a9334f199d8d2e5812ac31b3a30307b1a">os::File::File</a></div><div class="ttdeci">File(const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> file.hpp:26</div></div>
-<div class="ttc" id="classos_1_1File_html_a67e0a4cd871297754d618894f0dee88e"><div class="ttname"><a href="classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e">os::File::makeDirectory</a></div><div class="ttdeci">bool makeDirectory() const </div><div class="ttdef"><b>Definition:</b> file.hpp:185</div></div>
+<div class="ttc" id="classos_1_1File_html_a67e0a4cd871297754d618894f0dee88e"><div class="ttname"><a href="classos_1_1File.html#a67e0a4cd871297754d618894f0dee88e">os::File::makeDirectory</a></div><div class="ttdeci">bool makeDirectory() const </div><div class="ttdef"><b>Definition:</b> file.hpp:186</div></div>
 <div class="ttc" id="classos_1_1File_html_a18420560a891e849e17be973b4b6c972"><div class="ttname"><a href="classos_1_1File.html#a18420560a891e849e17be973b4b6c972">os::File::canRead</a></div><div class="ttdeci">bool canRead() const </div><div class="ttdef"><b>Definition:</b> file.hpp:61</div></div>
 <div class="ttc" id="classos_1_1File_html_a781e3cfd83fbef7d2079fff99506385d"><div class="ttname"><a href="classos_1_1File.html#a781e3cfd83fbef7d2079fff99506385d">os::File::isDirectory</a></div><div class="ttdeci">bool isDirectory() const </div><div class="ttdef"><b>Definition:</b> file.hpp:133</div></div>
 <div class="ttc" id="classos_1_1File_html_a6f8e55c816dd725e1d2aec444535f9d2"><div class="ttname"><a href="classos_1_1File.html#a6f8e55c816dd725e1d2aec444535f9d2">os::File::deleteFile</a></div><div class="ttdeci">bool deleteFile() const </div><div class="ttdef"><b>Definition:</b> file.hpp:79</div></div>
@@ -290,7 +291,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 11 2017 23:21:38 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 12 2017 10:41:08 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>
