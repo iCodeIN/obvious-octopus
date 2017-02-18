@@ -1,4 +1,5 @@
 #include "geometry/convexhull.hpp"
+#include "geometry/kmeans.hpp"
 
 #include <iostream>
 
@@ -6,7 +7,7 @@ int main()
 {
 
     // create grid pattern
-    auto K = 1000;
+    auto K = 10;
     std::vector<std::vector<double>> pts;
     for(int i=0; i<K; i++)
     {
@@ -19,9 +20,28 @@ int main()
         }
     }
 
+    auto clusters =  geometry::algorithm::kmeansWithEuclideanMetric(pts, 4);
+
+    // extract cluster 0
+    std::vector<std::vector<double>> cluster0;
+    for(auto &p : clusters)
+    {
+        if(p.second == 0)
+        {
+            cluster0.push_back(p.first);
+        }
+    }
+    std::cout << "cluster : " << std::endl;
+    for(auto &p : cluster0)
+    {
+        std::cout << p[0] << ", " << p[1] << std::endl;
+    }
+
     // unleash the convex hull algorithm
-    auto chPts = geometry::algorithm::convexHull(pts);
-    for(auto &p : chPts)
+    auto clusterHull = geometry::algorithm::convexHull(cluster0);
+
+    std::cout << "hull : " << std::endl;
+    for(auto &p : clusterHull)
     {
         std::cout << p[0] << ", " << p[1] << std::endl;
     }

@@ -136,6 +136,7 @@ namespace geometry
                 }
 
                 previousCentroids = centroidsVector;
+                iterationNr++;
             }
 
             // return
