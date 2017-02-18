@@ -11,6 +11,8 @@
 
 namespace
 {
+    /*! \return the zero vector for a given dimension
+     */
     static std::vector<double> zero(int d)
     {
         std::vector<double> v;
@@ -20,6 +22,9 @@ namespace
         }
         return v;
     }
+
+    /*! \return the result of vector multiplication with a scalar
+     */
     static std::vector<double> scalar(const std::vector<double>& p, double s)
     {
         std::vector<double> v;

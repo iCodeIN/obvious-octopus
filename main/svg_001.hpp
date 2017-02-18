@@ -174,8 +174,8 @@ std::unique_ptr<SVG::SVG> render()
 
 int main()
 {
-    auto w = 50;
-    auto h = 50;
+    auto w = 25;
+    auto h = 25;
 
     // 0. seed random
     srand(time(0));

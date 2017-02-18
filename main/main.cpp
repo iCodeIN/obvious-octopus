@@ -1,6 +1,6 @@
 /* SVG main methods
  */
-#include "svg_001.hpp"
+// #include "svg_001.hpp"
 
 /* GRAPH main methods
  */
@@ -21,3 +21,15 @@
 /* OS main methods
  */
 // #include "os_001.hpp"
+
+/* CODE main methods
+*/
+// #include "code_001.hpp"
+
+/* UTIL main methods
+*/
+// #include "util_001.hpp"
+
+/* GEOMETRY main methods
+ */
+#include "geometry_001.hpp"
