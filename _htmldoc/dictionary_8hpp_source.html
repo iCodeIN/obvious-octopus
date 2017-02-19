@@ -97,23 +97,100 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef NLP_DICTIONARY_HPP</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define NLP_DICTIONARY_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span>nlp</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html">    8</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classnlp_1_1Dictionary.html">Dictionary</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;        <span class="keyword">private</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;            <span class="comment">// --- methods ---</span></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;            <span class="comment">// --- members ---</span></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    };</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;}</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="preprocessor">#endif // NLP_DICTIONARY_HPP</span></div>
-<div class="ttc" id="classnlp_1_1Dictionary_html"><div class="ttname"><a href="classnlp_1_1Dictionary.html">nlp::Dictionary</a></div><div class="ttdef"><b>Definition:</b> dictionary.hpp:8</div></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;graph/bktree.hpp&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;util/levenshtein.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;set&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="preprocessor">#include &lt;iostream&gt;</span> <span class="comment">// debug</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">namespace </span>nlp</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classnlp_1_1Dictionary.html">Dictionary</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html#a9b2fb12382ed7a4eb61b0b1519f240f7">   24</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classnlp_1_1Dictionary.html#a9b2fb12382ed7a4eb61b0b1519f240f7">Dictionary</a>()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                <span class="comment">// init BKTree</span></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;                <span class="keyword">auto</span> m = [](<span class="keyword">const</span> std::string&amp; s0, <span class="keyword">const</span> std::string&amp; s1)</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                    <span class="keywordflow">return</span> util::string::levenshtein(s0, s1);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                m_bktree = std::unique_ptr&lt;graph::BKTree&lt;std::string&gt;&gt;(<span class="keyword">new</span> <a class="code" href="classgraph_1_1BKTree.html">graph::BKTree&lt;std::string&gt;</a>(m));</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            <span class="keyword">virtual</span> <a class="code" href="classnlp_1_1Dictionary.html#a0ff86600d0b3f37d7923541390ea30e9">~Dictionary</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;</div>
+<div class="line"><a name="l00040"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html#a97246de73a705cc144a5b23a3aa492ca">   40</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classnlp_1_1Dictionary.html#a97246de73a705cc144a5b23a3aa492ca">insert</a>(<span class="keyword">const</span> std::string&amp; s)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                <span class="comment">// insert word</span></div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                m_words.insert(s);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                m_bktree-&gt;insert(s);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;s.size(); i++)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    <span class="comment">// insert prefix</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    <span class="keyword">auto</span> prefix = s.substr(0, i);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    <span class="comment">// insert suffix</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                    <span class="keyword">auto</span> suffix = s.substr(i+1);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                    m_prefixes.insert(prefix);</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                    m_suffixes.insert(suffix);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                <span class="comment">// return</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html#a3f5e8c660dcebeb6700e1d3d9c6bfa74">   64</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classnlp_1_1Dictionary.html#a3f5e8c660dcebeb6700e1d3d9c6bfa74">isWord</a>(<span class="keyword">const</span> std::string&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                <span class="keywordflow">return</span> m_words.find(s) != m_words.end();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html#aa71c56d2ef4081b8cfc32ae392f35f25">   71</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classnlp_1_1Dictionary.html#aa71c56d2ef4081b8cfc32ae392f35f25">isPrefix</a>(<span class="keyword">const</span> std::string&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                <span class="keywordflow">return</span> m_prefixes.find(s) != m_prefixes.end();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;</div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html#ad8afc31459171c32f24582c8103979dd">   78</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classnlp_1_1Dictionary.html#ad8afc31459171c32f24582c8103979dd">isSuffix</a>(<span class="keyword">const</span> std::string&amp; s)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;                <span class="keywordflow">return</span> m_suffixes.find(s) != m_suffixes.end();</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;</div>
+<div class="line"><a name="l00086"></a><span class="lineno"><a class="line" href="classnlp_1_1Dictionary.html#a09de3317e3f23ed73d24e79e5dee7045">   86</a></span>&#160;            <span class="keywordtype">bool</span> <a class="code" href="classnlp_1_1Dictionary.html#a09de3317e3f23ed73d24e79e5dee7045">isPseudoWord</a>(<span class="keyword">const</span> std::string&amp; s, <span class="keywordtype">int</span> dist)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;                <span class="keywordflow">return</span> !m_bktree-&gt;find(s, dist).empty();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">// --- methods ---</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="comment">// --- members ---</span></div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            std::unique_ptr&lt;graph::BKTree&lt;std::string&gt;&gt;     m_bktree;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            std::set&lt;std::string&gt;                           m_words;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            std::set&lt;std::string&gt;                           m_prefixes;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            std::set&lt;std::string&gt;                           m_suffixes;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;<span class="preprocessor">#endif // NLP_DICTIONARY_HPP</span></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_a3f5e8c660dcebeb6700e1d3d9c6bfa74"><div class="ttname"><a href="classnlp_1_1Dictionary.html#a3f5e8c660dcebeb6700e1d3d9c6bfa74">nlp::Dictionary::isWord</a></div><div class="ttdeci">bool isWord(const std::string &amp;s) const </div><div class="ttdef"><b>Definition:</b> dictionary.hpp:64</div></div>
+<div class="ttc" id="classgraph_1_1BKTree_html"><div class="ttname"><a href="classgraph_1_1BKTree.html">graph::BKTree</a></div><div class="ttdef"><b>Definition:</b> bktree.hpp:54</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_a09de3317e3f23ed73d24e79e5dee7045"><div class="ttname"><a href="classnlp_1_1Dictionary.html#a09de3317e3f23ed73d24e79e5dee7045">nlp::Dictionary::isPseudoWord</a></div><div class="ttdeci">bool isPseudoWord(const std::string &amp;s, int dist) const </div><div class="ttdef"><b>Definition:</b> dictionary.hpp:86</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_ad8afc31459171c32f24582c8103979dd"><div class="ttname"><a href="classnlp_1_1Dictionary.html#ad8afc31459171c32f24582c8103979dd">nlp::Dictionary::isSuffix</a></div><div class="ttdeci">bool isSuffix(const std::string &amp;s) const </div><div class="ttdef"><b>Definition:</b> dictionary.hpp:78</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_a9b2fb12382ed7a4eb61b0b1519f240f7"><div class="ttname"><a href="classnlp_1_1Dictionary.html#a9b2fb12382ed7a4eb61b0b1519f240f7">nlp::Dictionary::Dictionary</a></div><div class="ttdeci">Dictionary()</div><div class="ttdef"><b>Definition:</b> dictionary.hpp:24</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html"><div class="ttname"><a href="classnlp_1_1Dictionary.html">nlp::Dictionary</a></div><div class="ttdef"><b>Definition:</b> dictionary.hpp:18</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_aa71c56d2ef4081b8cfc32ae392f35f25"><div class="ttname"><a href="classnlp_1_1Dictionary.html#aa71c56d2ef4081b8cfc32ae392f35f25">nlp::Dictionary::isPrefix</a></div><div class="ttdeci">bool isPrefix(const std::string &amp;s) const </div><div class="ttdef"><b>Definition:</b> dictionary.hpp:71</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_a0ff86600d0b3f37d7923541390ea30e9"><div class="ttname"><a href="classnlp_1_1Dictionary.html#a0ff86600d0b3f37d7923541390ea30e9">nlp::Dictionary::~Dictionary</a></div><div class="ttdeci">virtual ~Dictionary()=default</div></div>
+<div class="ttc" id="classnlp_1_1Dictionary_html_a97246de73a705cc144a5b23a3aa492ca"><div class="ttname"><a href="classnlp_1_1Dictionary.html#a97246de73a705cc144a5b23a3aa492ca">nlp::Dictionary::insert</a></div><div class="ttdeci">bool insert(const std::string &amp;s)</div><div class="ttdef"><b>Definition:</b> dictionary.hpp:40</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 18 2017 10:35:47 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 19 2017 22:10:21 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

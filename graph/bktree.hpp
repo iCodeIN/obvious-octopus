@@ -4,6 +4,8 @@
 
 #include "graph/adjecencylisttree.hpp"
 
+#include <set>
+
 namespace graph
 {
     /*! represents a node in a BKTree
@@ -135,9 +137,9 @@ namespace graph
 
             /*! \return an std::vector containing all Ts that differ only the given distance from the given T
              */
-            std::vector<T> find(const T& t, int maxDistance) const
+            std::set<T> find(const T& t, int maxDistance) const
             {
-                std::vector<T> retval;
+                std::set<T> retval;
                 // empty tree
                 if(AdjecencyListTree<BKTreeNode<T>*>::vertices().empty())
                 {
@@ -153,12 +155,12 @@ namespace graph
 
         private:
             // --- methods ---
-            void findRecursive(const BKTreeNode<T>* nodePtr, const T& t, int maxDist, std::vector<T>& retval) const
+            void findRecursive(const BKTreeNode<T>* nodePtr, const T& t, int maxDist, std::set<T>& retval) const
             {
                 auto dist = m_metric(nodePtr->getData(), t);
                 if(dist <= maxDist)
                 {
-                    retval.push_back(nodePtr->getData());
+                    retval.insert(nodePtr->getData());
                 }
                 auto lowerLimit = std::max(0, dist - maxDist);
                 auto upperLimit = dist + maxDist;

@@ -93,21 +93,227 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div>
 </div><!-- top -->
 <div class="header">
+  <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="classnlp_1_1Dictionary-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">nlp::Dictionary Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="dictionary_8hpp_source.html">dictionary.hpp</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a9b2fb12382ed7a4eb61b0b1519f240f7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#a9b2fb12382ed7a4eb61b0b1519f240f7">Dictionary</a> ()</td></tr>
+<tr class="separator:a9b2fb12382ed7a4eb61b0b1519f240f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0ff86600d0b3f37d7923541390ea30e9"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#a0ff86600d0b3f37d7923541390ea30e9">~Dictionary</a> ()=default</td></tr>
+<tr class="separator:a0ff86600d0b3f37d7923541390ea30e9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a97246de73a705cc144a5b23a3aa492ca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#a97246de73a705cc144a5b23a3aa492ca">insert</a> (const std::string &amp;s)</td></tr>
+<tr class="separator:a97246de73a705cc144a5b23a3aa492ca"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3f5e8c660dcebeb6700e1d3d9c6bfa74"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#a3f5e8c660dcebeb6700e1d3d9c6bfa74">isWord</a> (const std::string &amp;s) const </td></tr>
+<tr class="separator:a3f5e8c660dcebeb6700e1d3d9c6bfa74"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa71c56d2ef4081b8cfc32ae392f35f25"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#aa71c56d2ef4081b8cfc32ae392f35f25">isPrefix</a> (const std::string &amp;s) const </td></tr>
+<tr class="separator:aa71c56d2ef4081b8cfc32ae392f35f25"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad8afc31459171c32f24582c8103979dd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#ad8afc31459171c32f24582c8103979dd">isSuffix</a> (const std::string &amp;s) const </td></tr>
+<tr class="separator:ad8afc31459171c32f24582c8103979dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a09de3317e3f23ed73d24e79e5dee7045"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1Dictionary.html#a09de3317e3f23ed73d24e79e5dee7045">isPseudoWord</a> (const std::string &amp;s, int dist) const </td></tr>
+<tr class="separator:a09de3317e3f23ed73d24e79e5dee7045"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Utility class to handle word (including prefix, suffix, and quasi-match) lookup </p>
-</div><hr/>The documentation for this class was generated from the following file:<ul>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a9b2fb12382ed7a4eb61b0b1519f240f7"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">nlp::Dictionary::Dictionary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a0ff86600d0b3f37d7923541390ea30e9"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual nlp::Dictionary::~Dictionary </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>default constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a97246de73a705cc144a5b23a3aa492ca"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nlp::Dictionary::insert </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the given std::string was added successfully to the dictionary </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aa71c56d2ef4081b8cfc32ae392f35f25"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nlp::Dictionary::isPrefix </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the given std::string is a prefix of a valid dictionary word </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a09de3317e3f23ed73d24e79e5dee7045"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nlp::Dictionary::isPseudoWord </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>dist</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the given std::string is almost a valid dictionary word i.e. if the given std::string is at a given distance from any dictionary word </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad8afc31459171c32f24582c8103979dd"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nlp::Dictionary::isSuffix </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the given std::string is a suffix of a valid dictionary word </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="a3f5e8c660dcebeb6700e1d3d9c6bfa74"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool nlp::Dictionary::isWord </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<dl class="section return"><dt>Returns</dt><dd>true iff the given std::string is a valid dictionary word </dd></dl>
+
+</div>
+</div>
+<hr/>The documentation for this class was generated from the following file:<ul>
 <li>nlp/<a class="el" href="dictionary_8hpp_source.html">dictionary.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 18 2017 10:35:47 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun Feb 19 2017 22:10:21 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

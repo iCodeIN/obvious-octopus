@@ -7,6 +7,7 @@ var searchData=
   ['_7eboostmatriximpl',['~BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html#ac8cad4427c7d29e74f3eb73457b217ad',1,'matrix::BoostMatrixImpl']]],
   ['_7ecircle',['~Circle',['../classSVG_1_1Circle.html#a664ad02797ef13d38f06251bd4a7add0',1,'SVG::Circle']]],
   ['_7edefaultelementimpl',['~DefaultElementImpl',['../classXML_1_1DefaultElementImpl.html#a393c772c356267329fa787dde51f73f6',1,'XML::DefaultElementImpl']]],
+  ['_7edictionary',['~Dictionary',['../classnlp_1_1Dictionary.html#a0ff86600d0b3f37d7923541390ea30e9',1,'nlp::Dictionary']]],
   ['_7edictionarybasedtokenizer',['~DictionaryBasedTokenizer',['../classnlp_1_1DictionaryBasedTokenizer.html#aa3e2292ab1272b903f1132890b8c152c',1,'nlp::DictionaryBasedTokenizer']]],
   ['_7ehierarchicalgraphlayout',['~HierarchicalGraphLayout',['../classgraph__ui_1_1HierarchicalGraphLayout.html#a2c31623dc6b78455d8008a020b3be806',1,'graph_ui::HierarchicalGraphLayout']]],
   ['_7ei2dgraph',['~I2DGraph',['../classgraph_1_1I2DGraph.html#ac845fbcb82e52df701e0a9e487a52bde',1,'graph::I2DGraph']]],
