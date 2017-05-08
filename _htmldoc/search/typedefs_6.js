@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['realfunctiontype',['RealFunctionType',['../classnumeric_1_1Derivative.html#a9ae94b40e81041335af21a764eceaa19',1,'numeric::Derivative']]],
-  ['rgbcolor',['RGBColor',['../classSVG_1_1HSV.html#a93da59189b0174379bf7033229c8096d',1,'SVG::HSV']]]
+  ['pathcommand',['PathCommand',['../classSVG_1_1Path.html#a2dea120ac0ea64e6b07b9c5c4ed577ef',1,'SVG::Path']]],
+  ['pointtype',['PointType',['../classgraph__ui_1_1AbstractGraphLayout.html#add48a1e9871b0678afdd054f8b0b87c9',1,'graph_ui::AbstractGraphLayout']]]
 ];

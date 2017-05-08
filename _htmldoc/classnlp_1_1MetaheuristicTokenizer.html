@@ -119,8 +119,8 @@ Collaboration diagram for nlp::MetaheuristicTokenizer:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:abb62046a7126f0cb230bbd21dff53ec4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#abb62046a7126f0cb230bbd21dff53ec4">MetaheuristicTokenizer</a> (std::unique_ptr&lt; <a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> &gt; tokenizer)</td></tr>
-<tr class="separator:abb62046a7126f0cb230bbd21dff53ec4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab6a19d811af42582fb389a79d15f0246"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#ab6a19d811af42582fb389a79d15f0246">MetaheuristicTokenizer</a> (std::unique_ptr&lt; <a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> &gt; tokenizer, std::unique_ptr&lt; <a class="el" href="classnlp_1_1Dictionary.html">Dictionary</a> &gt; dictionary)</td></tr>
+<tr class="separator:ab6a19d811af42582fb389a79d15f0246"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1f91cfc66dc6d65c506bf652da33323"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classnlp_1_1MetaheuristicTokenizer.html#ab1f91cfc66dc6d65c506bf652da33323">~MetaheuristicTokenizer</a> ()=default</td></tr>
 <tr class="separator:ab1f91cfc66dc6d65c506bf652da33323"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf84bde2fdfc5474b3ee0b9c493ab526"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="adf84bde2fdfc5474b3ee0b9c493ab526"></a>
@@ -147,7 +147,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> implementation using meta-heuristic to improve the result obtained by a more naive <a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="abb62046a7126f0cb230bbd21dff53ec4"></a>
+<a class="anchor" id="ab6a19d811af42582fb389a79d15f0246"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -158,8 +158,18 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
           <td class="memname">nlp::MetaheuristicTokenizer::MetaheuristicTokenizer </td>
           <td>(</td>
           <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classnlp_1_1ITokenizer.html">ITokenizer</a> &gt;&#160;</td>
-          <td class="paramname"><em>tokenizer</em></td><td>)</td>
+          <td class="paramname"><em>tokenizer</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">std::unique_ptr&lt; <a class="el" href="classnlp_1_1Dictionary.html">Dictionary</a> &gt;&#160;</td>
+          <td class="paramname"><em>dictionary</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
   </td>
@@ -202,7 +212,7 @@ std::vector&lt; int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a c
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 19 2017 22:10:21 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 8 2017 23:45:50 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

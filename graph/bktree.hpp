@@ -98,7 +98,7 @@ namespace graph
             bool insert(const T& t)
             {
                 // special case for root
-                if(this->vertices().empty())
+                if(this->size() == 0)
                 {
                     this->insertVertex(new BKTreeNode<T>(t, 0));
                     return true;
@@ -141,7 +141,7 @@ namespace graph
             {
                 std::set<T> retval;
                 // empty tree
-                if(AdjecencyListTree<BKTreeNode<T>*>::vertices().empty())
+                if(this->size() == 0)
                 {
                     return retval;
                 }

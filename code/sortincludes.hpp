@@ -11,7 +11,6 @@ namespace code
         {
             // read entire file
             std::vector<std::string> lines;
-std:
             ifstream file(inputFile);
             if(file.is_open())
             {

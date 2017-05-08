@@ -38,7 +38,7 @@ namespace
             return 0.0;
         }
         auto r = std::acos((c*c + a*a - b*b) / (2*c*a));
-        return std::floor(r * 10000)/10000;
+        return std::floor(r * 10000) / 10000;
     }
 
     double dist(   const std::vector<double>& A,

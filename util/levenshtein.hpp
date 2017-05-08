@@ -15,49 +15,55 @@ namespace util
             Levenshtein distance may also be referred to as edit distance, although that may also denote a larger family of distance metrics.
             It is closely related to pairwise string alignments.
         */
-        static int levenshtein(const std::string& s0, const std::string& s1)
+        static int levenshtein(const std::string& s1, const std::string& s2)
         {
-            // easy cases
-            if(s0 == s1)
+            const size_t m(s1.size());
+            const size_t n(s2.size());
+
+            if( m==0 )
             {
-                return 0;
+                return n;
             }
-            if(s0.size() == 0)
+            if( n==0 )
             {
-                return s1.size();
-            }
-            if(s1.size() == 0)
-            {
-                return s0.size();
+                return m;
             }
 
-            std::vector<int> rowA;
-            std::vector<int> rowB;
+            size_t *costs = new size_t[n + 1];
 
-            // init rowA
-            for(int i=0; i<=s1.size(); i++)
+            for( size_t k=0; k<=n; k++ )
             {
-                rowA.push_back(i);
+                costs[k] = k;
             }
 
-            // main loop
-            for(int i=0; i<s0.size(); i++)
+            size_t i = 0;
+            for ( std::string::const_iterator it1 = s1.begin(); it1 != s1.end(); ++it1, ++i )
             {
-                rowB.push_back(i+1);
-                for(int j=0; j<s1.size(); j++)
+                costs[0] = i+1;
+                size_t corner = i;
+
+                size_t j = 0;
+                for ( std::string::const_iterator it2 = s2.begin(); it2 != s2.end(); ++it2, ++j )
                 {
-                    auto cost = ((s0[i] == s1[j]) ? 0 : 1);
-                    rowB.push_back(std::min(std::min(rowB[j]+1,rowA[j+1]+1), rowA[j]+cost));
+                    size_t upper = costs[j+1];
+                    if( *it1 == *it2 )
+                    {
+                        costs[j+1] = corner;
+                    }
+                    else
+                    {
+                        size_t t(upper<corner?upper:corner);
+                        costs[j+1] = (costs[j]<t?costs[j]:t)+1;
+                    }
+
+                    corner = upper;
                 }
-                rowA.clear();
-                for(auto d : rowB)
-                {
-                    rowA.push_back(d);
-                }
-                rowB.clear();
             }
-            // return
-            return rowA[rowA.size()-1];
+
+            size_t result = costs[n];
+            delete [] costs;
+
+            return result;
         }
     }
 }

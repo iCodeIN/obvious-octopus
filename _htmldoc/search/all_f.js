@@ -24,6 +24,7 @@ var searchData=
   ['setviewbox',['setViewBox',['../classSVG_1_1SVG.html#a739d75aa5386262f03885b2f9070a501',1,'SVG::SVG']]],
   ['setwidth',['setWidth',['../classSVG_1_1SVG.html#a147ca2690d70990968ae230a1fa1a05f',1,'SVG::SVG']]],
   ['simulatedannealing',['SimulatedAnnealing',['../classmeta_1_1SimulatedAnnealing.html',1,'meta']]],
+  ['size',['size',['../classgraph_1_1AdjecencyListGraph.html#a3d3529ccf73cb7e61d2035e653cd1d9e',1,'graph::AdjecencyListGraph::size()'],['../classgraph_1_1AdjecencyListTree.html#a571bad62acd83f715d9a68e7fd24b6a3',1,'graph::AdjecencyListTree::size()'],['../classgraph_1_1IGraph.html#af9b16bf29323ccb48d1bb52e47cd0d2b',1,'graph::IGraph::size()']]],
   ['sizefunctiontype',['SizeFunctionType',['../classgraph__ui_1_1AbstractGraphLayout.html#aa73fd17c800396b0636aa768eb2c0aa8',1,'graph_ui::AbstractGraphLayout::SizeFunctionType()'],['../classgraph__ui_1_1IGraphLayout.html#ab84d5069be32ffb6f52ed380bfe6159e',1,'graph_ui::IGraphLayout::SizeFunctionType()']]],
   ['sizetype',['SizeType',['../classgraph__ui_1_1AbstractGraphLayout.html#a3f3dcf6dc8d027e74b87365486029eff',1,'graph_ui::AbstractGraphLayout::SizeType()'],['../classgraph__ui_1_1IGraphLayout.html#a97e349e64c3ec2a1f879ccef53e63674',1,'graph_ui::IGraphLayout::SizeType()']]],
   ['skewx',['skewX',['../classSVG_1_1IElement.html#a1ee1970ad1ea86ce47f3a64d7cd92605',1,'SVG::IElement']]],
@@ -35,8 +36,8 @@ var searchData=
   ['sorteddft',['sortedDFT',['../classnumeric_1_1DFT.html#a95ef27ca473b1381784407bd7acec82f',1,'numeric::DFT']]],
   ['stem',['stem',['../classnlp_1_1IStemmer.html#ab5240c4183cfa6d9ee3b75fec58c5420',1,'nlp::IStemmer::stem()'],['../classnlp_1_1PorterStemmer.html#a35773ed86d848b3fd6a1d0608543c802',1,'nlp::PorterStemmer::stem()']]],
   ['sub',['sub',['../classnumeric_1_1BigInteger.html#a2e3cddb33588b58bfd4f61dbad82182f',1,'numeric::BigInteger']]],
-  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]],
   ['svg',['SVG',['../classSVG_1_1SVG.html#ac85aa23716d229d89b26e237365d9d98',1,'SVG::SVG::SVG()=default'],['../classSVG_1_1SVG.html#a91f8c40460dd462d733996a1ef0db511',1,'SVG::SVG::SVG(const SVG &amp;)=delete'],['../classSVG_1_1SVG.html#a2031b2ba044abb2252c54ac37f0297dc',1,'SVG::SVG::SVG(SVG &amp;)=delete']]],
+  ['svg',['SVG',['../classSVG_1_1SVG.html',1,'SVG']]],
   ['swapcols',['swapCols',['../classmatrix_1_1IMatrix.html#a156d2f262c656ea62f0da784ced4fb26',1,'matrix::IMatrix']]],
   ['swaprows',['swapRows',['../classmatrix_1_1IMatrix.html#a747304978363f970807830364f539e63',1,'matrix::IMatrix']]]
 ];

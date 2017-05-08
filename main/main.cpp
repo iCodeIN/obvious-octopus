@@ -1,3 +1,5 @@
+#define NDEBUG
+
 /* SVG main methods
  */
 // #include "svg_001.hpp"
@@ -17,7 +19,7 @@
 // #include "nlp_002.hpp"
 // #include "nlp_003.hpp"
 // #include "nlp_004.hpp"
-#include "nlp_005.hpp"
+// #include "nlp_005.hpp"
 
 /* OS main methods
  */
@@ -30,7 +32,13 @@
 /* UTIL main methods
 */
 // #include "util_001.hpp"
+// #include "util_002.hpp"
 
 /* GEOMETRY main methods
  */
 // #include "geometry_001.hpp"
+
+/* PLOT main methods
+ */
+// #include "plot_001.hpp"
+#include "plot_002.hpp"

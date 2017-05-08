@@ -6,6 +6,7 @@ _The Royal Library of Alexandria or Ancient Library of Alexandria in Alexandria,
 * numeric:distribution rework
 * support smoothing
 * support distance metrics
+* fluent interfaces
 
 ## long term goals
 * better svg support

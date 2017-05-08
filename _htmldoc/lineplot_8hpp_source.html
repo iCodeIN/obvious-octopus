@@ -261,7 +261,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                        <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin, m_bottomMargin + y * i, m_width - m_rightMargin, m_bottomMargin + y * i));</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                        line-&gt;setStrokeWidth(1);</div>
 <div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;                        line-&gt;setStroke(66,66,66);</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        line-&gt;setStrokeArray(dashes);</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;                        line-&gt;setDashArray(dashes);</div>
 <div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;                        svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
 <div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;                    }</div>
 <div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;                }</div>
@@ -273,7 +273,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;                        <span class="keyword">auto</span> line = std::unique_ptr&lt;SVG::Line&gt;(<span class="keyword">new</span> <a class="code" href="classSVG_1_1Line.html">SVG::Line</a>(m_leftMargin + x * i, m_topMargin, m_leftMargin + x * i, m_height - m_bottomMargin));</div>
 <div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;                        line-&gt;setStrokeWidth(1);</div>
 <div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;                        line-&gt;setStroke(66,66,66);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        line-&gt;setStrokeArray(dashes);</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;                        line-&gt;setDashArray(dashes);</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;                        svg.<a class="code" href="classSVG_1_1SVG.html#a16a57a2cf338dc191b1382df380d7fdd">add</a>(std::move(line));</div>
 <div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;                    }</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;                }</div>
@@ -348,7 +348,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Feb 19 2017 22:10:21 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Mon May 8 2017 23:45:50 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

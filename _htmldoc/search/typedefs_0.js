@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['distributiontype',['DistributionType',['../classnumeric_1_1Distribution.html#a2c6fff7e6087c3a130827d19be73f392',1,'numeric::Distribution']]],
-  ['domaintype',['DomainType',['../classmeta_1_1AbstractMetaHeuristic.html#abcd07a0ff223dfc116d7a54047a16701',1,'meta::AbstractMetaHeuristic']]]
+  ['boolfunctiontype',['BoolFunctionType',['../classmeta_1_1BooleanSearch.html#adced463db97082e64ed081666d9ec578',1,'meta::BooleanSearch']]],
+  ['booltupletype',['BoolTupleType',['../classmeta_1_1BooleanSearch.html#a167f22ff74f28b2273e9ff6c9a4604c8',1,'meta::BooleanSearch']]]
 ];

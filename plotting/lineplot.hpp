@@ -192,7 +192,7 @@ namespace plotting
                         auto line = std::unique_ptr<SVG::Line>(new SVG::Line(m_leftMargin, m_bottomMargin + y * i, m_width - m_rightMargin, m_bottomMargin + y * i));
                         line->setStrokeWidth(1);
                         line->setStroke(66,66,66);
-                        line->setStrokeArray(dashes);
+                        line->setDashArray(dashes);
                         svg.add(std::move(line));
                     }
                 }
@@ -204,7 +204,7 @@ namespace plotting
                         auto line = std::unique_ptr<SVG::Line>(new SVG::Line(m_leftMargin + x * i, m_topMargin, m_leftMargin + x * i, m_height - m_bottomMargin));
                         line->setStrokeWidth(1);
                         line->setStroke(66,66,66);
-                        line->setStrokeArray(dashes);
+                        line->setDashArray(dashes);
                         svg.add(std::move(line));
                     }
                 }

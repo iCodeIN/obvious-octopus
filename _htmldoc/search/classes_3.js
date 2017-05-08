@@ -1,6 +1,7 @@
 var searchData=
 [
   ['defaultelementimpl',['DefaultElementImpl',['../classXML_1_1DefaultElementImpl.html',1,'XML']]],
+  ['defaultgraphimpl',['DefaultGraphImpl',['../classgraph_1_1DefaultGraphImpl.html',1,'graph']]],
   ['derivative',['Derivative',['../classnumeric_1_1Derivative.html',1,'numeric']]],
   ['dft',['DFT',['../classnumeric_1_1DFT.html',1,'numeric']]],
   ['dictionary',['Dictionary',['../classnlp_1_1Dictionary.html',1,'nlp']]],

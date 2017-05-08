@@ -2,10 +2,12 @@
 #ifndef NLP_DICTIONARYBASEDTOKENIZER_HPP
 #define NLP_DICTIONARYBASEDTOKENIZER_HPP
 
+#include "nlp/dictionary.hpp"
 #include "nlp/itokenizer.h"
 #include "util/stringutils.hpp"
 #include "xml/xml.hpp"
 
+#include <memory>
 #include <set>
 
 namespace nlp
@@ -18,7 +20,8 @@ namespace nlp
 
             /*! default constructor
              */
-            explicit DictionaryBasedTokenizer()
+            explicit DictionaryBasedTokenizer(std::unique_ptr<Dictionary> dictionary)
+                : m_dictionary(std::move(dictionary))
             {
             }
 
@@ -42,13 +45,13 @@ namespace nlp
                     }
 
                     // if the token is a valid prefix, continue building the token
-                    if(isPrefix(token))
+                    if(m_dictionary->isPrefix(token))
                     {
                         // std::cout << token << ", pos : " << i << ", valid prefix, continue" << std::endl;
                         continue;
                     }
                     // if the token is a word, mark the boundary
-                    else if(isWord(token))
+                    else if(m_dictionary->isWord(token))
                     {
                         // std::cout << token << ", pos : " << i << ", valid word, push boundary" << std::endl;
                         tokenBoundaries.push_back(i);
@@ -71,7 +74,7 @@ namespace nlp
                                 we mark the boundary, and go back one character.
                              */
                             auto prevToken = token.substr(0, token.size() - 1);
-                            if(isPrefix(prevToken) || isWord(prevToken))
+                            if(m_dictionary->isPrefix(prevToken) || m_dictionary->isWord(prevToken))
                             {
                                 // std::cout << token << ", pos : " << i << ", prev token was valid prefix, or valid word, push boundary, resume from " << (i-1) << std::endl;
                                 tokenBoundaries.push_back(i - 1);
@@ -96,44 +99,10 @@ namespace nlp
                 return tokenBoundaries;
             }
 
-            /*! load a DictionaryBasedTokenizer from a given XML element
-             */
-            virtual void fromXML(std::unique_ptr<XML::IElement> xml)
-            {
-                // root element
-
-                // elements for each observed language
-                for(int i=0; i<xml->countChildren(); i++)
-                {
-                    auto word = xml->getChild(i).getText();
-                    if(this->isSet(IGNORE_CASE))
-                    {
-                        word = util::string::toUpper(word);
-                    }
-                    m_words.insert(word);
-                    for(int j=0; j<word.size(); j++)
-                    {
-                        auto prefix = word.substr(0, j);
-                        m_prefixes.insert(prefix);
-                    }
-                }
-            }
-
         private:
 
-            // --- methods ---
-            bool isPrefix(const std::string& s) const
-            {
-                return m_prefixes.find(s) != m_prefixes.cend();
-            }
-            bool isWord(const std::string& s) const
-            {
-                return m_words.find(s) != m_words.cend();
-            }
-
             // --- members ---
-            std::set<std::string> m_words;
-            std::set<std::string> m_prefixes;
+            std::unique_ptr<Dictionary> m_dictionary;
     };
 }
 

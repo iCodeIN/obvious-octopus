@@ -3,6 +3,9 @@
 
 #include "graph/bktree.hpp"
 #include "util/levenshtein.hpp"
+#include "util/stringutils.hpp"
+#include "nlp/imodel.hpp"
+#include "xml/xml.hpp"
 
 #include <functional>
 #include <memory>
@@ -15,7 +18,7 @@ namespace nlp
 {
     /*! Utility class to handle word (including prefix, suffix, and quasi-match) lookup
      */
-    class Dictionary
+    class Dictionary : public IModel
     {
         public:
 
@@ -63,21 +66,22 @@ namespace nlp
              */
             bool isWord(const std::string& s) const
             {
-                return m_words.find(s) != m_words.end();
+
+                return this->isSet(IGNORE_CASE) ? (m_words.find(util::string::toUpper(s)) != m_words.end()) : (m_words.find(s) != m_words.end());
             }
 
             /*! \return true iff the given std::string is a prefix of a valid dictionary word
              */
             bool isPrefix(const std::string& s) const
             {
-                return m_prefixes.find(s) != m_prefixes.end();
+                return this->isSet(IGNORE_CASE) ? (m_prefixes.find(util::string::toUpper(s)) != m_prefixes.end()) : (m_prefixes.find(s) != m_prefixes.end());
             }
 
             /*! \return true iff the given std::string is a suffix of a valid dictionary word
              */
             bool isSuffix(const std::string& s) const
             {
-                return m_suffixes.find(s) != m_suffixes.end();
+                return this->isSet(IGNORE_CASE) ? (m_suffixes.find(util::string::toUpper(s)) != m_suffixes.end()) : (m_suffixes.find(s) != m_suffixes.end());
             }
 
             /*! \return true iff the given std::string is almost a valid dictionary word
@@ -85,7 +89,27 @@ namespace nlp
              */
             bool isPseudoWord(const std::string& s, int dist) const
             {
-                return !m_bktree->find(s, dist).empty();
+                return this->isSet(IGNORE_CASE) ? !m_bktree->find(util::string::toUpper(s), dist).empty() : !m_bktree->find(s, dist).empty();
+            }
+
+            /*! load a Dictionary object from an XML file
+             */
+            void fromXML(std::unique_ptr<XML::IElement> xmlRoot)
+            {
+                // elements for each observed language
+                for(int i=0; i<xmlRoot->countChildren(); i++)
+                {
+                    auto word = xmlRoot->getChild(i).getText();
+                    if(this->isSet(IGNORE_CASE))
+                    {
+                        word = util::string::toUpper(word);
+                    }
+                    insert(word);
+                    if(i%1000==0)
+                    {
+                        std::cout << i << " / " << xmlRoot->countChildren() << std::endl;
+                    }
+                }
             }
 
         private:

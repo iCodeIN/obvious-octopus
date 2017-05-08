@@ -21,6 +21,7 @@ namespace graph
              */
             explicit AdjecencyListTree()
                 : m_graph(std::unique_ptr<IGraph<T>>(new AdjecencyListGraph<T>()))
+                , m_previousRootValid(false)
             {
             }
 
@@ -49,13 +50,17 @@ namespace graph
             {
                 assert(m_graph->incoming(target).size() == 0);
                 assert(source != target);
-
+                if(m_previousRootValid && target == m_root)
+                {
+                    m_previousRootValid = false;
+                }
                 m_graph->insertEdge(source, target);
             }
 
             //! --- IGraph ---
             virtual void eraseEdge(const T& source, const T& target) override
             {
+                m_previousRootValid = false;
                 m_graph->eraseEdge(source, target);
             }
 
@@ -81,6 +86,12 @@ namespace graph
             virtual const std::set<T> vertices() const override
             {
                 return m_graph->vertices();
+            }
+
+            //! --- IGraph ---
+            virtual int size() const override
+            {
+                return m_graph->size();
             }
 
             //! --- IGraph ---
@@ -125,6 +136,12 @@ namespace graph
             //! --- ITree ---
             virtual T root() const override
             {
+                // cache
+                if(m_previousRootValid)
+                {
+                    return m_root;
+                }
+                // expensive calculation
                 std::set<T> r;
                 for(auto &vertex : vertices())
                 {
@@ -134,7 +151,9 @@ namespace graph
                     }
                 }
                 assert(r.size() == 1);
-                return *(r.begin());
+                m_root = *(r.begin());
+                m_previousRootValid = true;
+                return m_root;
             }
 
             //! --- ITree ---
@@ -164,7 +183,9 @@ namespace graph
             // --- members ---
             std::unique_ptr<IGraph<T>>  m_graph;
             std::set<T>                 m_leaves;
-            std::set<T>                 m_roots;
+
+            mutable T                   m_root;
+            mutable bool                m_previousRootValid;
     };
 }
 

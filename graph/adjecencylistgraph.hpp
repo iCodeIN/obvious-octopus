@@ -185,6 +185,12 @@ namespace graph
             }
 
             // --- IGraph ---
+            virtual int size() const override
+            {
+                return m_vertexIds.size();
+            }
+
+            // --- IGraph ---
             virtual void insertVertex(const T& vertex) override
             {
                 if(hasVertex(vertex))

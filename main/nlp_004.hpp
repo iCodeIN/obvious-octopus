@@ -8,13 +8,8 @@
 using namespace std;
 using namespace nlp;
 
-int main()
+std::unique_ptr<Dictionary> loadDictionary()
 {
-
-    // init model
-    auto dbt = std::unique_ptr<DictionaryBasedTokenizer>(new DictionaryBasedTokenizer());
-    dbt->setOption(IGNORE_CASE);
-
     // read xml
     ifstream ifs;
     ifs.open ("dictionary_en.xml", ifstream::in);
@@ -23,13 +18,27 @@ int main()
     auto elementPtr = std::unique_ptr<XML::IElement>(new XML::DefaultElementImpl(""));
     ifs >> *(elementPtr.get());
 
-    // set model
-    dbt->fromXML(std::move(elementPtr));
+    // init dictionary
+    auto dPtr = std::unique_ptr<Dictionary>(new Dictionary());
+    dPtr->setOption(IGNORE_CASE);
+    dPtr->fromXML(std::move(elementPtr));
 
-    MetaheuristicTokenizer mht(std::move(dbt));
+    return std::move(dPtr);
+}
+
+int main()
+{
+
+    // init tokenizer
+    auto dbt = std::unique_ptr<DictionaryBasedTokenizer>(new DictionaryBasedTokenizer(loadDictionary()));
+    dbt->setOption(IGNORE_CASE);
+
+    // init metaheuristic tokenizer
+    MetaheuristicTokenizer mht(std::move(dbt), loadDictionary());
 
     // tokenize
-    auto text = std::string("Once upon a time I was falling in love, now I'm only falling apart. Nothing I can say, total eclipse of the heart.");
+    std::cout << "tokenization : " << std::endl;
+    auto text = std::string("THIS IS AN EXBMPLE SENTENCE.");
     auto tokens = mht.tokenize(text);
     std::cout << tokens.size() << std::endl;
 

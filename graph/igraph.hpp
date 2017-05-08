@@ -69,6 +69,10 @@ namespace graph
              */
             virtual const std::set<T> vertices() const = 0;
 
+            /*! \return the number of vertices in this IGraph
+             */
+            virtual int size() const = 0;
+
             /*! Insert a vertex into the graph
                 \param[in] vertex the vertex to be inserted
              */

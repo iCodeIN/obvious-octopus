@@ -22,6 +22,7 @@ var searchData=
   ['setvertexpoint',['setVertexPoint',['../classgraph_1_1AdjecencyListGraph.html#a65187cd396ed2c96011d2bde8792f272',1,'graph::AdjecencyListGraph']]],
   ['setviewbox',['setViewBox',['../classSVG_1_1SVG.html#a739d75aa5386262f03885b2f9070a501',1,'SVG::SVG']]],
   ['setwidth',['setWidth',['../classSVG_1_1SVG.html#a147ca2690d70990968ae230a1fa1a05f',1,'SVG::SVG']]],
+  ['size',['size',['../classgraph_1_1AdjecencyListGraph.html#a3d3529ccf73cb7e61d2035e653cd1d9e',1,'graph::AdjecencyListGraph::size()'],['../classgraph_1_1AdjecencyListTree.html#a571bad62acd83f715d9a68e7fd24b6a3',1,'graph::AdjecencyListTree::size()'],['../classgraph_1_1IGraph.html#af9b16bf29323ccb48d1bb52e47cd0d2b',1,'graph::IGraph::size()']]],
   ['skewx',['skewX',['../classSVG_1_1IElement.html#a1ee1970ad1ea86ce47f3a64d7cd92605',1,'SVG::IElement']]],
   ['skewy',['skewY',['../classSVG_1_1IElement.html#ae75f391c1344370c32b7c45e10945b9a',1,'SVG::IElement']]],
   ['smooth',['smooth',['../classsmooth_1_1ExponentialSmoothing.html#a57d5e1541614b65929f9cf1b25b99323',1,'smooth::ExponentialSmoothing::smooth()'],['../classsmooth_1_1PolynomialSmoothing.html#aa73ae5a61140354def5633cc692cb486',1,'smooth::PolynomialSmoothing::smooth()']]],

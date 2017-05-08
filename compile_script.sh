@@ -48,7 +48,7 @@ for folder in *; do
 			# compile, write errors to log
 			if [[ `find $folder -maxdepth 1 -iname *.cpp | wc -l` > 0 ]]; then
 				echo "Compiling all files in" $folder
-				g++ -std=c++1y -I $BOOST -iquote $MYDIR -g -c $folder/*.cpp 2>> $COMP_LOG_NAME
+				g++ -std=c++1y -I $BOOST -iquote $MYDIR -O3 -c $folder/*.cpp 2>> $COMP_LOG_NAME
 			else
 				echo "No cpp files in" $folder
 			fi

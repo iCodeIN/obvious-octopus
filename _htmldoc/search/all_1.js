@@ -6,6 +6,10 @@ var searchData=
   ['bktree',['BKTree',['../classgraph_1_1BKTree.html#ac0539e5c48a9c4e1de0078f7e6d89b1d',1,'graph::BKTree::BKTree(const MetricFunctionType &amp;metric)'],['../classgraph_1_1BKTree.html#a081e267c500e371d43a3056105fe1532',1,'graph::BKTree::BKTree(const BKTree &amp;)=delete'],['../classgraph_1_1BKTree.html#addae04245d09669051c011ae531e12d0',1,'graph::BKTree::BKTree(BKTree &amp;)=delete']]],
   ['bktreenode',['BKTreeNode',['../classgraph_1_1BKTreeNode.html#aaf1ea81d85df63896b2f538d4451db5b',1,'graph::BKTreeNode']]],
   ['bktreenode',['BKTreeNode',['../classgraph_1_1BKTreeNode.html',1,'graph']]],
-  ['boostmatriximpl',['BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html',1,'matrix']]],
-  ['boostmatriximpl',['BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html#aae81cb4bf7582656b4147aa3c5898501',1,'matrix::BoostMatrixImpl']]]
+  ['booleansearch',['BooleanSearch',['../classmeta_1_1BooleanSearch.html#a7f40f53aecf2717785c5178b40c42942',1,'meta::BooleanSearch']]],
+  ['booleansearch',['BooleanSearch',['../classmeta_1_1BooleanSearch.html',1,'meta']]],
+  ['boolfunctiontype',['BoolFunctionType',['../classmeta_1_1BooleanSearch.html#adced463db97082e64ed081666d9ec578',1,'meta::BooleanSearch']]],
+  ['booltupletype',['BoolTupleType',['../classmeta_1_1BooleanSearch.html#a167f22ff74f28b2273e9ff6c9a4604c8',1,'meta::BooleanSearch']]],
+  ['boostmatriximpl',['BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html#aae81cb4bf7582656b4147aa3c5898501',1,'matrix::BoostMatrixImpl']]],
+  ['boostmatriximpl',['BoostMatrixImpl',['../classmatrix_1_1BoostMatrixImpl.html',1,'matrix']]]
 ];
