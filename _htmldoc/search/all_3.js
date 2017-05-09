@@ -6,7 +6,7 @@ var searchData=
   ['deletefile',['deleteFile',['../classos_1_1File.html#a6f8e55c816dd725e1d2aec444535f9d2',1,'os::File']]],
   ['depth',['depth',['../classgraph_1_1AdjecencyListTree.html#a01b290e33edea432fc3b44329a66b536',1,'graph::AdjecencyListTree::depth()'],['../classgraph_1_1ITree.html#ad0c371eaba88df60210583d393ba0d70',1,'graph::ITree::depth()']]],
   ['derivative',['Derivative',['../classnumeric_1_1Derivative.html',1,'numeric']]],
-  ['derivative',['derivative',['../classnumeric_1_1Derivative.html#acd7e0c9caea7e5536288e3b7470115a9',1,'numeric::Derivative::derivative(const RealFunctionType &amp;f)'],['../classnumeric_1_1Derivative.html#a5dfe768e4ca8617554ff952df0dda006',1,'numeric::Derivative::Derivative()=delete']]],
+  ['derivative',['Derivative',['../classnumeric_1_1Derivative.html#a5dfe768e4ca8617554ff952df0dda006',1,'numeric::Derivative::Derivative()=delete'],['../classnumeric_1_1Derivative.html#acd7e0c9caea7e5536288e3b7470115a9',1,'numeric::Derivative::derivative(const RealFunctionType &amp;f)']]],
   ['detect',['detect',['../classnlp_1_1ILanguageDetector.html#abf5308220122f063d5dc51ff0b0e992b',1,'nlp::ILanguageDetector::detect()'],['../classnlp_1_1NGramLanguageDetector.html#a2174a7aafadd6411ebee123d24670cf2',1,'nlp::NGramLanguageDetector::detect()']]],
   ['dev',['dev',['../classnumeric_1_1Distribution.html#a3a81305af24cefab1a55b4e5c1f7fc4e',1,'numeric::Distribution']]],
   ['dft',['DFT',['../classnumeric_1_1DFT.html',1,'numeric']]],

@@ -32,6 +32,7 @@ var searchData=
   ['stem',['stem',['../classnlp_1_1IStemmer.html#ab5240c4183cfa6d9ee3b75fec58c5420',1,'nlp::IStemmer::stem()'],['../classnlp_1_1PorterStemmer.html#a35773ed86d848b3fd6a1d0608543c802',1,'nlp::PorterStemmer::stem()']]],
   ['sub',['sub',['../classnumeric_1_1BigInteger.html#a2e3cddb33588b58bfd4f61dbad82182f',1,'numeric::BigInteger']]],
   ['svg',['SVG',['../classSVG_1_1SVG.html#ac85aa23716d229d89b26e237365d9d98',1,'SVG::SVG::SVG()=default'],['../classSVG_1_1SVG.html#a91f8c40460dd462d733996a1ef0db511',1,'SVG::SVG::SVG(const SVG &amp;)=delete'],['../classSVG_1_1SVG.html#a2031b2ba044abb2252c54ac37f0297dc',1,'SVG::SVG::SVG(SVG &amp;)=delete']]],
+  ['svggraphics',['SVGGraphics',['../classgraphics_1_1SVGGraphics.html#a90994fd5905f9594b11659f257dc4208',1,'graphics::SVGGraphics::SVGGraphics()=default'],['../classgraphics_1_1SVGGraphics.html#abfe61fd7547caa0be4747324ca318cb0',1,'graphics::SVGGraphics::SVGGraphics(const SVGGraphics &amp;)=delete'],['../classgraphics_1_1SVGGraphics.html#a7136362713817244431964f6c3f5f74a',1,'graphics::SVGGraphics::SVGGraphics(SVGGraphics &amp;)=delete']]],
   ['swapcols',['swapCols',['../classmatrix_1_1IMatrix.html#a156d2f262c656ea62f0da784ced4fb26',1,'matrix::IMatrix']]],
   ['swaprows',['swapRows',['../classmatrix_1_1IMatrix.html#a747304978363f970807830364f539e63',1,'matrix::IMatrix']]]
 ];

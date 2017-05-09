@@ -1,0 +1,32 @@
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:10: warning: Compound graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:8: warning: Compound graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:26: warning: Member drawLine(int x1, int y1, int x2, int y2)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:28: warning: Member drawOval(int x, int y, int width, int height)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:29: warning: Member drawCircle(int x, int y, int radius)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:31: warning: Member fillOval(int x, int y, int width, int height)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:32: warning: Member fillCircle(int x, int y, int radius)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:34: warning: Member drawPolygon(int[] xs, int[] ys)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:35: warning: Member drawPolyline(int[] xs, int[] ys)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:37: warning: Member fillPolygon(int[] xs, int[] ys)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:39: warning: Member drawRect(int x, int y, int width, int height)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:40: warning: Member drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:42: warning: Member fillRect(int x, int y, int width, int height)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:43: warning: Member fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:45: warning: Member drawString(int x, int y, std::string text)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:47: warning: Member setStrokeColor(int r, int g, int b, int alpha)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/igraphics.hpp:48: warning: Member setFillColor(int r, int g, int b, int alpha)=0 (function) of class graphics::IGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:28: warning: Member drawLine(int x1, int y1, int x2, int y2) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:33: warning: Member drawOval(int x, int y, int width, int height) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:38: warning: Member drawCircle(int x, int y, int radius) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:43: warning: Member fillOval(int x, int y, int width, int height) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:47: warning: Member fillCircle(int x, int y, int radius) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:52: warning: Member drawPolygon(int[] xs, int[] ys) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:56: warning: Member drawPolyline(int[] xs, int[] ys) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:61: warning: Member fillPolygon(int[] xs, int[] ys) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:66: warning: Member drawRect(int x, int y, int width, int height) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:70: warning: Member drawRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:75: warning: Member fillRect(int x, int y, int width, int height) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:79: warning: Member fillRoundRect(int x, int y, int width, int height, int arcWidth, int arcHeight) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:84: warning: Member drawString(int x, int y, std::string text) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:89: warning: Member setStrokeColor(int r, int g, int b, int alpha) (function) of class graphics::SVGGraphics is not documented.
+/home/joris/Code/alexandria/graphics/svggraphics.hpp:93: warning: Member setFillColor(int r, int g, int b, int alpha) (function) of class graphics::SVGGraphics is not documented.

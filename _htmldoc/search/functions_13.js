@@ -12,6 +12,7 @@ var searchData=
   ['_7ehierarchicalgraphlayout',['~HierarchicalGraphLayout',['../classgraph__ui_1_1HierarchicalGraphLayout.html#a2c31623dc6b78455d8008a020b3be806',1,'graph_ui::HierarchicalGraphLayout']]],
   ['_7ei2dgraph',['~I2DGraph',['../classgraph_1_1I2DGraph.html#ac845fbcb82e52df701e0a9e487a52bde',1,'graph::I2DGraph']]],
   ['_7eielement',['~IElement',['../classSVG_1_1IElement.html#ab9492424a820131384e2ac4448cb8b31',1,'SVG::IElement::~IElement()'],['../classXML_1_1IElement.html#af130a92f3022e56bbe36a6013a949449',1,'XML::IElement::~IElement()']]],
+  ['_7eigraphics',['~IGraphics',['../classgraphics_1_1IGraphics.html#a89aaa8845d9bf534ff184c377b275274',1,'graphics::IGraphics']]],
   ['_7eilanguagedetector',['~ILanguageDetector',['../classnlp_1_1ILanguageDetector.html#a18bebb316617afa7d4348dc018e0ea94',1,'nlp::ILanguageDetector']]],
   ['_7eimatrix',['~IMatrix',['../classmatrix_1_1IMatrix.html#a6c12c83081d1bba960b628a7dfec7f21',1,'matrix::IMatrix']]],
   ['_7eimodel',['~IModel',['../classnlp_1_1IModel.html#ad70602e49682254ed6346a088ff105ff',1,'nlp::IModel']]],
@@ -33,5 +34,6 @@ var searchData=
   ['_7eresizegraphlayout',['~ResizeGraphLayout',['../classgraph__ui_1_1ResizeGraphLayout.html#a8389a387cb890d57881db60510d85501',1,'graph_ui::ResizeGraphLayout']]],
   ['_7esnaptogridgraphlayout',['~SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html#a42a012c99010de638de50ffda15a082f',1,'graph_ui::SnapToGridGraphLayout']]],
   ['_7esvg',['~SVG',['../classSVG_1_1SVG.html#adc050d33a0abf55a438ef5f23ef7c7a2',1,'SVG::SVG']]],
+  ['_7esvggraphics',['~SVGGraphics',['../classgraphics_1_1SVGGraphics.html#a21c83a70a6f1682a5d28d0c62d9c1666',1,'graphics::SVGGraphics']]],
   ['_7etext',['~Text',['../classSVG_1_1Text.html#a42aac6a3e87d571c7e10a4cb6c14ce8b',1,'SVG::Text']]]
 ];
