@@ -41,4 +41,8 @@
 /* PLOT main methods
  */
 // #include "plot_001.hpp"
-#include "plot_002.hpp"
+// #include "plot_002.hpp"
+
+/* SMOOOTH main methods
+ */
+#include "smooth_001.hpp"

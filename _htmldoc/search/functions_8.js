@@ -14,6 +14,7 @@ var searchData=
   ['ipostagger',['IPOSTagger',['../classnlp_1_1IPOSTagger.html#ac58826a2c24ae9f48e09e971a7f016eb',1,'nlp::IPOSTagger']]],
   ['isdigitpermutation',['isDigitPermutation',['../classnumeric_1_1Digits.html#abf78c078d98f67a31a3c25b30001465f',1,'numeric::Digits']]],
   ['isdirectory',['isDirectory',['../classos_1_1File.html#a781e3cfd83fbef7d2079fff99506385d',1,'os::File']]],
+  ['ismooth',['ISmooth',['../classsmooth_1_1ISmooth.html#a366c051d4b31317eb68dd22a1897ce07',1,'smooth::ISmooth::ISmooth()=default'],['../classsmooth_1_1ISmooth.html#a58508fcb2c7c8bbb6820f9c78940d6af',1,'smooth::ISmooth::ISmooth(const ISmooth &amp;)=delete'],['../classsmooth_1_1ISmooth.html#ab412f673a8146c60ff70aa99f7bef9a3',1,'smooth::ISmooth::ISmooth(ISmooth &amp;)=delete']]],
   ['isprefix',['isPrefix',['../classnlp_1_1Dictionary.html#aa71c56d2ef4081b8cfc32ae392f35f25',1,'nlp::Dictionary']]],
   ['isprobableprime',['isProbablePrime',['../classnumeric_1_1Prime.html#aad844ced34067404856a75b47bd196e4',1,'numeric::Prime']]],
   ['ispseudoword',['isPseudoWord',['../classnlp_1_1Dictionary.html#a09de3317e3f23ed73d24e79e5dee7045',1,'nlp::Dictionary']]],

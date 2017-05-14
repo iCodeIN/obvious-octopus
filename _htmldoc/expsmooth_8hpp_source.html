@@ -98,43 +98,55 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#ifndef EXPSMOOTH_HPP</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#define EXPSMOOTH_HPP</span></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">namespace </span>smooth</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classsmooth_1_1ExponentialSmoothing.html">   17</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsmooth_1_1ExponentialSmoothing.html">ExponentialSmoothing</a> final</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">public</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#a2d4ec6b6827cecff77c8398ea03d4603">ExponentialSmoothing</a>() = <span class="keyword">delete</span>;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;</div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="classsmooth_1_1ExponentialSmoothing.html#a57d5e1541614b65929f9cf1b25b99323">   26</a></span>&#160;            <span class="keyword">static</span> std::vector&lt;double&gt; <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#a57d5e1541614b65929f9cf1b25b99323">smooth</a>(<span class="keyword">const</span> std::vector&lt;double&gt; &amp;xs, <span class="keywordtype">double</span> alpha)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                <span class="comment">// asserts</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                assert(alpha &gt;= 0 &amp;&amp; alpha &lt;= 1);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                assert(xs.size() &gt; 0);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                std::vector&lt;double&gt; ys;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                ys.push_back(xs[0]);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;xs.size(); i++)</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    <span class="keyword">auto</span> v = xs[i] * alpha + ys[i-1] * (1.0 - alpha);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                    ys.push_back(v);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                <span class="keywordflow">return</span> ys;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    };</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;}</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#endif // EXPSMOOTH_HPP</span></div>
-<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html_a57d5e1541614b65929f9cf1b25b99323"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html#a57d5e1541614b65929f9cf1b25b99323">smooth::ExponentialSmoothing::smooth</a></div><div class="ttdeci">static std::vector&lt; double &gt; smooth(const std::vector&lt; double &gt; &amp;xs, double alpha)</div><div class="ttdef"><b>Definition:</b> expsmooth.hpp:26</div></div>
-<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html_a2d4ec6b6827cecff77c8398ea03d4603"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html#a2d4ec6b6827cecff77c8398ea03d4603">smooth::ExponentialSmoothing::ExponentialSmoothing</a></div><div class="ttdeci">ExponentialSmoothing()=delete</div></div>
-<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html">smooth::ExponentialSmoothing</a></div><div class="ttdef"><b>Definition:</b> expsmooth.hpp:17</div></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;ismooth.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;assert.h&gt;</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span>smooth</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classsmooth_1_1ExponentialSmoothing.html">   18</a></span>&#160;    <span class="keyword">class </span><a class="code" href="classsmooth_1_1ExponentialSmoothing.html">ExponentialSmoothing</a> final : <span class="keyword">public</span> <a class="code" href="classsmooth_1_1ISmooth.html">ISmooth</a></div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="classsmooth_1_1ExponentialSmoothing.html#ab9ae8454642efcad504a80ae1d539df7">   23</a></span>&#160;            <span class="keyword">explicit</span> <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#ab9ae8454642efcad504a80ae1d539df7">ExponentialSmoothing</a>(<span class="keywordtype">double</span> alpha)</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                : alpha(alpha)</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;                assert(alpha &gt;= 0 &amp;&amp; alpha &lt;= 1);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;</div>
+<div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="classsmooth_1_1ExponentialSmoothing.html#a0e2c8c804a9254f663c1ec0d577332b5">   31</a></span>&#160;            <span class="keyword">using</span> <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#a0e2c8c804a9254f663c1ec0d577332b5">SeriesType</a> = std::vector&lt;std::pair&lt;double,double&gt;&gt;;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="classsmooth_1_1ExponentialSmoothing.html#a9158927e88c99ed30e9be86518eb1af5">   36</a></span>&#160;            <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#a0e2c8c804a9254f663c1ec0d577332b5">SeriesType</a> <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#a9158927e88c99ed30e9be86518eb1af5">smooth</a>(<span class="keyword">const</span> <a class="code" href="classsmooth_1_1ExponentialSmoothing.html#a0e2c8c804a9254f663c1ec0d577332b5">SeriesType</a> &amp;xs)<span class="keyword"> const</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;<span class="keyword">            </span>{</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                <span class="comment">// asserts</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                assert(xs.size() &gt; 0);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                std::vector&lt;std::pair&lt;double,double&gt;&gt; retval;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                retval.push_back(xs[0]);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=1; i&lt;xs.size(); i++)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                    <span class="keyword">auto</span> y = xs[i].second * alpha + retval[i-1].second * (1.0 - alpha);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                    retval.push_back(std::make_pair(xs[i].first, y));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                <span class="keywordflow">return</span> retval;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">private</span>:</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordtype">double</span> alpha;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;<span class="preprocessor">#endif // EXPSMOOTH_HPP</span></div>
+<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html">smooth::ExponentialSmoothing</a></div><div class="ttdef"><b>Definition:</b> expsmooth.hpp:18</div></div>
+<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html_ab9ae8454642efcad504a80ae1d539df7"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html#ab9ae8454642efcad504a80ae1d539df7">smooth::ExponentialSmoothing::ExponentialSmoothing</a></div><div class="ttdeci">ExponentialSmoothing(double alpha)</div><div class="ttdef"><b>Definition:</b> expsmooth.hpp:23</div></div>
+<div class="ttc" id="classsmooth_1_1ISmooth_html"><div class="ttname"><a href="classsmooth_1_1ISmooth.html">smooth::ISmooth</a></div><div class="ttdef"><b>Definition:</b> ismooth.hpp:16</div></div>
+<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html_a0e2c8c804a9254f663c1ec0d577332b5"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html#a0e2c8c804a9254f663c1ec0d577332b5">smooth::ExponentialSmoothing::SeriesType</a></div><div class="ttdeci">std::vector&lt; std::pair&lt; double, double &gt;&gt; SeriesType</div><div class="ttdef"><b>Definition:</b> expsmooth.hpp:31</div></div>
+<div class="ttc" id="classsmooth_1_1ExponentialSmoothing_html_a9158927e88c99ed30e9be86518eb1af5"><div class="ttname"><a href="classsmooth_1_1ExponentialSmoothing.html#a9158927e88c99ed30e9be86518eb1af5">smooth::ExponentialSmoothing::smooth</a></div><div class="ttdeci">SeriesType smooth(const SeriesType &amp;xs) const </div><div class="ttdef"><b>Definition:</b> expsmooth.hpp:36</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 8 2017 23:45:50 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 10 2017 23:37:03 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

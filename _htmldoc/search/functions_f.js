@@ -25,7 +25,7 @@ var searchData=
   ['size',['size',['../classgraph_1_1AdjecencyListGraph.html#a3d3529ccf73cb7e61d2035e653cd1d9e',1,'graph::AdjecencyListGraph::size()'],['../classgraph_1_1AdjecencyListTree.html#a571bad62acd83f715d9a68e7fd24b6a3',1,'graph::AdjecencyListTree::size()'],['../classgraph_1_1IGraph.html#af9b16bf29323ccb48d1bb52e47cd0d2b',1,'graph::IGraph::size()']]],
   ['skewx',['skewX',['../classSVG_1_1IElement.html#a1ee1970ad1ea86ce47f3a64d7cd92605',1,'SVG::IElement']]],
   ['skewy',['skewY',['../classSVG_1_1IElement.html#ae75f391c1344370c32b7c45e10945b9a',1,'SVG::IElement']]],
-  ['smooth',['smooth',['../classsmooth_1_1ExponentialSmoothing.html#a57d5e1541614b65929f9cf1b25b99323',1,'smooth::ExponentialSmoothing::smooth()'],['../classsmooth_1_1PolynomialSmoothing.html#aa73ae5a61140354def5633cc692cb486',1,'smooth::PolynomialSmoothing::smooth()']]],
+  ['smooth',['smooth',['../classsmooth_1_1ExponentialSmoothing.html#a9158927e88c99ed30e9be86518eb1af5',1,'smooth::ExponentialSmoothing::smooth()'],['../classsmooth_1_1ISmooth.html#a451bb8799e2f7fcb7244dca403c03bb5',1,'smooth::ISmooth::smooth()'],['../classsmooth_1_1PolynomialSmoothing.html#afdb9923e8daf837f7c5b8c11fecd8254',1,'smooth::PolynomialSmoothing::smooth()']]],
   ['snaptogridgraphlayout',['SnapToGridGraphLayout',['../classgraph__ui_1_1SnapToGridGraphLayout.html#adc6cb6b00c4dd85ff6b36f2bb971dcf0',1,'graph_ui::SnapToGridGraphLayout']]],
   ['sometimes',['sometimes',['../classmeta_1_1AbstractMetaHeuristic.html#ae4fb328cee7109eedc3aa0eb8be5c888',1,'meta::AbstractMetaHeuristic']]],
   ['sorteddft',['sortedDFT',['../classnumeric_1_1DFT.html#a95ef27ca473b1381784407bd7acec82f',1,'numeric::DFT']]],

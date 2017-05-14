@@ -1,9 +1,11 @@
 #pragma once
-#ifndef POLYFIT_HPP
-#define POLYFIT_HPP
+#ifndef SMOOTH_POLYSMOOTH_HPP
+#define SMOOTH_POLYSMOOTH_HPP
 
-#include "matrix/gaussianelimination.h"
-#include "matrix/matrix.hpp"
+#include "ismooth.hpp"
+#include "matrix/gaussianelimination.hpp"
+#include "matrix/imatrix.hpp"
+#include "matrix/boostmatriximpl.hpp"
 
 #include <assert.h>
 #include <math.h>
@@ -19,12 +21,36 @@ namespace smooth
     	 estimation problem it is linear, in the sense that the regression function E(y | x) is linear in the unknown parameters that are estimated from the data.
     	 For this reason, polynomial regression is considered to be a special case of multiple linear regression.
      */
-    class PolynomialSmoothing final
+    class PolynomialSmoothing final : public ISmooth
     {
         public:
-            /*! Prohibit construction of PolynomialSmoothing. This class offers only static methods.
+            /*! Construct a polynomial smoothing algorithm
              */
-            explicit PolynomialSmoothing() = delete;
+            explicit PolynomialSmoothing(int degree)
+                : degree(degree)
+            {
+                assert(degree >= 0 && degree <= 30);
+            }
+
+            /*! Default destructor
+             */
+            virtual ~PolynomialSmoothing() = default;
+
+            /*! Prohibit const copy constructor
+             */
+            PolynomialSmoothing(const PolynomialSmoothing&) = delete;
+
+            /*! Prohibit copy constructor
+             */
+            PolynomialSmoothing(PolynomialSmoothing&) = delete;
+
+            /*! Prohibit const assignment operator
+             */
+            void operator=(const PolynomialSmoothing&) = delete;
+
+            /*! Prohibit assignment operator
+             */
+            void operator=(PolynomialSmoothing&) = delete;
 
             /*! Define a Series
              */
@@ -39,13 +65,12 @@ namespace smooth
              	 to highest degree. Such that the coefficient at index 0
              	 corresponds to the coefficient for term 'x^0'.
              */
-            static std::vector<double> fit(const SeriesType &series, int degree)
+            std::vector<double> fit(const SeriesType &series) const
             {
                 assert(series.size() > 0);
-                assert(degree >= 0);
 
                 // Set up least squares matrix
-                auto m0 = matrix::Matrix(degree+1,degree+2);
+                auto m0 = matrix::BoostMatrixImpl(degree+1,degree+2);
 
                 // Incorporate xs
                 for(int i=0; i<=degree; i++)
@@ -72,7 +97,7 @@ namespace smooth
                 }
 
                 // Perform gaussian elimination to solve the system
-                matrix::GaussianElimination::gaussianElimination(m0);
+                matrix::algorithm::gaussianElimination(m0);
 
                 // The last column should yield the coefficients of the polynomial
                 std::vector<double> coeffs;
@@ -90,14 +115,14 @@ namespace smooth
              	 numeric stability, as well as for the sake of accuracy to use
              	 high-degree polynomials.
              */
-            static SeriesType smooth(const SeriesType &series, int degree)
+            virtual SeriesType smooth(const SeriesType &series) const
             {
                 // asserts
                 assert(series.size() > 0);
                 assert(degree >= 0);
 
                 // fit polynomial
-                auto poly = PolynomialSmoothing::fit(series, degree);
+                auto poly = PolynomialSmoothing::fit(series);
 
                 // utility function to evaluate polynomial
                 auto eval = [&poly](double x)
@@ -122,7 +147,10 @@ namespace smooth
                 return approx;
             }
 
+        private:
+            int degree;
+
     };
 }
 
-#endif // POLYFIT_HPP
+#endif // SMOOTH_POLYSMOOTH_HPP

@@ -96,31 +96,67 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <div class="summary">
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
-<a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="classsmooth_1_1PolynomialSmoothing-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">smooth::PolynomialSmoothing Class Reference<span class="mlabels"><span class="mlabel">final</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="polysmooth_8hpp_source.html">polysmooth.hpp</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="polynomialsmoothing_8hpp_source.html">polynomialsmoothing.hpp</a>&gt;</code></p>
+<div class="dynheader">
+Inheritance diagram for smooth::PolynomialSmoothing:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsmooth_1_1PolynomialSmoothing__inherit__graph.png" border="0" usemap="#smooth_1_1PolynomialSmoothing_inherit__map" alt="Inheritance graph"/></div>
+<map name="smooth_1_1PolynomialSmoothing_inherit__map" id="smooth_1_1PolynomialSmoothing_inherit__map">
+<area shape="rect" id="node2" href="classsmooth_1_1ISmooth.html" title="smooth::ISmooth" alt="" coords="43,5,165,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div class="dynheader">
+Collaboration diagram for smooth::PolynomialSmoothing:</div>
+<div class="dyncontent">
+<div class="center"><img src="classsmooth_1_1PolynomialSmoothing__coll__graph.png" border="0" usemap="#smooth_1_1PolynomialSmoothing_coll__map" alt="Collaboration graph"/></div>
+<map name="smooth_1_1PolynomialSmoothing_coll__map" id="smooth_1_1PolynomialSmoothing_coll__map">
+<area shape="rect" id="node2" href="classsmooth_1_1ISmooth.html" title="smooth::ISmooth" alt="" coords="43,5,165,32"/></map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
 <tr class="memitem:a5762c5126f3e04a7ac1321198ba03db3"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a> = std::vector&lt; std::pair&lt; double, double &gt;&gt;</td></tr>
 <tr class="separator:a5762c5126f3e04a7ac1321198ba03db3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_types_classsmooth_1_1ISmooth"><td colspan="2" onclick="javascript:toggleInherit('pub_types_classsmooth_1_1ISmooth')"><img src="closed.png" alt="-"/>&#160;Public Types inherited from <a class="el" href="classsmooth_1_1ISmooth.html">smooth::ISmooth</a></td></tr>
+<tr class="memitem:a2a9a4e999838fbb43df465f00baf7c1c inherit pub_types_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">using&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a> = std::vector&lt; std::pair&lt; double, double &gt;&gt;</td></tr>
+<tr class="separator:a2a9a4e999838fbb43df465f00baf7c1c inherit pub_types_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:adca361eb838bd6e2abc40ff0f8159968"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#adca361eb838bd6e2abc40ff0f8159968">PolynomialSmoothing</a> ()=delete</td></tr>
-<tr class="separator:adca361eb838bd6e2abc40ff0f8159968"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
-Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a90329fbdae66177ca591b4f025d4ffb1"><td class="memItemLeft" align="right" valign="top">static std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a90329fbdae66177ca591b4f025d4ffb1">fit</a> (const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a> &amp;series, int degree)</td></tr>
-<tr class="separator:a90329fbdae66177ca591b4f025d4ffb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa73ae5a61140354def5633cc692cb486"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#aa73ae5a61140354def5633cc692cb486">smooth</a> (const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a> &amp;series, int degree)</td></tr>
-<tr class="separator:aa73ae5a61140354def5633cc692cb486"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab1d0f5036c1f076e23642ba899973833"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#ab1d0f5036c1f076e23642ba899973833">PolynomialSmoothing</a> (int degree)</td></tr>
+<tr class="separator:ab1d0f5036c1f076e23642ba899973833"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3babf749078f27d2a195d7d89a602822"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a3babf749078f27d2a195d7d89a602822">~PolynomialSmoothing</a> ()=default</td></tr>
+<tr class="separator:a3babf749078f27d2a195d7d89a602822"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0c66af1c9c242b9eca4e1883cd9f021e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a0c66af1c9c242b9eca4e1883cd9f021e">PolynomialSmoothing</a> (const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;)=delete</td></tr>
+<tr class="separator:a0c66af1c9c242b9eca4e1883cd9f021e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a961742ee756c6c09130c7c2453ce489c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a961742ee756c6c09130c7c2453ce489c">PolynomialSmoothing</a> (<a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;)=delete</td></tr>
+<tr class="separator:a961742ee756c6c09130c7c2453ce489c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f1ec9aedb4fd732a4a541862151cfce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a0f1ec9aedb4fd732a4a541862151cfce">operator=</a> (const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;)=delete</td></tr>
+<tr class="separator:a0f1ec9aedb4fd732a4a541862151cfce"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ade820fd9b89883a3366bfebdf4342c11"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#ade820fd9b89883a3366bfebdf4342c11">operator=</a> (<a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;)=delete</td></tr>
+<tr class="separator:ade820fd9b89883a3366bfebdf4342c11"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4fe5126522eb417522023aa6cd38c986"><td class="memItemLeft" align="right" valign="top">std::vector&lt; double &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a4fe5126522eb417522023aa6cd38c986">fit</a> (const <a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a> &amp;series) const </td></tr>
+<tr class="separator:a4fe5126522eb417522023aa6cd38c986"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afdb9923e8daf837f7c5b8c11fecd8254"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html#afdb9923e8daf837f7c5b8c11fecd8254">smooth</a> (const <a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a> &amp;series) const </td></tr>
+<tr class="separator:afdb9923e8daf837f7c5b8c11fecd8254"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classsmooth_1_1ISmooth"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classsmooth_1_1ISmooth')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classsmooth_1_1ISmooth.html">smooth::ISmooth</a></td></tr>
+<tr class="memitem:a366c051d4b31317eb68dd22a1897ce07 inherit pub_methods_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#a366c051d4b31317eb68dd22a1897ce07">ISmooth</a> ()=default</td></tr>
+<tr class="separator:a366c051d4b31317eb68dd22a1897ce07 inherit pub_methods_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a012178e8931742b384c7226dfac3fa9f inherit pub_methods_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#a012178e8931742b384c7226dfac3fa9f">~ISmooth</a> ()=default</td></tr>
+<tr class="separator:a012178e8931742b384c7226dfac3fa9f inherit pub_methods_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a58508fcb2c7c8bbb6820f9c78940d6af inherit pub_methods_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#a58508fcb2c7c8bbb6820f9c78940d6af">ISmooth</a> (const <a class="el" href="classsmooth_1_1ISmooth.html">ISmooth</a> &amp;)=delete</td></tr>
+<tr class="separator:a58508fcb2c7c8bbb6820f9c78940d6af inherit pub_methods_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab412f673a8146c60ff70aa99f7bef9a3 inherit pub_methods_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#ab412f673a8146c60ff70aa99f7bef9a3">ISmooth</a> (<a class="el" href="classsmooth_1_1ISmooth.html">ISmooth</a> &amp;)=delete</td></tr>
+<tr class="separator:ab412f673a8146c60ff70aa99f7bef9a3 inherit pub_methods_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07e6a84061991ac143c44837ea3a86cd inherit pub_methods_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#a07e6a84061991ac143c44837ea3a86cd">operator=</a> (const <a class="el" href="classsmooth_1_1ISmooth.html">ISmooth</a> &amp;)=delete</td></tr>
+<tr class="separator:a07e6a84061991ac143c44837ea3a86cd inherit pub_methods_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a506ab8278d010027921b9a5b5009a849 inherit pub_methods_classsmooth_1_1ISmooth"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classsmooth_1_1ISmooth.html#a506ab8278d010027921b9a5b5009a849">operator=</a> (<a class="el" href="classsmooth_1_1ISmooth.html">ISmooth</a> &amp;)=delete</td></tr>
+<tr class="separator:a506ab8278d010027921b9a5b5009a849 inherit pub_methods_classsmooth_1_1ISmooth"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>In statistics, polynomial regression is a form of linear regression in which the relationship between the independent variable x and the dependent variable y is modelled as an nth degree polynomial. Polynomial regression fits a nonlinear relationship between the value of x and the corresponding conditional mean of y, denoted E(y | x), and has been used to describe nonlinear phenomena such as the growth rate of tissues, the distribution of carbon isotopes in lake sediments, and the progression of disease epidemics. Although polynomial regression fits a nonlinear model to the data, as a statistical estimation problem it is linear, in the sense that the regression function E(y | x) is linear in the unknown parameters that are estimated from the data. For this reason, polynomial regression is considered to be a special case of multiple linear regression. </p>
@@ -139,7 +175,7 @@ Static Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a class="anchor" id="adca361eb838bd6e2abc40ff0f8159968"></a>
+<a class="anchor" id="ab1d0f5036c1f076e23642ba899973833"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -149,22 +185,22 @@ Static Public Member Functions</h2></td></tr>
         <tr>
           <td class="memname">smooth::PolynomialSmoothing::PolynomialSmoothing </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>degree</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">explicit</span><span class="mlabel">delete</span></span>  </td>
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">explicit</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Prohibit construction of <a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a>. This class offers only static methods. </p>
+<p>Construct a polynomial smoothing algorithm </p>
 
 </div>
 </div>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a90329fbdae66177ca591b4f025d4ffb1"></a>
+<a class="anchor" id="a3babf749078f27d2a195d7d89a602822"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -172,26 +208,91 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static std::vector&lt;double&gt; smooth::PolynomialSmoothing::fit </td>
+          <td class="memname">virtual smooth::PolynomialSmoothing::~PolynomialSmoothing </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a> &amp;&#160;</td>
-          <td class="paramname"><em>series</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>degree</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">virtual</span><span class="mlabel">default</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Default destructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a0c66af1c9c242b9eca4e1883cd9f021e"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">smooth::PolynomialSmoothing::PolynomialSmoothing </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit const copy constructor </p>
+
+</div>
+</div>
+<a class="anchor" id="a961742ee756c6c09130c7c2453ce489c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">smooth::PolynomialSmoothing::PolynomialSmoothing </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit copy constructor </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a4fe5126522eb417522023aa6cd38c986"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::vector&lt;double&gt; smooth::PolynomialSmoothing::fit </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a> &amp;&#160;</td>
+          <td class="paramname"><em>series</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -199,7 +300,7 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="aa73ae5a61140354def5633cc692cb486"></a>
+<a class="anchor" id="a0f1ec9aedb4fd732a4a541862151cfce"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -207,40 +308,82 @@ Static Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">static <a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a> smooth::PolynomialSmoothing::smooth </td>
+          <td class="memname">void smooth::PolynomialSmoothing::operator= </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html#a5762c5126f3e04a7ac1321198ba03db3">SeriesType</a> &amp;&#160;</td>
-          <td class="paramname"><em>series</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
+          <td class="paramtype">const <a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
           <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>degree</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit const assignment operator </p>
+
+</div>
+</div>
+<a class="anchor" id="ade820fd9b89883a3366bfebdf4342c11"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void smooth::PolynomialSmoothing::operator= </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classsmooth_1_1PolynomialSmoothing.html">PolynomialSmoothing</a> &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">delete</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>Prohibit assignment operator </p>
+
+</div>
+</div>
+<a class="anchor" id="afdb9923e8daf837f7c5b8c11fecd8254"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual <a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a> smooth::PolynomialSmoothing::smooth </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="classsmooth_1_1ISmooth.html#a2a9a4e999838fbb43df465f00baf7c1c">SeriesType</a> &amp;&#160;</td>
+          <td class="paramname"><em>series</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 <p>Fits a collection of points to a polynomial of given degree. This method uses a least-squares technique. It is not advised, both from the perspective of computational complexity, numeric stability, as well as for the sake of accuracy to use high-degree polynomials. </p>
 
+<p>Implements <a class="el" href="classsmooth_1_1ISmooth.html#a451bb8799e2f7fcb7244dca403c03bb5">smooth::ISmooth</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following file:<ul>
-<li>smooth/<a class="el" href="polysmooth_8hpp_source.html">polysmooth.hpp</a></li>
+<li>smooth/<a class="el" href="polynomialsmoothing_8hpp_source.html">polynomialsmoothing.hpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Mon May 8 2017 23:45:50 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Sun May 14 2017 20:15:51 for My Project by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.7
 </small></address>

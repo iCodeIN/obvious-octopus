@@ -14,7 +14,7 @@ var searchData=
   ['findminunseeded',['findMinUnseeded',['../classmeta_1_1AbstractMetaHeuristic.html#a86da1a2e385b4dbb5b4fbc0d1fb96819',1,'meta::AbstractMetaHeuristic']]],
   ['findunivariatemaxunseeded',['findUnivariateMaxUnseeded',['../classmeta_1_1AbstractMetaHeuristic.html#a5deb5769be613180e5cbce58cefc2127',1,'meta::AbstractMetaHeuristic']]],
   ['findunivariateminunseeded',['findUnivariateMinUnseeded',['../classmeta_1_1AbstractMetaHeuristic.html#af3fa1e3c1c54d2a31d95cfffb462e3f2',1,'meta::AbstractMetaHeuristic']]],
-  ['fit',['fit',['../classsmooth_1_1PolynomialSmoothing.html#a90329fbdae66177ca591b4f025d4ffb1',1,'smooth::PolynomialSmoothing']]],
+  ['fit',['fit',['../classsmooth_1_1PolynomialSmoothing.html#a4fe5126522eb417522023aa6cd38c986',1,'smooth::PolynomialSmoothing']]],
   ['fliphorizontal',['flipHorizontal',['../classSVG_1_1SVG.html#a5be929ad67753608ca7d1d8b0287d93c',1,'SVG::SVG']]],
   ['flipvertical',['flipVertical',['../classSVG_1_1SVG.html#acd27366306fcc945cf8f15b59b54961d',1,'SVG::SVG']]],
   ['forwarddft',['forwardDFT',['../classnumeric_1_1DFT.html#af9522b27f592ce3f8f673701a161254a',1,'numeric::DFT']]],

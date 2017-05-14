@@ -45,7 +45,7 @@ namespace matrix
                     }
                 }
                 // Swap rows to place pivot in correct position
-                matrix.swapRows(pivot, maxPiv           otRow);
+                matrix.swapRows(pivot, maxPivotRow);
 
                 // Divide each element in the row by the pivot
                 double pivotValue = matrix.get(pivot, pivot);
