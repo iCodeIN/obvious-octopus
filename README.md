@@ -1,6 +1,6 @@
 # obvious octopus
 
-## Getting Started
+## getting started
 
 First, get the code on your system!  The simplest method is via git:
 - `cd ~/`
@@ -21,7 +21,7 @@ First, get the code on your system!  The simplest method is via git:
 * plotting
 * word2vec
 
-## Getting Involved
+## getting involved
 
 This is an open source project and we would love your help.
 
